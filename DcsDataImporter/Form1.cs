@@ -13,7 +13,9 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using Microsoft.Office.Interop.Word;
+//using Microsoft.Office.Interop.Word;
+
+/* storeAsPdf-method contains code that is commented out temporarily */
 
 /* References
  * 
@@ -2222,11 +2224,11 @@ namespace DcsDataImporter
                 path += @"\";
             }
 
-            Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
-            Document wordDocument = appWord.Documents.Open(path + wordDoc);
-            wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
+            //Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+            //Document wordDocument = appWord.Documents.Open(path + wordDoc);
+            //wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close();
+            //wordDocument.Close();
         }
 
         void splitPdf(string path)
