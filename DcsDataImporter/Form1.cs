@@ -805,24 +805,32 @@ namespace DcsDataImporter
                 {
                     txtAwacsFreq.Text = freq;
                     txtAwacsPreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
                 }
 
                 if (textbox.Name.Equals("txtAwacsBackupChannel") && txtAwacsBackupFreq.Text == "" && txtAwacsBackupPreset.Text == "")
                 {
                     txtAwacsBackupFreq.Text = freq;
                     txtAwacsBackupPreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
                 }
 
                 if (textbox.Name.Equals("txtTacpChannel") && txtTacpFreq.Text == "" && txtTacpPreset.Text == "")
                 {
                     txtTacpFreq.Text = freq;
                     txtTacpPreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
                 }
 
                 if (textbox.Name.Equals("txtTacpBackupChannel") && txtTacpBackupFreq.Text == "" && txtTacpBackupPreset.Text == "")
                 {
                     txtTacpBackupFreq.Text = freq;
                     txtTacpBackupPreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
                 }
 
                 if (textbox.Name.Equals("txtInternalChannel") && txtInternalFreq.Text == "" && txtInternalPreset.Text == "")
