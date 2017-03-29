@@ -1519,7 +1519,19 @@ namespace DcsDataImporter
 
             /* Save file from one location to another */
             if (File.Exists(Environment.CurrentDirectory + @"\" + fnOut)) delete(Environment.CurrentDirectory + @"\" + fnOut);
-            File.Copy(inputPath + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
+            
+            try
+            {
+                File.Copy(inputPath + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
+            } catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show("Cannot find the directory:\n" + inputPath + "\n\nClosing application", "Error: Directory not found");
+                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+            } catch (FileNotFoundException)
+            {
+                MessageBox.Show("Cannot find the file:\n" + inputPath + fnIn + "\n\nClosing application", "Error: File not found");
+                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+            }
 
             // DEPARTURE AND ARRIVAL
             SearchAndReplace("/CALLSIGN/", txtCallsign.Text); // TODO: Parse to get just callsign
