@@ -2632,6 +2632,10 @@ namespace DcsDataImporter
                         if (tuple != null)
                         {
                             setRadio(dgv, tuple);
+                        } else
+                        {
+                            var row = dgv.CurrentRow;
+                            row.Cells["colChannelSupport"].Value = row.Cells["colChannelSupport"].Value.ToString().ToUpper();
                         }
                     }
 
