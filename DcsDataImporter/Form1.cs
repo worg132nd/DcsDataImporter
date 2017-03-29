@@ -1597,7 +1597,7 @@ namespace DcsDataImporter
 
             // TACP
             SearchAndReplace("/TACP/", txtTacpCallsign.Text);
-            SearchAndReplace("/TACPFRQ/", txtTacpFreq.Text.TrimEnd("0".ToCharArray())); ;
+            SearchAndReplace("/TACPFRQ/", txtTacpFreq.Text.TrimEnd("0".ToCharArray()));
             SearchAndReplace("/TACPCNL/", txtTacpChannel.Text);
             SearchAndReplace("/TACPPST/", "P" + txtTacpPreset.Text);
 

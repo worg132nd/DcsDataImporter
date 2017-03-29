@@ -300,6 +300,9 @@ namespace DcsDataImporter
                 // AMPN
                 string amplification = AmpnAmplification;
 
+                var form = new FormPopup();
+                form.ShowDialog();
+
                 Form1 form1 = new Form1(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, chkTraining.Checked, AmsndatTakeoffTime);
                 form1.Show();
             }
