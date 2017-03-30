@@ -17,7 +17,9 @@ namespace DcsDataImporter
             this.CenterToParent();
             InitializeComponent();
             txtKneeboardPath.Text = Properties.Settings.Default.pathKneeboardBuilder;
-            txtWordFile.Text = Properties.Settings.Default.filePathCommunicationNoAwacs;
+            txtCommunicationNoAwacsPath.Text = Properties.Settings.Default.filePathCommunicationNoAwacs;
+            txtCommunicationPath.Text = Properties.Settings.Default.filePathCommunication;
+            txtCommunicationNoTmaPath.Text = Properties.Settings.Default.filePathCommunicationNoTma;
 
             chkCommunicationHelp.Enabled = false;
 
@@ -26,7 +28,7 @@ namespace DcsDataImporter
                 chkCommunicationHelp.Checked = true;
             }
 
-            if (txtKneeboardPath.Text != "" && txtWordFile.Text != "")
+            if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
             {
                 chkCommunicationHelp.Enabled = true;
             }
@@ -40,9 +42,9 @@ namespace DcsDataImporter
             ofd.Title = "Select the file path for the supplied file CommunicationNoAwacs.docm";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                txtWordFile.Text = ofd.FileName; // only file name
+                txtCommunicationNoAwacsPath.Text = ofd.FileName; // only file name
 
-                if (txtKneeboardPath.Text != "")
+                if (txtKneeboardPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
                 {
                     chkCommunicationHelp.Enabled = true;
                 }
@@ -58,7 +60,7 @@ namespace DcsDataImporter
             {
                 txtKneeboardPath.Text = ofd.FileName; // path
 
-                if (txtWordFile.Text != "")
+                if (txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
                 {
                     chkCommunicationHelp.Enabled = true;
                 }
@@ -72,9 +74,19 @@ namespace DcsDataImporter
                 Properties.Settings.Default.pathKneeboardBuilder = txtKneeboardPath.Text; // path
             }
 
-            if (txtWordFile.Text != "")
+            if (txtCommunicationNoAwacsPath.Text != "")
             {
-                Properties.Settings.Default.filePathCommunicationNoAwacs = txtWordFile.Text;
+                Properties.Settings.Default.filePathCommunicationNoAwacs = txtCommunicationNoAwacsPath.Text;
+            }
+
+            if (txtCommunicationNoTmaPath.Text != "")
+            {
+                Properties.Settings.Default.filePathCommunicationNoTma = txtCommunicationNoTmaPath.Text;
+            }
+
+            if (txtCommunicationPath.Text != "")
+            {
+                Properties.Settings.Default.filePathCommunication = txtCommunicationPath.Text;
             }
 
             if (chkCommunicationHelp.Checked)
@@ -96,6 +108,38 @@ namespace DcsDataImporter
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBrowseCommunication_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = ".docm|*.docm";
+            ofd.Title = "Select the file path for the supplied file Communication.docm";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtCommunicationPath.Text = ofd.FileName; // only file name
+
+                if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
+                {
+                    chkCommunicationHelp.Enabled = true;
+                }
+            }
+        }
+
+        private void btnBrowseCommunicationNoTma_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = ".docm|*.docm";
+            ofd.Title = "Select the file path for the supplied file CommunicationNoTma.docm";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtCommunicationNoTmaPath.Text = ofd.FileName; // only file name
+
+                if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "")
+                {
+                    chkCommunicationHelp.Enabled = true;
+                }
+            }
         }
     }
 }
