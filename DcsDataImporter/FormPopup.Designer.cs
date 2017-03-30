@@ -73,7 +73,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 26);
             this.label1.TabIndex = 4;
-            this.label1.Text = "    - Supplied Word (.docm) file\r\n    - Kneeboard Builder application";
+            this.label1.Text = "    - Supplied Word (.docm) files\r\n    - Kneeboard Builder application";
             // 
             // label2
             // 
