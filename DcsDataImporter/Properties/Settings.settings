@@ -377,8 +377,11 @@
     <Setting Name="prevColNotesJSTARSupport" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="pathDocmFile" Type="System.String" Scope="User">
+    <Setting Name="filePathCommunicationNoAwacs" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommunicationHelp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

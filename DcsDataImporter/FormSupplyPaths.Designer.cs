@@ -1,6 +1,6 @@
 ﻿namespace DcsDataImporter
 {
-    partial class FormSupplyPaths
+    partial class FormSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -34,12 +34,14 @@
             this.btnBrowseKneeboardB = new System.Windows.Forms.Button();
             this.txtKneeboardPath = new System.Windows.Forms.TextBox();
             this.lblKneeboardPath = new System.Windows.Forms.Label();
-            this.btnNext = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.chkCommunicationHelp = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnBrowseDocm
             // 
-            this.btnBrowseDocm.Location = new System.Drawing.Point(260, 25);
+            this.btnBrowseDocm.Location = new System.Drawing.Point(260, 83);
             this.btnBrowseDocm.Name = "btnBrowseDocm";
             this.btnBrowseDocm.Size = new System.Drawing.Size(75, 23);
             this.btnBrowseDocm.TabIndex = 0;
@@ -50,7 +52,7 @@
             // txtWordFile
             // 
             this.txtWordFile.Enabled = false;
-            this.txtWordFile.Location = new System.Drawing.Point(12, 25);
+            this.txtWordFile.Location = new System.Drawing.Point(12, 83);
             this.txtWordFile.Name = "txtWordFile";
             this.txtWordFile.Size = new System.Drawing.Size(242, 20);
             this.txtWordFile.TabIndex = 87;
@@ -58,15 +60,15 @@
             // lblDocmPath
             // 
             this.lblDocmPath.AutoSize = true;
-            this.lblDocmPath.Location = new System.Drawing.Point(12, 9);
+            this.lblDocmPath.Location = new System.Drawing.Point(12, 67);
             this.lblDocmPath.Name = "lblDocmPath";
-            this.lblDocmPath.Size = new System.Drawing.Size(212, 13);
+            this.lblDocmPath.Size = new System.Drawing.Size(313, 13);
             this.lblDocmPath.TabIndex = 88;
-            this.lblDocmPath.Text = "Select path to supplied Word (.docm) file(s):";
+            this.lblDocmPath.Text = "Select path to supplied Word file CommunicationNoAwacs.docm:";
             // 
             // btnBrowseKneeboardB
             // 
-            this.btnBrowseKneeboardB.Location = new System.Drawing.Point(260, 64);
+            this.btnBrowseKneeboardB.Location = new System.Drawing.Point(260, 31);
             this.btnBrowseKneeboardB.Name = "btnBrowseKneeboardB";
             this.btnBrowseKneeboardB.Size = new System.Drawing.Size(75, 23);
             this.btnBrowseKneeboardB.TabIndex = 89;
@@ -77,7 +79,7 @@
             // txtKneeboardPath
             // 
             this.txtKneeboardPath.Enabled = false;
-            this.txtKneeboardPath.Location = new System.Drawing.Point(12, 64);
+            this.txtKneeboardPath.Location = new System.Drawing.Point(12, 31);
             this.txtKneeboardPath.Name = "txtKneeboardPath";
             this.txtKneeboardPath.Size = new System.Drawing.Size(242, 20);
             this.txtKneeboardPath.TabIndex = 90;
@@ -85,36 +87,58 @@
             // lblKneeboardPath
             // 
             this.lblKneeboardPath.AutoSize = true;
-            this.lblKneeboardPath.Location = new System.Drawing.Point(12, 48);
+            this.lblKneeboardPath.Location = new System.Drawing.Point(12, 15);
             this.lblKneeboardPath.Name = "lblKneeboardPath";
             this.lblKneeboardPath.Size = new System.Drawing.Size(218, 13);
             this.lblKneeboardPath.TabIndex = 88;
             this.lblKneeboardPath.Text = "Select installation path to Kneeboard Builder:";
             // 
-            // btnNext
+            // btnApply
             // 
-            this.btnNext.Location = new System.Drawing.Point(260, 105);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 91;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnApply.Location = new System.Drawing.Point(179, 165);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(75, 23);
+            this.btnApply.TabIndex = 91;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // FormSupplyPaths
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(259, 165);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 92;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // chkCommunicationHelp
+            // 
+            this.chkCommunicationHelp.AutoSize = true;
+            this.chkCommunicationHelp.Location = new System.Drawing.Point(12, 128);
+            this.chkCommunicationHelp.Name = "chkCommunicationHelp";
+            this.chkCommunicationHelp.Size = new System.Drawing.Size(302, 17);
+            this.chkCommunicationHelp.TabIndex = 93;
+            this.chkCommunicationHelp.Text = "Create kneeboard pages for DCS with communication help";
+            this.chkCommunicationHelp.UseVisualStyleBackColor = true;
+            // 
+            // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 140);
-            this.Controls.Add(this.btnNext);
+            this.ClientSize = new System.Drawing.Size(346, 199);
+            this.Controls.Add(this.chkCommunicationHelp);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtKneeboardPath);
             this.Controls.Add(this.btnBrowseKneeboardB);
             this.Controls.Add(this.lblKneeboardPath);
             this.Controls.Add(this.lblDocmPath);
             this.Controls.Add(this.txtWordFile);
             this.Controls.Add(this.btnBrowseDocm);
-            this.Name = "FormSupplyPaths";
-            this.Text = "Supply paths";
+            this.Name = "FormSettings";
+            this.Text = "Settings";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +152,8 @@
         private System.Windows.Forms.Button btnBrowseKneeboardB;
         private System.Windows.Forms.TextBox txtKneeboardPath;
         private System.Windows.Forms.Label lblKneeboardPath;
-        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox chkCommunicationHelp;
     }
 }

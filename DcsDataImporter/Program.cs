@@ -16,7 +16,7 @@ namespace DcsDataImporter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUserInput());
+            Application.Run(new Welcome());
         }
     }
 }

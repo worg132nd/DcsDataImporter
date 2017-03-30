@@ -1526,12 +1526,24 @@ namespace DcsDataImporter.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string pathDocmFile {
+        public string filePathCommunicationNoAwacs {
             get {
-                return ((string)(this["pathDocmFile"]));
+                return ((string)(this["filePathCommunicationNoAwacs"]));
             }
             set {
-                this["pathDocmFile"] = value;
+                this["filePathCommunicationNoAwacs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CommunicationHelp {
+            get {
+                return ((bool)(this["CommunicationHelp"]));
+            }
+            set {
+                this["CommunicationHelp"] = value;
             }
         }
     }

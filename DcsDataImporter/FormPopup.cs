@@ -19,15 +19,14 @@ namespace DcsDataImporter
 
         private void btnNo_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.CommunicationHelp = false;
             this.Close();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.CommunicationHelp = true;
             this.Close();
-            this.Hide();
-            var form = new FormSupplyPaths();
-            form.ShowDialog();
         }
     }
 }
