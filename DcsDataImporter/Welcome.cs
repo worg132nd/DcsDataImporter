@@ -15,6 +15,7 @@ namespace DcsDataImporter
         public Welcome()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btnBuild_Click(object sender, EventArgs e)

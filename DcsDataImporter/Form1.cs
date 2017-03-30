@@ -675,6 +675,9 @@ namespace DcsDataImporter
                     txtInternalChannel.Text = tuple.getChannel();
                     txtInternalFreq.Text = tuple.getFreq();
                     txtInternalPreset.Text = tuple.getPreset();
+                } else
+                {
+                    txtInternalChannel.Text = mainCh;
                 }
             }
             
@@ -1495,12 +1498,15 @@ namespace DcsDataImporter
         {
             // TODO: On clicking submit pop open a file dialoge window that asks you to select the communications file if it is not set
 
-            string inputPath = @"C:\Users\blue\Documents\-= 132nd =-\Kneeboard\Creating the kneeboard\Communications\-= Latest and current updated =-\";
-            string fnIn = "Communications.docm";
+            //string inputPath = @"C:\Users\blue\Documents\-= 132nd =-\Kneeboard\Creating the kneeboard\Communications\-= Latest and current updated =-\";
+            string inputPath = System.IO.Path.GetDirectoryName(Properties.Settings.Default.filePathCommunicationNoAwacs);
+            
+            string fnIn = "Communications.docm"; // ToDo: Need to add this file as well and get it from Properties.Settings.Default...
 
             // Use other .docm file if awacs is not checked - Remember to remove aci in kneeboard builder! (Do not remove aco as it still has ifrn)
             if (chkAwacs.Checked == false) {
-                fnIn = "CommunicationsNoAwacs.docm";
+                //fnIn = "CommunicationsNoAwacs.docm";
+                fnIn = System.IO.Path.GetFileName(Properties.Settings.Default.filePathCommunicationNoAwacs);
                 /* TBD: Also remove COM ACO and COM ACI from the documents saved. Need to renumber all consecutive images.
             }
 
@@ -1522,14 +1528,14 @@ namespace DcsDataImporter
             
             try
             {
-                File.Copy(inputPath + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
+                File.Copy(inputPath + @"\" + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
             } catch (DirectoryNotFoundException)
             {
                 MessageBox.Show("Cannot find the directory:\n" + inputPath + "\n\nClosing application", "Error: Directory not found");
                 Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
             } catch (FileNotFoundException)
             {
-                MessageBox.Show("Cannot find the file:\n" + inputPath + fnIn + "\n\nClosing application", "Error: File not found");
+                MessageBox.Show("Cannot find the file:\n" + inputPath + @"\" + fnIn + "\n\nClosing application", "Error: File not found");
                 Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
             }
 

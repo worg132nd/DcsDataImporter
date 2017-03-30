@@ -15,6 +15,7 @@ namespace DcsDataImporter
         public FormPopup()
         {
             InitializeComponent();
+            this.CenterToParent();
         }
 
         private void btnNo_Click(object sender, EventArgs e)

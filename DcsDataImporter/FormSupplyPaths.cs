@@ -14,6 +14,7 @@ namespace DcsDataImporter
     {
         public FormSettings()
         {
+            this.CenterToParent();
             InitializeComponent();
             txtKneeboardPath.Text = Properties.Settings.Default.pathKneeboardBuilder;
             txtWordFile.Text = Properties.Settings.Default.filePathCommunicationNoAwacs;

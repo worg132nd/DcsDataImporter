@@ -100,6 +100,7 @@ namespace DcsDataImporter
 
         public frmUserInput()
         {
+            this.CenterToParent();
             InitializeComponent();
 
             if (!Properties.Settings.Default.prevMsnNr.Equals("") && Properties.Settings.Default.prevMsnNr != null)
