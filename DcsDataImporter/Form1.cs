@@ -250,7 +250,6 @@ namespace DcsDataImporter
             initDataGridView(dgvAirbase, 3);
             initDataGridView(dgvFlight, 4);
             initDataGridView(dgvSupport, 6);
-
             initSupport();
         }
 
@@ -291,36 +290,100 @@ namespace DcsDataImporter
         {
             buildList();
 
+            loadFirstLineOfMDC();
+            loadSelectedAirbases();
+            loadTimes();
+            loadDGVAirbases();
+            loadAwacs();
+            loadTacp();
+            loadIfrn();
+            
+            txtCardinal.Text = Properties.Settings.Default.prevTxtCardinal;
+
+            loadTextBoxes();
+            loadLoadout();
+            loadAuthentication();
+            loadInternalFrequencies();
+            loadFuel();
+            loadDGVSupport();
+
+            if (Properties.Settings.Default.prevChkTma == "true") chkTma.Checked = true;
+            else chkTma.Checked = false;
+
+            /* TBD clean all presets that are 0 */
+        }
+
+        /* Loads textbox data like Metar and Amplification from last form */
+        private void loadTextBoxes()
+        {
+            txtAmp.Text = Properties.Settings.Default.prevTxtAmp;
+            txtMetar.Text = Properties.Settings.Default.prevTxtMetar;
+        }
+
+        /* Loads loadout data from last form */
+        private void loadLoadout()
+        {
+            txtLoadout.Text = Properties.Settings.Default.prevTxtLoadout;
+            if (Properties.Settings.Default.prevChkDefault == "true") chkDefault.Checked = true;
+            else chkDefault.Checked = false;
+        }
+
+        /* Loads takeoff and landing time data from last form */
+        private void loadTimes()
+        {
+            txtTakeoffTime.Text = Properties.Settings.Default.prevTxtTakeoffTime;
+            txtLandingTime.Text = Properties.Settings.Default.prevTxtLandingTime;
+        }
+
+        /* Loads fuel settings (JOKER and BINGO) from last form */
+        private void loadFuel()
+        {
+            txtJoker.Text = Properties.Settings.Default.prevTxtJoker;
+            txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
+        }
+
+        /* Loads IFRN data from last form */
+        private void loadIfrn()
+        {
+            txtIfrnFreq.Text = Properties.Settings.Default.prevTxtIfrnFreq;
+            txtIfrnChannel.Text = Properties.Settings.Default.prevTxtIfrnChannel;
+            txtIfrnPreset.Text = Properties.Settings.Default.prevTxtIfrnPreset;
+        }
+
+        /* Loads selected airbases from last form */
+        private void loadSelectedAirbases()
+        {
+            /* AIRPORT */
+            cmbAirbaseDep.Text = Properties.Settings.Default.prevCmbAirbaseDep;
+            cmbAirbaseArr.Text = Properties.Settings.Default.prevCmbAirbaseArr;
+            cmbAirbaseAlt.Text = Properties.Settings.Default.prevCmbAirbaseAlt;
+        }
+
+        /* Loads first line of the MDC data from last form */
+        private void loadFirstLineOfMDC()
+        {
             txtCallsign.Text = Properties.Settings.Default.prevTxtCallsign;
             cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
             txtMsnNr.Text = Properties.Settings.Default.prevTxtMsnNr;
             txtTasking.Text = Properties.Settings.Default.prevTxtTasking;
             txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
+        }
 
-            /* AIRPORT */
-            cmbAirbaseDep.Text = Properties.Settings.Default.prevCmbAirbaseDep;
-            cmbAirbaseArr.Text = Properties.Settings.Default.prevCmbAirbaseArr;
-            cmbAirbaseAlt.Text = Properties.Settings.Default.prevCmbAirbaseAlt;
+        /* Loads authentication data from last form (TBD: DELETE) */
+        private void loadAuthentication()
+        {
+            /* AUTHENTICATION */
+            txtAwacsChallenge.Text = Properties.Settings.Default.prevTxtAwacsChallenge;
+            txtAwacsResponse.Text = Properties.Settings.Default.prevTxtAwacsResponse;
+            txtTacpChallenge.Text = Properties.Settings.Default.prevTxtTacpChallenge;
+            txtTacpResponse.Text = Properties.Settings.Default.prevTxtTacpResponse;
+            txtTacpAbortChallenge.Text = Properties.Settings.Default.prevTxtTacpAbortChallenge;
+            txtTacpAbortResponse.Text = Properties.Settings.Default.prevTxtTacpAbortResponse;
+        }
 
-            txtTakeoffTime.Text = Properties.Settings.Default.prevTxtTakeoffTime;
-
-            loadDGVAirbases();
-
-            /* AWACS */
-            if (Properties.Settings.Default.prevChkAwacs == "true") chkAwacs.Checked = true;
-            else chkAwacs.Checked = false;
-
-            txtAwacsCallsign.Text = Properties.Settings.Default.prevTxtAwacsCallsign;
-            txtAwacsFreq.Text = Properties.Settings.Default.prevTxtAwacsFreq;
-            txtAwacsChannel.Text = Properties.Settings.Default.prevTxtAwacsChannel;
-            txtAwacsPreset.Text = Properties.Settings.Default.prevTxtAwacsPreset;
-            txtAwacsCp.Text = Properties.Settings.Default.prevTxtAwacsCp;
-
-            txtAwacsBackupFreq.Text = Properties.Settings.Default.prevTxtAwacsBackupFreq;
-            txtAwacsBackupChannel.Text = Properties.Settings.Default.prevTxtAwacsBackupChannel;
-            txtAwacsBackupPreset.Text = Properties.Settings.Default.prevTxtAwacsBackupPreset;
-
-            /* TACP */
+        /* Loads TACP (meaning JTAC and FAC(A)) data from last form */
+        private void loadTacp()
+        {
             if (Properties.Settings.Default.prevChkTacp == "true") chkTacp.Checked = true;
             else chkTacp.Checked = false;
 
@@ -333,51 +396,34 @@ namespace DcsDataImporter
             txtTacpBackupFreq.Text = Properties.Settings.Default.prevTxtTacpBackupFreq;
             txtTacpBackupChannel.Text = Properties.Settings.Default.prevTxtTacpBackupChannel;
             txtTacpBackupPreset.Text = Properties.Settings.Default.prevTxtTacpBackupPreset;
+        }
 
-            /* IFRN */
-            txtIfrnFreq.Text = Properties.Settings.Default.prevTxtIfrnFreq;
-            txtIfrnChannel.Text = Properties.Settings.Default.prevTxtIfrnChannel;
-            txtIfrnPreset.Text = Properties.Settings.Default.prevTxtIfrnPreset;
+        /* Loads AWACS data from last form */
+        private void loadAwacs()
+        {
+            if (Properties.Settings.Default.prevChkAwacs == "true") chkAwacs.Checked = true;
+            else chkAwacs.Checked = false;
 
-            /* AMP */
-            txtAmp.Text = Properties.Settings.Default.prevTxtAmp;
+            txtAwacsCallsign.Text = Properties.Settings.Default.prevTxtAwacsCallsign;
+            txtAwacsFreq.Text = Properties.Settings.Default.prevTxtAwacsFreq;
+            txtAwacsChannel.Text = Properties.Settings.Default.prevTxtAwacsChannel;
+            txtAwacsPreset.Text = Properties.Settings.Default.prevTxtAwacsPreset;
+            txtAwacsCp.Text = Properties.Settings.Default.prevTxtAwacsCp;
 
-            txtCardinal.Text = Properties.Settings.Default.prevTxtCardinal;
-            txtLoadout.Text = Properties.Settings.Default.prevTxtLoadout;
+            txtAwacsBackupFreq.Text = Properties.Settings.Default.prevTxtAwacsBackupFreq;
+            txtAwacsBackupChannel.Text = Properties.Settings.Default.prevTxtAwacsBackupChannel;
+            txtAwacsBackupPreset.Text = Properties.Settings.Default.prevTxtAwacsBackupPreset;
+        }
 
-            if (Properties.Settings.Default.prevChkDefault == "true") chkDefault.Checked = true;
-            else chkDefault.Checked = false;
-
-            /* AUTHENTICATION */
-            txtAwacsChallenge.Text = Properties.Settings.Default.prevTxtAwacsChallenge;
-            txtAwacsResponse.Text = Properties.Settings.Default.prevTxtAwacsResponse;
-            txtTacpChallenge.Text = Properties.Settings.Default.prevTxtTacpChallenge;
-            txtTacpResponse.Text = Properties.Settings.Default.prevTxtTacpResponse;
-            txtTacpAbortChallenge.Text = Properties.Settings.Default.prevTxtTacpAbortChallenge;
-            txtTacpAbortResponse.Text = Properties.Settings.Default.prevTxtTacpAbortResponse;
-
-            /* INTERNAL */
+        /* Loads internal frequency data from last form */
+        private void loadInternalFrequencies()
+        {
             txtInternalFreq.Text = Properties.Settings.Default.prevTxtInternalFreq;
             txtInternalChannel.Text = Properties.Settings.Default.prevTxtInternalChannel;
             txtInternalPreset.Text = Properties.Settings.Default.prevTxtInternalPreset;
             txtInternalBackupFreq.Text = Properties.Settings.Default.prevTxtInternalBackupFreq;
             txtInternalBackupChannel.Text = Properties.Settings.Default.prevTxtInternalBackupChannel;
             txtInternalBackupPreset.Text = Properties.Settings.Default.prevTxtInternalBackupPreset;
-
-            txtMetar.Text = Properties.Settings.Default.prevTxtMetar;
-
-            txtJoker.Text = Properties.Settings.Default.prevTxtJoker;
-            txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
-
-            txtLandingTime.Text = Properties.Settings.Default.prevTxtLandingTime;
-
-            loadDGVSupport();
-
-            if (Properties.Settings.Default.prevChkTma == "true") chkTma.Checked = true;
-            else chkTma.Checked = false;
-
-            /* TBD clean all presets that are 0 */
-
         }
 
         private void buildList()
@@ -567,6 +613,27 @@ namespace DcsDataImporter
             if (cmbNrOfAc.Text == "3") txtLoadout.Text = "6xAGM-65D, 6xGBU-12, 6xGBU-38, 7xWP";
             if (cmbNrOfAc.Text == "4") txtLoadout.Text = "8xAGM-65D, 8xGBU-12, 8xGBU-38, 7xWP";
             chkDefault.Checked = true;
+        }
+
+        /* TODO: Implement. Simplification of the 3 methods.
+         * This method is not actually used
+         */
+        private void setRadio(string type, string mainCh, string backupCh)
+        {
+            if (type.ToUpper().Equals("AWACS"))
+            {
+                // run AWACS version
+            }
+
+            if (type.ToUpper().Equals("TACP"))
+            {
+                // run TACP version
+            }
+
+            if (type.ToLower().Equals("internal"))
+            {
+                // run the internal version
+            }
         }
 
         private void setAwacsRadio(string mainCh, string backupCh)
