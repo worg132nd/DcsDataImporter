@@ -42,21 +42,6 @@ using iTextSharp.text.pdf.parser;
  * Test programmet på en annen maskin for å se hva som feiler. Bare kopier exe fila og se hvordan det går.
  * 
  * Add a line with TMA/airport: <TMA1>, <TMA2>, <TMA3>, <TMA4>, <TMA5>, <TMA1>, <ENTRY/EXIT1>, <ENTRY/EXIT2>, <ENTRY/EXIT3>, <NAV1>, <NAV2>, <NAV3> etc.
- * Remember that we can have three airports (at most). DEP, ARR, and ALT.
- * 
- * Need to update the flightplan from five flightplans to one flightplan in exec format with many columns of information as described below
- * 
- * Add tanker
- * 
- * Add divert airfield (ALT) and separate airfields for takeoff (DEP) and landing (ARR) 
- * 
- * Add excel format for flightplans with WPT, Name, NavPoint/Coordinates, Altitude, Mach/GS, Formation Mach/GS
- * 
- * Add TACAN for members in the flight (ie. lead 10Y, wingman 74Y)
- * 
- * Add possibility to SAVE the filled out MDC, so it can be loaded later
- * 
- * Add range frequency for the different training ranges
  * 
  * Lag import funksjonalitet for å laste ned ATO fra websiden vår
  * 
@@ -74,15 +59,7 @@ using iTextSharp.text.pdf.parser;
  * 
  * Kan ha checkbox bak runways som krysses av hvis aktiv runway. Så dersom den krysses av så velges automatisk riktig CP eller flightplan basert på retning.
  * 
- * Last inn alle taskings
- * 
  * Mulighet til å resette paths for både ato og for preset-pdf (hvis man f.eks. bytter installdirectory på kneeboardbuilder)
- * 
- * Legg til en beskrivende tittel på dialogboksen som spør etter ato
- * 
- * Legg til popup-bokser hvor man må trykke OK før man skal åpne en fil
- * 
- * TODO: Check that directory exists, and if not, create it before saving
  * 
  * Ha en mulighet til å IKKE automatisk fylle ut, eller overskrive det som har blitt fylt ut
  * 
@@ -161,7 +138,7 @@ namespace DcsDataImporter
             if (standardTraining) standardTrainingSet = true;
             init();
             loadPrevMission();
-        }
+        }    
 
         /* Constructor when ATO is filled out */
         public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime)
@@ -174,6 +151,7 @@ namespace DcsDataImporter
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
 
+            /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
             setAirport(airbaseDep);
             setAirport(airbaseArr);
@@ -194,6 +172,7 @@ namespace DcsDataImporter
             txtTacpCp.Text = TacpCp;
             setTacpCp(TacpCp);
             txtLocation.Text = location;
+            txtAmp.Text = amplification;
 
             // Set correct tasking
             if (tasking.Equals("TR"))
@@ -204,8 +183,6 @@ namespace DcsDataImporter
             {
                 txtTasking.Text = tasking;
             }
-
-            txtAmp.Text = amplification;
 
             if (!takeoffTime.Equals("-") && !takeoffTime.Equals(""))
             {
@@ -268,25 +245,24 @@ namespace DcsDataImporter
             initDataGridViews();
         }
 
-        private void initAirbase()
+        private void initDataGridViews()
         {
-            dgvAirbase.RowCount = 3;
-            dgvAirbase.DefaultCellStyle.SelectionBackColor = dgvAirbase.DefaultCellStyle.BackColor;
-            dgvAirbase.DefaultCellStyle.SelectionForeColor = dgvAirbase.DefaultCellStyle.ForeColor;
+            initDataGridView(dgvAirbase, 3);
+            initDataGridView(dgvFlight, 4);
+            initDataGridView(dgvSupport, 6);
+
+            initSupport();
         }
 
-        private void initFlight()
+        private void initDataGridView(DataGridView dgv, int rowCount)
         {
-            dgvFlight.RowCount = 4;
-            dgvFlight.DefaultCellStyle.SelectionBackColor = dgvFlight.DefaultCellStyle.BackColor;
-            dgvFlight.DefaultCellStyle.SelectionForeColor = dgvFlight.DefaultCellStyle.ForeColor;
+            dgv.RowCount = rowCount;
+            dgv.DefaultCellStyle.SelectionBackColor = dgv.DefaultCellStyle.BackColor;
+            dgv.DefaultCellStyle.SelectionForeColor = dgv.DefaultCellStyle.ForeColor;
         }
 
         private void initSupport()
         {
-            dgvSupport.RowCount = 6;
-            dgvSupport.DefaultCellStyle.SelectionBackColor = dgvSupport.DefaultCellStyle.BackColor;
-            dgvSupport.DefaultCellStyle.SelectionForeColor = dgvSupport.DefaultCellStyle.ForeColor;
 
             int i = 0;
             while (i < dgvSupport.Rows.Count)
@@ -402,13 +378,6 @@ namespace DcsDataImporter
 
             /* TBD clean all presets that are 0 */
 
-        }
-
-        private void initDataGridViews()
-        {
-            initAirbase();
-            initFlight();
-            initSupport();
         }
 
         private void buildList()
