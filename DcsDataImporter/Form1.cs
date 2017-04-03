@@ -168,9 +168,9 @@ namespace DcsDataImporter
             txtTacpAbortResponse.Text = X;
             /* REMOVE UNTIL HERE */
             txtTacpCallsign.Text = Tacp;
-            setTacpCallsign(Tacp);
+            setTacpDgvCallsign(Tacp);
             txtTacpCp.Text = TacpCp;
-            setTacpCp(TacpCp);
+            setTacpDgvCp(TacpCp);
             txtLocation.Text = location;
             txtAmp.Text = amplification;
 
@@ -195,7 +195,7 @@ namespace DcsDataImporter
                 setDefaultLoadout();
                 txtCardinal.Text = "North"; //default
                 txtTacpCp.Text = "MUKHRANI"; //default
-                setTacpCp("MUKHRANI");
+                setTacpDgvCp("MUKHRANI");
                 disableAwacs();
             }
 
@@ -234,9 +234,13 @@ namespace DcsDataImporter
                 txtIfrnChannel.Text = tuple.getChannel();
             }
 
-            setAwacsRadio(formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
+            setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
+            setRadio("TACP", formatChannel(TacpChn), formatChannel(TacpBackupChn));
+            setRadio("internal", formatChannel(internalFreq), formatChannel(internalBackupFreq));
+
+            /* setAwacsRadio(formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
             setTacpRadio(formatChannel(TacpChn), formatChannel(TacpBackupChn));
-            setInternalRadio(formatChannel(internalFreq), formatChannel(internalBackupFreq));
+            setInternalRadio(formatChannel(internalFreq), formatChannel(internalBackupFreq));*/
         }
 
         private void init()
@@ -502,56 +506,56 @@ namespace DcsDataImporter
             return digit;
         }
 
-        private void setTacpCallsign(string callsign)
+        private void setTacpDgvCallsign(string callsign)
         {
             if (callsign != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colCallsignSupport"].Value = callsign;
             }
         }
 
-        private void setTacpFreq(string freq)
+        private void setTacpDgvFreq(string freq)
         {
             if (freq != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colFreqSupport"].Value = freq;
             }
         }
 
-        private void setTacpChannel(string channel)
+        private void setTacpDgvChannel(string channel)
         {
             if (channel != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colChannelSupport"].Value = channel;
             }
         }
 
-        private void setTacpPreset(string preset)
+        private void setTacpDgvPreset(string preset)
         {
             if (preset != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colPresetSupport"].Value = preset;
             }
         }
 
-        private void setTacpBackup(string backup)
+        private void setTacpDgvBackup(string backup)
         {
             if (backup != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colBackupSupport"].Value = backup;
             }
         }
 
-        private void setTacpCp(string cp)
+        private void setTacpDgvCp(string cp)
         {
             if (cp != null)
             {
-                var row = dgvSupport.Rows[0];
+                var row = dgvSupport.Rows[2];
                 row.Cells["colNotesSupport"].Value = "Contact point " + cp;
             }
         }
@@ -616,119 +620,168 @@ namespace DcsDataImporter
         }
 
         /* TODO: Implement. Simplification of the 3 methods.
-         * This method is not actually used
+         * This method is not actually used YET
          */
         private void setRadio(string type, string mainCh, string backupCh)
         {
-            if (type.ToUpper().Equals("AWACS"))
-            {
-                // run AWACS version
-            }
+            const bool BACKUP = true;
+            const bool MAIN = false;
 
-            if (type.ToUpper().Equals("TACP"))
-            {
-                // run TACP version
-            }
-
-            if (type.ToLower().Equals("internal"))
-            {
-                // run the internal version
-            }
-        }
-
-        private void setAwacsRadio(string mainCh, string backupCh)
-        {
-            if (mainCh != null && mainCh != "")
-            {
-                Tuple tuple = getTuple(mainCh);
-                if (tuple != null)
-                {
-                    txtAwacsChannel.Text = tuple.getChannel();
-                    txtAwacsFreq.Text = tuple.getFreq();
-                    txtAwacsPreset.Text = tuple.getPreset();
-                }
-            }
-            
-            if (backupCh != null && backupCh != "")
-            {
-                Tuple tuple = getTuple(backupCh);
-                if (tuple != null)
-                {
-                    txtAwacsBackupChannel.Text = tuple.getChannel();
-                    txtAwacsBackupFreq.Text = tuple.getFreq();
-                    txtAwacsBackupPreset.Text = tuple.getPreset();
-                }
-                else
-                {
-                    txtAwacsBackupChannel.Text = backupCh;
-                }
-            }
-        }
-
-        private void setTacpRadio(string mainCh, string backupCh)
-        {
-            if (mainCh != null && mainCh != "")
-            {
-                Tuple tuple = getTuple(mainCh);
-                if (tuple != null)
-                {
-                    txtTacpChannel.Text = tuple.getChannel();
-                    txtTacpFreq.Text = tuple.getFreq();
-                    txtTacpPreset.Text = tuple.getPreset();
-
-                    setTacpChannel(tuple.getChannel());
-                    setTacpFreq(tuple.getFreq());
-                    setTacpPreset(tuple.getPreset());
-                }
-            }
-            
-            if (backupCh != null && backupCh != "") {
-                Tuple tuple = getTuple(backupCh);
-                if (tuple != null)
-                {
-                    txtTacpBackupChannel.Text = tuple.getChannel();
-                    txtTacpBackupFreq.Text = tuple.getFreq();
-                    txtTacpBackupPreset.Text = tuple.getPreset();
-
-                    setTacpBackup(tuple.getFreq());
-                }
-                else
-                {
-                    txtTacpBackupChannel.Text = backupCh;
-
-                    setTacpBackup(backupCh);
-                }
-            }
-        }
-
-        private void setInternalRadio(string mainCh, string backupCh)
-        {
             if (mainCh != null)
             {
                 Tuple tuple = getTuple(mainCh);
                 if (tuple != null)
                 {
-                    txtInternalChannel.Text = tuple.getChannel();
-                    txtInternalFreq.Text = tuple.getFreq();
-                    txtInternalPreset.Text = tuple.getPreset();
-                } else
+                    setRadioAccordingToType(type, tuple, MAIN);
+                }
+                else
                 {
-                    txtInternalChannel.Text = mainCh;
+                    setOnlyChannel(type, mainCh, MAIN);
                 }
             }
-            
+
             if (backupCh != null)
             {
                 Tuple tuple = getTuple(backupCh);
                 if (tuple != null)
                 {
-                    txtInternalBackupChannel.Text = tuple.getChannel();
-                    txtInternalBackupFreq.Text = tuple.getFreq();
-                    txtInternalBackupPreset.Text = tuple.getPreset();
+                    setRadioAccordingToType(type, tuple, BACKUP);
                 }
                 else
                 {
-                    txtInternalBackupChannel.Text = backupCh;
+                    // set radio channel if no hit in list
+                    setOnlyChannel(type, backupCh, BACKUP); // e.g. GREEN 1
+                }
+            }
+        }
+
+        private void setOnlyChannel(string type, string channel, bool backup)
+        {
+            if (type.ToUpper().Equals("AWACS"))
+            {
+                if (backup)
+                {
+                    txtAwacsBackupChannel.Text = channel;
+                } else
+                {
+                    txtAwacsChannel.Text = channel;
+                }
+            }
+
+            if (type.ToUpper().Equals("TACP"))
+            {
+                if (backup)
+                {
+                    txtTacpBackupChannel.Text = channel;
+                    setTacpDgvBackup(channel);
+                }
+                else
+                {
+                    txtTacpChannel.Text = channel;
+                    setTacpDgvChannel(channel);
+                }
+            }
+
+            if (type.ToLower().Equals("internal"))
+            {
+                txtInternalBackupChannel.Text = channel;
+            }
+        }
+
+        /* Set AWACS main radio frequency values in the form */
+        private void setAwacsMain(Tuple tuple)
+        {
+            txtAwacsChannel.Text = tuple.getChannel();
+            txtAwacsFreq.Text = tuple.getFreq();
+            txtAwacsPreset.Text = tuple.getPreset();
+        }
+
+        /* Set AWACS backup radio frequency values in the form */
+        private void setAwacsBackup(Tuple tuple)
+        {
+            txtAwacsBackupChannel.Text = tuple.getChannel();
+            txtAwacsBackupFreq.Text = tuple.getFreq();
+            txtAwacsBackupPreset.Text = tuple.getPreset();
+        }
+
+        /* Set TACP main radio frequency values in the form, both textboxes and data grid views */
+        private void setTacpMain(Tuple tuple)
+        {
+            txtTacpChannel.Text = tuple.getChannel();
+            txtTacpFreq.Text = tuple.getFreq();
+            txtTacpPreset.Text = tuple.getPreset();
+
+            // set the dataGridView table as well?
+            setTacpDgvChannel(tuple.getChannel()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
+            setTacpDgvFreq(tuple.getFreq()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
+            setTacpDgvPreset(tuple.getPreset()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
+        }
+
+        /* Set TACP backup radio frequency values in the form */
+        private void setTacpBackup(Tuple tuple)
+        {
+            txtTacpBackupChannel.Text = tuple.getChannel();
+            txtTacpBackupFreq.Text = tuple.getFreq();
+            txtTacpBackupPreset.Text = tuple.getPreset();
+
+            setTacpDgvBackup(tuple.getFreq()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
+        }
+
+        /* Set internal main radio frequency values in the form */
+        private void setInternalMain(Tuple tuple)
+        {
+            txtInternalChannel.Text = tuple.getChannel();
+            txtInternalFreq.Text = tuple.getFreq();
+            txtInternalPreset.Text = tuple.getPreset();
+        }
+
+        /* Set internal backup radio frequency values in the form */
+        private void setInternalBackup(Tuple tuple)
+        {
+            txtInternalBackupChannel.Text = tuple.getChannel();
+            txtInternalBackupFreq.Text = tuple.getFreq();
+            txtInternalBackupPreset.Text = tuple.getPreset();
+        }
+
+        /* Sets radio according to specified type for AWACS, TACP and internal radio frequency values.
+         * Sets either main or backup radio values based on parameter backup
+         */
+        private void setRadioAccordingToType(string type, Tuple tuple, bool backup)
+        {
+            /* AWACS frequencies */
+            if (type.ToUpper().Equals("AWACS"))
+            {
+                if (backup) // Set backup frequencies
+                {
+                    setAwacsBackup(tuple);
+                } else // Set main frequencies
+                {
+                    setAwacsMain(tuple);
+                }
+            }
+
+            /* TAC frequencies */
+            if (type.ToUpper().Equals("TACP"))
+            {
+
+                if (backup) // Setting backup frequencies
+                {
+                    setTacpBackup(tuple);
+                } else // Setting main frequencies
+                {
+                    setTacpMain(tuple);
+                }
+            }
+
+            /* INTERNAL FREQUENCIES */
+            if (type.ToLower().Equals("internal"))
+            {
+                if (backup) // Setting backup frequencies
+                {
+                    setInternalBackup(tuple);
+                } else // Setting main frequencies
+                {
+                    setInternalMain(tuple);
                 }
             }
         }

@@ -236,7 +236,7 @@ namespace DcsDataImporter
                                 ControlaPrimaryFrequency = words[4];
                                 ControlaSecondaryFrequency = words[5];
                             }
-                            else if (words[0] == "JTAC")
+                            else if (words[0] == "TAC")
                             {
                                 // Set JTAC data
                                 JtacType = words[1];
