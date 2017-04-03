@@ -27,6 +27,9 @@ using iTextSharp.text.pdf.parser;
  */
 
 /* TODO
+ * 
+ * Add tanker ATO import functionality (ARINFO)
+ * 
  * --------------------------------------------------------------------------------------------------------------------------------------
  * Must build up a group of images for standard training and another for mission (don't need multiple groups in the kneeboard builder!)
  * This will make integration with the kneeboard builder much better.
@@ -627,7 +630,7 @@ namespace DcsDataImporter
             const bool BACKUP = true;
             const bool MAIN = false;
 
-            if (mainCh != null)
+            if (mainCh != null && mainCh != "")
             {
                 Tuple tuple = getTuple(mainCh);
                 if (tuple != null)
@@ -640,7 +643,7 @@ namespace DcsDataImporter
                 }
             }
 
-            if (backupCh != null)
+            if (backupCh != null && backupCh != "")
             {
                 Tuple tuple = getTuple(backupCh);
                 if (tuple != null)
