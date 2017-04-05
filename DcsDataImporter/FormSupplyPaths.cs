@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DcsDataImporter
 {
@@ -17,18 +18,16 @@ namespace DcsDataImporter
             this.CenterToParent();
             InitializeComponent();
             txtKneeboardPath.Text = Properties.Settings.Default.pathKneeboardBuilder;
-            txtCommunicationNoAwacsPath.Text = Properties.Settings.Default.filePathCommunicationNoAwacs;
             txtCommunicationPath.Text = Properties.Settings.Default.filePathCommunication;
-            txtCommunicationNoTmaPath.Text = Properties.Settings.Default.filePathCommunicationNoTma;
 
-            chkCommunicationHelp.Enabled = false;
-
+            /* Load chkCommunicationHelp checkbox */
+            chkCommunicationHelp.Checked = false;
             if (Properties.Settings.Default.CommunicationHelp)
             {
                 chkCommunicationHelp.Checked = true;
             }
 
-            if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
+            if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
             {
                 chkCommunicationHelp.Enabled = true;
             }
@@ -37,7 +36,7 @@ namespace DcsDataImporter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            /* OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = ".docm|*.docm";
             ofd.Title = "Select the file path for the supplied file CommunicationNoAwacs.docm";
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -48,10 +47,29 @@ namespace DcsDataImporter
                 {
                     chkCommunicationHelp.Enabled = true;
                 }
+            }*/
+
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string[] files = Directory.GetFiles(fbd.SelectedPath);
+
+                    System.Windows.Forms.MessageBox.Show(fbd.SelectedPath + "\nFiles found: " + files.Length.ToString(), "Message");
+                    
+                    if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
+                    {
+                        chkCommunicationHelp.Enabled = true;
+                    }
+
+                    Properties.Settings.Default.filePathCommunication = fbd.SelectedPath;
+                }
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnBrowseKneeboard_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = ".exe|*.exe";
@@ -60,31 +78,21 @@ namespace DcsDataImporter
             {
                 txtKneeboardPath.Text = ofd.FileName; // path
 
-                if (txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
+                if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
                 {
                     chkCommunicationHelp.Enabled = true;
                 }
             }
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnApply_Click(object sender, EventArgs e)
         {
-            if (txtKneeboardPath.Text != "")
+            if (!string.IsNullOrEmpty(txtKneeboardPath.Text))
             {
                 Properties.Settings.Default.pathKneeboardBuilder = txtKneeboardPath.Text; // path
             }
-
-            if (txtCommunicationNoAwacsPath.Text != "")
-            {
-                Properties.Settings.Default.filePathCommunicationNoAwacs = txtCommunicationNoAwacsPath.Text;
-            }
-
-            if (txtCommunicationNoTmaPath.Text != "")
-            {
-                Properties.Settings.Default.filePathCommunicationNoTma = txtCommunicationNoTmaPath.Text;
-            }
-
-            if (txtCommunicationPath.Text != "")
+            
+            if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
             {
                 Properties.Settings.Default.filePathCommunication = txtCommunicationPath.Text;
             }
@@ -119,23 +127,7 @@ namespace DcsDataImporter
             {
                 txtCommunicationPath.Text = ofd.FileName; // only file name
 
-                if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
-                {
-                    chkCommunicationHelp.Enabled = true;
-                }
-            }
-        }
-
-        private void btnBrowseCommunicationNoTma_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ".docm|*.docm";
-            ofd.Title = "Select the file path for the supplied file CommunicationNoTma.docm";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtCommunicationNoTmaPath.Text = ofd.FileName; // only file name
-
-                if (txtKneeboardPath.Text != "" && txtCommunicationNoAwacsPath.Text != "" && txtCommunicationPath.Text != "")
+                if (!string.IsNullOrEmpty(txtKneeboardPath.Text) && !string.IsNullOrEmpty(txtCommunicationPath.Text))
                 {
                     chkCommunicationHelp.Enabled = true;
                 }

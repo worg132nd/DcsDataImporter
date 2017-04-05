@@ -17,24 +17,6 @@ C:\Users\blue\Documents\-= 132nd =-\DcsDataImporter\DcsDataImporter\obj\Debug\Dc
 C:\Users\blue\Documents\-= 132nd =-\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.GenerateResource.Cache
 C:\Users\blue\Documents\-= 132nd =-\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.exe
 C:\Users\blue\Documents\-= 132nd =-\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.pdb
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.exe.config
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.ResolveComReference.cache
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.exe
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.pdb
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csprojResolveAssemblyReference.cache
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Form1.resources
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Form2.resources
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Form3.resources
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.frmUserInput.resources
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Properties.Resources.resources
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.GenerateResource.Cache
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.exe
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.pdb
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\GhostscriptSharp.dll
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\NLua.dll
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\KeraLua.dll
-C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\itextsharp.xml
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.exe.config
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.exe
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.pdb
