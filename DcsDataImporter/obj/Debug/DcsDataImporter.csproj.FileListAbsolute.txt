@@ -33,3 +33,5 @@ C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Pr
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.GenerateResource.Cache
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.exe
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.pdb
+C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DcsDataImporter.exe.config
+C:\Users\DELL\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.ResolveComReference.cache

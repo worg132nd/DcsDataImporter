@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBrowseCommunicationNoAwacs = new System.Windows.Forms.Button();
+            this.btnBrowseWordFiles = new System.Windows.Forms.Button();
             this.txtCommunicationPath = new System.Windows.Forms.TextBox();
-            this.btnBrowseKneeboardB = new System.Windows.Forms.Button();
+            this.btnBrowseKneeboard = new System.Windows.Forms.Button();
             this.txtKneeboardPath = new System.Windows.Forms.TextBox();
             this.lblKneeboardPath = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
@@ -39,15 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnBrowseCommunicationNoAwacs
+            // btnBrowseWordFiles
             // 
-            this.btnBrowseCommunicationNoAwacs.Location = new System.Drawing.Point(260, 93);
-            this.btnBrowseCommunicationNoAwacs.Name = "btnBrowseCommunicationNoAwacs";
-            this.btnBrowseCommunicationNoAwacs.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseCommunicationNoAwacs.TabIndex = 0;
-            this.btnBrowseCommunicationNoAwacs.Text = "Browse";
-            this.btnBrowseCommunicationNoAwacs.UseVisualStyleBackColor = true;
-            this.btnBrowseCommunicationNoAwacs.Click += new System.EventHandler(this.button1_Click);
+            this.btnBrowseWordFiles.Location = new System.Drawing.Point(260, 93);
+            this.btnBrowseWordFiles.Name = "btnBrowseWordFiles";
+            this.btnBrowseWordFiles.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseWordFiles.TabIndex = 0;
+            this.btnBrowseWordFiles.Text = "Browse";
+            this.btnBrowseWordFiles.UseVisualStyleBackColor = true;
+            this.btnBrowseWordFiles.Click += new System.EventHandler(this.btnBrowseWordFiles_Click);
             // 
             // txtCommunicationPath
             // 
@@ -57,15 +57,15 @@
             this.txtCommunicationPath.Size = new System.Drawing.Size(242, 20);
             this.txtCommunicationPath.TabIndex = 87;
             // 
-            // btnBrowseKneeboardB
+            // btnBrowseKneeboard
             // 
-            this.btnBrowseKneeboardB.Location = new System.Drawing.Point(260, 28);
-            this.btnBrowseKneeboardB.Name = "btnBrowseKneeboardB";
-            this.btnBrowseKneeboardB.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseKneeboardB.TabIndex = 89;
-            this.btnBrowseKneeboardB.Text = "Browse";
-            this.btnBrowseKneeboardB.UseVisualStyleBackColor = true;
-            this.btnBrowseKneeboardB.Click += new System.EventHandler(this.btnBrowseKneeboard_Click);
+            this.btnBrowseKneeboard.Location = new System.Drawing.Point(260, 28);
+            this.btnBrowseKneeboard.Name = "btnBrowseKneeboard";
+            this.btnBrowseKneeboard.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseKneeboard.TabIndex = 89;
+            this.btnBrowseKneeboard.Text = "Browse";
+            this.btnBrowseKneeboard.UseVisualStyleBackColor = true;
+            this.btnBrowseKneeboard.Click += new System.EventHandler(this.btnBrowseKneeboard_Click);
             // 
             // txtKneeboardPath
             // 
@@ -128,14 +128,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 212);
-            this.Controls.Add(this.btnBrowseCommunicationNoAwacs);
+            this.Controls.Add(this.btnBrowseWordFiles);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCommunicationPath);
             this.Controls.Add(this.chkCommunicationHelp);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtKneeboardPath);
-            this.Controls.Add(this.btnBrowseKneeboardB);
+            this.Controls.Add(this.btnBrowseKneeboard);
             this.Controls.Add(this.lblKneeboardPath);
             this.Name = "FormSettings";
             this.Text = "Settings";
@@ -146,9 +146,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBrowseCommunicationNoAwacs;
+        private System.Windows.Forms.Button btnBrowseWordFiles;
         private System.Windows.Forms.TextBox txtCommunicationPath;
-        private System.Windows.Forms.Button btnBrowseKneeboardB;
+        private System.Windows.Forms.Button btnBrowseKneeboard;
         private System.Windows.Forms.TextBox txtKneeboardPath;
         private System.Windows.Forms.Label lblKneeboardPath;
         private System.Windows.Forms.Button btnApply;

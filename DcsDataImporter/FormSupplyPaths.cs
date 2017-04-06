@@ -13,12 +13,15 @@ namespace DcsDataImporter
 {
     public partial class FormSettings : Form
     {
+        bool oldValue;
         public FormSettings()
         {
             this.CenterToParent();
             InitializeComponent();
             txtKneeboardPath.Text = Properties.Settings.Default.pathKneeboardBuilder;
             txtCommunicationPath.Text = Properties.Settings.Default.filePathCommunication;
+
+            chkCommunicationHelp.Enabled = false;
 
             /* Load chkCommunicationHelp checkbox */
             chkCommunicationHelp.Checked = false;
@@ -31,40 +34,44 @@ namespace DcsDataImporter
             {
                 chkCommunicationHelp.Enabled = true;
             }
-            
+
+            /* store the old value of chkCommunicationHelp to see if it changes */
+            oldValue = false;
+            if (chkCommunicationHelp.Checked)
+            {
+                oldValue = true;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBrowseWordFiles_Click(object sender, EventArgs e)
         {
-            /* OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ".docm|*.docm";
-            ofd.Title = "Select the file path for the supplied file CommunicationNoAwacs.docm";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtCommunicationNoAwacsPath.Text = ofd.FileName; // only file name
-
-                if (txtKneeboardPath.Text != "" && txtCommunicationPath.Text != "" && txtCommunicationNoTmaPath.Text != "")
-                {
-                    chkCommunicationHelp.Enabled = true;
-                }
-            }*/
-
             using (var fbd = new FolderBrowserDialog())
             {
+                fbd.Description = "Select the path for the supplied Word (.docm) files:";
                 DialogResult result = fbd.ShowDialog();
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
                     string[] files = Directory.GetFiles(fbd.SelectedPath);
 
-                    System.Windows.Forms.MessageBox.Show(fbd.SelectedPath + "\nFiles found: " + files.Length.ToString(), "Message");
+                    bool validFile = false;
+                    int validFiles = 0;
                     
-                    if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
+                    foreach (string file in files)
+                    {
+                        if (file.Contains("communication") && file.EndsWith(".docm")) {
+                            validFile = true;
+                            validFiles++;
+                        }
+                    }
+
+                    System.Windows.Forms.MessageBox.Show(fbd.SelectedPath + "\n\nValid Word (.docm) files found: " + validFiles, "Message");
+
+                    txtCommunicationPath.Text = fbd.SelectedPath;
+                    if (validFile && !string.IsNullOrEmpty(txtCommunicationPath.Text) && !string.IsNullOrEmpty(txtKneeboardPath.Text))
                     {
                         chkCommunicationHelp.Enabled = true;
                     }
-
-                    Properties.Settings.Default.filePathCommunication = fbd.SelectedPath;
                 }
             }
         }
@@ -97,7 +104,7 @@ namespace DcsDataImporter
                 Properties.Settings.Default.filePathCommunication = txtCommunicationPath.Text;
             }
 
-            if (chkCommunicationHelp.Checked)
+            if (chkCommunicationHelp.Checked && (chkCommunicationHelp.Checked != oldValue))
             {
                 var form = new FormPopup();
                 this.Hide();
