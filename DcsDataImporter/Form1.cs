@@ -1604,7 +1604,7 @@ namespace DcsDataImporter
             /* Only run SearchAndReplace if CommunicationHelp checkbox is checked in Settings */
             if (Properties.Settings.Default.CommunicationHelp)
             {
-                string inputPath = System.IO.Path.GetDirectoryName(Properties.Settings.Default.filePathCommunication);
+                string inputPath = Properties.Settings.Default.filePathCommunication;
                 string fnIn = chooseTemplate();
                 string fnOut = "temp.docm";
                 moveFile(fnIn, fnOut, inputPath);
@@ -1775,161 +1775,12 @@ namespace DcsDataImporter
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             createCommunicationHelp();
+
+            string pathA10c = @"\Kneeboard Groups\A-10C";
+            captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
+
             saveForm();
             showMDC2();
-            /*
-            string inputPath = System.IO.Path.GetDirectoryName(Properties.Settings.Default.filePathCommunicationNoAwacs);
-            
-            string fnIn = "Communications.docm"; // ToDo: Need to add this file as well and get it from Properties.Settings.Default...
-
-            // Use other .docm file if awacs is not checked - Remember to remove aci in kneeboard builder! (Do not remove aco as it still has ifrn)
-            if (chkAwacs.Checked == false) {
-                //fnIn = "CommunicationsNoAwacs.docm";
-                fnIn = System.IO.Path.GetFileName(Properties.Settings.Default.filePathCommunicationNoAwacs);
-                // TBD: Also remove COM ACO and COM ACI from the documents saved. Need to renumber all consecutive images.
-            }
-
-            if (chkTma.Checked == false)
-            {
-                fnIn = "CommunicationsNoTma.docm";
-
-                // TBD: Need to create template document first, then uncommend this code
-                if (chkAwacs.Checked == false)
-                {
-                    fnIn = "CommunicationsNoAwacsAndNoTma.docm";
-                }
-            }
-
-            string fnOut = "temp.docm";
-
-            // Save file from one location to another
-            if (File.Exists(Environment.CurrentDirectory + @"\" + fnOut)) delete(Environment.CurrentDirectory + @"\" + fnOut);
-            
-            try
-            {
-                File.Copy(inputPath + @"\" + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
-            } catch (DirectoryNotFoundException)
-            {
-                MessageBox.Show("Cannot find the directory:\n" + inputPath + "\n\nClosing application", "Error: Directory not found");
-                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
-            } catch (FileNotFoundException)
-            {
-                MessageBox.Show("Cannot find the file:\n" + inputPath + @"\" + fnIn + "\n\nClosing application", "Error: File not found");
-                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
-            }
-
-            // DEPARTURE AND ARRIVAL
-            SearchAndReplace("/CALLSIGN/", txtCallsign.Text); // TODO: Parse to get just callsign
-            SearchAndReplace("/FLIGHT/", GetLettersOnly(txtCallsign.Text)); // TODO: Parse to get just letters (no digits) (split på 1, 2, 3, 4, 5, 6, 7, 8 og 9? og bare lagre words[0] bør funke)
-
-            SearchAndReplace("/#AC/", convertDigitToNumber(cmbNrOfAc.Text));
-
-            var row = dgvAirbase.Rows[0];
-
-            SearchAndReplace("/AIRPORT/", row.Cells["colAirbase"].Value as string); // TODO: Transform to human-readable name TODO2: Separate departure and arrival airfield
-            SearchAndReplace("/TMA/", row.Cells["colTma"].Value.ToString().TrimEnd("0".ToCharArray())); // TODO: Transform to human-readable name and select correct TMA for each airfield TODO: Change it to AIRPORTA for arrival and AIRPORTD for departure in the word document
-
-            SearchAndReplace("/PARKING/", txtParking.Text);
-
-
-            // Need to make separate codewords for DEP and ARR, e.g. /#RD/ and /#RA/ (for departure and arrival airbases)
-            string runways = (string)row.Cells["colRwy"].Value;
-            foreach (string runway in runways.Split('/'))
-            {
-                bool second = false;
-
-                if (runway.Contains('L'))
-                {
-                    SearchAndReplace("/#L/", runway);
-                } else if (runway.Contains('R'))
-                {
-                    SearchAndReplace("/#R/", runway);
-                } else
-                {
-                    if (second)
-                    {
-                        SearchAndReplace("/#R", runway);
-                    } else
-                    {
-                        SearchAndReplace("/#L/", runway);
-                    }
-                }
-                second = true;
-            }
-
-            // Need to make separate codewords for DEP and ARR, e.g. /GNDFRQDEP/ and /GNDFRQARR/
-            SearchAndReplace("/GNDFRQ/", row.Cells["colGnd"].Value.ToString().TrimEnd("0".ToCharArray()));
-            
-            // Need to make separate codewords for DEP and ARR, e.g. /TWRFRQDEP/ and /TWRFRQARR/
-            SearchAndReplace("/TWRFRQ/", row.Cells["colTwr"].Value.ToString().TrimEnd("0".ToCharArray()));
-
-            // Need to make separate codewords for DEP and ARR, e.g. /TMAFRQDEP/ and /TMAFRQARR/
-            SearchAndReplace("/TMAFRQ/", row.Cells["colTma"].Value.ToString().TrimEnd("0".ToCharArray()));
-
-
-            // Remember to add only Lochini to the kneeboard
-
-
-            SearchAndReplace("/CARDINAL/", txtCardinal.Text);
-
-            // AWACS
-            SearchAndReplace("/AWACS/", txtAwacsCallsign.Text);
-            SearchAndReplace("/AWACSFRQ/", txtAwacsFreq.Text.TrimEnd("0".ToCharArray()));
-            SearchAndReplace("/AWACSCNL/", txtAwacsChannel.Text);
-            SearchAndReplace("/AWACSPST/", "P" + txtAwacsPreset.Text);
-
-            SearchAndReplace("/CP/", txtTacpCp.Text);
-
-            // TACP
-            SearchAndReplace("/TACP/", txtTacpCallsign.Text);
-            SearchAndReplace("/TACPFRQ/", txtTacpFreq.Text.TrimEnd("0".ToCharArray()));
-            SearchAndReplace("/TACPCNL/", txtTacpChannel.Text);
-            SearchAndReplace("/TACPPST/", "P" + txtTacpPreset.Text);
-
-            SearchAndReplace("/LOC/", txtLocation.Text);
-            SearchAndReplace("/MSN#/", txtMsnNr.Text);
-            SearchAndReplace("/TASKING/", txtTasking.Text);
-            SearchAndReplace("/LOADOUT/", txtLoadout.Text);
-
-            // IFRN
-            SearchAndReplace("/IFRNFRQ/", txtIfrnFreq.Text.TrimEnd("0".ToCharArray()));
-            SearchAndReplace("/IFRNCNL/", txtIfrnChannel.Text);
-            SearchAndReplace("/IFRNPST/", "P" + txtIfrnPreset.Text);
-
-            // AUTHENTICATION
-            SearchAndReplace("/AWACS_C/", txtAwacsChallenge.Text);
-            SearchAndReplace("/AWACS_R/", txtAwacsResponse.Text);
-            SearchAndReplace("/TACP_C/", txtTacpChallenge.Text);
-            SearchAndReplace("/TACP_R/", txtTacpResponse.Text);
-            SearchAndReplace("/ABORT_C/", txtTacpAbortChallenge.Text);
-            SearchAndReplace("/ABORT_R/", txtTacpAbortResponse.Text);
-
-            SearchAndReplace("one by ALPHA 10 CHARLIEs", "singleship ALPHA 10 CHARLIE"); // TODO: Does not work, maybe because one is still /#AC/? Then I would have to wait before searching and replacing.
-
-            storeAsPdf(Environment.CurrentDirectory);
-            splitPdf(Environment.CurrentDirectory);
-
-            // Select kneeboardbuilder file and save path
-            setKneeboardPath();
-
-            storePngsToKneeboardBuilder();
-
-            delete(Environment.CurrentDirectory + @"\" + "temp.docm");
-
-            saveForm();
-
-            // sending airbases to form2
-            row = dgvAirbase.Rows[0];
-            string dep = (string) row.Cells["colAirbase"].Value;
-            row = dgvAirbase.Rows[1];
-            string arr = (string) row.Cells["colAirbase"].Value;
-            row = dgvAirbase.Rows[2];
-            string alt = (string) row.Cells["colAirbase"].Value;
-
-            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text);
-            form2.Show(); // Show next flight form
-            Hide(); // Hide form1
-            */
         }
 
         private void storePngsToKneeboardBuilder()
@@ -2588,8 +2439,6 @@ namespace DcsDataImporter
             saveAsPng("com8-arr", path);
             saveAsPng("com9-lan", path);
             saveAsPng("com10-tax", path);
-
-            captureScreen(path);
         }
 
         private void captureScreen(string path)

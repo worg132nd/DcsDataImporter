@@ -1,155 +1,95 @@
 options = 
 {
+    ["difficulty"] = 
+    {
+        ["padlock"] = false,
+        ["easyRadar"] = false,
+        ["miniHUD"] = false,
+        ["birds"] = 10,
+        ["optionsView"] = "optview_all",
+        ["permitCrash"] = false,
+        ["immortal"] = false,
+        ["easyCommunication"] = false,
+        ["reports"] = true,
+        ["radio"] = false,
+        ["labels"] = false,
+        ["map"] = true,
+        ["easyFlight"] = false,
+        ["cockpitLanguage"] = "english",
+        ["units"] = "imperial",
+        ["userSnapView"] = true,
+        ["tips"] = true,
+        ["externalViews"] = true,
+        ["iconsTheme"] = "nato",
+        ["fuel"] = false,
+        ["weapons"] = false,
+        ["setGlobal"] = true,
+        ["geffect"] = "realistic",
+    }, -- end of ["difficulty"]
+    ["playerName"] = "New callsign",
+    ["graphics"] = 
+    {
+        ["multiMonitorSetup"] = "1camera",
+        ["color"] = "32",
+        ["preloadRadius"] = 150000,
+        ["heatBlr"] = 1,
+        ["scenes"] = "high",
+        ["water"] = 2,
+        ["fullScreen"] = true,
+        ["disableAero"] = false,
+        ["visibRange"] = "High",
+        ["treesVisibility"] = 9000,
+        ["aspect"] = 1.6,
+        ["haze"] = 1,
+        ["HDR"] = 3,
+        ["TranspSSAA"] = true,
+        ["textures"] = 2,
+        ["cockpitShadows"] = true,
+        ["shadows"] = 2,
+        ["effects"] = 3,
+        ["MSAA"] = 6,
+        ["height"] = 1200,
+        ["sync"] = false,
+        ["shadowTree"] = false,
+        ["civTraffic"] = "medium",
+        ["width"] = 1920,
+        ["clutterMaxDistance"] = 100,
+        ["lights"] = 2,
+    }, -- end of ["graphics"]
+    ["plugins"] = 
+    {
+    }, -- end of ["plugins"]
     ["views"] = 
     {
         ["cockpit"] = 
         {
             ["mirrors"] = false,
             ["reflections"] = false,
-            ["avionics"] = 1,
+            ["russianHud"] = false,
+            ["avionics"] = 3,
         }, -- end of ["cockpit"]
     }, -- end of ["views"]
-    ["playerName"] = "Worg",
-    ["VR"] = 
-    {
-        ["use_mouse"] = false,
-        ["enable"] = true,
-        ["box_mouse_cursor"] = true,
-        ["pixel_density"] = 1,
-    }, -- end of ["VR"]
-    ["graphics"] = 
-    {
-        ["terrainTextures"] = "max",
-        ["multiMonitorSetup"] = "1camera",
-        ["LensEffects"] = 0,
-        ["heatBlr"] = 0,
-        ["anisotropy"] = 3,
-        ["water"] = 1,
-        ["fullScreen"] = true,
-        ["HDR"] = 1,
-        ["disableAero"] = false,
-        ["visibRange"] = "Medium",
-        ["DOF"] = 0,
-        ["clouds"] = 2,
-        ["textures"] = 2,
-        ["shadows"] = 2,
-        ["MSAA"] = 5,
-        ["shadowTree"] = false,
-        ["civTraffic"] = "",
-        ["OculusRift"] = true,
-        ["flatTerrainShadows"] = 1,
-        ["effects"] = 3,
-        ["preloadRadius"] = 30001,
-        ["treesVisibility"] = 10005,
-        ["sync"] = false,
-        ["width"] = 1920,
-        ["height"] = 1080,
-        ["lights"] = 2,
-        ["clutterMaxDistance"] = 750,
-        ["aspect"] = 1.7777777777778,
-    }, -- end of ["graphics"]
-    ["plugins"] = 
-    {
-        ["CA"] = 
-        {
-            ["kompass_options"] = 1,
-            ["ground_target_info"] = true,
-            ["ground_aim_helper"] = true,
-            ["ground_platform_shake"] = false,
-            ["ground_automatic"] = true,
-        }, -- end of ["CA"]
-        ["P-51D"] = 
-        {
-            ["assistance"] = 100,
-            ["CPLocalList"] = "default",
-            ["autoRudder"] = false,
-        }, -- end of ["P-51D"]
-        ["A-10C"] = 
-        {
-            ["CPLocalList"] = "default",
-        }, -- end of ["A-10C"]
-        ["Ka-50"] = 
-        {
-            ["altTrimmingMethod"] = false,
-            ["Ka50RudderTrimmer"] = false,
-            ["CPLocalList"] = "default",
-        }, -- end of ["Ka-50"]
-        ["TF-51D"] = 
-        {
-            ["assistance"] = 100,
-            ["CPLocalList"] = "default",
-            ["autoRudder"] = false,
-        }, -- end of ["TF-51D"]
-        ["UH-1H"] = 
-        {
-            ["UHRudderTrimmer"] = false,
-            ["autoPilot"] = true,
-            ["altUHTrimmingMethod"] = false,
-            ["CPLocalList"] = "default",
-            ["weapTooltips"] = true,
-            ["UHTrackIRAiming"] = true,
-        }, -- end of ["UH-1H"]
-        ["Su-25T"] = 
-        {
-            ["CPLocalList"] = "default",
-        }, -- end of ["Su-25T"]
-    }, -- end of ["plugins"]
-    ["difficulty"] = 
-    {
-        ["fuel"] = false,
-        ["easyRadar"] = false,
-        ["labels"] = false,
-        ["miniHUD"] = false,
-        ["cockpitStatusBarAllowed"] = false,
-        ["birds"] = 100,
-        ["optionsView"] = "optview_all",
-        ["permitCrash"] = false,
-        ["immortal"] = false,
-        ["easyCommunication"] = false,
-        ["cockpitVisualRM"] = false,
-        ["padlock"] = false,
-        ["reports"] = true,
-        ["hideStick"] = false,
-        ["radio"] = false,
-        ["tips"] = true,
-        ["easyFlight"] = false,
-        ["externalViews"] = true,
-        ["avionicsLanguage"] = "native",
-        ["units"] = "imperial",
-        ["userSnapView"] = true,
-        ["spectatorExternalViews"] = true,
-        ["impostors"] = "",
-        ["iconsTheme"] = "nato",
-        ["map"] = true,
-        ["weapons"] = false,
-        ["setGlobal"] = true,
-        ["geffect"] = "realistic",
-    }, -- end of ["difficulty"]
     ["sound"] = 
     {
-        ["hear_in_helmet"] = true,
-        ["headphones"] = -5,
-        ["cockpit"] = -5,
-        ["GBreathEffect"] = true,
-        ["gui"] = -5,
-        ["volume"] = -5,
+        ["headphones"] = -11,
+        ["cockpit"] = -11,
         ["radioSpeech"] = true,
+        ["world"] = -11,
+        ["volume"] = 0,
+        ["GBreathEffect"] = true,
         ["music"] = -100,
         ["subtitles"] = true,
-        ["world"] = -5,
+        ["gui"] = -4,
     }, -- end of ["sound"]
     ["miscellaneous"] = 
     {
+        ["Coordinate_Display"] = "Lat Long",
+        ["accidental_failures"] = false,
         ["headmove"] = true,
-        ["TrackIR_external_views"] = true,
+        ["force_feedback_enabled"] = false,
         ["f5_nearest_ac"] = true,
         ["f11_free_camera"] = true,
-        ["F2_view_effects"] = 2,
-        ["f10_awacs"] = true,
-        ["Coordinate_Display"] = "Lat Long",
-        ["accidental_failures"] = true,
-        ["force_feedback_enabled"] = true,
         ["synchronize_controls"] = false,
-        ["show_pilot_body"] = true,
+        ["f10_awacs"] = true,
     }, -- end of ["miscellaneous"]
 } -- end of options

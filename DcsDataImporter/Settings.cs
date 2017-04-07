@@ -58,23 +58,26 @@ namespace DcsDataImporter
                 {
                     string[] files = Directory.GetFiles(fbd.SelectedPath);
 
-                    bool validFile = false;
                     int validFiles = 0;
                     
                     foreach (string file in files)
                     {
-                        if (file.Contains("communication") && file.EndsWith(".docm")) {
-                            validFile = true;
+                        if (file.Contains("Communications") && file.EndsWith(".docm")) {
                             validFiles++;
                         }
                     }
 
-                    System.Windows.Forms.MessageBox.Show(fbd.SelectedPath + "\n\nValid Word (.docm) files found: " + validFiles, "Message");
-
-                    txtCommunicationPath.Text = fbd.SelectedPath;
-                    if (validFile && !string.IsNullOrEmpty(txtCommunicationPath.Text) && !string.IsNullOrEmpty(txtKneeboardPath.Text))
+                    if (validFiles > 0)
                     {
-                        chkCommunicationHelp.Enabled = true;
+                        MessageBox.Show(fbd.SelectedPath + "\n\nValid Word (.docm) files found: " + validFiles, "Message");
+                        txtCommunicationPath.Text = fbd.SelectedPath;
+                        if (!string.IsNullOrEmpty(txtKneeboardPath.Text))
+                        {
+                            chkCommunicationHelp.Enabled = true;
+                        }
+                    } else
+                    {
+                        MessageBox.Show("Error: No valid Word (.docm) files found!");
                     }
                 }
             }
@@ -83,16 +86,28 @@ namespace DcsDataImporter
         /* Opens directory browser for locating install directory of the Kneeboard Builder application */
         private void btnBrowseKneeboard_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ".exe|*.exe";
-            ofd.Title = "Select path to the install directory of the Kneeboard Builder application by selecting the exe file";
-            if (ofd.ShowDialog() == DialogResult.OK)
+            using (var fbd = new FolderBrowserDialog())
             {
-                txtKneeboardPath.Text = ofd.FileName; // path
+                fbd.Description = "Select the folder where Kneeboard Builder is installed:";
+                DialogResult result = fbd.ShowDialog();
 
-                if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    chkCommunicationHelp.Enabled = true;
+
+                    if (File.Exists(fbd.SelectedPath + "\\kneeboardbuilder.exe"))
+                    {
+                        MessageBox.Show("Application Kneeboard Builder found!");
+                        txtKneeboardPath.Text = fbd.SelectedPath;
+
+                        if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
+                        {
+                            chkCommunicationHelp.Enabled = true;
+                        }
+
+                    } else
+                    {
+                        MessageBox.Show("Error: Application Kneeboard Builder NOT found!");
+                    }
                 }
             }
         }
