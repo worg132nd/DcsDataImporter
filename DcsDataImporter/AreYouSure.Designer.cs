@@ -1,6 +1,6 @@
 ﻿namespace DcsDataImporter
 {
-    partial class FormPopup
+    partial class AreYouSure
     {
         /// <summary>
         /// Required designer variable.

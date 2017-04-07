@@ -112,7 +112,7 @@ namespace DcsDataImporter
 
             if (chkCommunicationHelp.Checked && (chkCommunicationHelp.Checked != oldValue))
             {
-                var form = new FormPopup();
+                var form = new AreYouSure();
                 this.Hide();
                 form.ShowDialog();
                 this.Close();

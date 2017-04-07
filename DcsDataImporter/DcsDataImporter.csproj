@@ -96,17 +96,17 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSupplyPaths.cs">
+    <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSupplyPaths.Designer.cs">
-      <DependentUpon>FormSupplyPaths.cs</DependentUpon>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPopup.cs">
+    <Compile Include="AreYouSure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPopup.Designer.cs">
-      <DependentUpon>FormPopup.cs</DependentUpon>
+    <Compile Include="AreYouSure.Designer.cs">
+      <DependentUpon>AreYouSure.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserInput.cs">
       <SubType>Form</SubType>
@@ -131,11 +131,11 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSupplyPaths.resx">
-      <DependentUpon>FormSupplyPaths.cs</DependentUpon>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPopup.resx">
-      <DependentUpon>FormPopup.cs</DependentUpon>
+    <EmbeddedResource Include="AreYouSure.resx">
+      <DependentUpon>AreYouSure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserInput.resx">
       <DependentUpon>frmUserInput.cs</DependentUpon>

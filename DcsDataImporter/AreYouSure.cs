@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DcsDataImporter
 {
-    public partial class FormPopup : Form
+    public partial class AreYouSure : Form
     {
-        public FormPopup()
+        public AreYouSure()
         {
             InitializeComponent();
             this.CenterToParent();

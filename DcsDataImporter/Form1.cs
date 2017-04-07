@@ -814,21 +814,34 @@ namespace DcsDataImporter
             {
                 string path = Environment.CurrentDirectory + @"\" + "temp.docm"; // TODO: use currently active directory or select using a browse function instead. Save this in a document so it remembers it for each run of the application, so you don't have to do it more than once
 
-                using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(path, true))
+                try
                 {
-                    string docText = null;
-                    using (StreamReader stream = new StreamReader(wordDoc.MainDocumentPart.GetStream()))
+                    using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(path, true))
                     {
-                        docText = stream.ReadToEnd();
-                    }
+                        string docText = null;
+                        using (StreamReader stream = new StreamReader(wordDoc.MainDocumentPart.GetStream()))
+                        {
+                            docText = stream.ReadToEnd();
+                        }
 
-                    Regex regexText = new Regex(search); // &lt og &gt escaper henholdsvis < og >
-                    docText = regexText.Replace(docText, replacement);
+                        Regex regexText = new Regex(search); // &lt og &gt escaper henholdsvis < og >
+                        docText = regexText.Replace(docText, replacement);
 
-                    using (StreamWriter sw = new StreamWriter(wordDoc.MainDocumentPart.GetStream(FileMode.Create)))
-                    {
-                        sw.Write(docText);
+                        using (StreamWriter sw = new StreamWriter(wordDoc.MainDocumentPart.GetStream(FileMode.Create)))
+                        {
+                            sw.Write(docText);
+                        }
                     }
+                }
+                catch (FileFormatException ffe)
+                {
+                    MessageBox.Show("The file is corrupt or not in the expected format. Closing application.");
+                    Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: ", e.ToString());
+                    Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
                 }
             }
         }
@@ -1586,11 +1599,185 @@ namespace DcsDataImporter
             txtTacpCp.Text = "";
         }
 
+        private void createCommunicationHelp()
+        {
+            /* Only run SearchAndReplace if CommunicationHelp checkbox is checked in Settings */
+            if (Properties.Settings.Default.CommunicationHelp)
+            {
+                string inputPath = System.IO.Path.GetDirectoryName(Properties.Settings.Default.filePathCommunication);
+                string fnIn = chooseTemplate();
+                string fnOut = "temp.docm";
+                moveFile(fnIn, fnOut, inputPath);
+                initSearchAndReplace();
+                storeAsPdf(Environment.CurrentDirectory);
+                splitPdf(Environment.CurrentDirectory);
+                setKneeboardPath();
+                storePngsToKneeboardBuilder();
+                delete(Environment.CurrentDirectory + @"\" + "temp.docm");
+            }
+        }
+
+        private void initSearchAndReplace()
+        {
+            // DEPARTURE AND ARRIVAL
+            SearchAndReplace("/CALLSIGN/", txtCallsign.Text); // TODO: Parse to get just callsign
+            SearchAndReplace("/FLIGHT/", GetLettersOnly(txtCallsign.Text)); // TODO: Parse to get just letters (no digits) (split på 1, 2, 3, 4, 5, 6, 7, 8 og 9? og bare lagre words[0] bør funke)
+            SearchAndReplace("/#AC/", convertDigitToNumber(cmbNrOfAc.Text));
+
+            var row = dgvAirbase.Rows[0];
+
+            SearchAndReplace("/AIRPORT/", row.Cells["colAirbase"].Value as string); // TODO: Transform to human-readable name TODO2: Separate departure and arrival airfield
+            SearchAndReplace("/TMA/", row.Cells["colTma"].Value.ToString().TrimEnd("0".ToCharArray())); // TODO: Transform to human-readable name and select correct TMA for each airfield TODO: Change it to AIRPORTA for arrival and AIRPORTD for departure in the word document
+            SearchAndReplace("/PARKING/", txtParking.Text);
+
+            searchAndReplaceRunwayHeadings();
+
+            // Need to make separate codewords for DEP and ARR, e.g. /GNDFRQDEP/ and /GNDFRQARR/
+            SearchAndReplace("/GNDFRQ/", row.Cells["colGnd"].Value.ToString().TrimEnd("0".ToCharArray()));
+
+            // Need to make separate codewords for DEP and ARR, e.g. /TWRFRQDEP/ and /TWRFRQARR/
+            SearchAndReplace("/TWRFRQ/", row.Cells["colTwr"].Value.ToString().TrimEnd("0".ToCharArray()));
+
+            // Need to make separate codewords for DEP and ARR, e.g. /TMAFRQDEP/ and /TMAFRQARR/
+            SearchAndReplace("/TMAFRQ/", row.Cells["colTma"].Value.ToString().TrimEnd("0".ToCharArray()));
+
+
+            // Remember to add only Lochini to the kneeboard
+
+
+            SearchAndReplace("/CARDINAL/", txtCardinal.Text);
+
+            // AWACS
+            SearchAndReplace("/AWACS/", txtAwacsCallsign.Text);
+            SearchAndReplace("/AWACSFRQ/", txtAwacsFreq.Text.TrimEnd("0".ToCharArray()));
+            SearchAndReplace("/AWACSCNL/", txtAwacsChannel.Text);
+            SearchAndReplace("/AWACSPST/", "P" + txtAwacsPreset.Text);
+
+            SearchAndReplace("/CP/", txtTacpCp.Text);
+
+            // TACP
+            SearchAndReplace("/TACP/", txtTacpCallsign.Text);
+            SearchAndReplace("/TACPFRQ/", txtTacpFreq.Text.TrimEnd("0".ToCharArray()));
+            SearchAndReplace("/TACPCNL/", txtTacpChannel.Text);
+            SearchAndReplace("/TACPPST/", "P" + txtTacpPreset.Text);
+
+            SearchAndReplace("/LOC/", txtLocation.Text);
+            SearchAndReplace("/MSN#/", txtMsnNr.Text);
+            SearchAndReplace("/TASKING/", txtTasking.Text);
+            SearchAndReplace("/LOADOUT/", txtLoadout.Text);
+
+            // IFRN
+            SearchAndReplace("/IFRNFRQ/", txtIfrnFreq.Text.TrimEnd("0".ToCharArray()));
+            SearchAndReplace("/IFRNCNL/", txtIfrnChannel.Text);
+            SearchAndReplace("/IFRNPST/", "P" + txtIfrnPreset.Text);
+
+            // AUTHENTICATION
+            SearchAndReplace("/AWACS_C/", txtAwacsChallenge.Text);
+            SearchAndReplace("/AWACS_R/", txtAwacsResponse.Text);
+            SearchAndReplace("/TACP_C/", txtTacpChallenge.Text);
+            SearchAndReplace("/TACP_R/", txtTacpResponse.Text);
+            SearchAndReplace("/ABORT_C/", txtTacpAbortChallenge.Text);
+            SearchAndReplace("/ABORT_R/", txtTacpAbortResponse.Text);
+
+            SearchAndReplace("one by ALPHA 10 CHARLIEs", "singleship ALPHA 10 CHARLIE"); // TODO: Does not work, maybe because one is still /#AC/? Then I would have to wait before searching and replacing.
+        }
+
+        private void searchAndReplaceRunwayHeadings()
+        {
+            var row = dgvAirbase.Rows[0];
+
+            // Need to make separate codewords for DEP and ARR, e.g. /#RD/ and /#RA/ (for departure and arrival airbases)
+            string runways = (string)row.Cells["colRwy"].Value;
+            foreach (string runway in runways.Split('/'))
+            {
+                bool second = false;
+
+                if (runway.Contains('L'))
+                {
+                    SearchAndReplace("/#L/", runway);
+                }
+                else if (runway.Contains('R'))
+                {
+                    SearchAndReplace("/#R/", runway);
+                }
+                else
+                {
+                    if (second)
+                    {
+                        SearchAndReplace("/#R", runway);
+                    }
+                    else
+                    {
+                        SearchAndReplace("/#L/", runway);
+                    }
+                }
+                second = true;
+            }
+        }
+
+        /* Save file from one location to another */
+        private void moveFile(string fnIn, string fnOut, string inputPath)
+        {
+            if (File.Exists(Environment.CurrentDirectory + @"\" + fnOut))
+            {
+                delete(Environment.CurrentDirectory + @"\" + fnOut);
+            }
+
+            try
+            {
+                File.Copy(inputPath + @"\" + fnIn, Environment.CurrentDirectory + @"\" + fnOut);
+            }
+            catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show("Cannot find the directory:\n" + inputPath + "\n\nClosing application", "Error: Directory not found");
+                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Cannot find the file:\n" + inputPath + @"\" + fnIn + "\n\nClosing application", "Error: File not found");
+                Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+            }
+        }
+
+        /* Selects template based on settings in form */
+        private string chooseTemplate()
+        {
+            string fnIn = "Communications.docm";
+            if (chkTma.Checked == false && chkAwacs.Checked)
+            {
+                fnIn = "CommunicationsNoTma.docm";
+            }
+
+            if (chkTma.Checked && chkAwacs.Checked == false)
+            {
+                fnIn = "CommunicationsNoAwacs.docm";
+            }
+            return fnIn;
+        }
+
+        private void showMDC2()
+        {
+            // sending airbases to form2
+            var row = dgvAirbase.Rows[0];
+
+            row = dgvAirbase.Rows[0];
+            string dep = (string)row.Cells["colAirbase"].Value;
+            row = dgvAirbase.Rows[1];
+            string arr = (string)row.Cells["colAirbase"].Value;
+            row = dgvAirbase.Rows[2];
+            string alt = (string)row.Cells["colAirbase"].Value;
+
+            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text);
+            form2.Show(); // Show next flight form
+            Hide(); // Hide form1
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // TODO: On clicking submit pop open a file dialoge window that asks you to select the communications file if it is not set
-
-            //string inputPath = @"C:\Users\blue\Documents\-= 132nd =-\Kneeboard\Creating the kneeboard\Communications\-= Latest and current updated =-\";
+            createCommunicationHelp();
+            saveForm();
+            showMDC2();
+            /*
             string inputPath = System.IO.Path.GetDirectoryName(Properties.Settings.Default.filePathCommunicationNoAwacs);
             
             string fnIn = "Communications.docm"; // ToDo: Need to add this file as well and get it from Properties.Settings.Default...
@@ -1599,23 +1786,23 @@ namespace DcsDataImporter
             if (chkAwacs.Checked == false) {
                 //fnIn = "CommunicationsNoAwacs.docm";
                 fnIn = System.IO.Path.GetFileName(Properties.Settings.Default.filePathCommunicationNoAwacs);
-                /* TBD: Also remove COM ACO and COM ACI from the documents saved. Need to renumber all consecutive images.
+                // TBD: Also remove COM ACO and COM ACI from the documents saved. Need to renumber all consecutive images.
             }
 
             if (chkTma.Checked == false)
             {
                 fnIn = "CommunicationsNoTma.docm";
 
-                /* TBD: Need to create template document first, then uncommend this code
+                // TBD: Need to create template document first, then uncommend this code
                 if (chkAwacs.Checked == false)
                 {
                     fnIn = "CommunicationsNoAwacsAndNoTma.docm";
-                } */
+                }
             }
 
             string fnOut = "temp.docm";
 
-            /* Save file from one location to another */
+            // Save file from one location to another
             if (File.Exists(Environment.CurrentDirectory + @"\" + fnOut)) delete(Environment.CurrentDirectory + @"\" + fnOut);
             
             try
@@ -1725,19 +1912,7 @@ namespace DcsDataImporter
             // Select kneeboardbuilder file and save path
             setKneeboardPath();
 
-            string pathA10c = @"\Kneeboard Groups\A-10C";
-            string pathStandardTraining = @"\StandardTraining";
-            string noAwacs = @"\NoAwacs";
-            string noTacp = @"\NoTacp";
-
-            
-            if (@"C:\Users\blue\Programs\KneeboardBuilder\Kneeboard Groups\A-10C".Equals(Properties.Settings.Default.pathKneeboardBuilder + pathA10c))
-            {
-                /* Create directory if it does not exist */
-                Directory.CreateDirectory(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
-
-                toKneeboardBuilder(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
-            }
+            storePngsToKneeboardBuilder();
 
             delete(Environment.CurrentDirectory + @"\" + "temp.docm");
 
@@ -1751,24 +1926,35 @@ namespace DcsDataImporter
             row = dgvAirbase.Rows[2];
             string alt = (string) row.Cells["colAirbase"].Value;
 
-            if (dep == null)
-            {
-                dep = "";
-            }
-
-            if (arr == null)
-            {
-                arr = "";
-            }
-
-            if (alt == null)
-            {
-                alt = "";
-            }
-
-            Form2 form2 = new Form2(dep, arr, alt, txtLocation.Text);
+            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text);
             form2.Show(); // Show next flight form
             Hide(); // Hide form1
+            */
+        }
+
+        private void storePngsToKneeboardBuilder()
+        {
+            string pathA10c = @"\Kneeboard Groups\A-10C";
+            string pathStandardTraining = @"\StandardTraining";
+            string noAwacs = @"\NoAwacs";
+            string noTacp = @"\NoTacp";
+
+            if (@"C:\Users\blue\Programs\KneeboardBuilder\Kneeboard Groups\A-10C".Equals(Properties.Settings.Default.pathKneeboardBuilder + pathA10c))
+            {
+                /* Create directory if it does not exist */
+                Directory.CreateDirectory(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
+
+                toKneeboardBuilder(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
+            }
+        }
+
+        private string blank(string airport)
+        {
+            if (airport == null)
+            {
+                return "";
+            }
+            return airport;
         }
 
         private void saveForm()
@@ -2079,6 +2265,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColNotesJSTARSupport = row.Cells["colNotesSupport"].Value as string;
         }
 
+        /* Select kneeboardbuilder file and save path */
         public static void setKneeboardPath()
         {
             string fileDialogText = "Select the kneeboardbuilder application file";
