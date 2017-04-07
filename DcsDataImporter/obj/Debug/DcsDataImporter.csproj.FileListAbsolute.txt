@@ -26,7 +26,6 @@ C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\DocumentFormat.Ope
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\GhostscriptSharp.dll
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\NLua.dll
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\bin\Debug\KeraLua.dll
-C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csprojResolveAssemblyReference.cache
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.csproj.ResolveComReference.cache
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Form1.resources
 C:\Users\red\GitHub\DcsDataImporter\DcsDataImporter\obj\Debug\DcsDataImporter.Form2.resources
