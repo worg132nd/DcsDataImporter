@@ -17,11 +17,12 @@ namespace DcsDataImporter
         public FormSettings()
         {
             this.CenterToParent();
+
             InitializeComponent();
+
+            /* Load paths */
             txtKneeboardPath.Text = Properties.Settings.Default.pathKneeboardBuilder;
             txtCommunicationPath.Text = Properties.Settings.Default.filePathCommunication;
-
-            chkCommunicationHelp.Enabled = false;
 
             /* Load chkCommunicationHelp checkbox */
             chkCommunicationHelp.Checked = false;
@@ -30,7 +31,9 @@ namespace DcsDataImporter
                 chkCommunicationHelp.Checked = true;
             }
 
-            if (!string.IsNullOrEmpty(txtCommunicationPath.Text))
+            /* Enable checkbox if both loaded paths are previously filled out */
+            chkCommunicationHelp.Enabled = false;
+            if (!string.IsNullOrEmpty(txtCommunicationPath.Text) && !string.IsNullOrEmpty(txtKneeboardPath.Text))
             {
                 chkCommunicationHelp.Enabled = true;
             }
@@ -43,6 +46,7 @@ namespace DcsDataImporter
             }
         }
 
+        /* Opens directory browser for locating folder with word (.docm) files */
         private void btnBrowseWordFiles_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
@@ -76,6 +80,7 @@ namespace DcsDataImporter
             }
         }
 
+        /* Opens directory browser for locating install directory of the Kneeboard Builder application */
         private void btnBrowseKneeboard_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -92,6 +97,7 @@ namespace DcsDataImporter
             }
         }
 
+        /* Applies selected changes to form */
         private void btnApply_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtKneeboardPath.Text))
@@ -120,25 +126,10 @@ namespace DcsDataImporter
             this.Close();
         }
 
+        /* Goes back to previous form and cancels any changes */
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnBrowseCommunication_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ".docm|*.docm";
-            ofd.Title = "Select the file path for the supplied file Communication.docm";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtCommunicationPath.Text = ofd.FileName; // only file name
-
-                if (!string.IsNullOrEmpty(txtKneeboardPath.Text) && !string.IsNullOrEmpty(txtCommunicationPath.Text))
-                {
-                    chkCommunicationHelp.Enabled = true;
-                }
-            }
         }
     }
 }
