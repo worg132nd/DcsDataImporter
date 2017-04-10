@@ -260,7 +260,7 @@ namespace DcsDataImporter
             initSupport();
         }
 
-        private void initDataGridView(DataGridView dgv, int rowCount)
+        public void initDataGridView(DataGridView dgv, int rowCount)
         {
             dgv.RowCount = rowCount;
             dgv.DefaultCellStyle.SelectionBackColor = dgv.DefaultCellStyle.BackColor;
