@@ -65,7 +65,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblMunitions = new System.Windows.Forms.Label();
             this.cbDelivery1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbSem1 = new System.Windows.Forms.ComboBox();
@@ -76,25 +76,25 @@
             this.cbEgressCardinal1 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.cbMunitions1 = new System.Windows.Forms.ComboBox();
+            this.Munitions1 = new System.Windows.Forms.ComboBox();
             this.numEgressHeading1 = new System.Windows.Forms.NumericUpDown();
-            this.cbMode1 = new System.Windows.Forms.ComboBox();
+            this.Mode1 = new System.Windows.Forms.ComboBox();
             this.lblMode = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtAbort1 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.cbSGLPAIR1 = new System.Windows.Forms.ComboBox();
+            this.SGLPAIR1 = new System.Windows.Forms.ComboBox();
             this.lblSGLPAIR = new System.Windows.Forms.Label();
             this.txtAltitude1 = new System.Windows.Forms.TextBox();
             this.lblRPL = new System.Windows.Forms.Label();
             this.lblSpacing = new System.Windows.Forms.Label();
-            this.numRipple1 = new System.Windows.Forms.NumericUpDown();
-            this.numSpacing1 = new System.Windows.Forms.NumericUpDown();
+            this.RPL1 = new System.Windows.Forms.NumericUpDown();
+            this.Spacing1 = new System.Windows.Forms.NumericUpDown();
             this.lblFusing = new System.Windows.Forms.Label();
-            this.cbFusing1 = new System.Windows.Forms.ComboBox();
-            this.txtHOF1 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Fusing1 = new System.Windows.Forms.ComboBox();
+            this.HOF1 = new System.Windows.Forms.TextBox();
+            this.lblProfile = new System.Windows.Forms.Label();
             this.txtProfile1 = new System.Windows.Forms.TextBox();
             this.txtProfileAttack1 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -102,8 +102,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.txtProfileAttack2 = new System.Windows.Forms.TextBox();
             this.cbDelivery2 = new System.Windows.Forms.ComboBox();
-            this.cbMunitions2 = new System.Windows.Forms.ComboBox();
-            this.cbMode2 = new System.Windows.Forms.ComboBox();
+            this.Munitions2 = new System.Windows.Forms.ComboBox();
+            this.Mode2 = new System.Windows.Forms.ComboBox();
             this.txtAltitude2 = new System.Windows.Forms.TextBox();
             this.txtAbort2 = new System.Windows.Forms.TextBox();
             this.cbSem2 = new System.Windows.Forms.ComboBox();
@@ -112,8 +112,8 @@
             this.numEgressHeading2 = new System.Windows.Forms.NumericUpDown();
             this.txtProfileAttack3 = new System.Windows.Forms.TextBox();
             this.cbDelivery3 = new System.Windows.Forms.ComboBox();
-            this.cbMunitions3 = new System.Windows.Forms.ComboBox();
-            this.cbMode3 = new System.Windows.Forms.ComboBox();
+            this.Munitions3 = new System.Windows.Forms.ComboBox();
+            this.Mode3 = new System.Windows.Forms.ComboBox();
             this.txtAltitude3 = new System.Windows.Forms.TextBox();
             this.txtAbort3 = new System.Windows.Forms.TextBox();
             this.cbSem3 = new System.Windows.Forms.ComboBox();
@@ -122,8 +122,8 @@
             this.numEgressHeading3 = new System.Windows.Forms.NumericUpDown();
             this.txtProfileAttack4 = new System.Windows.Forms.TextBox();
             this.cbDelivery4 = new System.Windows.Forms.ComboBox();
-            this.cbMunitions4 = new System.Windows.Forms.ComboBox();
-            this.cbMode4 = new System.Windows.Forms.ComboBox();
+            this.Munitions4 = new System.Windows.Forms.ComboBox();
+            this.Mode4 = new System.Windows.Forms.ComboBox();
             this.txtAltitude4 = new System.Windows.Forms.TextBox();
             this.txtAbort4 = new System.Windows.Forms.TextBox();
             this.cbSem4 = new System.Windows.Forms.ComboBox();
@@ -144,55 +144,55 @@
             this.txtAttackIP2 = new System.Windows.Forms.TextBox();
             this.txtAttackIP3 = new System.Windows.Forms.TextBox();
             this.txtAttackIP4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbFormation2 = new System.Windows.Forms.ComboBox();
+            this.cbFormation3 = new System.Windows.Forms.ComboBox();
+            this.cbFormation4 = new System.Windows.Forms.ComboBox();
             this.txtEgressIP2 = new System.Windows.Forms.TextBox();
             this.txtEgressIP3 = new System.Windows.Forms.TextBox();
             this.txtEgressIP4 = new System.Windows.Forms.TextBox();
             this.txtProfile2 = new System.Windows.Forms.TextBox();
             this.txtProfile3 = new System.Windows.Forms.TextBox();
             this.txtProfile4 = new System.Windows.Forms.TextBox();
-            this.cbFusing2 = new System.Windows.Forms.ComboBox();
-            this.cbFusing3 = new System.Windows.Forms.ComboBox();
-            this.cbFusing4 = new System.Windows.Forms.ComboBox();
-            this.cbSGLPAIR2 = new System.Windows.Forms.ComboBox();
-            this.cbSGLPAIR3 = new System.Windows.Forms.ComboBox();
-            this.cbSGLPAIR4 = new System.Windows.Forms.ComboBox();
-            this.numRipple2 = new System.Windows.Forms.NumericUpDown();
-            this.numRipple3 = new System.Windows.Forms.NumericUpDown();
-            this.numRipple4 = new System.Windows.Forms.NumericUpDown();
-            this.numSpacing2 = new System.Windows.Forms.NumericUpDown();
-            this.numSpacing3 = new System.Windows.Forms.NumericUpDown();
-            this.numSpacing4 = new System.Windows.Forms.NumericUpDown();
-            this.txtHOF2 = new System.Windows.Forms.TextBox();
-            this.txtHOF3 = new System.Windows.Forms.TextBox();
-            this.txtHOF4 = new System.Windows.Forms.TextBox();
+            this.Fusing2 = new System.Windows.Forms.ComboBox();
+            this.Fusing3 = new System.Windows.Forms.ComboBox();
+            this.Fusing4 = new System.Windows.Forms.ComboBox();
+            this.SGLPAIR2 = new System.Windows.Forms.ComboBox();
+            this.SGLPAIR3 = new System.Windows.Forms.ComboBox();
+            this.SGLPAIR4 = new System.Windows.Forms.ComboBox();
+            this.RPL2 = new System.Windows.Forms.NumericUpDown();
+            this.RPL3 = new System.Windows.Forms.NumericUpDown();
+            this.RPL4 = new System.Windows.Forms.NumericUpDown();
+            this.Spacing2 = new System.Windows.Forms.NumericUpDown();
+            this.Spacing3 = new System.Windows.Forms.NumericUpDown();
+            this.Spacing4 = new System.Windows.Forms.NumericUpDown();
+            this.HOF2 = new System.Windows.Forms.TextBox();
+            this.HOF3 = new System.Windows.Forms.TextBox();
+            this.HOF4 = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblRPM = new System.Windows.Forms.Label();
-            this.numRPM1 = new System.Windows.Forms.NumericUpDown();
-            this.numRPM2 = new System.Windows.Forms.NumericUpDown();
-            this.numRPM3 = new System.Windows.Forms.NumericUpDown();
-            this.numRPM4 = new System.Windows.Forms.NumericUpDown();
+            this.RPM1 = new System.Windows.Forms.NumericUpDown();
+            this.RPM2 = new System.Windows.Forms.NumericUpDown();
+            this.RPM3 = new System.Windows.Forms.NumericUpDown();
+            this.RPM4 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -518,14 +518,14 @@
             this.label14.TabIndex = 172;
             this.label14.Text = "Mission notes";
             // 
-            // label11
+            // lblMunitions
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(79, 527);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 173;
-            this.label11.Text = "Munitions";
+            this.lblMunitions.AutoSize = true;
+            this.lblMunitions.Location = new System.Drawing.Point(79, 527);
+            this.lblMunitions.Name = "lblMunitions";
+            this.lblMunitions.Size = new System.Drawing.Size(52, 13);
+            this.lblMunitions.TabIndex = 173;
+            this.lblMunitions.Text = "Munitions";
             // 
             // cbDelivery1
             // 
@@ -639,10 +639,10 @@
             this.label19.TabIndex = 184;
             this.label19.Text = "Heading";
             // 
-            // cbMunitions1
+            // Munitions1
             // 
-            this.cbMunitions1.FormattingEnabled = true;
-            this.cbMunitions1.Items.AddRange(new object[] {
+            this.Munitions1.FormattingEnabled = true;
+            this.Munitions1.Items.AddRange(new object[] {
             "Guns",
             "AGM-65D",
             "AGM-65G",
@@ -672,15 +672,15 @@
             "MK1",
             "MK61",
             "WTU1B",
-            "M274",
             "TGM-65D",
             "TGM-65G",
             "CATM-65K",
             "TGM-65H"});
-            this.cbMunitions1.Location = new System.Drawing.Point(68, 541);
-            this.cbMunitions1.Name = "cbMunitions1";
-            this.cbMunitions1.Size = new System.Drawing.Size(81, 21);
-            this.cbMunitions1.TabIndex = 185;
+            this.Munitions1.Location = new System.Drawing.Point(68, 541);
+            this.Munitions1.Name = "Munitions1";
+            this.Munitions1.Size = new System.Drawing.Size(81, 21);
+            this.Munitions1.TabIndex = 185;
+            this.Munitions1.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
             // numEgressHeading1
             // 
@@ -704,18 +704,18 @@
             0,
             0});
             // 
-            // cbMode1
+            // Mode1
             // 
-            this.cbMode1.FormattingEnabled = true;
-            this.cbMode1.Items.AddRange(new object[] {
+            this.Mode1.FormattingEnabled = true;
+            this.Mode1.Items.AddRange(new object[] {
             "CCRP",
             "CCIP",
             "CCIP 3/9",
             "CCIP 5 MIL"});
-            this.cbMode1.Location = new System.Drawing.Point(150, 541);
-            this.cbMode1.Name = "cbMode1";
-            this.cbMode1.Size = new System.Drawing.Size(76, 21);
-            this.cbMode1.TabIndex = 187;
+            this.Mode1.Location = new System.Drawing.Point(150, 541);
+            this.Mode1.Name = "Mode1";
+            this.Mode1.Size = new System.Drawing.Size(76, 21);
+            this.Mode1.TabIndex = 187;
             // 
             // lblMode
             // 
@@ -761,19 +761,20 @@
             this.label23.TabIndex = 193;
             this.label23.Text = "Abort alt";
             // 
-            // cbSGLPAIR1
+            // SGLPAIR1
             // 
-            this.cbSGLPAIR1.FormattingEnabled = true;
-            this.cbSGLPAIR1.Items.AddRange(new object[] {
+            this.SGLPAIR1.FormattingEnabled = true;
+            this.SGLPAIR1.Items.AddRange(new object[] {
             "SGL",
             "PRS",
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.cbSGLPAIR1.Location = new System.Drawing.Point(275, 541);
-            this.cbSGLPAIR1.Name = "cbSGLPAIR1";
-            this.cbSGLPAIR1.Size = new System.Drawing.Size(65, 21);
-            this.cbSGLPAIR1.TabIndex = 192;
+            this.SGLPAIR1.Location = new System.Drawing.Point(275, 541);
+            this.SGLPAIR1.Name = "SGLPAIR1";
+            this.SGLPAIR1.Size = new System.Drawing.Size(65, 21);
+            this.SGLPAIR1.TabIndex = 192;
+            this.SGLPAIR1.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
             // lblSGLPAIR
             // 
@@ -809,34 +810,34 @@
             this.lblSpacing.TabIndex = 197;
             this.lblSpacing.Text = "Spacing";
             // 
-            // numRipple1
+            // RPL1
             // 
-            this.numRipple1.Location = new System.Drawing.Point(341, 541);
-            this.numRipple1.Maximum = new decimal(new int[] {
+            this.RPL1.Location = new System.Drawing.Point(341, 541);
+            this.RPL1.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.numRipple1.Name = "numRipple1";
-            this.numRipple1.Size = new System.Drawing.Size(32, 20);
-            this.numRipple1.TabIndex = 198;
+            this.RPL1.Name = "RPL1";
+            this.RPL1.Size = new System.Drawing.Size(32, 20);
+            this.RPL1.TabIndex = 198;
             // 
-            // numSpacing1
+            // Spacing1
             // 
-            this.numSpacing1.Increment = new decimal(new int[] {
+            this.Spacing1.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numSpacing1.Location = new System.Drawing.Point(374, 541);
-            this.numSpacing1.Maximum = new decimal(new int[] {
+            this.Spacing1.Location = new System.Drawing.Point(374, 541);
+            this.Spacing1.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numSpacing1.Name = "numSpacing1";
-            this.numSpacing1.Size = new System.Drawing.Size(38, 20);
-            this.numSpacing1.TabIndex = 199;
+            this.Spacing1.Name = "Spacing1";
+            this.Spacing1.Size = new System.Drawing.Size(38, 20);
+            this.Spacing1.TabIndex = 199;
             // 
             // lblFusing
             // 
@@ -847,34 +848,34 @@
             this.lblFusing.TabIndex = 201;
             this.lblFusing.Text = "Fusing";
             // 
-            // cbFusing1
+            // Fusing1
             // 
-            this.cbFusing1.FormattingEnabled = true;
-            this.cbFusing1.Items.AddRange(new object[] {
+            this.Fusing1.FormattingEnabled = true;
+            this.Fusing1.Items.AddRange(new object[] {
             "Nose",
             "Tail",
             "N/T",
             "N/A"});
-            this.cbFusing1.Location = new System.Drawing.Point(227, 541);
-            this.cbFusing1.Name = "cbFusing1";
-            this.cbFusing1.Size = new System.Drawing.Size(47, 21);
-            this.cbFusing1.TabIndex = 202;
+            this.Fusing1.Location = new System.Drawing.Point(227, 541);
+            this.Fusing1.Name = "Fusing1";
+            this.Fusing1.Size = new System.Drawing.Size(47, 21);
+            this.Fusing1.TabIndex = 202;
             // 
-            // txtHOF1
+            // HOF1
             // 
-            this.txtHOF1.Location = new System.Drawing.Point(413, 541);
-            this.txtHOF1.Name = "txtHOF1";
-            this.txtHOF1.Size = new System.Drawing.Size(48, 20);
-            this.txtHOF1.TabIndex = 205;
+            this.HOF1.Location = new System.Drawing.Point(413, 541);
+            this.HOF1.Name = "HOF1";
+            this.HOF1.Size = new System.Drawing.Size(48, 20);
+            this.HOF1.TabIndex = 205;
             // 
-            // label30
+            // lblProfile
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(24, 527);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 13);
-            this.label30.TabIndex = 206;
-            this.label30.Text = "Profile";
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Location = new System.Drawing.Point(24, 527);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(36, 13);
+            this.lblProfile.TabIndex = 206;
+            this.lblProfile.Text = "Profile";
             // 
             // txtProfile1
             // 
@@ -940,39 +941,62 @@
             this.cbDelivery2.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery2.TabIndex = 211;
             // 
-            // cbMunitions2
+            // Munitions2
             // 
-            this.cbMunitions2.FormattingEnabled = true;
-            this.cbMunitions2.Items.AddRange(new object[] {
+            this.Munitions2.FormattingEnabled = true;
+            this.Munitions2.Items.AddRange(new object[] {
             "Guns",
-            "MK-82",
-            "MK-82AIR",
-            "MK-84",
+            "AGM-65D",
+            "AGM-65G",
+            "AGM-65H",
+            "AGM-65K",
             "GBU-10",
             "GBU-12",
             "GBU-31",
             "GBU-38",
-            "Rockets",
-            "",
-            "..."});
-            this.cbMunitions2.Location = new System.Drawing.Point(68, 563);
-            this.cbMunitions2.Name = "cbMunitions2";
-            this.cbMunitions2.Size = new System.Drawing.Size(81, 21);
-            this.cbMunitions2.TabIndex = 212;
-            this.cbMunitions2.SelectedIndexChanged += new System.EventHandler(this.cbMunitions2_SelectedIndexChanged);
+            "MK-82",
+            "MK-82AIR",
+            "MK-84",
+            "CBU-87",
+            "CBU-97",
+            "CBU-103",
+            "CBU-105",
+            "M151",
+            "MK5",
+            "M156",
+            "M257",
+            "LUU-2B/B",
+            "LUU-19",
+            "BDU-33",
+            "BDU-50LD",
+            "BDU-50HD",
+            "BDU-50LGB",
+            "MK1",
+            "MK61",
+            "WTU1B",
+            "M274",
+            "TGM-65D",
+            "TGM-65G",
+            "CATM-65K",
+            "TGM-65H"});
+            this.Munitions2.Location = new System.Drawing.Point(68, 563);
+            this.Munitions2.Name = "Munitions2";
+            this.Munitions2.Size = new System.Drawing.Size(81, 21);
+            this.Munitions2.TabIndex = 212;
+            this.Munitions2.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
-            // cbMode2
+            // Mode2
             // 
-            this.cbMode2.FormattingEnabled = true;
-            this.cbMode2.Items.AddRange(new object[] {
+            this.Mode2.FormattingEnabled = true;
+            this.Mode2.Items.AddRange(new object[] {
             "CCRP",
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.cbMode2.Location = new System.Drawing.Point(150, 563);
-            this.cbMode2.Name = "cbMode2";
-            this.cbMode2.Size = new System.Drawing.Size(76, 21);
-            this.cbMode2.TabIndex = 213;
+            this.Mode2.Location = new System.Drawing.Point(150, 563);
+            this.Mode2.Name = "Mode2";
+            this.Mode2.Size = new System.Drawing.Size(76, 21);
+            this.Mode2.TabIndex = 213;
             // 
             // txtAltitude2
             // 
@@ -1074,39 +1098,62 @@
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery3.TabIndex = 221;
             // 
-            // cbMunitions3
+            // Munitions3
             // 
-            this.cbMunitions3.FormattingEnabled = true;
-            this.cbMunitions3.Items.AddRange(new object[] {
+            this.Munitions3.FormattingEnabled = true;
+            this.Munitions3.Items.AddRange(new object[] {
             "Guns",
-            "MK-82",
-            "MK-82AIR",
-            "MK-84",
+            "AGM-65D",
+            "AGM-65G",
+            "AGM-65H",
+            "AGM-65K",
             "GBU-10",
             "GBU-12",
             "GBU-31",
             "GBU-38",
-            "Rockets",
-            "",
-            "..."});
-            this.cbMunitions3.Location = new System.Drawing.Point(68, 585);
-            this.cbMunitions3.Name = "cbMunitions3";
-            this.cbMunitions3.Size = new System.Drawing.Size(81, 21);
-            this.cbMunitions3.TabIndex = 222;
-            this.cbMunitions3.SelectedIndexChanged += new System.EventHandler(this.cbMunitions3_SelectedIndexChanged);
+            "MK-82",
+            "MK-82AIR",
+            "MK-84",
+            "CBU-87",
+            "CBU-97",
+            "CBU-103",
+            "CBU-105",
+            "M151",
+            "MK5",
+            "M156",
+            "M257",
+            "LUU-2B/B",
+            "LUU-19",
+            "BDU-33",
+            "BDU-50LD",
+            "BDU-50HD",
+            "BDU-50LGB",
+            "MK1",
+            "MK61",
+            "WTU1B",
+            "M274",
+            "TGM-65D",
+            "TGM-65G",
+            "CATM-65K",
+            "TGM-65H"});
+            this.Munitions3.Location = new System.Drawing.Point(68, 585);
+            this.Munitions3.Name = "Munitions3";
+            this.Munitions3.Size = new System.Drawing.Size(81, 21);
+            this.Munitions3.TabIndex = 222;
+            this.Munitions3.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
-            // cbMode3
+            // Mode3
             // 
-            this.cbMode3.FormattingEnabled = true;
-            this.cbMode3.Items.AddRange(new object[] {
+            this.Mode3.FormattingEnabled = true;
+            this.Mode3.Items.AddRange(new object[] {
             "CCRP",
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.cbMode3.Location = new System.Drawing.Point(150, 585);
-            this.cbMode3.Name = "cbMode3";
-            this.cbMode3.Size = new System.Drawing.Size(76, 21);
-            this.cbMode3.TabIndex = 223;
+            this.Mode3.Location = new System.Drawing.Point(150, 585);
+            this.Mode3.Name = "Mode3";
+            this.Mode3.Size = new System.Drawing.Size(76, 21);
+            this.Mode3.TabIndex = 223;
             // 
             // txtAltitude3
             // 
@@ -1208,39 +1255,62 @@
             this.cbDelivery4.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery4.TabIndex = 231;
             // 
-            // cbMunitions4
+            // Munitions4
             // 
-            this.cbMunitions4.FormattingEnabled = true;
-            this.cbMunitions4.Items.AddRange(new object[] {
+            this.Munitions4.FormattingEnabled = true;
+            this.Munitions4.Items.AddRange(new object[] {
             "Guns",
-            "MK-82",
-            "MK-82AIR",
-            "MK-84",
+            "AGM-65D",
+            "AGM-65G",
+            "AGM-65H",
+            "AGM-65K",
             "GBU-10",
             "GBU-12",
             "GBU-31",
             "GBU-38",
-            "Rockets",
-            "",
-            "..."});
-            this.cbMunitions4.Location = new System.Drawing.Point(68, 607);
-            this.cbMunitions4.Name = "cbMunitions4";
-            this.cbMunitions4.Size = new System.Drawing.Size(81, 21);
-            this.cbMunitions4.TabIndex = 232;
-            this.cbMunitions4.SelectedIndexChanged += new System.EventHandler(this.cbMunitions4_SelectedIndexChanged);
+            "MK-82",
+            "MK-82AIR",
+            "MK-84",
+            "CBU-87",
+            "CBU-97",
+            "CBU-103",
+            "CBU-105",
+            "M151",
+            "MK5",
+            "M156",
+            "M257",
+            "LUU-2B/B",
+            "LUU-19",
+            "BDU-33",
+            "BDU-50LD",
+            "BDU-50HD",
+            "BDU-50LGB",
+            "MK1",
+            "MK61",
+            "WTU1B",
+            "M274",
+            "TGM-65D",
+            "TGM-65G",
+            "CATM-65K",
+            "TGM-65H"});
+            this.Munitions4.Location = new System.Drawing.Point(68, 607);
+            this.Munitions4.Name = "Munitions4";
+            this.Munitions4.Size = new System.Drawing.Size(81, 21);
+            this.Munitions4.TabIndex = 232;
+            this.Munitions4.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
-            // cbMode4
+            // Mode4
             // 
-            this.cbMode4.FormattingEnabled = true;
-            this.cbMode4.Items.AddRange(new object[] {
+            this.Mode4.FormattingEnabled = true;
+            this.Mode4.Items.AddRange(new object[] {
             "CCRP",
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.cbMode4.Location = new System.Drawing.Point(150, 607);
-            this.cbMode4.Name = "cbMode4";
-            this.cbMode4.Size = new System.Drawing.Size(76, 21);
-            this.cbMode4.TabIndex = 233;
+            this.Mode4.Location = new System.Drawing.Point(150, 607);
+            this.Mode4.Name = "Mode4";
+            this.Mode4.Size = new System.Drawing.Size(76, 21);
+            this.Mode4.TabIndex = 233;
             // 
             // txtAltitude4
             // 
@@ -1451,41 +1521,41 @@
             this.txtAttackIP4.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP4.TabIndex = 253;
             // 
-            // comboBox1
+            // cbFormation2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbFormation2.FormattingEnabled = true;
+            this.cbFormation2.Items.AddRange(new object[] {
             "FW",
             "Line",
             "Trail"});
-            this.comboBox1.Location = new System.Drawing.Point(193, 261);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(42, 21);
-            this.comboBox1.TabIndex = 254;
+            this.cbFormation2.Location = new System.Drawing.Point(193, 261);
+            this.cbFormation2.Name = "cbFormation2";
+            this.cbFormation2.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation2.TabIndex = 254;
             // 
-            // comboBox3
+            // cbFormation3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbFormation3.FormattingEnabled = true;
+            this.cbFormation3.Items.AddRange(new object[] {
             "FW",
             "Line",
             "Trail"});
-            this.comboBox3.Location = new System.Drawing.Point(193, 283);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(42, 21);
-            this.comboBox3.TabIndex = 255;
+            this.cbFormation3.Location = new System.Drawing.Point(193, 283);
+            this.cbFormation3.Name = "cbFormation3";
+            this.cbFormation3.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation3.TabIndex = 255;
             // 
-            // comboBox4
+            // cbFormation4
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbFormation4.FormattingEnabled = true;
+            this.cbFormation4.Items.AddRange(new object[] {
             "FW",
             "Line",
             "Trail"});
-            this.comboBox4.Location = new System.Drawing.Point(193, 305);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(42, 21);
-            this.comboBox4.TabIndex = 256;
+            this.cbFormation4.Location = new System.Drawing.Point(193, 305);
+            this.cbFormation4.Name = "cbFormation4";
+            this.cbFormation4.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation4.TabIndex = 256;
             // 
             // txtEgressIP2
             // 
@@ -1529,194 +1599,197 @@
             this.txtProfile4.Size = new System.Drawing.Size(52, 20);
             this.txtProfile4.TabIndex = 262;
             // 
-            // cbFusing2
+            // Fusing2
             // 
-            this.cbFusing2.FormattingEnabled = true;
-            this.cbFusing2.Items.AddRange(new object[] {
+            this.Fusing2.FormattingEnabled = true;
+            this.Fusing2.Items.AddRange(new object[] {
             "Nose",
             "Tail",
             "N/T",
             "N/A"});
-            this.cbFusing2.Location = new System.Drawing.Point(227, 563);
-            this.cbFusing2.Name = "cbFusing2";
-            this.cbFusing2.Size = new System.Drawing.Size(47, 21);
-            this.cbFusing2.TabIndex = 263;
+            this.Fusing2.Location = new System.Drawing.Point(227, 563);
+            this.Fusing2.Name = "Fusing2";
+            this.Fusing2.Size = new System.Drawing.Size(47, 21);
+            this.Fusing2.TabIndex = 263;
             // 
-            // cbFusing3
+            // Fusing3
             // 
-            this.cbFusing3.FormattingEnabled = true;
-            this.cbFusing3.Items.AddRange(new object[] {
+            this.Fusing3.FormattingEnabled = true;
+            this.Fusing3.Items.AddRange(new object[] {
             "Nose",
             "Tail",
             "N/T",
             "N/A"});
-            this.cbFusing3.Location = new System.Drawing.Point(227, 585);
-            this.cbFusing3.Name = "cbFusing3";
-            this.cbFusing3.Size = new System.Drawing.Size(47, 21);
-            this.cbFusing3.TabIndex = 264;
+            this.Fusing3.Location = new System.Drawing.Point(227, 585);
+            this.Fusing3.Name = "Fusing3";
+            this.Fusing3.Size = new System.Drawing.Size(47, 21);
+            this.Fusing3.TabIndex = 264;
             // 
-            // cbFusing4
+            // Fusing4
             // 
-            this.cbFusing4.FormattingEnabled = true;
-            this.cbFusing4.Items.AddRange(new object[] {
+            this.Fusing4.FormattingEnabled = true;
+            this.Fusing4.Items.AddRange(new object[] {
             "Nose",
             "Tail",
             "N/T",
             "N/A"});
-            this.cbFusing4.Location = new System.Drawing.Point(227, 607);
-            this.cbFusing4.Name = "cbFusing4";
-            this.cbFusing4.Size = new System.Drawing.Size(47, 21);
-            this.cbFusing4.TabIndex = 265;
+            this.Fusing4.Location = new System.Drawing.Point(227, 607);
+            this.Fusing4.Name = "Fusing4";
+            this.Fusing4.Size = new System.Drawing.Size(47, 21);
+            this.Fusing4.TabIndex = 265;
             // 
-            // cbSGLPAIR2
+            // SGLPAIR2
             // 
-            this.cbSGLPAIR2.FormattingEnabled = true;
-            this.cbSGLPAIR2.Items.AddRange(new object[] {
+            this.SGLPAIR2.FormattingEnabled = true;
+            this.SGLPAIR2.Items.AddRange(new object[] {
             "SGL",
             "PRS",
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.cbSGLPAIR2.Location = new System.Drawing.Point(275, 563);
-            this.cbSGLPAIR2.Name = "cbSGLPAIR2";
-            this.cbSGLPAIR2.Size = new System.Drawing.Size(65, 21);
-            this.cbSGLPAIR2.TabIndex = 266;
+            this.SGLPAIR2.Location = new System.Drawing.Point(275, 563);
+            this.SGLPAIR2.Name = "SGLPAIR2";
+            this.SGLPAIR2.Size = new System.Drawing.Size(65, 21);
+            this.SGLPAIR2.TabIndex = 266;
+            this.SGLPAIR2.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
-            // cbSGLPAIR3
+            // SGLPAIR3
             // 
-            this.cbSGLPAIR3.FormattingEnabled = true;
-            this.cbSGLPAIR3.Items.AddRange(new object[] {
+            this.SGLPAIR3.FormattingEnabled = true;
+            this.SGLPAIR3.Items.AddRange(new object[] {
             "SGL",
             "PRS",
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.cbSGLPAIR3.Location = new System.Drawing.Point(275, 585);
-            this.cbSGLPAIR3.Name = "cbSGLPAIR3";
-            this.cbSGLPAIR3.Size = new System.Drawing.Size(65, 21);
-            this.cbSGLPAIR3.TabIndex = 267;
+            this.SGLPAIR3.Location = new System.Drawing.Point(275, 585);
+            this.SGLPAIR3.Name = "SGLPAIR3";
+            this.SGLPAIR3.Size = new System.Drawing.Size(65, 21);
+            this.SGLPAIR3.TabIndex = 267;
+            this.SGLPAIR3.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
-            // cbSGLPAIR4
+            // SGLPAIR4
             // 
-            this.cbSGLPAIR4.FormattingEnabled = true;
-            this.cbSGLPAIR4.Items.AddRange(new object[] {
+            this.SGLPAIR4.FormattingEnabled = true;
+            this.SGLPAIR4.Items.AddRange(new object[] {
             "SGL",
             "PRS",
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.cbSGLPAIR4.Location = new System.Drawing.Point(275, 607);
-            this.cbSGLPAIR4.Name = "cbSGLPAIR4";
-            this.cbSGLPAIR4.Size = new System.Drawing.Size(65, 21);
-            this.cbSGLPAIR4.TabIndex = 268;
+            this.SGLPAIR4.Location = new System.Drawing.Point(275, 607);
+            this.SGLPAIR4.Name = "SGLPAIR4";
+            this.SGLPAIR4.Size = new System.Drawing.Size(65, 21);
+            this.SGLPAIR4.TabIndex = 268;
+            this.SGLPAIR4.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
-            // numRipple2
+            // RPL2
             // 
-            this.numRipple2.Location = new System.Drawing.Point(341, 564);
-            this.numRipple2.Maximum = new decimal(new int[] {
+            this.RPL2.Location = new System.Drawing.Point(341, 564);
+            this.RPL2.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.numRipple2.Name = "numRipple2";
-            this.numRipple2.Size = new System.Drawing.Size(32, 20);
-            this.numRipple2.TabIndex = 269;
+            this.RPL2.Name = "RPL2";
+            this.RPL2.Size = new System.Drawing.Size(32, 20);
+            this.RPL2.TabIndex = 269;
             // 
-            // numRipple3
+            // RPL3
             // 
-            this.numRipple3.Location = new System.Drawing.Point(341, 585);
-            this.numRipple3.Maximum = new decimal(new int[] {
+            this.RPL3.Location = new System.Drawing.Point(341, 585);
+            this.RPL3.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.numRipple3.Name = "numRipple3";
-            this.numRipple3.Size = new System.Drawing.Size(32, 20);
-            this.numRipple3.TabIndex = 270;
+            this.RPL3.Name = "RPL3";
+            this.RPL3.Size = new System.Drawing.Size(32, 20);
+            this.RPL3.TabIndex = 270;
             // 
-            // numRipple4
+            // RPL4
             // 
-            this.numRipple4.Location = new System.Drawing.Point(341, 608);
-            this.numRipple4.Maximum = new decimal(new int[] {
+            this.RPL4.Location = new System.Drawing.Point(341, 608);
+            this.RPL4.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.numRipple4.Name = "numRipple4";
-            this.numRipple4.Size = new System.Drawing.Size(32, 20);
-            this.numRipple4.TabIndex = 271;
+            this.RPL4.Name = "RPL4";
+            this.RPL4.Size = new System.Drawing.Size(32, 20);
+            this.RPL4.TabIndex = 271;
             // 
-            // numSpacing2
+            // Spacing2
             // 
-            this.numSpacing2.Increment = new decimal(new int[] {
+            this.Spacing2.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numSpacing2.Location = new System.Drawing.Point(374, 564);
-            this.numSpacing2.Maximum = new decimal(new int[] {
+            this.Spacing2.Location = new System.Drawing.Point(374, 564);
+            this.Spacing2.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numSpacing2.Name = "numSpacing2";
-            this.numSpacing2.Size = new System.Drawing.Size(38, 20);
-            this.numSpacing2.TabIndex = 272;
+            this.Spacing2.Name = "Spacing2";
+            this.Spacing2.Size = new System.Drawing.Size(38, 20);
+            this.Spacing2.TabIndex = 272;
             // 
-            // numSpacing3
+            // Spacing3
             // 
-            this.numSpacing3.Increment = new decimal(new int[] {
+            this.Spacing3.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numSpacing3.Location = new System.Drawing.Point(374, 585);
-            this.numSpacing3.Maximum = new decimal(new int[] {
+            this.Spacing3.Location = new System.Drawing.Point(374, 585);
+            this.Spacing3.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numSpacing3.Name = "numSpacing3";
-            this.numSpacing3.Size = new System.Drawing.Size(38, 20);
-            this.numSpacing3.TabIndex = 273;
+            this.Spacing3.Name = "Spacing3";
+            this.Spacing3.Size = new System.Drawing.Size(38, 20);
+            this.Spacing3.TabIndex = 273;
             // 
-            // numSpacing4
+            // Spacing4
             // 
-            this.numSpacing4.Increment = new decimal(new int[] {
+            this.Spacing4.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numSpacing4.Location = new System.Drawing.Point(374, 608);
-            this.numSpacing4.Maximum = new decimal(new int[] {
+            this.Spacing4.Location = new System.Drawing.Point(374, 608);
+            this.Spacing4.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numSpacing4.Name = "numSpacing4";
-            this.numSpacing4.Size = new System.Drawing.Size(38, 20);
-            this.numSpacing4.TabIndex = 274;
+            this.Spacing4.Name = "Spacing4";
+            this.Spacing4.Size = new System.Drawing.Size(38, 20);
+            this.Spacing4.TabIndex = 274;
             // 
-            // txtHOF2
+            // HOF2
             // 
-            this.txtHOF2.Location = new System.Drawing.Point(413, 564);
-            this.txtHOF2.Name = "txtHOF2";
-            this.txtHOF2.Size = new System.Drawing.Size(48, 20);
-            this.txtHOF2.TabIndex = 275;
+            this.HOF2.Location = new System.Drawing.Point(413, 564);
+            this.HOF2.Name = "HOF2";
+            this.HOF2.Size = new System.Drawing.Size(48, 20);
+            this.HOF2.TabIndex = 275;
             // 
-            // txtHOF3
+            // HOF3
             // 
-            this.txtHOF3.Location = new System.Drawing.Point(413, 585);
-            this.txtHOF3.Name = "txtHOF3";
-            this.txtHOF3.Size = new System.Drawing.Size(48, 20);
-            this.txtHOF3.TabIndex = 276;
+            this.HOF3.Location = new System.Drawing.Point(413, 585);
+            this.HOF3.Name = "HOF3";
+            this.HOF3.Size = new System.Drawing.Size(48, 20);
+            this.HOF3.TabIndex = 276;
             // 
-            // txtHOF4
+            // HOF4
             // 
-            this.txtHOF4.Location = new System.Drawing.Point(413, 608);
-            this.txtHOF4.Name = "txtHOF4";
-            this.txtHOF4.Size = new System.Drawing.Size(48, 20);
-            this.txtHOF4.TabIndex = 277;
+            this.HOF4.Location = new System.Drawing.Point(413, 608);
+            this.HOF4.Name = "HOF4";
+            this.HOF4.Size = new System.Drawing.Size(48, 20);
+            this.HOF4.TabIndex = 277;
             // 
             // btnBack
             // 
@@ -1737,109 +1810,109 @@
             this.lblRPM.TabIndex = 280;
             this.lblRPM.Text = "RPM";
             // 
-            // numRPM1
+            // RPM1
             // 
-            this.numRPM1.Increment = new decimal(new int[] {
+            this.RPM1.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numRPM1.Location = new System.Drawing.Point(462, 541);
-            this.numRPM1.Maximum = new decimal(new int[] {
+            this.RPM1.Location = new System.Drawing.Point(462, 541);
+            this.RPM1.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numRPM1.Name = "numRPM1";
-            this.numRPM1.Size = new System.Drawing.Size(44, 20);
-            this.numRPM1.TabIndex = 281;
+            this.RPM1.Name = "RPM1";
+            this.RPM1.Size = new System.Drawing.Size(44, 20);
+            this.RPM1.TabIndex = 281;
             // 
-            // numRPM2
+            // RPM2
             // 
-            this.numRPM2.Increment = new decimal(new int[] {
+            this.RPM2.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numRPM2.Location = new System.Drawing.Point(462, 564);
-            this.numRPM2.Maximum = new decimal(new int[] {
+            this.RPM2.Location = new System.Drawing.Point(462, 564);
+            this.RPM2.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numRPM2.Name = "numRPM2";
-            this.numRPM2.Size = new System.Drawing.Size(44, 20);
-            this.numRPM2.TabIndex = 282;
+            this.RPM2.Name = "RPM2";
+            this.RPM2.Size = new System.Drawing.Size(44, 20);
+            this.RPM2.TabIndex = 282;
             // 
-            // numRPM3
+            // RPM3
             // 
-            this.numRPM3.Increment = new decimal(new int[] {
+            this.RPM3.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numRPM3.Location = new System.Drawing.Point(462, 585);
-            this.numRPM3.Maximum = new decimal(new int[] {
+            this.RPM3.Location = new System.Drawing.Point(462, 585);
+            this.RPM3.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numRPM3.Name = "numRPM3";
-            this.numRPM3.Size = new System.Drawing.Size(44, 20);
-            this.numRPM3.TabIndex = 283;
+            this.RPM3.Name = "RPM3";
+            this.RPM3.Size = new System.Drawing.Size(44, 20);
+            this.RPM3.TabIndex = 283;
             // 
-            // numRPM4
+            // RPM4
             // 
-            this.numRPM4.Increment = new decimal(new int[] {
+            this.RPM4.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numRPM4.Location = new System.Drawing.Point(462, 608);
-            this.numRPM4.Maximum = new decimal(new int[] {
+            this.RPM4.Location = new System.Drawing.Point(462, 608);
+            this.RPM4.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numRPM4.Name = "numRPM4";
-            this.numRPM4.Size = new System.Drawing.Size(44, 20);
-            this.numRPM4.TabIndex = 284;
+            this.RPM4.Name = "RPM4";
+            this.RPM4.Size = new System.Drawing.Size(44, 20);
+            this.RPM4.TabIndex = 284;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 901);
-            this.Controls.Add(this.numRPM4);
-            this.Controls.Add(this.numRPM3);
-            this.Controls.Add(this.numRPM2);
-            this.Controls.Add(this.numRPM1);
+            this.Controls.Add(this.RPM4);
+            this.Controls.Add(this.RPM3);
+            this.Controls.Add(this.RPM2);
+            this.Controls.Add(this.RPM1);
             this.Controls.Add(this.lblRPM);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtHOF4);
-            this.Controls.Add(this.txtHOF3);
-            this.Controls.Add(this.txtHOF2);
-            this.Controls.Add(this.numSpacing4);
-            this.Controls.Add(this.numSpacing3);
-            this.Controls.Add(this.numSpacing2);
-            this.Controls.Add(this.numRipple4);
-            this.Controls.Add(this.numRipple3);
-            this.Controls.Add(this.numRipple2);
-            this.Controls.Add(this.cbSGLPAIR4);
-            this.Controls.Add(this.cbSGLPAIR3);
-            this.Controls.Add(this.cbSGLPAIR2);
-            this.Controls.Add(this.cbFusing4);
-            this.Controls.Add(this.cbFusing3);
-            this.Controls.Add(this.cbFusing2);
+            this.Controls.Add(this.HOF4);
+            this.Controls.Add(this.HOF3);
+            this.Controls.Add(this.HOF2);
+            this.Controls.Add(this.Spacing4);
+            this.Controls.Add(this.Spacing3);
+            this.Controls.Add(this.Spacing2);
+            this.Controls.Add(this.RPL4);
+            this.Controls.Add(this.RPL3);
+            this.Controls.Add(this.RPL2);
+            this.Controls.Add(this.SGLPAIR4);
+            this.Controls.Add(this.SGLPAIR3);
+            this.Controls.Add(this.SGLPAIR2);
+            this.Controls.Add(this.Fusing4);
+            this.Controls.Add(this.Fusing3);
+            this.Controls.Add(this.Fusing2);
             this.Controls.Add(this.txtProfile4);
             this.Controls.Add(this.txtProfile3);
             this.Controls.Add(this.txtProfile2);
             this.Controls.Add(this.txtEgressIP4);
             this.Controls.Add(this.txtEgressIP3);
             this.Controls.Add(this.txtEgressIP2);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbFormation4);
+            this.Controls.Add(this.cbFormation3);
+            this.Controls.Add(this.cbFormation2);
             this.Controls.Add(this.txtAttackIP4);
             this.Controls.Add(this.txtAttackIP3);
             this.Controls.Add(this.txtAttackIP2);
@@ -1860,8 +1933,8 @@
             this.Controls.Add(this.cbSem4);
             this.Controls.Add(this.txtAbort4);
             this.Controls.Add(this.txtAltitude4);
-            this.Controls.Add(this.cbMode4);
-            this.Controls.Add(this.cbMunitions4);
+            this.Controls.Add(this.Mode4);
+            this.Controls.Add(this.Munitions4);
             this.Controls.Add(this.cbDelivery4);
             this.Controls.Add(this.txtProfileAttack4);
             this.Controls.Add(this.numEgressHeading3);
@@ -1870,8 +1943,8 @@
             this.Controls.Add(this.cbSem3);
             this.Controls.Add(this.txtAbort3);
             this.Controls.Add(this.txtAltitude3);
-            this.Controls.Add(this.cbMode3);
-            this.Controls.Add(this.cbMunitions3);
+            this.Controls.Add(this.Mode3);
+            this.Controls.Add(this.Munitions3);
             this.Controls.Add(this.cbDelivery3);
             this.Controls.Add(this.txtProfileAttack3);
             this.Controls.Add(this.numEgressHeading2);
@@ -1880,34 +1953,34 @@
             this.Controls.Add(this.cbSem2);
             this.Controls.Add(this.txtAbort2);
             this.Controls.Add(this.txtAltitude2);
-            this.Controls.Add(this.cbMode2);
-            this.Controls.Add(this.cbMunitions2);
+            this.Controls.Add(this.Mode2);
+            this.Controls.Add(this.Munitions2);
             this.Controls.Add(this.cbDelivery2);
             this.Controls.Add(this.txtProfileAttack2);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.txtProfileAttack1);
             this.Controls.Add(this.txtProfile1);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.txtHOF1);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.HOF1);
             this.Controls.Add(this.lblHOF);
-            this.Controls.Add(this.cbFusing1);
+            this.Controls.Add(this.Fusing1);
             this.Controls.Add(this.lblFusing);
-            this.Controls.Add(this.numSpacing1);
-            this.Controls.Add(this.numRipple1);
+            this.Controls.Add(this.Spacing1);
+            this.Controls.Add(this.RPL1);
             this.Controls.Add(this.lblSpacing);
             this.Controls.Add(this.lblRPL);
             this.Controls.Add(this.txtAltitude1);
             this.Controls.Add(this.lblSGLPAIR);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.cbSGLPAIR1);
+            this.Controls.Add(this.SGLPAIR1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtAbort1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.lblMode);
-            this.Controls.Add(this.cbMode1);
+            this.Controls.Add(this.Mode1);
             this.Controls.Add(this.numEgressHeading1);
-            this.Controls.Add(this.cbMunitions1);
+            this.Controls.Add(this.Munitions1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.cbEgressCardinal1);
             this.Controls.Add(this.label18);
@@ -1918,7 +1991,7 @@
             this.Controls.Add(this.cbSem1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbDelivery1);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblMunitions);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dgvTgtElem);
             this.Controls.Add(this.textBox2);
@@ -1953,21 +2026,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRipple4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpacing4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRPM4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPL4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spacing4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPM4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2010,7 +2083,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblMunitions;
         private System.Windows.Forms.ComboBox cbDelivery1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbSem1;
@@ -2021,25 +2094,25 @@
         private System.Windows.Forms.ComboBox cbEgressCardinal1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cbMunitions1;
+        private System.Windows.Forms.ComboBox Munitions1;
         private System.Windows.Forms.NumericUpDown numEgressHeading1;
-        private System.Windows.Forms.ComboBox cbMode1;
+        private System.Windows.Forms.ComboBox Mode1;
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtAbort1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cbSGLPAIR1;
+        private System.Windows.Forms.ComboBox SGLPAIR1;
         private System.Windows.Forms.Label lblSGLPAIR;
         private System.Windows.Forms.TextBox txtAltitude1;
         private System.Windows.Forms.Label lblRPL;
         private System.Windows.Forms.Label lblSpacing;
-        private System.Windows.Forms.NumericUpDown numRipple1;
-        private System.Windows.Forms.NumericUpDown numSpacing1;
+        private System.Windows.Forms.NumericUpDown RPL1;
+        private System.Windows.Forms.NumericUpDown Spacing1;
         private System.Windows.Forms.Label lblFusing;
-        private System.Windows.Forms.ComboBox cbFusing1;
-        private System.Windows.Forms.TextBox txtHOF1;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox Fusing1;
+        private System.Windows.Forms.TextBox HOF1;
+        private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.TextBox txtProfile1;
         private System.Windows.Forms.TextBox txtProfileAttack1;
         private System.Windows.Forms.Label label31;
@@ -2047,8 +2120,8 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtProfileAttack2;
         private System.Windows.Forms.ComboBox cbDelivery2;
-        private System.Windows.Forms.ComboBox cbMunitions2;
-        private System.Windows.Forms.ComboBox cbMode2;
+        private System.Windows.Forms.ComboBox Munitions2;
+        private System.Windows.Forms.ComboBox Mode2;
         private System.Windows.Forms.TextBox txtAltitude2;
         private System.Windows.Forms.TextBox txtAbort2;
         private System.Windows.Forms.ComboBox cbSem2;
@@ -2057,8 +2130,8 @@
         private System.Windows.Forms.NumericUpDown numEgressHeading2;
         private System.Windows.Forms.TextBox txtProfileAttack3;
         private System.Windows.Forms.ComboBox cbDelivery3;
-        private System.Windows.Forms.ComboBox cbMunitions3;
-        private System.Windows.Forms.ComboBox cbMode3;
+        private System.Windows.Forms.ComboBox Munitions3;
+        private System.Windows.Forms.ComboBox Mode3;
         private System.Windows.Forms.TextBox txtAltitude3;
         private System.Windows.Forms.TextBox txtAbort3;
         private System.Windows.Forms.ComboBox cbSem3;
@@ -2067,8 +2140,8 @@
         private System.Windows.Forms.NumericUpDown numEgressHeading3;
         private System.Windows.Forms.TextBox txtProfileAttack4;
         private System.Windows.Forms.ComboBox cbDelivery4;
-        private System.Windows.Forms.ComboBox cbMunitions4;
-        private System.Windows.Forms.ComboBox cbMode4;
+        private System.Windows.Forms.ComboBox Munitions4;
+        private System.Windows.Forms.ComboBox Mode4;
         private System.Windows.Forms.TextBox txtAltitude4;
         private System.Windows.Forms.TextBox txtAbort4;
         private System.Windows.Forms.ComboBox cbSem4;
@@ -2089,35 +2162,35 @@
         private System.Windows.Forms.TextBox txtAttackIP2;
         private System.Windows.Forms.TextBox txtAttackIP3;
         private System.Windows.Forms.TextBox txtAttackIP4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbFormation2;
+        private System.Windows.Forms.ComboBox cbFormation3;
+        private System.Windows.Forms.ComboBox cbFormation4;
         private System.Windows.Forms.TextBox txtEgressIP2;
         private System.Windows.Forms.TextBox txtEgressIP3;
         private System.Windows.Forms.TextBox txtEgressIP4;
         private System.Windows.Forms.TextBox txtProfile2;
         private System.Windows.Forms.TextBox txtProfile3;
         private System.Windows.Forms.TextBox txtProfile4;
-        private System.Windows.Forms.ComboBox cbFusing2;
-        private System.Windows.Forms.ComboBox cbFusing3;
-        private System.Windows.Forms.ComboBox cbFusing4;
-        private System.Windows.Forms.ComboBox cbSGLPAIR2;
-        private System.Windows.Forms.ComboBox cbSGLPAIR3;
-        private System.Windows.Forms.ComboBox cbSGLPAIR4;
-        private System.Windows.Forms.NumericUpDown numRipple2;
-        private System.Windows.Forms.NumericUpDown numRipple3;
-        private System.Windows.Forms.NumericUpDown numRipple4;
-        private System.Windows.Forms.NumericUpDown numSpacing2;
-        private System.Windows.Forms.NumericUpDown numSpacing3;
-        private System.Windows.Forms.NumericUpDown numSpacing4;
-        private System.Windows.Forms.TextBox txtHOF2;
-        private System.Windows.Forms.TextBox txtHOF3;
-        private System.Windows.Forms.TextBox txtHOF4;
+        private System.Windows.Forms.ComboBox Fusing2;
+        private System.Windows.Forms.ComboBox Fusing3;
+        private System.Windows.Forms.ComboBox Fusing4;
+        private System.Windows.Forms.ComboBox SGLPAIR2;
+        private System.Windows.Forms.ComboBox SGLPAIR3;
+        private System.Windows.Forms.ComboBox SGLPAIR4;
+        private System.Windows.Forms.NumericUpDown RPL2;
+        private System.Windows.Forms.NumericUpDown RPL3;
+        private System.Windows.Forms.NumericUpDown RPL4;
+        private System.Windows.Forms.NumericUpDown Spacing2;
+        private System.Windows.Forms.NumericUpDown Spacing3;
+        private System.Windows.Forms.NumericUpDown Spacing4;
+        private System.Windows.Forms.TextBox HOF2;
+        private System.Windows.Forms.TextBox HOF3;
+        private System.Windows.Forms.TextBox HOF4;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblRPM;
-        private System.Windows.Forms.NumericUpDown numRPM1;
-        private System.Windows.Forms.NumericUpDown numRPM2;
-        private System.Windows.Forms.NumericUpDown numRPM3;
-        private System.Windows.Forms.NumericUpDown numRPM4;
+        private System.Windows.Forms.NumericUpDown RPM1;
+        private System.Windows.Forms.NumericUpDown RPM2;
+        private System.Windows.Forms.NumericUpDown RPM3;
+        private System.Windows.Forms.NumericUpDown RPM4;
     }
 }
