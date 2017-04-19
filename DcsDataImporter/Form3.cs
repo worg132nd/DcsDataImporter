@@ -30,6 +30,18 @@ namespace DcsDataImporter
             initTgtDgv(dgvTgtLead);
             initTgtDgv(dgvTgtElem);
             initProfiles();
+            initPackageDgv();
+            initForm();
+        }
+
+        private void initForm()
+        {
+            txtCallsign.Text = Properties.Settings.Default.prevTxtCallsign;
+            txtMsnNr.Text = Properties.Settings.Default.prevTxtMsnNr;
+            txtJoker.Text = Properties.Settings.Default.prevTxtJoker;
+            txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
+            cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
+
         }
 
         private void initTgtDgv(DataGridView dgv)
@@ -45,6 +57,44 @@ namespace DcsDataImporter
             row.Cells[0].Value = row.Cells[2].Value = "DMPI";
             row = dgv.Rows[2];
             row.Cells[0].Value = row.Cells[2].Value = "Coordinates";
+        }
+
+        private void initPackageDgv()
+        {
+            dgvPackage.RowCount = 6;
+            dgvPackage.DefaultCellStyle.SelectionBackColor = dgvPackage.DefaultCellStyle.BackColor;
+            dgvPackage.DefaultCellStyle.SelectionForeColor = dgvPackage.DefaultCellStyle.ForeColor;
+
+            int i = 0;
+            while (i < dgvPackage.Rows.Count)
+            {
+                initSupportRow(i);
+                i++;
+            }
+        }
+
+        private void initSupportRow(int i)
+        {
+            var row = dgvPackage.Rows[i];
+            row.Cells["colCallsign"].Value = "-";
+            row.Cells["colAircraftType"].Value = "-";
+            row.Cells["colGid"].Value = "-";
+            row.Cells["colTcn"].Value = "-";
+            row.Cells["colTask"].Value = "-";
+            row.Cells["colNotes"].Value = "-";
+
+            row = dgvPackage.Rows[0];
+            row.Cells["colTask"].Value = "SWEEP";
+            row = dgvPackage.Rows[1];
+            row.Cells["colTask"].Value = "SEAD";
+            row = dgvPackage.Rows[2];
+            row.Cells["colTask"].Value = "SEAD";
+            row = dgvPackage.Rows[3];
+            row.Cells["colTask"].Value = "AI";
+            row = dgvPackage.Rows[4];
+            row.Cells["colTask"].Value = "CAP";
+            row = dgvPackage.Rows[5];
+            row.Cells["colTask"].Value = "CAP";
         }
 
         private void initProfiles()
