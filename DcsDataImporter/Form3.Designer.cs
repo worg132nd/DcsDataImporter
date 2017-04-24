@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -372,18 +372,34 @@
             // 
             // cbDelivery1
             // 
+            this.cbDelivery1.DropDownWidth = 185;
             this.cbDelivery1.FormattingEnabled = true;
             this.cbDelivery1.Items.AddRange(new object[] {
-            "HARB",
-            "HADB",
-            "LALD",
-            "LAHD",
-            "Toss",
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
             "Popup"});
             this.cbDelivery1.Location = new System.Drawing.Point(68, 233);
             this.cbDelivery1.Name = "cbDelivery1";
             this.cbDelivery1.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery1.TabIndex = 174;
+            this.cbDelivery1.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery1.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -462,6 +478,7 @@
             this.cbEgressCardinal1.Name = "cbEgressCardinal1";
             this.cbEgressCardinal1.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal1.TabIndex = 182;
+            this.cbEgressCardinal1.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -771,18 +788,34 @@
             // 
             // cbDelivery2
             // 
+            this.cbDelivery2.DropDownWidth = 185;
             this.cbDelivery2.FormattingEnabled = true;
             this.cbDelivery2.Items.AddRange(new object[] {
-            "HARB",
-            "HADB",
-            "LALD",
-            "LAHD",
-            "Toss",
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
             "Popup"});
             this.cbDelivery2.Location = new System.Drawing.Point(68, 255);
             this.cbDelivery2.Name = "cbDelivery2";
             this.cbDelivery2.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery2.TabIndex = 211;
+            this.cbDelivery2.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery2.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // Munitions2
             // 
@@ -896,6 +929,7 @@
             this.cbEgressCardinal2.Name = "cbEgressCardinal2";
             this.cbEgressCardinal2.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal2.TabIndex = 218;
+            this.cbEgressCardinal2.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading2
             // 
@@ -928,18 +962,34 @@
             // 
             // cbDelivery3
             // 
+            this.cbDelivery3.DropDownWidth = 185;
             this.cbDelivery3.FormattingEnabled = true;
             this.cbDelivery3.Items.AddRange(new object[] {
-            "HARB",
-            "HADB",
-            "LALD",
-            "LAHD",
-            "Toss",
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
             "Popup"});
             this.cbDelivery3.Location = new System.Drawing.Point(68, 409);
             this.cbDelivery3.Name = "cbDelivery3";
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery3.TabIndex = 221;
+            this.cbDelivery3.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery3.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // Munitions3
             // 
@@ -1053,6 +1103,7 @@
             this.cbEgressCardinal3.Name = "cbEgressCardinal3";
             this.cbEgressCardinal3.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal3.TabIndex = 228;
+            this.cbEgressCardinal3.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading3
             // 
@@ -1085,18 +1136,34 @@
             // 
             // cbDelivery4
             // 
+            this.cbDelivery4.DropDownWidth = 185;
             this.cbDelivery4.FormattingEnabled = true;
             this.cbDelivery4.Items.AddRange(new object[] {
-            "HARB",
-            "HADB",
-            "LALD",
-            "LAHD",
-            "Toss",
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
             "Popup"});
             this.cbDelivery4.Location = new System.Drawing.Point(68, 431);
             this.cbDelivery4.Name = "cbDelivery4";
             this.cbDelivery4.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery4.TabIndex = 231;
+            this.cbDelivery4.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery4.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // Munitions4
             // 
@@ -1210,6 +1277,7 @@
             this.cbEgressCardinal4.Name = "cbEgressCardinal4";
             this.cbEgressCardinal4.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal4.TabIndex = 238;
+            this.cbEgressCardinal4.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading4
             // 
@@ -1296,7 +1364,8 @@
             this.cbFormation1.Items.AddRange(new object[] {
             "FW",
             "Line",
-            "Trail"});
+            "Trail",
+            "Wedge"});
             this.cbFormation1.Location = new System.Drawing.Point(193, 233);
             this.cbFormation1.Name = "cbFormation1";
             this.cbFormation1.Size = new System.Drawing.Size(42, 21);
@@ -1370,7 +1439,8 @@
             this.cbFormation2.Items.AddRange(new object[] {
             "FW",
             "Line",
-            "Trail"});
+            "Trail",
+            "Wedge"});
             this.cbFormation2.Location = new System.Drawing.Point(193, 255);
             this.cbFormation2.Name = "cbFormation2";
             this.cbFormation2.Size = new System.Drawing.Size(42, 21);
@@ -1382,7 +1452,8 @@
             this.cbFormation3.Items.AddRange(new object[] {
             "FW",
             "Line",
-            "Trail"});
+            "Trail",
+            "Wedge"});
             this.cbFormation3.Location = new System.Drawing.Point(193, 409);
             this.cbFormation3.Name = "cbFormation3";
             this.cbFormation3.Size = new System.Drawing.Size(42, 21);
@@ -1394,7 +1465,8 @@
             this.cbFormation4.Items.AddRange(new object[] {
             "FW",
             "Line",
-            "Trail"});
+            "Trail",
+            "Wedge"});
             this.cbFormation4.Location = new System.Drawing.Point(193, 431);
             this.cbFormation4.Name = "cbFormation4";
             this.cbFormation4.Size = new System.Drawing.Size(42, 21);
@@ -2023,14 +2095,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2042,8 +2114,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 500);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPackage.Size = new System.Drawing.Size(589, 155);
             this.dgvPackage.TabIndex = 379;
             // 

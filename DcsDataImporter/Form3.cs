@@ -232,7 +232,24 @@ namespace DcsDataImporter
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string pathA10c = @"\Kneeboard Groups\A-10C";
+            captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
+
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void captureScreen(string path)
+        {
+            System.Drawing.Rectangle bounds = this.Bounds;
+            using (Bitmap bitmap = new Bitmap(bounds.Width - 6, bounds.Height - 30))
+            {
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+                    g.CopyFromScreen(new System.Drawing.Point(bounds.Left + 3, bounds.Top + 30), System.Drawing.Point.Empty, bounds.Size);
+                }
+                System.IO.Directory.CreateDirectory(path + @"\MDC");
+                bitmap.Save(path + @"\MDC\MDC-002.png");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -392,6 +409,24 @@ namespace DcsDataImporter
             return false;
         }
 
+        private bool isBomb(string m)
+        {
+            if (m.Contains("GBU") || m.Contains("CBU") || m.Contains("BDU") || m.Contains("MK-8"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool isHighDrag(string m)
+        {
+            if (m.Equals("MK-82AIR") || m.Equals("BDU-50HD"))
+            {
+                return true;
+            }
+            return false;
+        }
+
         private bool isMav(string m)
         {
             if (m.Contains("-65"))
@@ -453,10 +488,28 @@ namespace DcsDataImporter
             Control[] list = this.Controls.Find(obj + rowNr, true);
             list[0].Text = "";
             list[0].Enabled = false;
-            Control[] label = this.Controls.Find("lbl" + obj, true);
-            label[0].Enabled = false;
 
+            if (allDisabled(obj))
+            {
+                Control[] label = this.Controls.Find("lbl" + obj, true);
+                label[0].Enabled = false;
+            }
             // TODO: if mode1-4.Enabled == false, label[0].Enabled = false;
+        }
+
+        private bool allDisabled(string obj)
+        {
+            int rowNr = 1;
+            while (rowNr < 5)
+            {
+                Control[] list = this.Controls.Find(obj + rowNr, true);
+                if (list[0].Enabled)
+                {
+                    return false;
+                }
+                rowNr++;
+            }
+            return true;
         }
 
         private char getNumber(object sender)
@@ -470,6 +523,165 @@ namespace DcsDataImporter
             char number = getNumber(sender);
 
             updateRowActivationSGLPAIR(number, sender);
+        }
+
+        private void cbEgressCardinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            const string N = "360";
+            const string NE = "45";
+            const string E = "90";
+            const string SE = "135";
+            const string S = "180";
+            const string SW = "225";
+            const string W = "270";
+            const string NW = "315";
+
+            char rowNr = getNumber(sender);
+            ComboBox cardinal = (ComboBox)sender;
+            if (cardinal.Text.Equals("N")) findObj("numEgressHeading", rowNr).Text = N;
+            if (cardinal.Text.Equals("NE")) findObj("numEgressHeading", rowNr).Text = NE;
+            if (cardinal.Text.Equals("E")) findObj("numEgressHeading", rowNr).Text = E;
+            if (cardinal.Text.Equals("SE")) findObj("numEgressHeading", rowNr).Text = SE;
+            if (cardinal.Text.Equals("S")) findObj("numEgressHeading", rowNr).Text = S;
+            if (cardinal.Text.Equals("SW")) findObj("numEgressHeading", rowNr).Text = SW;
+            if (cardinal.Text.Equals("W")) findObj("numEgressHeading", rowNr).Text = W;
+            if (cardinal.Text.Equals("NW")) findObj("numEgressHeading", rowNr).Text = NW;
+        }
+
+        private void cbDelivery_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox delivery = sender as ComboBox;
+            
+            if (delivery.SelectedItem.Equals("Low Angle Strafe (LAS)")) delivery.Items[delivery.FindStringExact("Low Angle Strafe (LAS)")] = "LAS";
+            if (delivery.SelectedItem.Equals("High Angle Strafe (HAS)")) delivery.Items[delivery.FindStringExact("High Angle Strafe (HAS)")] = "HAS";
+            if (delivery.SelectedItem.Equals("Long Range Strafe (LRS)")) delivery.Items[delivery.FindStringExact("Long Range Strafe (LRS)")] = "LRS";
+            if (delivery.SelectedItem.Equals("Two-Target Strafe (TTS)")) delivery.Items[delivery.FindStringExact("Two-Target Strafe (TTS)")] = "TTS";
+            if (delivery.SelectedItem.Equals("Low Angle Rocket (LAR)")) delivery.Items[delivery.FindStringExact("Low Angle Rocket (LAR)")] = "LAR";
+            if (delivery.SelectedItem.Equals("High Angle Rocket (HAR)")) delivery.Items[delivery.FindStringExact("High Angle Rocket (HAR)")] = "HAR";
+            if (delivery.SelectedItem.Equals("Low Altitude Tactical Rocket (LATR)")) delivery.Items[delivery.FindStringExact("Low Altitude Tactical Rocket (LATR)")] = "LATR";
+            if (delivery.SelectedItem.Equals("High Altitude Tactical Rocket (HATR)")) delivery.Items[delivery.FindStringExact("High Altitude Tactical Rocket (HATR)")] = "HATR";
+            if (delivery.SelectedItem.Equals("High Altitude Release Rocket (HARR)")) delivery.Items[delivery.FindStringExact("High Altitude Release Rocket (HARR)")] = "HARR";
+            if (delivery.SelectedItem.Equals("Loft Rocket (LR)")) delivery.Items[delivery.FindStringExact("Loft Rocket (LR)")] = "LR";
+            if (delivery.SelectedItem.Equals("Visual Level Delivery (VLD)")) delivery.Items[delivery.FindStringExact("Visual Level Delivery (VLD)")] = "VLD";
+            if (delivery.SelectedItem.Equals("Low Angle High Drag (LAHD)")) delivery.Items[delivery.FindStringExact("Low Angle High Drag (LAHD)")] = "LAHD";
+            if (delivery.SelectedItem.Equals("Low Angle Low Drag (LALD)")) delivery.Items[delivery.FindStringExact("Low Angle Low Drag (LALD)")] = "LALD";
+            if (delivery.SelectedItem.Equals("Dive Bomb (DB)")) delivery.Items[delivery.FindStringExact("Dive Bomb (DB)")] = "DB";
+            if (delivery.SelectedItem.Equals("High Altitude Dive Bomb (HADB)")) delivery.Items[delivery.FindStringExact("High Altitude Dive Bomb (HADB)")] = "HADB";
+            if (delivery.SelectedItem.Equals("High Altitude Release Bomb (HARB)")) delivery.Items[delivery.FindStringExact("High Altitude Release Bomb (HARB)")] = "HARB";
+            if (delivery.SelectedItem.Equals("Low Altitude Toss (LAT)")) delivery.Items[delivery.FindStringExact("Low Altitude Toss (LAT)")] = "LAT";
+            if (delivery.SelectedItem.Equals("Medium Altitude Toss (MAT)")) delivery.Items[delivery.FindStringExact("Medium Altitude Toss (MAT)")] = "MAT";
+        }
+
+        private void cbDelivery_DropDown(object sender, EventArgs e)
+        {
+            char rowNr = getNumber(sender);
+            ComboBox d = sender as ComboBox;
+
+            Control[] attack_profile = this.Controls.Find("txtProfileAttack" + rowNr, true);
+            if (profileMatched(attack_profile))
+            {
+                Control[] control_Delivery = this.Controls.Find("cbDelivery" + rowNr, true);
+                ComboBox munitions = getMunitions(attack_profile);
+                setCollection(munitions.Text, control_Delivery[0] as ComboBox);
+            }
+        }
+
+        private void setCollection(string munitions, ComboBox delivery)
+        {
+            const string LAS = "Low Angle Strafe (LAS)";
+            const string HAS = "High Angle Strafe (HAS)";
+            const string LRS = "Long Range Strafe (LRS)";
+            const string TTS = "Two-Target Strafe (TTS)";
+
+            const string LAR = "Low Angle Rocket(LAR)";
+            const string HAR = "High Angle Rocket (HAR)";
+            const string LATR = "Low Altitude Tactical Rocket (LATR)";
+            const string HATR = "High Altitude Tactical Rocket (HATR)";
+            const string HARR = "High Altitude Release Rocket(HARR)";
+            const string LR = "Loft Rocket (LR)";
+
+            const string VLD = "Visual Level Delivery (VLD)";
+            const string LAHD = "Low Angle High Drag (LAHD)";
+            const string LALD = "Low Angle Low Drag (LALD)";
+            const string DB = "Dive Bomb (DB)";
+            const string HADB = "High Altitude Dive Bomb (HADB)";
+            const string HARB = "High Altitude Release Bomb (HARB)";
+            const string LAT = "Low Altitude Toss (LAT)";
+            const string MAT = "Medium Altitude Toss (MAT)";
+            const string popup = "Popup";
+
+            if (isRocket(munitions))
+            {
+                delivery.Items.Clear();
+
+                delivery.Items.Add(LAR);
+                delivery.Items.Add(HAR);
+                delivery.Items.Add(LATR);
+                delivery.Items.Add(HATR);
+                delivery.Items.Add(HARR);
+                delivery.Items.Add(LR);
+                delivery.Items.Add(popup);
+            }
+
+            if (munitions.Contains("Gun"))
+            {
+                delivery.Items.Clear();
+
+                delivery.Items.Add(LAS);
+                delivery.Items.Add(HAS);
+                delivery.Items.Add(LRS);
+                delivery.Items.Add(TTS);
+                delivery.Items.Add(popup);
+            }
+
+            if (isBomb(munitions))
+            {
+                delivery.Items.Clear();
+
+                if (isHighDrag(munitions))
+                {
+                    delivery.Items.Add(LAHD);
+                }
+                
+                delivery.Items.Add(VLD);
+                delivery.Items.Add(LALD);
+                delivery.Items.Add(DB);
+                delivery.Items.Add(HADB);
+                delivery.Items.Add(HARB);
+                delivery.Items.Add(LAT);
+                delivery.Items.Add(MAT);
+                delivery.Items.Add(popup);
+            }
+        }
+
+        private bool profileMatched(Control[] profile_a)
+        {
+            int rowNr = 1;
+            while (rowNr < 5)
+            {
+                Control[] profile_b = this.Controls.Find("txtProfile" + rowNr.ToString(), true);
+                if (profile_a[0].Text.Equals(profile_b[0].Text) && profile_a[0].Text != "")
+                {
+                    return true;
+                }
+                rowNr++;
+            }
+            return false;
+        }
+
+        private ComboBox getMunitions(Control[] profile_a)
+        {
+            int rowNr = 1;
+            while (rowNr < 5)
+            {
+                Control[] profile_b = this.Controls.Find("txtProfile" + rowNr.ToString(), true);
+                if (profile_a[0].Text.Equals(profile_b[0].Text) && profile_a[0].Text != "")
+                {
+                    return this.Controls.Find("Munitions" + rowNr, true)[0] as ComboBox;
+                }
+                rowNr++;
+            }
+            return null;
         }
     }
 }
