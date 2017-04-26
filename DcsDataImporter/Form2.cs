@@ -18,6 +18,7 @@ namespace DcsDataImporter
 
         Dictionary<string, Waypoint> waypoints = new Dictionary<string, Waypoint>();
         LinkedList<string> waypointIDs = new LinkedList<string>();
+        string tacticalAirControl = "";
 
 
         public Form2()
@@ -28,7 +29,7 @@ namespace DcsDataImporter
             initTma();
         }
 
-        public Form2(string dep, string arr, string alt, string loc)
+        public Form2(string dep, string arr, string alt, string loc, string tac)
         {
             InitializeComponent();
             initFp();
@@ -44,6 +45,7 @@ namespace DcsDataImporter
             {
                 setKillbox(loc);
             }
+            tacticalAirControl = tac;
         }
 
         private bool isRange(string loc)
@@ -590,7 +592,7 @@ namespace DcsDataImporter
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
-            Form3 form3 = new Form3();
+            Form3 form3 = new Form3(tacticalAirControl);
             form3.Show(); // Show next flight form
             Hide(); // Hide form1
         }

@@ -19,28 +19,30 @@ namespace DcsDataImporter
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(string tac)
         {
             InitializeComponent();
-            initTarget();
+            initTarget(tac);
         }
 
-        private void initTarget()
+        private void initTarget(string tac)
         {
             initTgtDgv(dgvTgtLead);
             initTgtDgv(dgvTgtElem);
             initProfiles();
             initPackageDgv();
-            initForm();
+            initForm(tac);
         }
 
-        private void initForm()
+        private void initForm(string tac)
         {
             txtCallsign.Text = Properties.Settings.Default.prevTxtCallsign;
             txtMsnNr.Text = Properties.Settings.Default.prevTxtMsnNr;
             txtJoker.Text = Properties.Settings.Default.prevTxtJoker;
             txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
             cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
+            txtTac.Text = tac;
+            txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
 
         }
 

@@ -298,8 +298,10 @@ namespace DcsDataImporter
             buildList();
 
             loadFirstLineOfMDC();
+            loadDGVFlight();
             loadSelectedAirbases();
             loadTimes();
+            loadTaxiAndRejoin();
             loadDGVAirbases();
             loadAwacs();
             loadTacp();
@@ -316,8 +318,12 @@ namespace DcsDataImporter
 
             if (Properties.Settings.Default.prevChkTma == "true") chkTma.Checked = true;
             else chkTma.Checked = false;
+        }
 
-            /* TBD clean all presets that are 0 */
+        private void loadTaxiAndRejoin()
+        {
+            cbRejoin.Text = Properties.Settings.Default.prevCbRejoin;
+            cbTaxi.Text = Properties.Settings.Default.prevCbTaxi;
         }
 
         /* Loads textbox data like Metar and Amplification from last form */
@@ -1767,9 +1773,65 @@ namespace DcsDataImporter
             row = dgvAirbase.Rows[2];
             string alt = (string)row.Cells["colAirbase"].Value;
 
-            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text);
+            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text, selectTac());
             form2.Show(); // Show next flight form
             Hide(); // Hide form1
+        }
+
+        private string selectTac()
+        {
+            if (chkTacp.Checked)
+            {
+                return txtTacpCallsign.Text;
+            }
+            else
+            {
+                if (isAwacsGround())
+                {
+                    return getAwacsGround();
+                }
+                else
+                {
+                    return txtAwacsCallsign.Text;
+                }
+            }
+            return "";
+        }
+
+        private bool isAwacsGround()
+        {
+            int rowNr = 0;
+            while (rowNr < dgvSupport.RowCount)
+            {
+                var row = dgvSupport.Rows[rowNr];
+                if (row.Cells["colTypeSupport"].Value.Equals("AWACS A-G"))
+                {
+                    if (!row.Cells["colCallsignSupport"].Value.Equals("") && !row.Cells["colCallsignSupport"].Value.Equals("-"))
+                    {
+                        return true;
+                    }
+                }
+                rowNr++;
+            }
+            return false;
+        }
+
+        private string getAwacsGround()
+        {
+            int rowNr = 0;
+            while (rowNr < dgvSupport.RowCount)
+            {
+                var row = dgvSupport.Rows[rowNr];
+                if (row.Cells["colTypeSupport"].Value.Equals("AWACS A-G"))
+                {
+                    if (!row.Cells["colCallsignSupport"].Value.Equals("") && !row.Cells["colCallsignSupport"].Value.Equals("-"))
+                    {
+                        return row.Cells["colCallsignSupport"].Value.ToString();
+                    }
+                }
+                rowNr++;
+            }
+            return null;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -1890,7 +1952,12 @@ namespace DcsDataImporter
 
             Properties.Settings.Default.prevTxtLandingTime = txtLandingTime.Text;
 
+            /* TAXI and REJOIN */
+            Properties.Settings.Default.prevCbRejoin = cbRejoin.Text;
+            Properties.Settings.Default.prevCbTaxi = cbTaxi.Text;
+
             saveDGVSupport();
+            saveDGVFlight();
 
             if (chkTma.Checked == true) Properties.Settings.Default.prevChkTma = "true";
             else Properties.Settings.Default.prevChkTma = "false";
@@ -2008,6 +2075,53 @@ namespace DcsDataImporter
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesJSTARSupport;
         }
 
+        private void loadDGVFlight()
+        {
+            /* Lead */
+            var row = dgvFlight.Rows[0];
+
+            row.Cells["colPos"].Value = Properties.Settings.Default.prevColPosLead;
+            row.Cells["colCallsign"].Value = Properties.Settings.Default.prevColCallsignLead;
+            row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotLead;
+            row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidLead;
+            row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickLead;
+            row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrLead;
+            row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesLead;
+
+            /* Wing */
+            row = dgvFlight.Rows[1];
+
+            row.Cells["colPos"].Value = Properties.Settings.Default.prevColPosWing;
+            row.Cells["colCallsign"].Value = Properties.Settings.Default.prevColCallsignWing;
+            row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotWing;
+            row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidWing;
+            row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickWing;
+            row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrWing;
+            row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesWing;
+
+            /* Element */
+            row = dgvFlight.Rows[2];
+
+            row.Cells["colPos"].Value = Properties.Settings.Default.prevColPosElement;
+            row.Cells["colCallsign"].Value = Properties.Settings.Default.prevColCallsignElement;
+            row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotElement;
+            row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidElement;
+            row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickElement;
+            row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrElement;
+            row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesElement;
+
+            /* Trail */
+            row = dgvFlight.Rows[3];
+
+            row.Cells["colPos"].Value = Properties.Settings.Default.prevColPosTrail;
+            row.Cells["colCallsign"].Value = Properties.Settings.Default.prevColCallsignTrail;
+            row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotTrail;
+            row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidTrail;
+            row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickTrail;
+            row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrTrail;
+            row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesTrail;
+        }
+
         private void loadDGVAirbases()
         {
             /* Departure */
@@ -2045,6 +2159,53 @@ namespace DcsDataImporter
             row.Cells["colElev"].Value = Properties.Settings.Default.prevColElevAlt;
             row.Cells["colRwy"].Value = Properties.Settings.Default.prevColRwyAlt;
             row.Cells["colIls"].Value = Properties.Settings.Default.prevColIlsAlt;
+        }
+
+        private void saveDGVFlight()
+        {
+            /* Lead */
+            var row = dgvFlight.Rows[0];
+
+            Properties.Settings.Default.prevColPosLead = row.Cells["colPos"].Value as string;
+            Properties.Settings.Default.prevColCallsignLead = row.Cells["colCallsign"].Value as string;
+            Properties.Settings.Default.prevColPilotLead = row.Cells["colPilot"].Value as string;
+            Properties.Settings.Default.prevColGidOidLead = row.Cells["colGidOid"].Value as string;
+            Properties.Settings.Default.prevColYardstickLead = row.Cells["colYardstick"].Value as string;
+            Properties.Settings.Default.prevColLsrLead = row.Cells["colLsr"].Value as string;
+            Properties.Settings.Default.prevColNotesLead = row.Cells["colNotes"].Value as string;
+
+            /* Wing */
+            row = dgvFlight.Rows[1];
+
+            Properties.Settings.Default.prevColPosWing = row.Cells["colPos"].Value as string;
+            Properties.Settings.Default.prevColCallsignWing = row.Cells["colCallsign"].Value as string;
+            Properties.Settings.Default.prevColPilotWing = row.Cells["colPilot"].Value as string;
+            Properties.Settings.Default.prevColGidOidWing = row.Cells["colGidOid"].Value as string;
+            Properties.Settings.Default.prevColYardstickWing = row.Cells["colYardstick"].Value as string;
+            Properties.Settings.Default.prevColLsrWing = row.Cells["colLsr"].Value as string;
+            Properties.Settings.Default.prevColNotesWing = row.Cells["colNotes"].Value as string;
+
+            /* Element */
+            row = dgvFlight.Rows[2];
+
+            Properties.Settings.Default.prevColPosElement = row.Cells["colPos"].Value as string;
+            Properties.Settings.Default.prevColCallsignElement = row.Cells["colCallsign"].Value as string;
+            Properties.Settings.Default.prevColPilotElement = row.Cells["colPilot"].Value as string;
+            Properties.Settings.Default.prevColGidOidElement = row.Cells["colGidOid"].Value as string;
+            Properties.Settings.Default.prevColYardstickElement = row.Cells["colYardstick"].Value as string;
+            Properties.Settings.Default.prevColLsrElement = row.Cells["colLsr"].Value as string;
+            Properties.Settings.Default.prevColNotesElement = row.Cells["colNotes"].Value as string;
+
+            /* Wing 2: trail */
+            row = dgvFlight.Rows[3];
+
+            Properties.Settings.Default.prevColPosTrail = row.Cells["colPos"].Value as string;
+            Properties.Settings.Default.prevColCallsignTrail = row.Cells["colCallsign"].Value as string;
+            Properties.Settings.Default.prevColPilotTrail = row.Cells["colPilot"].Value as string;
+            Properties.Settings.Default.prevColGidOidTrail = row.Cells["colGidOid"].Value as string;
+            Properties.Settings.Default.prevColYardstickTrail = row.Cells["colYardstick"].Value as string;
+            Properties.Settings.Default.prevColLsrTrail = row.Cells["colLsr"].Value as string;
+            Properties.Settings.Default.prevColNotesTrail = row.Cells["colNotes"].Value as string;
         }
 
         private void saveDGVSupport()

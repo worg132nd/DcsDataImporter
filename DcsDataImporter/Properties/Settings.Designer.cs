@@ -12,7 +12,7 @@ namespace DcsDataImporter.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.0.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -1568,6 +1568,366 @@ namespace DcsDataImporter.Properties {
             }
             set {
                 this["filePathCommunicationNoTma"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevCbRejoin {
+            get {
+                return ((string)(this["prevCbRejoin"]));
+            }
+            set {
+                this["prevCbRejoin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevCbTaxi {
+            get {
+                return ((string)(this["prevCbTaxi"]));
+            }
+            set {
+                this["prevCbTaxi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPosLead {
+            get {
+                return ((string)(this["prevColPosLead"]));
+            }
+            set {
+                this["prevColPosLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColCallsignLead {
+            get {
+                return ((string)(this["prevColCallsignLead"]));
+            }
+            set {
+                this["prevColCallsignLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPilotLead {
+            get {
+                return ((string)(this["prevColPilotLead"]));
+            }
+            set {
+                this["prevColPilotLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColGidOidLead {
+            get {
+                return ((string)(this["prevColGidOidLead"]));
+            }
+            set {
+                this["prevColGidOidLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColYardstickLead {
+            get {
+                return ((string)(this["prevColYardstickLead"]));
+            }
+            set {
+                this["prevColYardstickLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColLsrLead {
+            get {
+                return ((string)(this["prevColLsrLead"]));
+            }
+            set {
+                this["prevColLsrLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColNotesLead {
+            get {
+                return ((string)(this["prevColNotesLead"]));
+            }
+            set {
+                this["prevColNotesLead"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPosWing {
+            get {
+                return ((string)(this["prevColPosWing"]));
+            }
+            set {
+                this["prevColPosWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColCallsignWing {
+            get {
+                return ((string)(this["prevColCallsignWing"]));
+            }
+            set {
+                this["prevColCallsignWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPilotWing {
+            get {
+                return ((string)(this["prevColPilotWing"]));
+            }
+            set {
+                this["prevColPilotWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColGidOidWing {
+            get {
+                return ((string)(this["prevColGidOidWing"]));
+            }
+            set {
+                this["prevColGidOidWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColYardstickWing {
+            get {
+                return ((string)(this["prevColYardstickWing"]));
+            }
+            set {
+                this["prevColYardstickWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColLsrWing {
+            get {
+                return ((string)(this["prevColLsrWing"]));
+            }
+            set {
+                this["prevColLsrWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColNotesWing {
+            get {
+                return ((string)(this["prevColNotesWing"]));
+            }
+            set {
+                this["prevColNotesWing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPosElement {
+            get {
+                return ((string)(this["prevColPosElement"]));
+            }
+            set {
+                this["prevColPosElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColCallsignElement {
+            get {
+                return ((string)(this["prevColCallsignElement"]));
+            }
+            set {
+                this["prevColCallsignElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPilotElement {
+            get {
+                return ((string)(this["prevColPilotElement"]));
+            }
+            set {
+                this["prevColPilotElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColGidOidElement {
+            get {
+                return ((string)(this["prevColGidOidElement"]));
+            }
+            set {
+                this["prevColGidOidElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColYardstickElement {
+            get {
+                return ((string)(this["prevColYardstickElement"]));
+            }
+            set {
+                this["prevColYardstickElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColLsrElement {
+            get {
+                return ((string)(this["prevColLsrElement"]));
+            }
+            set {
+                this["prevColLsrElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColNotesElement {
+            get {
+                return ((string)(this["prevColNotesElement"]));
+            }
+            set {
+                this["prevColNotesElement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPosTrail {
+            get {
+                return ((string)(this["prevColPosTrail"]));
+            }
+            set {
+                this["prevColPosTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColCallsignTrail {
+            get {
+                return ((string)(this["prevColCallsignTrail"]));
+            }
+            set {
+                this["prevColCallsignTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColPilotTrail {
+            get {
+                return ((string)(this["prevColPilotTrail"]));
+            }
+            set {
+                this["prevColPilotTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColGidOidTrail {
+            get {
+                return ((string)(this["prevColGidOidTrail"]));
+            }
+            set {
+                this["prevColGidOidTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColYardstickTrail {
+            get {
+                return ((string)(this["prevColYardstickTrail"]));
+            }
+            set {
+                this["prevColYardstickTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColLsrTrail {
+            get {
+                return ((string)(this["prevColLsrTrail"]));
+            }
+            set {
+                this["prevColLsrTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColNotesTrail {
+            get {
+                return ((string)(this["prevColNotesTrail"]));
+            }
+            set {
+                this["prevColNotesTrail"] = value;
             }
         }
     }
