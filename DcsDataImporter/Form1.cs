@@ -144,7 +144,7 @@ namespace DcsDataImporter
         }    
 
         /* Constructor when ATO is filled out */
-        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime)
+        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime)
         {
             init();
 
@@ -162,20 +162,14 @@ namespace DcsDataImporter
             cmbNrOfAc.Text = convertNumberToDigit(NrAc);
             txtAwacsCallsign.Text = Awacs;
             txtAwacsCp.Text = AwacsCp;
-            /* REMOVE THE FOLLOWING */
-            txtAwacsChallenge.Text = B + " - " + S;
-            txtAwacsResponse.Text = C;
-            txtTacpChallenge.Text = S + " - " + H;
-            txtTacpResponse.Text = F;
-            txtTacpAbortChallenge.Text = X + " - " + C;
-            txtTacpAbortResponse.Text = X;
-            /* REMOVE UNTIL HERE */
             txtTacpCallsign.Text = Tacp;
+            setJtacLbl(TacpType);
             setTacpDgvCallsign(Tacp);
             txtTacpCp.Text = TacpCp;
             setTacpDgvCp(TacpCp);
             txtLocation.Text = location;
-            txtAmp.Text = amplification;
+            Properties.Settings.Default.prevAmpn = amplification;
+            initFuel();
 
             // Set correct tasking
             if (tasking.Equals("TR"))
@@ -195,8 +189,6 @@ namespace DcsDataImporter
             if (standardTraining)
             {
                 standardTrainingSet = true;
-                setDefaultLoadout();
-                txtCardinal.Text = "North"; //default
                 txtTacpCp.Text = "MUKHRANI"; //default
                 setTacpDgvCp("MUKHRANI");
                 disableAwacs();
@@ -240,10 +232,6 @@ namespace DcsDataImporter
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
             setRadio("TACP", formatChannel(TacpChn), formatChannel(TacpBackupChn));
             setRadio("internal", formatChannel(internalFreq), formatChannel(internalBackupFreq));
-
-            /* setAwacsRadio(formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
-            setTacpRadio(formatChannel(TacpChn), formatChannel(TacpBackupChn));
-            setInternalRadio(formatChannel(internalFreq), formatChannel(internalBackupFreq));*/
         }
 
         private void init()
@@ -306,14 +294,8 @@ namespace DcsDataImporter
             loadAwacs();
             loadTacp();
             loadIfrn();
-            
-            txtCardinal.Text = Properties.Settings.Default.prevTxtCardinal;
-
             loadTextBoxes();
-            loadLoadout();
-            loadAuthentication();
             loadInternalFrequencies();
-            loadFuel();
             loadDGVSupport();
 
             if (Properties.Settings.Default.prevChkTma == "true") chkTma.Checked = true;
@@ -329,16 +311,7 @@ namespace DcsDataImporter
         /* Loads textbox data like Metar and Amplification from last form */
         private void loadTextBoxes()
         {
-            txtAmp.Text = Properties.Settings.Default.prevTxtAmp;
             txtMetar.Text = Properties.Settings.Default.prevTxtMetar;
-        }
-
-        /* Loads loadout data from last form */
-        private void loadLoadout()
-        {
-            txtLoadout.Text = Properties.Settings.Default.prevTxtLoadout;
-            if (Properties.Settings.Default.prevChkDefault == "true") chkDefault.Checked = true;
-            else chkDefault.Checked = false;
         }
 
         /* Loads takeoff and landing time data from last form */
@@ -346,13 +319,6 @@ namespace DcsDataImporter
         {
             txtTakeoffTime.Text = Properties.Settings.Default.prevTxtTakeoffTime;
             txtLandingTime.Text = Properties.Settings.Default.prevTxtLandingTime;
-        }
-
-        /* Loads fuel settings (JOKER and BINGO) from last form */
-        private void loadFuel()
-        {
-            txtJoker.Text = Properties.Settings.Default.prevTxtJoker;
-            txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
         }
 
         /* Loads IFRN data from last form */
@@ -382,18 +348,6 @@ namespace DcsDataImporter
             txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
         }
 
-        /* Loads authentication data from last form (TBD: DELETE) */
-        private void loadAuthentication()
-        {
-            /* AUTHENTICATION */
-            txtAwacsChallenge.Text = Properties.Settings.Default.prevTxtAwacsChallenge;
-            txtAwacsResponse.Text = Properties.Settings.Default.prevTxtAwacsResponse;
-            txtTacpChallenge.Text = Properties.Settings.Default.prevTxtTacpChallenge;
-            txtTacpResponse.Text = Properties.Settings.Default.prevTxtTacpResponse;
-            txtTacpAbortChallenge.Text = Properties.Settings.Default.prevTxtTacpAbortChallenge;
-            txtTacpAbortResponse.Text = Properties.Settings.Default.prevTxtTacpAbortResponse;
-        }
-
         /* Loads TACP (meaning JTAC and FAC(A)) data from last form */
         private void loadTacp()
         {
@@ -409,6 +363,14 @@ namespace DcsDataImporter
             txtTacpBackupFreq.Text = Properties.Settings.Default.prevTxtTacpBackupFreq;
             txtTacpBackupChannel.Text = Properties.Settings.Default.prevTxtTacpBackupChannel;
             txtTacpBackupPreset.Text = Properties.Settings.Default.prevTxtTacpBackupPreset;
+        }
+
+        private void setJtacLbl(string type)
+        {
+            if (type != null && !type.Equals(""))
+            {
+                lblJTAC.Text = type;
+            }
         }
 
         /* Loads AWACS data from last form */
@@ -619,15 +581,6 @@ namespace DcsDataImporter
             // TBD
         }
 
-        public void setDefaultLoadout()
-        {
-            if (cmbNrOfAc.Text == "1") txtLoadout.Text = "2xAGM-65D, 2xGBU-12, 2xGBU-38, 7xWP";
-            if (cmbNrOfAc.Text == "2") txtLoadout.Text = "4xAGM-65D, 4xGBU-12, 4xGBU-38, 7xWP";
-            if (cmbNrOfAc.Text == "3") txtLoadout.Text = "6xAGM-65D, 6xGBU-12, 6xGBU-38, 7xWP";
-            if (cmbNrOfAc.Text == "4") txtLoadout.Text = "8xAGM-65D, 8xGBU-12, 8xGBU-38, 7xWP";
-            chkDefault.Checked = true;
-        }
-
         /* TODO: Implement. Simplification of the 3 methods.
          * This method is not actually used YET
          */
@@ -797,11 +750,11 @@ namespace DcsDataImporter
 
         private string formatChannel(string channel)
         {
-            if (channel == null || channel.Length == 0)
+            if (channel == null || channel.Length == 0 || channel.Equals("-"))
             {
                 return "";
             }
-            if (!channel.Contains(" ") && channel != null)
+            if (!channel.Contains(" ") && !channel.Equals("-") && channel != null)
             {
                 channel = channel.Insert(channel.IndexOfAny("0123456789".ToCharArray()), " ");
             }
@@ -1393,7 +1346,7 @@ namespace DcsDataImporter
                 /* TIANETI */
                 if (tianeti.ToLower().Contains(s.ToLower())) {
                     string amp = "FAH 360 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized. CBU's only allowed on the artillery firing locations.";
-                    setRangeInfo(tianeti, "north", "MUKHRANI", fpTia, "TIA", amp, 3100, 2100);
+                    setRangeInfo(tianeti, "MUKHRANI", fpTia, "TIA", amp, 3100, 2100);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("225.750", "INDIGO 10", 8, "131.750", "CHERRY 10", 18);
@@ -1403,7 +1356,7 @@ namespace DcsDataImporter
                 } else if (dusheti.ToLower().Contains(s.ToLower()))
                 {
                     string amp = "FAH 022 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
-                    setRangeInfo(dusheti, "north-west", "GIMUR", fpDushex, "DUSHEX", amp, 2900, 1900);
+                    setRangeInfo(dusheti, "GIMUR", fpDushex, "DUSHEX", amp, 2900, 1900);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("247.500", "LIME 11", 6, "140.750", "INDIGO 9", 0);
@@ -1416,7 +1369,7 @@ namespace DcsDataImporter
                      * LAGAS is in the far west of TETRA, at the westernmost border of the range
                      */
                     string amp = "No FAH restrictions. All conventional ordnance authorized. No use of CBU's in the villages.";
-                    setRangeInfo(tetra, "west-south-west", "GIMUR", fpTet, "TET", amp, 2800, 1800);
+                    setRangeInfo(tetra, "GIMUR", fpTet, "TET", amp, 2800, 1800);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("243.500", "RED 10", 9, "127.750", "PURPLE 11", 15); // Backup channel has conflicts with AWACS backup frequency
@@ -1429,7 +1382,7 @@ namespace DcsDataImporter
                      * TISOT is in MARNUELI
                      */
                     string amp = "FAH 225 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
-                    setRangeInfo(marnueli, "south", "OBORA", fpMar, "MAR", amp, 2900, 1900);
+                    setRangeInfo(marnueli, "OBORA", fpMar, "MAR", amp, 2900, 1900);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("248.500", "PURPLE 1", 7, "124.750", "AMBER 1", 0);
@@ -1438,16 +1391,26 @@ namespace DcsDataImporter
             }
         }
 
-        private void setRangeInfo(string loc, string cardinal, string cp, string fp, string lbl, string amp, int joker, int bingo)
+        private void setRangeInfo(string loc, string cp, string fp, string lbl, string amp, int joker, int bingo)
         {
             txtLocation.Text = loc;
-            txtCardinal.Text = cardinal;
             txtTacpCp.Text = cp;
             // txtFlightplan2.Text = fp.Replace(",", Environment.NewLine);
             // lblFp2.Text = lbl;
-            txtAmp.Text = amp;
-            txtJoker.Value = joker;
-            txtBingo.Value = bingo;
+            Properties.Settings.Default.prevAmpn = amp;
+            setFuel(joker, bingo);
+        }
+
+        private void setFuel(int joker, int bingo)
+        {
+            Properties.Settings.Default.prevTxtJoker = joker.ToString();
+            Properties.Settings.Default.prevTxtBingo = bingo.ToString();
+        }
+
+        private void initFuel()
+        {
+            Properties.Settings.Default.prevTxtJoker = "2000";
+            Properties.Settings.Default.prevTxtBingo = "1500";
         }
 
         private void setTacpFreq(string freq, string channel, int preset, string bkpFreq, string bkpChannel, int bkpPreset)
@@ -1552,11 +1515,7 @@ namespace DcsDataImporter
             lblTacpBackupFreq.Enabled = lblTacpBackupChannel.Enabled = lblTacpBackupPreset.Enabled = false;
             clearTacpFreq();
             chkTacp.Checked = false;
-
-            if (lblJTAC.Text.Equals("Range"))
-            {
-                lblJTAC.Text = "JTAC";
-            }
+            lblJTAC.Text = "JTAC";
         }
 
         private void enableTacp()
@@ -1571,10 +1530,7 @@ namespace DcsDataImporter
         private void HandleCheck(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox cb = sender as System.Windows.Forms.CheckBox;
-            if (cb.Name == "chkDefault")
-            {
-                setDefaultLoadout();
-            } else if (cb.Name == "chkAwacs")
+            if (cb.Name == "chkAwacs")
             {
                 enableAwacs();
             } else if (cb.Name == "chkTacp")
@@ -1586,10 +1542,7 @@ namespace DcsDataImporter
         private void HandleUncheck(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox cb = sender as System.Windows.Forms.CheckBox;
-            if (cb.Name == "chkDefault")
-            {
-                txtLoadout.Text = "";
-            } else if (cb.Name == "chkAwacs")
+            if (cb.Name == "chkAwacs")
             {
                 disableAwacs();
             } else if (cb.Name == "chkTacp")
@@ -1650,9 +1603,6 @@ namespace DcsDataImporter
 
             // Remember to add only Lochini to the kneeboard
 
-
-            SearchAndReplace("/CARDINAL/", txtCardinal.Text);
-
             // AWACS
             SearchAndReplace("/AWACS/", txtAwacsCallsign.Text);
             SearchAndReplace("/AWACSFRQ/", txtAwacsFreq.Text.TrimEnd("0".ToCharArray()));
@@ -1670,20 +1620,11 @@ namespace DcsDataImporter
             SearchAndReplace("/LOC/", txtLocation.Text);
             SearchAndReplace("/MSN#/", txtMsnNr.Text);
             SearchAndReplace("/TASKING/", txtTasking.Text);
-            SearchAndReplace("/LOADOUT/", txtLoadout.Text);
 
             // IFRN
             SearchAndReplace("/IFRNFRQ/", txtIfrnFreq.Text.TrimEnd("0".ToCharArray()));
             SearchAndReplace("/IFRNCNL/", txtIfrnChannel.Text);
             SearchAndReplace("/IFRNPST/", "P" + txtIfrnPreset.Text);
-
-            // AUTHENTICATION
-            SearchAndReplace("/AWACS_C/", txtAwacsChallenge.Text);
-            SearchAndReplace("/AWACS_R/", txtAwacsResponse.Text);
-            SearchAndReplace("/TACP_C/", txtTacpChallenge.Text);
-            SearchAndReplace("/TACP_R/", txtTacpResponse.Text);
-            SearchAndReplace("/ABORT_C/", txtTacpAbortChallenge.Text);
-            SearchAndReplace("/ABORT_R/", txtTacpAbortResponse.Text);
 
             SearchAndReplace("one by ALPHA 10 CHARLIEs", "singleship ALPHA 10 CHARLIE"); // TODO: Does not work, maybe because one is still /#AC/? Then I would have to wait before searching and replacing.
         }
@@ -1920,23 +1861,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtIfrnChannel = txtIfrnChannel.Text;
             Properties.Settings.Default.prevTxtIfrnPreset = txtIfrnPreset.Text;
 
-            /* AMP */
-            Properties.Settings.Default.prevTxtAmp = txtAmp.Text;
-
-            Properties.Settings.Default.prevTxtCardinal = txtCardinal.Text;
-            Properties.Settings.Default.prevTxtLoadout = txtLoadout.Text;
-
-            if (chkDefault.Checked == true) Properties.Settings.Default.prevChkDefault = "true";
-            else Properties.Settings.Default.prevChkDefault = "false";
-
-            /* AUTHENTICATION */
-            Properties.Settings.Default.prevTxtAwacsChallenge = txtAwacsChallenge.Text;
-            Properties.Settings.Default.prevTxtAwacsResponse = txtAwacsResponse.Text;
-            Properties.Settings.Default.prevTxtTacpChallenge = txtTacpChallenge.Text;
-            Properties.Settings.Default.prevTxtTacpResponse = txtTacpResponse.Text;
-            Properties.Settings.Default.prevTxtTacpAbortChallenge = txtTacpAbortChallenge.Text;
-            Properties.Settings.Default.prevTxtTacpAbortResponse = txtTacpAbortResponse.Text;
-
             /* INTERNAL */
             Properties.Settings.Default.prevTxtInternalFreq = txtInternalFreq.Text;
             Properties.Settings.Default.prevTxtInternalChannel = txtInternalChannel.Text;
@@ -1946,9 +1870,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtInternalBackupPreset = txtInternalBackupPreset.Text;
 
             Properties.Settings.Default.prevTxtMetar = txtMetar.Text;
-
-            Properties.Settings.Default.prevTxtJoker = txtJoker.Text;
-            Properties.Settings.Default.prevTxtBingo = txtBingo.Text;
 
             Properties.Settings.Default.prevTxtLandingTime = txtLandingTime.Text;
 

@@ -43,6 +43,7 @@ namespace DcsDataImporter
             cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
             txtTac.Text = tac;
             txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
+            txtNotes.Text = Properties.Settings.Default.prevAmpn;
 
         }
 

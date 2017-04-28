@@ -458,18 +458,6 @@ namespace DcsDataImporter.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtCardinal {
-            get {
-                return ((string)(this["prevTxtCardinal"]));
-            }
-            set {
-                this["prevTxtCardinal"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string prevTxtLoadout {
             get {
                 return ((string)(this["prevTxtLoadout"]));
@@ -488,78 +476,6 @@ namespace DcsDataImporter.Properties {
             }
             set {
                 this["prevChkDefault"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtAwacsChallenge {
-            get {
-                return ((string)(this["prevTxtAwacsChallenge"]));
-            }
-            set {
-                this["prevTxtAwacsChallenge"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtAwacsResponse {
-            get {
-                return ((string)(this["prevTxtAwacsResponse"]));
-            }
-            set {
-                this["prevTxtAwacsResponse"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtTacpChallenge {
-            get {
-                return ((string)(this["prevTxtTacpChallenge"]));
-            }
-            set {
-                this["prevTxtTacpChallenge"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtTacpResponse {
-            get {
-                return ((string)(this["prevTxtTacpResponse"]));
-            }
-            set {
-                this["prevTxtTacpResponse"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtTacpAbortChallenge {
-            get {
-                return ((string)(this["prevTxtTacpAbortChallenge"]));
-            }
-            set {
-                this["prevTxtTacpAbortChallenge"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtTacpAbortResponse {
-            get {
-                return ((string)(this["prevTxtTacpAbortResponse"]));
-            }
-            set {
-                this["prevTxtTacpAbortResponse"] = value;
             }
         }
         
@@ -1928,6 +1844,18 @@ namespace DcsDataImporter.Properties {
             }
             set {
                 this["prevColNotesTrail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevAmpn {
+            get {
+                return ((string)(this["prevAmpn"]));
+            }
+            set {
+                this["prevAmpn"] = value;
             }
         }
     }

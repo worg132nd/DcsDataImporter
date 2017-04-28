@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +38,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.dgvTgtElem = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -236,7 +236,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(532, 866);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 144;
+            this.btnSubmit.TabIndex = 102;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -278,7 +278,7 @@
             this.dgvTgtLead.Name = "dgvTgtLead";
             this.dgvTgtLead.RowHeadersVisible = false;
             this.dgvTgtLead.Size = new System.Drawing.Size(589, 69);
-            this.dgvTgtLead.TabIndex = 169;
+            this.dgvTgtLead.TabIndex = 9;
             // 
             // Column1
             // 
@@ -304,13 +304,13 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 229;
             // 
-            // textBox2
+            // txtNotes
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 791);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(589, 69);
-            this.textBox2.TabIndex = 170;
+            this.txtNotes.Location = new System.Drawing.Point(15, 791);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(589, 69);
+            this.txtNotes.TabIndex = 96;
             // 
             // dgvTgtElem
             // 
@@ -329,7 +329,7 @@
             this.dgvTgtElem.Name = "dgvTgtElem";
             this.dgvTgtElem.RowHeadersVisible = false;
             this.dgvTgtElem.Size = new System.Drawing.Size(589, 69);
-            this.dgvTgtElem.TabIndex = 171;
+            this.dgvTgtElem.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -400,7 +400,7 @@
             this.cbDelivery1.Location = new System.Drawing.Point(68, 233);
             this.cbDelivery1.Name = "cbDelivery1";
             this.cbDelivery1.Size = new System.Drawing.Size(53, 21);
-            this.cbDelivery1.TabIndex = 174;
+            this.cbDelivery1.TabIndex = 11;
             this.cbDelivery1.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
             this.cbDelivery1.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
@@ -424,7 +424,7 @@
             this.cbSem1.Location = new System.Drawing.Point(393, 233);
             this.cbSem1.Name = "cbSem1";
             this.cbSem1.Size = new System.Drawing.Size(53, 21);
-            this.cbSem1.TabIndex = 176;
+            this.cbSem1.TabIndex = 17;
             // 
             // label15
             // 
@@ -444,7 +444,7 @@
             this.cbEgressDirection1.Location = new System.Drawing.Point(447, 233);
             this.cbEgressDirection1.Name = "cbEgressDirection1";
             this.cbEgressDirection1.Size = new System.Drawing.Size(47, 21);
-            this.cbEgressDirection1.TabIndex = 178;
+            this.cbEgressDirection1.TabIndex = 18;
             // 
             // label16
             // 
@@ -480,7 +480,7 @@
             this.cbEgressCardinal1.Location = new System.Drawing.Point(495, 233);
             this.cbEgressCardinal1.Name = "cbEgressCardinal1";
             this.cbEgressCardinal1.Size = new System.Drawing.Size(43, 21);
-            this.cbEgressCardinal1.TabIndex = 182;
+            this.cbEgressCardinal1.TabIndex = 19;
             this.cbEgressCardinal1.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // label18
@@ -542,7 +542,7 @@
             this.Munitions1.Location = new System.Drawing.Point(67, 678);
             this.Munitions1.Name = "Munitions1";
             this.Munitions1.Size = new System.Drawing.Size(81, 21);
-            this.Munitions1.TabIndex = 185;
+            this.Munitions1.TabIndex = 61;
             this.Munitions1.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
             // numEgressHeading1
@@ -560,7 +560,7 @@
             0});
             this.numEgressHeading1.Name = "numEgressHeading1";
             this.numEgressHeading1.Size = new System.Drawing.Size(38, 20);
-            this.numEgressHeading1.TabIndex = 186;
+            this.numEgressHeading1.TabIndex = 20;
             this.numEgressHeading1.Value = new decimal(new int[] {
             360,
             0,
@@ -578,7 +578,7 @@
             this.Mode1.Location = new System.Drawing.Point(149, 678);
             this.Mode1.Name = "Mode1";
             this.Mode1.Size = new System.Drawing.Size(76, 21);
-            this.Mode1.TabIndex = 187;
+            this.Mode1.TabIndex = 62;
             // 
             // lblMode
             // 
@@ -603,7 +603,7 @@
             this.txtAbort1.Location = new System.Drawing.Point(316, 233);
             this.txtAbort1.Name = "txtAbort1";
             this.txtAbort1.Size = new System.Drawing.Size(48, 20);
-            this.txtAbort1.TabIndex = 190;
+            this.txtAbort1.TabIndex = 16;
             // 
             // label22
             // 
@@ -636,7 +636,7 @@
             this.SGLPAIR1.Location = new System.Drawing.Point(274, 678);
             this.SGLPAIR1.Name = "SGLPAIR1";
             this.SGLPAIR1.Size = new System.Drawing.Size(65, 21);
-            this.SGLPAIR1.TabIndex = 192;
+            this.SGLPAIR1.TabIndex = 64;
             this.SGLPAIR1.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
             // lblSGLPAIR
@@ -653,7 +653,7 @@
             this.txtAltitude1.Location = new System.Drawing.Point(267, 233);
             this.txtAltitude1.Name = "txtAltitude1";
             this.txtAltitude1.Size = new System.Drawing.Size(48, 20);
-            this.txtAltitude1.TabIndex = 195;
+            this.txtAltitude1.TabIndex = 15;
             // 
             // lblRPL
             // 
@@ -683,7 +683,7 @@
             0});
             this.RPL1.Name = "RPL1";
             this.RPL1.Size = new System.Drawing.Size(32, 20);
-            this.RPL1.TabIndex = 198;
+            this.RPL1.TabIndex = 65;
             // 
             // Spacing1
             // 
@@ -700,7 +700,7 @@
             0});
             this.Spacing1.Name = "Spacing1";
             this.Spacing1.Size = new System.Drawing.Size(38, 20);
-            this.Spacing1.TabIndex = 199;
+            this.Spacing1.TabIndex = 66;
             // 
             // lblFusing
             // 
@@ -722,14 +722,14 @@
             this.Fusing1.Location = new System.Drawing.Point(226, 678);
             this.Fusing1.Name = "Fusing1";
             this.Fusing1.Size = new System.Drawing.Size(47, 21);
-            this.Fusing1.TabIndex = 202;
+            this.Fusing1.TabIndex = 63;
             // 
             // HOF1
             // 
             this.HOF1.Location = new System.Drawing.Point(412, 678);
             this.HOF1.Name = "HOF1";
             this.HOF1.Size = new System.Drawing.Size(48, 20);
-            this.HOF1.TabIndex = 205;
+            this.HOF1.TabIndex = 67;
             // 
             // lblProfile
             // 
@@ -745,14 +745,14 @@
             this.txtProfile1.Location = new System.Drawing.Point(14, 678);
             this.txtProfile1.Name = "txtProfile1";
             this.txtProfile1.Size = new System.Drawing.Size(52, 20);
-            this.txtProfile1.TabIndex = 207;
+            this.txtProfile1.TabIndex = 60;
             // 
             // txtProfileAttack1
             // 
             this.txtProfileAttack1.Location = new System.Drawing.Point(15, 233);
             this.txtProfileAttack1.Name = "txtProfileAttack1";
             this.txtProfileAttack1.Size = new System.Drawing.Size(52, 20);
-            this.txtProfileAttack1.TabIndex = 208;
+            this.txtProfileAttack1.TabIndex = 10;
             // 
             // label31
             // 
@@ -787,7 +787,7 @@
             this.txtProfileAttack2.Location = new System.Drawing.Point(15, 256);
             this.txtProfileAttack2.Name = "txtProfileAttack2";
             this.txtProfileAttack2.Size = new System.Drawing.Size(52, 20);
-            this.txtProfileAttack2.TabIndex = 210;
+            this.txtProfileAttack2.TabIndex = 22;
             // 
             // cbDelivery2
             // 
@@ -816,7 +816,7 @@
             this.cbDelivery2.Location = new System.Drawing.Point(68, 255);
             this.cbDelivery2.Name = "cbDelivery2";
             this.cbDelivery2.Size = new System.Drawing.Size(53, 21);
-            this.cbDelivery2.TabIndex = 211;
+            this.cbDelivery2.TabIndex = 23;
             this.cbDelivery2.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
             this.cbDelivery2.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
@@ -861,7 +861,7 @@
             this.Munitions2.Location = new System.Drawing.Point(67, 700);
             this.Munitions2.Name = "Munitions2";
             this.Munitions2.Size = new System.Drawing.Size(81, 21);
-            this.Munitions2.TabIndex = 212;
+            this.Munitions2.TabIndex = 70;
             this.Munitions2.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
             // Mode2
@@ -875,21 +875,21 @@
             this.Mode2.Location = new System.Drawing.Point(149, 700);
             this.Mode2.Name = "Mode2";
             this.Mode2.Size = new System.Drawing.Size(76, 21);
-            this.Mode2.TabIndex = 213;
+            this.Mode2.TabIndex = 71;
             // 
             // txtAltitude2
             // 
             this.txtAltitude2.Location = new System.Drawing.Point(267, 256);
             this.txtAltitude2.Name = "txtAltitude2";
             this.txtAltitude2.Size = new System.Drawing.Size(48, 20);
-            this.txtAltitude2.TabIndex = 214;
+            this.txtAltitude2.TabIndex = 27;
             // 
             // txtAbort2
             // 
             this.txtAbort2.Location = new System.Drawing.Point(316, 256);
             this.txtAbort2.Name = "txtAbort2";
             this.txtAbort2.Size = new System.Drawing.Size(48, 20);
-            this.txtAbort2.TabIndex = 215;
+            this.txtAbort2.TabIndex = 28;
             // 
             // cbSem2
             // 
@@ -902,7 +902,7 @@
             this.cbSem2.Location = new System.Drawing.Point(393, 255);
             this.cbSem2.Name = "cbSem2";
             this.cbSem2.Size = new System.Drawing.Size(53, 21);
-            this.cbSem2.TabIndex = 216;
+            this.cbSem2.TabIndex = 29;
             // 
             // cbEgressDirection2
             // 
@@ -913,7 +913,7 @@
             this.cbEgressDirection2.Location = new System.Drawing.Point(447, 255);
             this.cbEgressDirection2.Name = "cbEgressDirection2";
             this.cbEgressDirection2.Size = new System.Drawing.Size(47, 21);
-            this.cbEgressDirection2.TabIndex = 217;
+            this.cbEgressDirection2.TabIndex = 30;
             // 
             // cbEgressCardinal2
             // 
@@ -931,7 +931,7 @@
             this.cbEgressCardinal2.Location = new System.Drawing.Point(495, 255);
             this.cbEgressCardinal2.Name = "cbEgressCardinal2";
             this.cbEgressCardinal2.Size = new System.Drawing.Size(43, 21);
-            this.cbEgressCardinal2.TabIndex = 218;
+            this.cbEgressCardinal2.TabIndex = 31;
             this.cbEgressCardinal2.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading2
@@ -949,7 +949,7 @@
             0});
             this.numEgressHeading2.Name = "numEgressHeading2";
             this.numEgressHeading2.Size = new System.Drawing.Size(38, 20);
-            this.numEgressHeading2.TabIndex = 219;
+            this.numEgressHeading2.TabIndex = 32;
             this.numEgressHeading2.Value = new decimal(new int[] {
             360,
             0,
@@ -961,7 +961,7 @@
             this.txtProfileAttack3.Location = new System.Drawing.Point(15, 409);
             this.txtProfileAttack3.Name = "txtProfileAttack3";
             this.txtProfileAttack3.Size = new System.Drawing.Size(52, 20);
-            this.txtProfileAttack3.TabIndex = 220;
+            this.txtProfileAttack3.TabIndex = 35;
             // 
             // cbDelivery3
             // 
@@ -990,7 +990,7 @@
             this.cbDelivery3.Location = new System.Drawing.Point(68, 409);
             this.cbDelivery3.Name = "cbDelivery3";
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
-            this.cbDelivery3.TabIndex = 221;
+            this.cbDelivery3.TabIndex = 36;
             this.cbDelivery3.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
             this.cbDelivery3.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
@@ -1035,7 +1035,7 @@
             this.Munitions3.Location = new System.Drawing.Point(67, 722);
             this.Munitions3.Name = "Munitions3";
             this.Munitions3.Size = new System.Drawing.Size(81, 21);
-            this.Munitions3.TabIndex = 222;
+            this.Munitions3.TabIndex = 79;
             this.Munitions3.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
             // Mode3
@@ -1049,21 +1049,21 @@
             this.Mode3.Location = new System.Drawing.Point(149, 722);
             this.Mode3.Name = "Mode3";
             this.Mode3.Size = new System.Drawing.Size(76, 21);
-            this.Mode3.TabIndex = 223;
+            this.Mode3.TabIndex = 80;
             // 
             // txtAltitude3
             // 
             this.txtAltitude3.Location = new System.Drawing.Point(267, 409);
             this.txtAltitude3.Name = "txtAltitude3";
             this.txtAltitude3.Size = new System.Drawing.Size(48, 20);
-            this.txtAltitude3.TabIndex = 224;
+            this.txtAltitude3.TabIndex = 40;
             // 
             // txtAbort3
             // 
             this.txtAbort3.Location = new System.Drawing.Point(316, 409);
             this.txtAbort3.Name = "txtAbort3";
             this.txtAbort3.Size = new System.Drawing.Size(48, 20);
-            this.txtAbort3.TabIndex = 225;
+            this.txtAbort3.TabIndex = 41;
             // 
             // cbSem3
             // 
@@ -1076,7 +1076,7 @@
             this.cbSem3.Location = new System.Drawing.Point(393, 409);
             this.cbSem3.Name = "cbSem3";
             this.cbSem3.Size = new System.Drawing.Size(53, 21);
-            this.cbSem3.TabIndex = 226;
+            this.cbSem3.TabIndex = 42;
             // 
             // cbEgressDirection3
             // 
@@ -1087,7 +1087,7 @@
             this.cbEgressDirection3.Location = new System.Drawing.Point(447, 409);
             this.cbEgressDirection3.Name = "cbEgressDirection3";
             this.cbEgressDirection3.Size = new System.Drawing.Size(47, 21);
-            this.cbEgressDirection3.TabIndex = 227;
+            this.cbEgressDirection3.TabIndex = 43;
             // 
             // cbEgressCardinal3
             // 
@@ -1105,7 +1105,7 @@
             this.cbEgressCardinal3.Location = new System.Drawing.Point(495, 409);
             this.cbEgressCardinal3.Name = "cbEgressCardinal3";
             this.cbEgressCardinal3.Size = new System.Drawing.Size(43, 21);
-            this.cbEgressCardinal3.TabIndex = 228;
+            this.cbEgressCardinal3.TabIndex = 44;
             this.cbEgressCardinal3.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading3
@@ -1123,7 +1123,7 @@
             0});
             this.numEgressHeading3.Name = "numEgressHeading3";
             this.numEgressHeading3.Size = new System.Drawing.Size(38, 20);
-            this.numEgressHeading3.TabIndex = 229;
+            this.numEgressHeading3.TabIndex = 45;
             this.numEgressHeading3.Value = new decimal(new int[] {
             360,
             0,
@@ -1135,7 +1135,7 @@
             this.txtProfileAttack4.Location = new System.Drawing.Point(15, 432);
             this.txtProfileAttack4.Name = "txtProfileAttack4";
             this.txtProfileAttack4.Size = new System.Drawing.Size(52, 20);
-            this.txtProfileAttack4.TabIndex = 230;
+            this.txtProfileAttack4.TabIndex = 47;
             // 
             // cbDelivery4
             // 
@@ -1164,7 +1164,7 @@
             this.cbDelivery4.Location = new System.Drawing.Point(68, 431);
             this.cbDelivery4.Name = "cbDelivery4";
             this.cbDelivery4.Size = new System.Drawing.Size(53, 21);
-            this.cbDelivery4.TabIndex = 231;
+            this.cbDelivery4.TabIndex = 48;
             this.cbDelivery4.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
             this.cbDelivery4.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
@@ -1209,7 +1209,7 @@
             this.Munitions4.Location = new System.Drawing.Point(67, 744);
             this.Munitions4.Name = "Munitions4";
             this.Munitions4.Size = new System.Drawing.Size(81, 21);
-            this.Munitions4.TabIndex = 232;
+            this.Munitions4.TabIndex = 88;
             this.Munitions4.SelectedIndexChanged += new System.EventHandler(this.cbMunitions_SelectedIndexChanged);
             // 
             // Mode4
@@ -1223,21 +1223,21 @@
             this.Mode4.Location = new System.Drawing.Point(149, 744);
             this.Mode4.Name = "Mode4";
             this.Mode4.Size = new System.Drawing.Size(76, 21);
-            this.Mode4.TabIndex = 233;
+            this.Mode4.TabIndex = 89;
             // 
             // txtAltitude4
             // 
             this.txtAltitude4.Location = new System.Drawing.Point(267, 432);
             this.txtAltitude4.Name = "txtAltitude4";
             this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
-            this.txtAltitude4.TabIndex = 234;
+            this.txtAltitude4.TabIndex = 52;
             // 
             // txtAbort4
             // 
             this.txtAbort4.Location = new System.Drawing.Point(316, 432);
             this.txtAbort4.Name = "txtAbort4";
             this.txtAbort4.Size = new System.Drawing.Size(48, 20);
-            this.txtAbort4.TabIndex = 235;
+            this.txtAbort4.TabIndex = 53;
             // 
             // cbSem4
             // 
@@ -1250,7 +1250,7 @@
             this.cbSem4.Location = new System.Drawing.Point(393, 431);
             this.cbSem4.Name = "cbSem4";
             this.cbSem4.Size = new System.Drawing.Size(53, 21);
-            this.cbSem4.TabIndex = 236;
+            this.cbSem4.TabIndex = 54;
             // 
             // cbEgressDirection4
             // 
@@ -1261,7 +1261,7 @@
             this.cbEgressDirection4.Location = new System.Drawing.Point(447, 431);
             this.cbEgressDirection4.Name = "cbEgressDirection4";
             this.cbEgressDirection4.Size = new System.Drawing.Size(47, 21);
-            this.cbEgressDirection4.TabIndex = 237;
+            this.cbEgressDirection4.TabIndex = 55;
             // 
             // cbEgressCardinal4
             // 
@@ -1279,7 +1279,7 @@
             this.cbEgressCardinal4.Location = new System.Drawing.Point(495, 431);
             this.cbEgressCardinal4.Name = "cbEgressCardinal4";
             this.cbEgressCardinal4.Size = new System.Drawing.Size(43, 21);
-            this.cbEgressCardinal4.TabIndex = 238;
+            this.cbEgressCardinal4.TabIndex = 56;
             this.cbEgressCardinal4.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
             // numEgressHeading4
@@ -1297,7 +1297,7 @@
             0});
             this.numEgressHeading4.Name = "numEgressHeading4";
             this.numEgressHeading4.Size = new System.Drawing.Size(38, 20);
-            this.numEgressHeading4.TabIndex = 239;
+            this.numEgressHeading4.TabIndex = 57;
             this.numEgressHeading4.Value = new decimal(new int[] {
             360,
             0,
@@ -1314,7 +1314,7 @@
             this.cbSCSS1.Location = new System.Drawing.Point(149, 233);
             this.cbSCSS1.Name = "cbSCSS1";
             this.cbSCSS1.Size = new System.Drawing.Size(43, 21);
-            this.cbSCSS1.TabIndex = 240;
+            this.cbSCSS1.TabIndex = 13;
             // 
             // label28
             // 
@@ -1335,7 +1335,7 @@
             this.cbSCSS2.Location = new System.Drawing.Point(149, 255);
             this.cbSCSS2.Name = "cbSCSS2";
             this.cbSCSS2.Size = new System.Drawing.Size(43, 21);
-            this.cbSCSS2.TabIndex = 242;
+            this.cbSCSS2.TabIndex = 25;
             // 
             // cbSCSS3
             // 
@@ -1347,7 +1347,7 @@
             this.cbSCSS3.Location = new System.Drawing.Point(149, 409);
             this.cbSCSS3.Name = "cbSCSS3";
             this.cbSCSS3.Size = new System.Drawing.Size(43, 21);
-            this.cbSCSS3.TabIndex = 243;
+            this.cbSCSS3.TabIndex = 38;
             // 
             // cbSCSS4
             // 
@@ -1359,7 +1359,7 @@
             this.cbSCSS4.Location = new System.Drawing.Point(149, 431);
             this.cbSCSS4.Name = "cbSCSS4";
             this.cbSCSS4.Size = new System.Drawing.Size(43, 21);
-            this.cbSCSS4.TabIndex = 244;
+            this.cbSCSS4.TabIndex = 50;
             // 
             // cbFormation1
             // 
@@ -1372,7 +1372,7 @@
             this.cbFormation1.Location = new System.Drawing.Point(193, 233);
             this.cbFormation1.Name = "cbFormation1";
             this.cbFormation1.Size = new System.Drawing.Size(42, 21);
-            this.cbFormation1.TabIndex = 245;
+            this.cbFormation1.TabIndex = 14;
             // 
             // label33
             // 
@@ -1388,7 +1388,7 @@
             this.txtEgressIP1.Location = new System.Drawing.Point(578, 233);
             this.txtEgressIP1.Name = "txtEgressIP1";
             this.txtEgressIP1.Size = new System.Drawing.Size(26, 20);
-            this.txtEgressIP1.TabIndex = 247;
+            this.txtEgressIP1.TabIndex = 21;
             // 
             // label34
             // 
@@ -1404,7 +1404,7 @@
             this.txtAttackIP1.Location = new System.Drawing.Point(122, 233);
             this.txtAttackIP1.Name = "txtAttackIP1";
             this.txtAttackIP1.Size = new System.Drawing.Size(26, 20);
-            this.txtAttackIP1.TabIndex = 249;
+            this.txtAttackIP1.TabIndex = 12;
             // 
             // label35
             // 
@@ -1420,21 +1420,21 @@
             this.txtAttackIP2.Location = new System.Drawing.Point(122, 256);
             this.txtAttackIP2.Name = "txtAttackIP2";
             this.txtAttackIP2.Size = new System.Drawing.Size(26, 20);
-            this.txtAttackIP2.TabIndex = 251;
+            this.txtAttackIP2.TabIndex = 24;
             // 
             // txtAttackIP3
             // 
             this.txtAttackIP3.Location = new System.Drawing.Point(122, 409);
             this.txtAttackIP3.Name = "txtAttackIP3";
             this.txtAttackIP3.Size = new System.Drawing.Size(26, 20);
-            this.txtAttackIP3.TabIndex = 252;
+            this.txtAttackIP3.TabIndex = 37;
             // 
             // txtAttackIP4
             // 
             this.txtAttackIP4.Location = new System.Drawing.Point(122, 432);
             this.txtAttackIP4.Name = "txtAttackIP4";
             this.txtAttackIP4.Size = new System.Drawing.Size(26, 20);
-            this.txtAttackIP4.TabIndex = 253;
+            this.txtAttackIP4.TabIndex = 49;
             // 
             // cbFormation2
             // 
@@ -1447,7 +1447,7 @@
             this.cbFormation2.Location = new System.Drawing.Point(193, 255);
             this.cbFormation2.Name = "cbFormation2";
             this.cbFormation2.Size = new System.Drawing.Size(42, 21);
-            this.cbFormation2.TabIndex = 254;
+            this.cbFormation2.TabIndex = 26;
             // 
             // cbFormation3
             // 
@@ -1460,7 +1460,7 @@
             this.cbFormation3.Location = new System.Drawing.Point(193, 409);
             this.cbFormation3.Name = "cbFormation3";
             this.cbFormation3.Size = new System.Drawing.Size(42, 21);
-            this.cbFormation3.TabIndex = 255;
+            this.cbFormation3.TabIndex = 39;
             // 
             // cbFormation4
             // 
@@ -1473,49 +1473,49 @@
             this.cbFormation4.Location = new System.Drawing.Point(193, 431);
             this.cbFormation4.Name = "cbFormation4";
             this.cbFormation4.Size = new System.Drawing.Size(42, 21);
-            this.cbFormation4.TabIndex = 256;
+            this.cbFormation4.TabIndex = 51;
             // 
             // txtEgressIP2
             // 
             this.txtEgressIP2.Location = new System.Drawing.Point(578, 256);
             this.txtEgressIP2.Name = "txtEgressIP2";
             this.txtEgressIP2.Size = new System.Drawing.Size(26, 20);
-            this.txtEgressIP2.TabIndex = 257;
+            this.txtEgressIP2.TabIndex = 33;
             // 
             // txtEgressIP3
             // 
             this.txtEgressIP3.Location = new System.Drawing.Point(578, 410);
             this.txtEgressIP3.Name = "txtEgressIP3";
             this.txtEgressIP3.Size = new System.Drawing.Size(26, 20);
-            this.txtEgressIP3.TabIndex = 258;
+            this.txtEgressIP3.TabIndex = 46;
             // 
             // txtEgressIP4
             // 
             this.txtEgressIP4.Location = new System.Drawing.Point(578, 432);
             this.txtEgressIP4.Name = "txtEgressIP4";
             this.txtEgressIP4.Size = new System.Drawing.Size(26, 20);
-            this.txtEgressIP4.TabIndex = 259;
+            this.txtEgressIP4.TabIndex = 58;
             // 
             // txtProfile2
             // 
             this.txtProfile2.Location = new System.Drawing.Point(14, 701);
             this.txtProfile2.Name = "txtProfile2";
             this.txtProfile2.Size = new System.Drawing.Size(52, 20);
-            this.txtProfile2.TabIndex = 260;
+            this.txtProfile2.TabIndex = 69;
             // 
             // txtProfile3
             // 
             this.txtProfile3.Location = new System.Drawing.Point(14, 722);
             this.txtProfile3.Name = "txtProfile3";
             this.txtProfile3.Size = new System.Drawing.Size(52, 20);
-            this.txtProfile3.TabIndex = 261;
+            this.txtProfile3.TabIndex = 78;
             // 
             // txtProfile4
             // 
             this.txtProfile4.Location = new System.Drawing.Point(14, 745);
             this.txtProfile4.Name = "txtProfile4";
             this.txtProfile4.Size = new System.Drawing.Size(52, 20);
-            this.txtProfile4.TabIndex = 262;
+            this.txtProfile4.TabIndex = 87;
             // 
             // Fusing2
             // 
@@ -1528,7 +1528,7 @@
             this.Fusing2.Location = new System.Drawing.Point(226, 700);
             this.Fusing2.Name = "Fusing2";
             this.Fusing2.Size = new System.Drawing.Size(47, 21);
-            this.Fusing2.TabIndex = 263;
+            this.Fusing2.TabIndex = 72;
             // 
             // Fusing3
             // 
@@ -1541,7 +1541,7 @@
             this.Fusing3.Location = new System.Drawing.Point(226, 722);
             this.Fusing3.Name = "Fusing3";
             this.Fusing3.Size = new System.Drawing.Size(47, 21);
-            this.Fusing3.TabIndex = 264;
+            this.Fusing3.TabIndex = 81;
             // 
             // Fusing4
             // 
@@ -1554,7 +1554,7 @@
             this.Fusing4.Location = new System.Drawing.Point(226, 744);
             this.Fusing4.Name = "Fusing4";
             this.Fusing4.Size = new System.Drawing.Size(47, 21);
-            this.Fusing4.TabIndex = 265;
+            this.Fusing4.TabIndex = 90;
             // 
             // SGLPAIR2
             // 
@@ -1568,7 +1568,7 @@
             this.SGLPAIR2.Location = new System.Drawing.Point(274, 700);
             this.SGLPAIR2.Name = "SGLPAIR2";
             this.SGLPAIR2.Size = new System.Drawing.Size(65, 21);
-            this.SGLPAIR2.TabIndex = 266;
+            this.SGLPAIR2.TabIndex = 73;
             this.SGLPAIR2.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
             // SGLPAIR3
@@ -1583,7 +1583,7 @@
             this.SGLPAIR3.Location = new System.Drawing.Point(274, 722);
             this.SGLPAIR3.Name = "SGLPAIR3";
             this.SGLPAIR3.Size = new System.Drawing.Size(65, 21);
-            this.SGLPAIR3.TabIndex = 267;
+            this.SGLPAIR3.TabIndex = 82;
             this.SGLPAIR3.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
             // SGLPAIR4
@@ -1598,7 +1598,7 @@
             this.SGLPAIR4.Location = new System.Drawing.Point(274, 744);
             this.SGLPAIR4.Name = "SGLPAIR4";
             this.SGLPAIR4.Size = new System.Drawing.Size(65, 21);
-            this.SGLPAIR4.TabIndex = 268;
+            this.SGLPAIR4.TabIndex = 91;
             this.SGLPAIR4.SelectedIndexChanged += new System.EventHandler(this.SGLPAIR_SelectedIndexChanged);
             // 
             // RPL2
@@ -1611,7 +1611,7 @@
             0});
             this.RPL2.Name = "RPL2";
             this.RPL2.Size = new System.Drawing.Size(32, 20);
-            this.RPL2.TabIndex = 269;
+            this.RPL2.TabIndex = 74;
             // 
             // RPL3
             // 
@@ -1623,7 +1623,7 @@
             0});
             this.RPL3.Name = "RPL3";
             this.RPL3.Size = new System.Drawing.Size(32, 20);
-            this.RPL3.TabIndex = 270;
+            this.RPL3.TabIndex = 83;
             // 
             // RPL4
             // 
@@ -1635,7 +1635,7 @@
             0});
             this.RPL4.Name = "RPL4";
             this.RPL4.Size = new System.Drawing.Size(32, 20);
-            this.RPL4.TabIndex = 271;
+            this.RPL4.TabIndex = 92;
             // 
             // Spacing2
             // 
@@ -1652,7 +1652,7 @@
             0});
             this.Spacing2.Name = "Spacing2";
             this.Spacing2.Size = new System.Drawing.Size(38, 20);
-            this.Spacing2.TabIndex = 272;
+            this.Spacing2.TabIndex = 75;
             // 
             // Spacing3
             // 
@@ -1669,7 +1669,7 @@
             0});
             this.Spacing3.Name = "Spacing3";
             this.Spacing3.Size = new System.Drawing.Size(38, 20);
-            this.Spacing3.TabIndex = 273;
+            this.Spacing3.TabIndex = 84;
             // 
             // Spacing4
             // 
@@ -1686,35 +1686,35 @@
             0});
             this.Spacing4.Name = "Spacing4";
             this.Spacing4.Size = new System.Drawing.Size(38, 20);
-            this.Spacing4.TabIndex = 274;
+            this.Spacing4.TabIndex = 93;
             // 
             // HOF2
             // 
             this.HOF2.Location = new System.Drawing.Point(412, 701);
             this.HOF2.Name = "HOF2";
             this.HOF2.Size = new System.Drawing.Size(48, 20);
-            this.HOF2.TabIndex = 275;
+            this.HOF2.TabIndex = 76;
             // 
             // HOF3
             // 
             this.HOF3.Location = new System.Drawing.Point(412, 722);
             this.HOF3.Name = "HOF3";
             this.HOF3.Size = new System.Drawing.Size(48, 20);
-            this.HOF3.TabIndex = 276;
+            this.HOF3.TabIndex = 85;
             // 
             // HOF4
             // 
             this.HOF4.Location = new System.Drawing.Point(412, 745);
             this.HOF4.Name = "HOF4";
             this.HOF4.Size = new System.Drawing.Size(48, 20);
-            this.HOF4.TabIndex = 277;
+            this.HOF4.TabIndex = 94;
             // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(451, 866);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 278;
+            this.btnBack.TabIndex = 101;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -1743,7 +1743,7 @@
             0});
             this.RPM1.Name = "RPM1";
             this.RPM1.Size = new System.Drawing.Size(44, 20);
-            this.RPM1.TabIndex = 281;
+            this.RPM1.TabIndex = 68;
             // 
             // RPM2
             // 
@@ -1760,7 +1760,7 @@
             0});
             this.RPM2.Name = "RPM2";
             this.RPM2.Size = new System.Drawing.Size(44, 20);
-            this.RPM2.TabIndex = 282;
+            this.RPM2.TabIndex = 77;
             // 
             // RPM3
             // 
@@ -1777,7 +1777,7 @@
             0});
             this.RPM3.Name = "RPM3";
             this.RPM3.Size = new System.Drawing.Size(44, 20);
-            this.RPM3.TabIndex = 283;
+            this.RPM3.TabIndex = 86;
             // 
             // RPM4
             // 
@@ -1794,7 +1794,7 @@
             0});
             this.RPM4.Name = "RPM4";
             this.RPM4.Size = new System.Drawing.Size(44, 20);
-            this.RPM4.TabIndex = 284;
+            this.RPM4.TabIndex = 95;
             // 
             // label11
             // 
@@ -1810,7 +1810,7 @@
             this.txtVulStart.Location = new System.Drawing.Point(281, 868);
             this.txtVulStart.Name = "txtVulStart";
             this.txtVulStart.Size = new System.Drawing.Size(42, 20);
-            this.txtVulStart.TabIndex = 286;
+            this.txtVulStart.TabIndex = 99;
             this.txtVulStart.Text = ":";
             this.txtVulStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1849,7 +1849,7 @@
             this.txtMsnNr.Location = new System.Drawing.Point(348, 12);
             this.txtMsnNr.Name = "txtMsnNr";
             this.txtMsnNr.Size = new System.Drawing.Size(53, 20);
-            this.txtMsnNr.TabIndex = 292;
+            this.txtMsnNr.TabIndex = 3;
             // 
             // label4
             // 
@@ -1865,7 +1865,7 @@
             this.txtCallsign.Location = new System.Drawing.Point(198, 12);
             this.txtCallsign.Name = "txtCallsign";
             this.txtCallsign.Size = new System.Drawing.Size(100, 20);
-            this.txtCallsign.TabIndex = 291;
+            this.txtCallsign.TabIndex = 2;
             // 
             // label3
             // 
@@ -1896,7 +1896,7 @@
             0});
             this.txtBingo.Name = "txtBingo";
             this.txtBingo.Size = new System.Drawing.Size(44, 20);
-            this.txtBingo.TabIndex = 296;
+            this.txtBingo.TabIndex = 98;
             this.txtBingo.Value = new decimal(new int[] {
             1500,
             0,
@@ -1923,7 +1923,7 @@
             0});
             this.txtJoker.Name = "txtJoker";
             this.txtJoker.Size = new System.Drawing.Size(44, 20);
-            this.txtJoker.TabIndex = 295;
+            this.txtJoker.TabIndex = 97;
             this.txtJoker.Value = new decimal(new int[] {
             2000,
             0,
@@ -2088,7 +2088,7 @@
             this.txtVulEnd.Location = new System.Drawing.Point(381, 868);
             this.txtVulEnd.Name = "txtVulEnd";
             this.txtVulEnd.Size = new System.Drawing.Size(42, 20);
-            this.txtVulEnd.TabIndex = 354;
+            this.txtVulEnd.TabIndex = 100;
             this.txtVulEnd.Text = ":";
             this.txtVulEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2098,14 +2098,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2117,10 +2117,10 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 500);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPackage.Size = new System.Drawing.Size(589, 155);
-            this.dgvPackage.TabIndex = 379;
+            this.dgvPackage.TabIndex = 59;
             // 
             // colCallsign
             // 
@@ -2194,7 +2194,7 @@
             this.cmbNrOfAc.Location = new System.Drawing.Point(445, 12);
             this.cmbNrOfAc.Name = "cmbNrOfAc";
             this.cmbNrOfAc.Size = new System.Drawing.Size(32, 21);
-            this.cmbNrOfAc.TabIndex = 383;
+            this.cmbNrOfAc.TabIndex = 4;
             // 
             // label43
             // 
@@ -2210,7 +2210,7 @@
             this.txtLocation.Location = new System.Drawing.Point(524, 12);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(84, 20);
-            this.txtLocation.TabIndex = 384;
+            this.txtLocation.TabIndex = 5;
             // 
             // label44
             // 
@@ -2240,7 +2240,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(38, 20);
-            this.numericUpDown1.TabIndex = 387;
+            this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.Value = new decimal(new int[] {
             60,
             0,
@@ -2261,7 +2261,7 @@
             this.textBox1.Location = new System.Drawing.Point(143, 46);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(334, 20);
-            this.textBox1.TabIndex = 390;
+            this.textBox1.TabIndex = 7;
             this.textBox1.Text = "2x12, 2x38, 4xMav, 7xRock, 7xSmoke, TGP, ECM, SADL, NVG";
             // 
             // label47
@@ -2306,7 +2306,7 @@
             this.cbAbort.Location = new System.Drawing.Point(524, 46);
             this.cbAbort.Name = "cbAbort";
             this.cbAbort.Size = new System.Drawing.Size(84, 21);
-            this.cbAbort.TabIndex = 392;
+            this.cbAbort.TabIndex = 8;
             this.cbAbort.Text = "In the clear";
             // 
             // label46
@@ -2323,7 +2323,7 @@
             this.txtTac.Location = new System.Drawing.Point(43, 12);
             this.txtTac.Name = "txtTac";
             this.txtTac.Size = new System.Drawing.Size(100, 20);
-            this.txtTac.TabIndex = 394;
+            this.txtTac.TabIndex = 1;
             // 
             // label48
             // 
@@ -2514,7 +2514,7 @@
             this.Controls.Add(this.lblMunitions);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dgvTgtElem);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.dgvTgtLead);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -2554,7 +2554,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvTgtLead;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.DataGridView dgvTgtElem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

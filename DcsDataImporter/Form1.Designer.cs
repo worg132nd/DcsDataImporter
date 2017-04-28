@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtCallsign = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,36 +72,14 @@
             this.label29 = new System.Windows.Forms.Label();
             this.txtIfrnFreq = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtCardinal = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtLoadout = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtAwacsChallenge = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.txtAwacsResponse = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.txtTacpChallenge = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.txtTacpResponse = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.txtTacpAbortChallenge = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.txtTacpAbortResponse = new System.Windows.Forms.TextBox();
             this.lblAwacsCallsign = new System.Windows.Forms.Label();
             this.lblTacpCallsign = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.txtTasking = new System.Windows.Forms.ComboBox();
             this.txtAwacsPreset = new System.Windows.Forms.NumericUpDown();
             this.txtTacpPreset = new System.Windows.Forms.NumericUpDown();
-            this.chkDefault = new System.Windows.Forms.CheckBox();
             this.chkAwacs = new System.Windows.Forms.CheckBox();
             this.chkTacp = new System.Windows.Forms.CheckBox();
             this.txtIfrnPreset = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtJoker = new System.Windows.Forms.NumericUpDown();
-            this.txtBingo = new System.Windows.Forms.NumericUpDown();
             this.txtMetar = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtInternalPreset = new System.Windows.Forms.NumericUpDown();
@@ -117,8 +95,6 @@
             this.txtInternalBackupFreq = new System.Windows.Forms.TextBox();
             this.txtInternalBackupChannel = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.txtAmp = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
             this.txtAwacsBackupFreq = new System.Windows.Forms.TextBox();
             this.txtAwacsBackupChannel = new System.Windows.Forms.TextBox();
             this.txtAwacsBackupPreset = new System.Windows.Forms.NumericUpDown();
@@ -162,7 +138,6 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.dgvFlight = new System.Windows.Forms.DataGridView();
             this.colPos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCallsign = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -186,11 +161,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cbRejoin = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacpPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIfrnPreset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBingo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalBackupPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsBackupPreset)).BeginInit();
@@ -240,7 +214,7 @@
             this.txtMsnNr.Location = new System.Drawing.Point(551, 27);
             this.txtMsnNr.Name = "txtMsnNr";
             this.txtMsnNr.Size = new System.Drawing.Size(53, 20);
-            this.txtMsnNr.TabIndex = 3;
+            this.txtMsnNr.TabIndex = 5;
             // 
             // label6
             // 
@@ -254,7 +228,7 @@
             // lblTacpCp
             // 
             this.lblTacpCp.AutoSize = true;
-            this.lblTacpCp.Location = new System.Drawing.Point(445, 413);
+            this.lblTacpCp.Location = new System.Drawing.Point(445, 612);
             this.lblTacpCp.Name = "lblTacpCp";
             this.lblTacpCp.Size = new System.Drawing.Size(73, 13);
             this.lblTacpCp.TabIndex = 13;
@@ -262,10 +236,10 @@
             // 
             // txtTacpCp
             // 
-            this.txtTacpCp.Location = new System.Drawing.Point(524, 410);
+            this.txtTacpCp.Location = new System.Drawing.Point(524, 609);
             this.txtTacpCp.Name = "txtTacpCp";
             this.txtTacpCp.Size = new System.Drawing.Size(80, 20);
-            this.txtTacpCp.TabIndex = 33;
+            this.txtTacpCp.TabIndex = 38;
             // 
             // label8
             // 
@@ -281,7 +255,7 @@
             this.txtLocation.Location = new System.Drawing.Point(418, 27);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(80, 20);
-            this.txtLocation.TabIndex = 5;
+            this.txtLocation.TabIndex = 4;
             this.txtLocation.Enter += new System.EventHandler(this.txtLocation_Enter);
             this.txtLocation.Leave += new System.EventHandler(this.textboxLeaveLocationEventHandler);
             // 
@@ -290,7 +264,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(532, 866);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 68;
+            this.btnSubmit.TabIndex = 47;
             this.btnSubmit.Text = "Next";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -300,25 +274,25 @@
             this.chkTma.AutoSize = true;
             this.chkTma.Checked = true;
             this.chkTma.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTma.Location = new System.Drawing.Point(312, 870);
+            this.chkTma.Location = new System.Drawing.Point(387, 869);
             this.chkTma.Name = "chkTma";
-            this.chkTma.Size = new System.Drawing.Size(214, 17);
-            this.chkTma.TabIndex = 67;
-            this.chkTma.Text = "Does mission have TMA? (Check if yes)";
+            this.chkTma.Size = new System.Drawing.Size(114, 17);
+            this.chkTma.TabIndex = 46;
+            this.chkTma.Text = "Has mission TMA?";
             this.chkTma.UseVisualStyleBackColor = true;
             // 
             // txtParking
             // 
-            this.txtParking.Location = new System.Drawing.Point(317, 288);
+            this.txtParking.Location = new System.Drawing.Point(317, 371);
             this.txtParking.Name = "txtParking";
             this.txtParking.Size = new System.Drawing.Size(165, 20);
-            this.txtParking.TabIndex = 15;
+            this.txtParking.TabIndex = 20;
             this.txtParking.Enter += new System.EventHandler(this.txtParking_Enter);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(265, 291);
+            this.label14.Location = new System.Drawing.Point(265, 374);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(46, 13);
             this.label14.TabIndex = 27;
@@ -328,7 +302,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 338);
+            this.label16.Location = new System.Drawing.Point(12, 537);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 13);
             this.label16.TabIndex = 29;
@@ -338,15 +312,15 @@
             // 
             this.txtAwacsCallsign.BackColor = System.Drawing.SystemColors.Window;
             this.txtAwacsCallsign.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtAwacsCallsign.Location = new System.Drawing.Point(64, 352);
+            this.txtAwacsCallsign.Location = new System.Drawing.Point(64, 551);
             this.txtAwacsCallsign.Name = "txtAwacsCallsign";
             this.txtAwacsCallsign.Size = new System.Drawing.Size(67, 20);
-            this.txtAwacsCallsign.TabIndex = 20;
+            this.txtAwacsCallsign.TabIndex = 25;
             // 
             // lblAwacsChannel
             // 
             this.lblAwacsChannel.AutoSize = true;
-            this.lblAwacsChannel.Location = new System.Drawing.Point(231, 355);
+            this.lblAwacsChannel.Location = new System.Drawing.Point(231, 554);
             this.lblAwacsChannel.Name = "lblAwacsChannel";
             this.lblAwacsChannel.Size = new System.Drawing.Size(49, 13);
             this.lblAwacsChannel.TabIndex = 31;
@@ -354,16 +328,16 @@
             // 
             // txtAwacsChannel
             // 
-            this.txtAwacsChannel.Location = new System.Drawing.Point(286, 352);
+            this.txtAwacsChannel.Location = new System.Drawing.Point(286, 551);
             this.txtAwacsChannel.Name = "txtAwacsChannel";
             this.txtAwacsChannel.Size = new System.Drawing.Size(69, 20);
-            this.txtAwacsChannel.TabIndex = 22;
+            this.txtAwacsChannel.TabIndex = 27;
             this.txtAwacsChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // lblAwacsFreq
             // 
             this.lblAwacsFreq.AutoSize = true;
-            this.lblAwacsFreq.Location = new System.Drawing.Point(137, 355);
+            this.lblAwacsFreq.Location = new System.Drawing.Point(137, 554);
             this.lblAwacsFreq.Name = "lblAwacsFreq";
             this.lblAwacsFreq.Size = new System.Drawing.Size(31, 13);
             this.lblAwacsFreq.TabIndex = 33;
@@ -371,16 +345,16 @@
             // 
             // txtAwacsFreq
             // 
-            this.txtAwacsFreq.Location = new System.Drawing.Point(174, 352);
+            this.txtAwacsFreq.Location = new System.Drawing.Point(174, 551);
             this.txtAwacsFreq.Name = "txtAwacsFreq";
             this.txtAwacsFreq.Size = new System.Drawing.Size(51, 20);
-            this.txtAwacsFreq.TabIndex = 21;
+            this.txtAwacsFreq.TabIndex = 26;
             this.txtAwacsFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // lblAwacsPreset
             // 
             this.lblAwacsPreset.AutoSize = true;
-            this.lblAwacsPreset.Location = new System.Drawing.Point(361, 355);
+            this.lblAwacsPreset.Location = new System.Drawing.Point(361, 554);
             this.lblAwacsPreset.Name = "lblAwacsPreset";
             this.lblAwacsPreset.Size = new System.Drawing.Size(40, 13);
             this.lblAwacsPreset.TabIndex = 35;
@@ -388,15 +362,15 @@
             // 
             // txtTacpCallsign
             // 
-            this.txtTacpCallsign.Location = new System.Drawing.Point(64, 410);
+            this.txtTacpCallsign.Location = new System.Drawing.Point(64, 609);
             this.txtTacpCallsign.Name = "txtTacpCallsign";
             this.txtTacpCallsign.Size = new System.Drawing.Size(67, 20);
-            this.txtTacpCallsign.TabIndex = 29;
+            this.txtTacpCallsign.TabIndex = 34;
             // 
             // lblTacpChannel
             // 
             this.lblTacpChannel.AutoSize = true;
-            this.lblTacpChannel.Location = new System.Drawing.Point(231, 413);
+            this.lblTacpChannel.Location = new System.Drawing.Point(231, 612);
             this.lblTacpChannel.Name = "lblTacpChannel";
             this.lblTacpChannel.Size = new System.Drawing.Size(49, 13);
             this.lblTacpChannel.TabIndex = 40;
@@ -404,16 +378,16 @@
             // 
             // txtTacpChannel
             // 
-            this.txtTacpChannel.Location = new System.Drawing.Point(286, 410);
+            this.txtTacpChannel.Location = new System.Drawing.Point(286, 609);
             this.txtTacpChannel.Name = "txtTacpChannel";
             this.txtTacpChannel.Size = new System.Drawing.Size(69, 20);
-            this.txtTacpChannel.TabIndex = 31;
+            this.txtTacpChannel.TabIndex = 36;
             this.txtTacpChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // lblTacpFreq
             // 
             this.lblTacpFreq.AutoSize = true;
-            this.lblTacpFreq.Location = new System.Drawing.Point(137, 413);
+            this.lblTacpFreq.Location = new System.Drawing.Point(137, 612);
             this.lblTacpFreq.Name = "lblTacpFreq";
             this.lblTacpFreq.Size = new System.Drawing.Size(31, 13);
             this.lblTacpFreq.TabIndex = 42;
@@ -423,7 +397,7 @@
             // 
             this.lblJTAC.AutoSize = true;
             this.lblJTAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJTAC.Location = new System.Drawing.Point(12, 396);
+            this.lblJTAC.Location = new System.Drawing.Point(12, 595);
             this.lblJTAC.Name = "lblJTAC";
             this.lblJTAC.Size = new System.Drawing.Size(37, 13);
             this.lblJTAC.TabIndex = 37;
@@ -431,16 +405,16 @@
             // 
             // txtTacpFreq
             // 
-            this.txtTacpFreq.Location = new System.Drawing.Point(174, 410);
+            this.txtTacpFreq.Location = new System.Drawing.Point(174, 609);
             this.txtTacpFreq.Name = "txtTacpFreq";
             this.txtTacpFreq.Size = new System.Drawing.Size(51, 20);
-            this.txtTacpFreq.TabIndex = 30;
+            this.txtTacpFreq.TabIndex = 35;
             this.txtTacpFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // lblTacpPreset
             // 
             this.lblTacpPreset.AutoSize = true;
-            this.lblTacpPreset.Location = new System.Drawing.Point(361, 413);
+            this.lblTacpPreset.Location = new System.Drawing.Point(361, 612);
             this.lblTacpPreset.Name = "lblTacpPreset";
             this.lblTacpPreset.Size = new System.Drawing.Size(40, 13);
             this.lblTacpPreset.TabIndex = 44;
@@ -450,7 +424,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(12, 476);
+            this.label28.Location = new System.Drawing.Point(12, 849);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(119, 13);
             this.label28.TabIndex = 52;
@@ -459,7 +433,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(109, 497);
+            this.label27.Location = new System.Drawing.Point(109, 871);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(49, 13);
             this.label27.TabIndex = 53;
@@ -467,15 +441,15 @@
             // 
             // txtIfrnChannel
             // 
-            this.txtIfrnChannel.Location = new System.Drawing.Point(164, 494);
+            this.txtIfrnChannel.Location = new System.Drawing.Point(164, 868);
             this.txtIfrnChannel.Name = "txtIfrnChannel";
             this.txtIfrnChannel.Size = new System.Drawing.Size(67, 20);
-            this.txtIfrnChannel.TabIndex = 38;
+            this.txtIfrnChannel.TabIndex = 44;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(12, 497);
+            this.label29.Location = new System.Drawing.Point(12, 871);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(31, 13);
             this.label29.TabIndex = 55;
@@ -483,154 +457,25 @@
             // 
             // txtIfrnFreq
             // 
-            this.txtIfrnFreq.Location = new System.Drawing.Point(49, 494);
+            this.txtIfrnFreq.Location = new System.Drawing.Point(49, 868);
             this.txtIfrnFreq.Name = "txtIfrnFreq";
             this.txtIfrnFreq.Size = new System.Drawing.Size(54, 20);
-            this.txtIfrnFreq.TabIndex = 37;
+            this.txtIfrnFreq.TabIndex = 43;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(237, 497);
+            this.label30.Location = new System.Drawing.Point(237, 871);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(40, 13);
             this.label30.TabIndex = 57;
             this.label30.Text = "Preset:";
             // 
-            // txtCardinal
-            // 
-            this.txtCardinal.Location = new System.Drawing.Point(245, 538);
-            this.txtCardinal.Name = "txtCardinal";
-            this.txtCardinal.Size = new System.Drawing.Size(100, 20);
-            this.txtCardinal.TabIndex = 41;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(12, 541);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(227, 13);
-            this.label31.TabIndex = 59;
-            this.label31.Text = "Expected RTB cardinal (east|west|north|south):";
-            // 
-            // txtLoadout
-            // 
-            this.txtLoadout.Location = new System.Drawing.Point(187, 564);
-            this.txtLoadout.Name = "txtLoadout";
-            this.txtLoadout.Size = new System.Drawing.Size(351, 20);
-            this.txtLoadout.TabIndex = 42;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(12, 593);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(89, 13);
-            this.label36.TabIndex = 63;
-            this.label36.Text = "Authentication";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(12, 619);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(98, 13);
-            this.label34.TabIndex = 64;
-            this.label34.Text = "AWACS challenge:";
-            // 
-            // txtAwacsChallenge
-            // 
-            this.txtAwacsChallenge.Location = new System.Drawing.Point(132, 616);
-            this.txtAwacsChallenge.Name = "txtAwacsChallenge";
-            this.txtAwacsChallenge.Size = new System.Drawing.Size(140, 20);
-            this.txtAwacsChallenge.TabIndex = 44;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(278, 619);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(95, 13);
-            this.label33.TabIndex = 66;
-            this.label33.Text = "AWACS response:";
-            // 
-            // txtAwacsResponse
-            // 
-            this.txtAwacsResponse.Location = new System.Drawing.Point(395, 616);
-            this.txtAwacsResponse.Name = "txtAwacsResponse";
-            this.txtAwacsResponse.Size = new System.Drawing.Size(70, 20);
-            this.txtAwacsResponse.TabIndex = 45;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(12, 645);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(87, 13);
-            this.label37.TabIndex = 68;
-            this.label37.Text = "TACP challenge:";
-            // 
-            // txtTacpChallenge
-            // 
-            this.txtTacpChallenge.Location = new System.Drawing.Point(132, 642);
-            this.txtTacpChallenge.Name = "txtTacpChallenge";
-            this.txtTacpChallenge.Size = new System.Drawing.Size(140, 20);
-            this.txtTacpChallenge.TabIndex = 46;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(278, 645);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(84, 13);
-            this.label35.TabIndex = 70;
-            this.label35.Text = "TACP response:";
-            // 
-            // txtTacpResponse
-            // 
-            this.txtTacpResponse.Location = new System.Drawing.Point(395, 642);
-            this.txtTacpResponse.Name = "txtTacpResponse";
-            this.txtTacpResponse.Size = new System.Drawing.Size(70, 20);
-            this.txtTacpResponse.TabIndex = 47;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(12, 671);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(114, 13);
-            this.label39.TabIndex = 72;
-            this.label39.Text = "TACP abort challenge:";
-            // 
-            // txtTacpAbortChallenge
-            // 
-            this.txtTacpAbortChallenge.Location = new System.Drawing.Point(132, 668);
-            this.txtTacpAbortChallenge.Name = "txtTacpAbortChallenge";
-            this.txtTacpAbortChallenge.Size = new System.Drawing.Size(140, 20);
-            this.txtTacpAbortChallenge.TabIndex = 48;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(278, 671);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(111, 13);
-            this.label38.TabIndex = 74;
-            this.label38.Text = "TACP abort response:";
-            // 
-            // txtTacpAbortResponse
-            // 
-            this.txtTacpAbortResponse.Location = new System.Drawing.Point(395, 668);
-            this.txtTacpAbortResponse.Name = "txtTacpAbortResponse";
-            this.txtTacpAbortResponse.Size = new System.Drawing.Size(70, 20);
-            this.txtTacpAbortResponse.TabIndex = 49;
-            // 
             // lblAwacsCallsign
             // 
             this.lblAwacsCallsign.AutoSize = true;
             this.lblAwacsCallsign.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAwacsCallsign.Location = new System.Drawing.Point(12, 355);
+            this.lblAwacsCallsign.Location = new System.Drawing.Point(12, 554);
             this.lblAwacsCallsign.Name = "lblAwacsCallsign";
             this.lblAwacsCallsign.Size = new System.Drawing.Size(46, 13);
             this.lblAwacsCallsign.TabIndex = 29;
@@ -639,20 +484,11 @@
             // lblTacpCallsign
             // 
             this.lblTacpCallsign.AutoSize = true;
-            this.lblTacpCallsign.Location = new System.Drawing.Point(12, 413);
+            this.lblTacpCallsign.Location = new System.Drawing.Point(12, 612);
             this.lblTacpCallsign.Name = "lblTacpCallsign";
             this.lblTacpCallsign.Size = new System.Drawing.Size(46, 13);
             this.lblTacpCallsign.TabIndex = 38;
             this.lblTacpCallsign.Text = "Callsign:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 567);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(169, 13);
-            this.label19.TabIndex = 61;
-            this.label19.Text = "Total flight loadout (exclude guns):";
             // 
             // txtTasking
             // 
@@ -692,11 +528,11 @@
             this.txtTasking.Location = new System.Drawing.Point(288, 27);
             this.txtTasking.Name = "txtTasking";
             this.txtTasking.Size = new System.Drawing.Size(90, 21);
-            this.txtTasking.TabIndex = 4;
+            this.txtTasking.TabIndex = 3;
             // 
             // txtAwacsPreset
             // 
-            this.txtAwacsPreset.Location = new System.Drawing.Point(407, 353);
+            this.txtAwacsPreset.Location = new System.Drawing.Point(407, 552);
             this.txtAwacsPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -704,11 +540,11 @@
             0});
             this.txtAwacsPreset.Name = "txtAwacsPreset";
             this.txtAwacsPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtAwacsPreset.TabIndex = 23;
+            this.txtAwacsPreset.TabIndex = 28;
             // 
             // txtTacpPreset
             // 
-            this.txtTacpPreset.Location = new System.Drawing.Point(407, 411);
+            this.txtTacpPreset.Location = new System.Drawing.Point(407, 610);
             this.txtTacpPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -716,28 +552,17 @@
             0});
             this.txtTacpPreset.Name = "txtTacpPreset";
             this.txtTacpPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtTacpPreset.TabIndex = 32;
-            // 
-            // chkDefault
-            // 
-            this.chkDefault.AutoSize = true;
-            this.chkDefault.Location = new System.Drawing.Point(547, 566);
-            this.chkDefault.Name = "chkDefault";
-            this.chkDefault.Size = new System.Drawing.Size(60, 17);
-            this.chkDefault.TabIndex = 43;
-            this.chkDefault.Text = "Default";
-            this.chkDefault.UseVisualStyleBackColor = true;
-            this.chkDefault.CheckedChanged += new System.EventHandler(this.CheckCheck);
+            this.txtTacpPreset.TabIndex = 37;
             // 
             // chkAwacs
             // 
             this.chkAwacs.AutoSize = true;
             this.chkAwacs.Checked = true;
             this.chkAwacs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAwacs.Location = new System.Drawing.Point(64, 337);
+            this.chkAwacs.Location = new System.Drawing.Point(64, 536);
             this.chkAwacs.Name = "chkAwacs";
             this.chkAwacs.Size = new System.Drawing.Size(15, 14);
-            this.chkAwacs.TabIndex = 19;
+            this.chkAwacs.TabIndex = 24;
             this.chkAwacs.UseVisualStyleBackColor = true;
             this.chkAwacs.CheckedChanged += new System.EventHandler(this.CheckCheck);
             // 
@@ -746,104 +571,32 @@
             this.chkTacp.AutoSize = true;
             this.chkTacp.Checked = true;
             this.chkTacp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTacp.Location = new System.Drawing.Point(64, 396);
+            this.chkTacp.Location = new System.Drawing.Point(64, 595);
             this.chkTacp.Name = "chkTacp";
             this.chkTacp.Size = new System.Drawing.Size(15, 14);
-            this.chkTacp.TabIndex = 28;
+            this.chkTacp.TabIndex = 33;
             this.chkTacp.UseVisualStyleBackColor = true;
             this.chkTacp.CheckedChanged += new System.EventHandler(this.CheckCheck);
             // 
             // txtIfrnPreset
             // 
-            this.txtIfrnPreset.Location = new System.Drawing.Point(283, 495);
+            this.txtIfrnPreset.Location = new System.Drawing.Point(283, 869);
             this.txtIfrnPreset.Name = "txtIfrnPreset";
             this.txtIfrnPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtIfrnPreset.TabIndex = 39;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 838);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 82;
-            this.label5.Text = "JOKER";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 864);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 82;
-            this.label15.Text = "BINGO";
-            // 
-            // txtJoker
-            // 
-            this.txtJoker.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.txtJoker.Location = new System.Drawing.Point(60, 836);
-            this.txtJoker.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.txtJoker.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.txtJoker.Name = "txtJoker";
-            this.txtJoker.Size = new System.Drawing.Size(68, 20);
-            this.txtJoker.TabIndex = 62;
-            this.txtJoker.Value = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            // 
-            // txtBingo
-            // 
-            this.txtBingo.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.txtBingo.Location = new System.Drawing.Point(59, 862);
-            this.txtBingo.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.txtBingo.Minimum = new decimal(new int[] {
-            1500,
-            0,
-            0,
-            0});
-            this.txtBingo.Name = "txtBingo";
-            this.txtBingo.Size = new System.Drawing.Size(68, 20);
-            this.txtBingo.TabIndex = 63;
-            this.txtBingo.Value = new decimal(new int[] {
-            1500,
-            0,
-            0,
-            0});
+            this.txtIfrnPreset.TabIndex = 45;
             // 
             // txtMetar
             // 
-            this.txtMetar.Location = new System.Drawing.Point(387, 774);
+            this.txtMetar.Location = new System.Drawing.Point(387, 203);
             this.txtMetar.Multiline = true;
             this.txtMetar.Name = "txtMetar";
-            this.txtMetar.Size = new System.Drawing.Size(220, 82);
-            this.txtMetar.TabIndex = 61;
+            this.txtMetar.Size = new System.Drawing.Size(220, 47);
+            this.txtMetar.TabIndex = 13;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(510, 754);
+            this.label18.Location = new System.Drawing.Point(384, 183);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(34, 13);
             this.label18.TabIndex = 46;
@@ -851,7 +604,7 @@
             // 
             // txtInternalPreset
             // 
-            this.txtInternalPreset.Location = new System.Drawing.Point(347, 775);
+            this.txtInternalPreset.Location = new System.Drawing.Point(347, 204);
             this.txtInternalPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -859,12 +612,12 @@
             0});
             this.txtInternalPreset.Name = "txtInternalPreset";
             this.txtInternalPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtInternalPreset.TabIndex = 57;
+            this.txtInternalPreset.TabIndex = 9;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(301, 777);
+            this.label20.Location = new System.Drawing.Point(301, 206);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(40, 13);
             this.label20.TabIndex = 95;
@@ -872,16 +625,16 @@
             // 
             // txtInternalFreq
             // 
-            this.txtInternalFreq.Location = new System.Drawing.Point(100, 774);
+            this.txtInternalFreq.Location = new System.Drawing.Point(100, 203);
             this.txtInternalFreq.Name = "txtInternalFreq";
             this.txtInternalFreq.Size = new System.Drawing.Size(67, 20);
-            this.txtInternalFreq.TabIndex = 55;
+            this.txtInternalFreq.TabIndex = 7;
             this.txtInternalFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 777);
+            this.label21.Location = new System.Drawing.Point(12, 206);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(65, 13);
             this.label21.TabIndex = 94;
@@ -889,16 +642,16 @@
             // 
             // txtInternalChannel
             // 
-            this.txtInternalChannel.Location = new System.Drawing.Point(228, 774);
+            this.txtInternalChannel.Location = new System.Drawing.Point(228, 203);
             this.txtInternalChannel.Name = "txtInternalChannel";
             this.txtInternalChannel.Size = new System.Drawing.Size(67, 20);
-            this.txtInternalChannel.TabIndex = 56;
+            this.txtInternalChannel.TabIndex = 8;
             this.txtInternalChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(173, 777);
+            this.label22.Location = new System.Drawing.Point(173, 206);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 93;
@@ -908,7 +661,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(12, 754);
+            this.label32.Location = new System.Drawing.Point(12, 183);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(50, 13);
             this.label32.TabIndex = 91;
@@ -917,7 +670,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(12, 803);
+            this.label40.Location = new System.Drawing.Point(12, 232);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(82, 13);
             this.label40.TabIndex = 94;
@@ -925,7 +678,7 @@
             // 
             // txtInternalBackupPreset
             // 
-            this.txtInternalBackupPreset.Location = new System.Drawing.Point(347, 801);
+            this.txtInternalBackupPreset.Location = new System.Drawing.Point(347, 230);
             this.txtInternalBackupPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -933,12 +686,12 @@
             0});
             this.txtInternalBackupPreset.Name = "txtInternalBackupPreset";
             this.txtInternalBackupPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtInternalBackupPreset.TabIndex = 60;
+            this.txtInternalBackupPreset.TabIndex = 12;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(301, 803);
+            this.label24.Location = new System.Drawing.Point(301, 232);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(40, 13);
             this.label24.TabIndex = 100;
@@ -946,65 +699,48 @@
             // 
             // txtInternalBackupFreq
             // 
-            this.txtInternalBackupFreq.Location = new System.Drawing.Point(100, 800);
+            this.txtInternalBackupFreq.Location = new System.Drawing.Point(100, 229);
             this.txtInternalBackupFreq.Name = "txtInternalBackupFreq";
             this.txtInternalBackupFreq.Size = new System.Drawing.Size(67, 20);
-            this.txtInternalBackupFreq.TabIndex = 58;
+            this.txtInternalBackupFreq.TabIndex = 10;
             this.txtInternalBackupFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // txtInternalBackupChannel
             // 
-            this.txtInternalBackupChannel.Location = new System.Drawing.Point(228, 800);
+            this.txtInternalBackupChannel.Location = new System.Drawing.Point(228, 229);
             this.txtInternalBackupChannel.Name = "txtInternalBackupChannel";
             this.txtInternalBackupChannel.Size = new System.Drawing.Size(67, 20);
-            this.txtInternalBackupChannel.TabIndex = 59;
+            this.txtInternalBackupChannel.TabIndex = 11;
             this.txtInternalBackupChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(173, 803);
+            this.label41.Location = new System.Drawing.Point(173, 232);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(49, 13);
             this.label41.TabIndex = 99;
             this.label41.Text = "Channel:";
             // 
-            // txtAmp
-            // 
-            this.txtAmp.Location = new System.Drawing.Point(387, 464);
-            this.txtAmp.Multiline = true;
-            this.txtAmp.Name = "txtAmp";
-            this.txtAmp.Size = new System.Drawing.Size(217, 94);
-            this.txtAmp.TabIndex = 40;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(472, 447);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(66, 13);
-            this.label42.TabIndex = 102;
-            this.label42.Text = "Amplification";
-            // 
             // txtAwacsBackupFreq
             // 
-            this.txtAwacsBackupFreq.Location = new System.Drawing.Point(174, 378);
+            this.txtAwacsBackupFreq.Location = new System.Drawing.Point(174, 577);
             this.txtAwacsBackupFreq.Name = "txtAwacsBackupFreq";
             this.txtAwacsBackupFreq.Size = new System.Drawing.Size(51, 20);
-            this.txtAwacsBackupFreq.TabIndex = 25;
+            this.txtAwacsBackupFreq.TabIndex = 30;
             this.txtAwacsBackupFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // txtAwacsBackupChannel
             // 
-            this.txtAwacsBackupChannel.Location = new System.Drawing.Point(286, 378);
+            this.txtAwacsBackupChannel.Location = new System.Drawing.Point(286, 577);
             this.txtAwacsBackupChannel.Name = "txtAwacsBackupChannel";
             this.txtAwacsBackupChannel.Size = new System.Drawing.Size(69, 20);
-            this.txtAwacsBackupChannel.TabIndex = 26;
+            this.txtAwacsBackupChannel.TabIndex = 31;
             this.txtAwacsBackupChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // txtAwacsBackupPreset
             // 
-            this.txtAwacsBackupPreset.Location = new System.Drawing.Point(407, 378);
+            this.txtAwacsBackupPreset.Location = new System.Drawing.Point(407, 577);
             this.txtAwacsBackupPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -1012,12 +748,12 @@
             0});
             this.txtAwacsBackupPreset.Name = "txtAwacsBackupPreset";
             this.txtAwacsBackupPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtAwacsBackupPreset.TabIndex = 27;
+            this.txtAwacsBackupPreset.TabIndex = 32;
             // 
             // lblAwacsBackupChannel
             // 
             this.lblAwacsBackupChannel.AutoSize = true;
-            this.lblAwacsBackupChannel.Location = new System.Drawing.Point(231, 381);
+            this.lblAwacsBackupChannel.Location = new System.Drawing.Point(231, 580);
             this.lblAwacsBackupChannel.Name = "lblAwacsBackupChannel";
             this.lblAwacsBackupChannel.Size = new System.Drawing.Size(49, 13);
             this.lblAwacsBackupChannel.TabIndex = 106;
@@ -1025,24 +761,24 @@
             // 
             // txtTacpBackupChannel
             // 
-            this.txtTacpBackupChannel.Location = new System.Drawing.Point(286, 436);
+            this.txtTacpBackupChannel.Location = new System.Drawing.Point(286, 635);
             this.txtTacpBackupChannel.Name = "txtTacpBackupChannel";
             this.txtTacpBackupChannel.Size = new System.Drawing.Size(69, 20);
-            this.txtTacpBackupChannel.TabIndex = 35;
+            this.txtTacpBackupChannel.TabIndex = 40;
             this.txtTacpBackupChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // txtTacpBackupFreq
             // 
-            this.txtTacpBackupFreq.Location = new System.Drawing.Point(174, 436);
+            this.txtTacpBackupFreq.Location = new System.Drawing.Point(174, 635);
             this.txtTacpBackupFreq.Name = "txtTacpBackupFreq";
             this.txtTacpBackupFreq.Size = new System.Drawing.Size(51, 20);
-            this.txtTacpBackupFreq.TabIndex = 34;
+            this.txtTacpBackupFreq.TabIndex = 39;
             this.txtTacpBackupFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
             // lblAwacsBackupFreq
             // 
             this.lblAwacsBackupFreq.AutoSize = true;
-            this.lblAwacsBackupFreq.Location = new System.Drawing.Point(121, 381);
+            this.lblAwacsBackupFreq.Location = new System.Drawing.Point(121, 580);
             this.lblAwacsBackupFreq.Name = "lblAwacsBackupFreq";
             this.lblAwacsBackupFreq.Size = new System.Drawing.Size(47, 13);
             this.lblAwacsBackupFreq.TabIndex = 109;
@@ -1050,7 +786,7 @@
             // 
             // txtTacpBackupPreset
             // 
-            this.txtTacpBackupPreset.Location = new System.Drawing.Point(407, 437);
+            this.txtTacpBackupPreset.Location = new System.Drawing.Point(407, 636);
             this.txtTacpBackupPreset.Maximum = new decimal(new int[] {
             20,
             0,
@@ -1058,12 +794,12 @@
             0});
             this.txtTacpBackupPreset.Name = "txtTacpBackupPreset";
             this.txtTacpBackupPreset.Size = new System.Drawing.Size(32, 20);
-            this.txtTacpBackupPreset.TabIndex = 36;
+            this.txtTacpBackupPreset.TabIndex = 41;
             // 
             // lblTacpBackupFreq
             // 
             this.lblTacpBackupFreq.AutoSize = true;
-            this.lblTacpBackupFreq.Location = new System.Drawing.Point(121, 439);
+            this.lblTacpBackupFreq.Location = new System.Drawing.Point(121, 638);
             this.lblTacpBackupFreq.Name = "lblTacpBackupFreq";
             this.lblTacpBackupFreq.Size = new System.Drawing.Size(47, 13);
             this.lblTacpBackupFreq.TabIndex = 111;
@@ -1072,7 +808,7 @@
             // lblTacpBackupChannel
             // 
             this.lblTacpBackupChannel.AutoSize = true;
-            this.lblTacpBackupChannel.Location = new System.Drawing.Point(231, 439);
+            this.lblTacpBackupChannel.Location = new System.Drawing.Point(231, 638);
             this.lblTacpBackupChannel.Name = "lblTacpBackupChannel";
             this.lblTacpBackupChannel.Size = new System.Drawing.Size(49, 13);
             this.lblTacpBackupChannel.TabIndex = 112;
@@ -1081,7 +817,7 @@
             // lblAwacsBackupPreset
             // 
             this.lblAwacsBackupPreset.AutoSize = true;
-            this.lblAwacsBackupPreset.Location = new System.Drawing.Point(361, 381);
+            this.lblAwacsBackupPreset.Location = new System.Drawing.Point(361, 580);
             this.lblAwacsBackupPreset.Name = "lblAwacsBackupPreset";
             this.lblAwacsBackupPreset.Size = new System.Drawing.Size(40, 13);
             this.lblAwacsBackupPreset.TabIndex = 113;
@@ -1090,7 +826,7 @@
             // lblTacpBackupPreset
             // 
             this.lblTacpBackupPreset.AutoSize = true;
-            this.lblTacpBackupPreset.Location = new System.Drawing.Point(361, 439);
+            this.lblTacpBackupPreset.Location = new System.Drawing.Point(361, 638);
             this.lblTacpBackupPreset.Name = "lblTacpBackupPreset";
             this.lblTacpBackupPreset.Size = new System.Drawing.Size(40, 13);
             this.lblTacpBackupPreset.TabIndex = 114;
@@ -1099,7 +835,7 @@
             // lblAwacsCp
             // 
             this.lblAwacsCp.AutoSize = true;
-            this.lblAwacsCp.Location = new System.Drawing.Point(445, 355);
+            this.lblAwacsCp.Location = new System.Drawing.Point(445, 554);
             this.lblAwacsCp.Name = "lblAwacsCp";
             this.lblAwacsCp.Size = new System.Drawing.Size(73, 13);
             this.lblAwacsCp.TabIndex = 115;
@@ -1107,10 +843,10 @@
             // 
             // txtAwacsCp
             // 
-            this.txtAwacsCp.Location = new System.Drawing.Point(524, 352);
+            this.txtAwacsCp.Location = new System.Drawing.Point(524, 551);
             this.txtAwacsCp.Name = "txtAwacsCp";
             this.txtAwacsCp.Size = new System.Drawing.Size(80, 20);
-            this.txtAwacsCp.TabIndex = 24;
+            this.txtAwacsCp.TabIndex = 29;
             // 
             // cmbAirbaseDep
             // 
@@ -1137,16 +873,16 @@
             "URMO",
             "URSS",
             "XRMF"});
-            this.cmbAirbaseDep.Location = new System.Drawing.Point(48, 212);
+            this.cmbAirbaseDep.Location = new System.Drawing.Point(48, 295);
             this.cmbAirbaseDep.Name = "cmbAirbaseDep";
             this.cmbAirbaseDep.Size = new System.Drawing.Size(57, 21);
-            this.cmbAirbaseDep.TabIndex = 6;
+            this.cmbAirbaseDep.TabIndex = 14;
             this.cmbAirbaseDep.SelectedIndexChanged += new System.EventHandler(this.comboboxAirportSelectedIndexChanged);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(10, 291);
+            this.label26.Location = new System.Drawing.Point(10, 374);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(73, 13);
             this.label26.TabIndex = 122;
@@ -1154,10 +890,10 @@
             // 
             // txtTakeoffTime
             // 
-            this.txtTakeoffTime.Location = new System.Drawing.Point(89, 288);
+            this.txtTakeoffTime.Location = new System.Drawing.Point(89, 371);
             this.txtTakeoffTime.Name = "txtTakeoffTime";
             this.txtTakeoffTime.Size = new System.Drawing.Size(42, 20);
-            this.txtTakeoffTime.TabIndex = 123;
+            this.txtTakeoffTime.TabIndex = 18;
             this.txtTakeoffTime.Text = ":";
             this.txtTakeoffTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1167,14 +903,14 @@
             this.dgvAirbase.AllowUserToDeleteRows = false;
             this.dgvAirbase.AllowUserToResizeColumns = false;
             this.dgvAirbase.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAirbase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAirbase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAirbase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAirbase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAirbase,
@@ -1185,26 +921,26 @@
             this.colElev,
             this.colRwy,
             this.colILS});
-            this.dgvAirbase.Location = new System.Drawing.Point(111, 190);
+            this.dgvAirbase.Location = new System.Drawing.Point(111, 273);
             this.dgvAirbase.Name = "dgvAirbase";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAirbase.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAirbase.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAirbase.RowHeadersVisible = false;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvAirbase.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvAirbase.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAirbase.Size = new System.Drawing.Size(493, 89);
-            this.dgvAirbase.TabIndex = 124;
+            this.dgvAirbase.TabIndex = 17;
             // 
             // colAirbase
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colAirbase.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colAirbase.DefaultCellStyle = dataGridViewCellStyle2;
             this.colAirbase.HeaderText = "Airbase";
             this.colAirbase.Name = "colAirbase";
             this.colAirbase.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1247,8 +983,8 @@
             // 
             // colRwy
             // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colRwy.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colRwy.DefaultCellStyle = dataGridViewCellStyle3;
             this.colRwy.HeaderText = "RWY";
             this.colRwy.Name = "colRwy";
             this.colRwy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1263,7 +999,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(12, 192);
+            this.label43.Location = new System.Drawing.Point(12, 275);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(68, 13);
             this.label43.TabIndex = 125;
@@ -1272,7 +1008,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(12, 215);
+            this.label44.Location = new System.Drawing.Point(12, 298);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(29, 13);
             this.label44.TabIndex = 126;
@@ -1281,7 +1017,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(12, 238);
+            this.label45.Location = new System.Drawing.Point(12, 321);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(30, 13);
             this.label45.TabIndex = 127;
@@ -1290,7 +1026,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(12, 261);
+            this.label46.Location = new System.Drawing.Point(12, 344);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(27, 13);
             this.label46.TabIndex = 128;
@@ -1321,10 +1057,10 @@
             "URMO",
             "URSS",
             "XRMF"});
-            this.cmbAirbaseArr.Location = new System.Drawing.Point(48, 235);
+            this.cmbAirbaseArr.Location = new System.Drawing.Point(48, 318);
             this.cmbAirbaseArr.Name = "cmbAirbaseArr";
             this.cmbAirbaseArr.Size = new System.Drawing.Size(57, 21);
-            this.cmbAirbaseArr.TabIndex = 129;
+            this.cmbAirbaseArr.TabIndex = 15;
             this.cmbAirbaseArr.SelectedIndexChanged += new System.EventHandler(this.comboboxAirportSelectedIndexChanged);
             // 
             // cmbAirbaseAlt
@@ -1352,16 +1088,16 @@
             "URMO",
             "URSS",
             "XRMF"});
-            this.cmbAirbaseAlt.Location = new System.Drawing.Point(48, 258);
+            this.cmbAirbaseAlt.Location = new System.Drawing.Point(48, 341);
             this.cmbAirbaseAlt.Name = "cmbAirbaseAlt";
             this.cmbAirbaseAlt.Size = new System.Drawing.Size(57, 21);
-            this.cmbAirbaseAlt.TabIndex = 130;
+            this.cmbAirbaseAlt.TabIndex = 16;
             this.cmbAirbaseAlt.SelectedIndexChanged += new System.EventHandler(this.comboboxAirportSelectedIndexChanged);
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(137, 291);
+            this.label47.Location = new System.Drawing.Point(137, 374);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(74, 13);
             this.label47.TabIndex = 131;
@@ -1369,10 +1105,10 @@
             // 
             // txtLandingTime
             // 
-            this.txtLandingTime.Location = new System.Drawing.Point(217, 288);
+            this.txtLandingTime.Location = new System.Drawing.Point(217, 371);
             this.txtLandingTime.Name = "txtLandingTime";
             this.txtLandingTime.Size = new System.Drawing.Size(42, 20);
-            this.txtLandingTime.TabIndex = 132;
+            this.txtLandingTime.TabIndex = 19;
             this.txtLandingTime.Text = ":";
             this.txtLandingTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1387,13 +1123,13 @@
             this.cmbNrOfAc.Location = new System.Drawing.Point(210, 27);
             this.cmbNrOfAc.Name = "cmbNrOfAc";
             this.cmbNrOfAc.Size = new System.Drawing.Size(32, 21);
-            this.cmbNrOfAc.TabIndex = 133;
+            this.cmbNrOfAc.TabIndex = 2;
             this.cmbNrOfAc.SelectedIndexChanged += new System.EventHandler(this.cmbNrOfAc_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(492, 645);
+            this.label7.Location = new System.Drawing.Point(529, 479);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 134;
@@ -1402,7 +1138,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(492, 671);
+            this.label9.Location = new System.Drawing.Point(529, 505);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 135;
@@ -1411,7 +1147,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(492, 619);
+            this.label10.Location = new System.Drawing.Point(529, 453);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 136;
@@ -1420,7 +1156,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(137, 593);
+            this.label49.Location = new System.Drawing.Point(238, 453);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(57, 13);
             this.label49.TabIndex = 141;
@@ -1429,7 +1165,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(200, 593);
+            this.label50.Location = new System.Drawing.Point(301, 453);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(37, 13);
             this.label50.TabIndex = 142;
@@ -1438,7 +1174,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(243, 593);
+            this.label51.Location = new System.Drawing.Point(344, 453);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(28, 13);
             this.label51.TabIndex = 143;
@@ -1447,7 +1183,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(277, 593);
+            this.label52.Location = new System.Drawing.Point(378, 453);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(31, 13);
             this.label52.TabIndex = 144;
@@ -1456,20 +1192,11 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(321, 593);
+            this.label53.Location = new System.Drawing.Point(422, 453);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(29, 13);
             this.label53.TabIndex = 145;
             this.label53.Text = "POS";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(495, 591);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(51, 13);
-            this.label54.TabIndex = 146;
-            this.label54.Text = "TANKER";
             // 
             // dgvFlight
             // 
@@ -1477,14 +1204,14 @@
             this.dgvFlight.AllowUserToDeleteRows = false;
             this.dgvFlight.AllowUserToResizeColumns = false;
             this.dgvFlight.AllowUserToResizeRows = false;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvFlight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFlight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPos,
@@ -1496,19 +1223,19 @@
             this.colNotes});
             this.dgvFlight.Location = new System.Drawing.Point(15, 63);
             this.dgvFlight.Name = "dgvFlight";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvFlight.RowHeadersVisible = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvFlight.Size = new System.Drawing.Size(589, 111);
-            this.dgvFlight.TabIndex = 148;
+            this.dgvFlight.TabIndex = 6;
             // 
             // colPos
             // 
@@ -1572,14 +1299,14 @@
             this.dgvSupport.AllowUserToDeleteRows = false;
             this.dgvSupport.AllowUserToResizeColumns = false;
             this.dgvSupport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSupport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTypeSupport,
@@ -1589,13 +1316,13 @@
             this.colPresetSupport,
             this.colBackupSupport,
             this.colNotesSupport});
-            this.dgvSupport.Location = new System.Drawing.Point(15, 593);
+            this.dgvSupport.Location = new System.Drawing.Point(15, 677);
             this.dgvSupport.Name = "dgvSupport";
             this.dgvSupport.RowHeadersVisible = false;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvSupport.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSupport.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSupport.Size = new System.Drawing.Size(589, 155);
-            this.dgvSupport.TabIndex = 152;
+            this.dgvSupport.TabIndex = 42;
             this.dgvSupport.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupport_CellValueChanged);
             // 
             // colTypeSupport
@@ -1651,7 +1378,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(80, 337);
+            this.label11.Location = new System.Drawing.Point(80, 536);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 13);
             this.label11.TabIndex = 153;
@@ -1660,7 +1387,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(488, 291);
+            this.label2.Location = new System.Drawing.Point(488, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 155;
@@ -1672,15 +1399,16 @@
             this.cbTaxi.Items.AddRange(new object[] {
             "Trail",
             "Staggered"});
-            this.cbTaxi.Location = new System.Drawing.Point(524, 288);
+            this.cbTaxi.Location = new System.Drawing.Point(524, 371);
             this.cbTaxi.Name = "cbTaxi";
             this.cbTaxi.Size = new System.Drawing.Size(80, 21);
-            this.cbTaxi.TabIndex = 156;
+            this.cbTaxi.TabIndex = 21;
+            this.cbTaxi.Text = "Trail";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(348, 318);
+            this.label12.Location = new System.Drawing.Point(348, 401);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 157;
@@ -1688,16 +1416,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(403, 315);
+            this.textBox1.Location = new System.Drawing.Point(403, 398);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 158;
+            this.textBox1.TabIndex = 22;
             this.textBox1.Text = "20 sec";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(467, 318);
+            this.label13.Location = new System.Drawing.Point(467, 401);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 159;
@@ -1711,16 +1439,27 @@
             "Echelon right",
             "Trail",
             "Finger four"});
-            this.cbRejoin.Location = new System.Drawing.Point(513, 315);
+            this.cbRejoin.Location = new System.Drawing.Point(513, 398);
             this.cbRejoin.Name = "cbRejoin";
             this.cbRejoin.Size = new System.Drawing.Size(91, 21);
-            this.cbRejoin.TabIndex = 160;
+            this.cbRejoin.TabIndex = 23;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 661);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 161;
+            this.label5.Text = "Support";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 901);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbRejoin);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox1);
@@ -1730,7 +1469,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgvSupport);
             this.Controls.Add(this.dgvFlight);
-            this.Controls.Add(this.label54);
             this.Controls.Add(this.label53);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
@@ -1766,8 +1504,6 @@
             this.Controls.Add(this.txtAwacsBackupPreset);
             this.Controls.Add(this.txtAwacsBackupChannel);
             this.Controls.Add(this.txtAwacsBackupFreq);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.txtAmp);
             this.Controls.Add(this.txtInternalBackupPreset);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.txtInternalBackupFreq);
@@ -1782,34 +1518,12 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.txtMetar);
-            this.Controls.Add(this.txtBingo);
-            this.Controls.Add(this.txtJoker);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIfrnPreset);
             this.Controls.Add(this.chkTacp);
             this.Controls.Add(this.chkAwacs);
-            this.Controls.Add(this.chkDefault);
             this.Controls.Add(this.txtTacpPreset);
             this.Controls.Add(this.txtAwacsPreset);
             this.Controls.Add(this.txtTasking);
-            this.Controls.Add(this.txtTacpAbortResponse);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.txtTacpAbortChallenge);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.txtTacpResponse);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.txtTacpChallenge);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.txtAwacsResponse);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.txtAwacsChallenge);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.txtLoadout);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.txtCardinal);
-            this.Controls.Add(this.label31);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.txtIfrnFreq);
             this.Controls.Add(this.label29);
@@ -1852,8 +1566,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacpPreset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIfrnPreset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBingo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalPreset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalBackupPreset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsBackupPreset)).EndInit();
@@ -1901,36 +1613,14 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtIfrnFreq;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox txtCardinal;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txtLoadout;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txtAwacsChallenge;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox txtAwacsResponse;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox txtTacpChallenge;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txtTacpResponse;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox txtTacpAbortChallenge;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox txtTacpAbortResponse;
         private System.Windows.Forms.Label lblAwacsCallsign;
         private System.Windows.Forms.Label lblTacpCallsign;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox txtTasking;
         private System.Windows.Forms.NumericUpDown txtAwacsPreset;
         private System.Windows.Forms.NumericUpDown txtTacpPreset;
-        private System.Windows.Forms.CheckBox chkDefault;
         private System.Windows.Forms.CheckBox chkAwacs;
         private System.Windows.Forms.CheckBox chkTacp;
         private System.Windows.Forms.NumericUpDown txtIfrnPreset;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown txtJoker;
-        private System.Windows.Forms.NumericUpDown txtBingo;
         private System.Windows.Forms.TextBox txtMetar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown txtInternalPreset;
@@ -1946,8 +1636,6 @@
         private System.Windows.Forms.TextBox txtInternalBackupFreq;
         private System.Windows.Forms.TextBox txtInternalBackupChannel;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox txtAmp;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txtAwacsBackupFreq;
         private System.Windows.Forms.TextBox txtAwacsBackupChannel;
         private System.Windows.Forms.NumericUpDown txtAwacsBackupPreset;
@@ -1983,7 +1671,6 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.DataGridView dgvFlight;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCallsign;
@@ -2015,6 +1702,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbRejoin;
+        private System.Windows.Forms.Label label5;
     }
 }
 

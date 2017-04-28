@@ -236,7 +236,7 @@ namespace DcsDataImporter
                                 ControlaPrimaryFrequency = words[4];
                                 ControlaSecondaryFrequency = words[5];
                             }
-                            else if (words[0] == "TAC")
+                            else if (words[0] == "TAC" || words[0] == "JTAC")
                             {
                                 // Set JTAC data
                                 JtacType = words[1];
@@ -249,6 +249,19 @@ namespace DcsDataImporter
                             {
                                 // Set AMPN data
                                 AmpnAmplification = words[1];
+                                // read next line until //
+                                while ((line = file.ReadLine()) != null)
+                                {
+                                    AmpnAmplification += line;
+                                    // add line to AmpnAmplification
+                                    if (line.EndsWith(@"//"))
+                                    {
+
+                                        AmpnAmplification = AmpnAmplification.Substring(0, AmpnAmplification.Length-2);
+                                        // reached end of AMPN
+                                        break;
+                                    }
+                                }
                             }
                             else if (words[0] == "VTASK")
                             {
@@ -291,6 +304,7 @@ namespace DcsDataImporter
 
                 // JTAC
                 string Tacp = JtacCallsign;
+                string TacpType = JtacType;
                 string TacpChn = JtacPrimaryFrequency;
                 string TacpBackupChn = JtacSecondaryFrequency;
                 string TacpCp = JtacPosition;
@@ -301,7 +315,7 @@ namespace DcsDataImporter
                 // AMPN
                 string amplification = AmpnAmplification;
 
-                Form1 form1 = new Form1(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, chkTraining.Checked, AmsndatTakeoffTime);
+                Form1 form1 = new Form1(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpType, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, chkTraining.Checked, AmsndatTakeoffTime);
                 form1.Show();
             }
         }

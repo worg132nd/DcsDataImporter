@@ -110,31 +110,10 @@
     <Setting Name="prevTxtAmp" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="prevTxtCardinal" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="prevTxtLoadout" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="prevChkDefault" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtAwacsChallenge" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtAwacsResponse" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtTacpChallenge" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtTacpResponse" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtTacpAbortChallenge" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtTacpAbortResponse" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="prevTxtInternalFreq" Type="System.String" Scope="User">
@@ -477,6 +456,9 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="prevColNotesTrail" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevAmpn" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

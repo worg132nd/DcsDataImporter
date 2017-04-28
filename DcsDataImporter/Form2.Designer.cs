@@ -88,7 +88,7 @@
             this.dgvFlightplan.Name = "dgvFlightplan";
             this.dgvFlightplan.RowHeadersVisible = false;
             this.dgvFlightplan.Size = new System.Drawing.Size(595, 617);
-            this.dgvFlightplan.TabIndex = 126;
+            this.dgvFlightplan.TabIndex = 2;
             // 
             // colWpt
             // 
@@ -170,14 +170,14 @@
             this.txtKillbox.Location = new System.Drawing.Point(58, 774);
             this.txtKillbox.Name = "txtKillbox";
             this.txtKillbox.Size = new System.Drawing.Size(549, 20);
-            this.txtKillbox.TabIndex = 128;
+            this.txtKillbox.TabIndex = 3;
             // 
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(532, 866);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 129;
+            this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -187,7 +187,7 @@
             this.btnBack.Location = new System.Drawing.Point(451, 866);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 130;
+            this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -207,7 +207,7 @@
             this.dgvTma.Name = "dgvTma";
             this.dgvTma.RowHeadersVisible = false;
             this.dgvTma.Size = new System.Drawing.Size(595, 89);
-            this.dgvTma.TabIndex = 131;
+            this.dgvTma.TabIndex = 1;
             // 
             // colType
             // 
@@ -241,7 +241,7 @@
             this.btnImportMissionFile.Location = new System.Drawing.Point(12, 866);
             this.btnImportMissionFile.Name = "btnImportMissionFile";
             this.btnImportMissionFile.Size = new System.Drawing.Size(113, 23);
-            this.btnImportMissionFile.TabIndex = 132;
+            this.btnImportMissionFile.TabIndex = 4;
             this.btnImportMissionFile.Text = "Import mission file";
             this.btnImportMissionFile.UseVisualStyleBackColor = true;
             this.btnImportMissionFile.Click += new System.EventHandler(this.btnImportMissionFile_Click);
