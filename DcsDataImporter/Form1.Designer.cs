@@ -135,9 +135,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
             this.dgvFlight = new System.Windows.Forms.DataGridView();
             this.colPos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCallsign = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,6 +159,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cbRejoin = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtAltitude1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacpPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIfrnPreset)).BeginInit();
@@ -172,6 +176,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirbase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCallsign
@@ -1129,74 +1134,48 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(529, 479);
+            this.label7.Location = new System.Drawing.Point(488, 460);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 134;
-            this.label7.Text = "MSL FLR";
+            this.label7.Text = "Missile floor:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(529, 505);
+            this.label9.Location = new System.Drawing.Point(495, 502);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 135;
-            this.label9.Text = "HARD";
+            this.label9.Text = "Harddeck:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(529, 453);
+            this.label10.Location = new System.Drawing.Point(511, 481);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 136;
-            this.label10.Text = "CEILING";
+            this.label10.Text = "Ceiling:";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(238, 453);
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(12, 500);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(57, 13);
+            this.label49.Size = new System.Drawing.Size(121, 13);
             this.label49.TabIndex = 141;
-            this.label49.Text = "PACKAGE";
+            this.label49.Text = "Package frequency:";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(301, 453);
+            this.label50.Location = new System.Drawing.Point(326, 500);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(37, 13);
+            this.label50.Size = new System.Drawing.Size(40, 13);
             this.label50.TabIndex = 142;
-            this.label50.Text = "Preset";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(344, 453);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(28, 13);
-            this.label51.TabIndex = 143;
-            this.label51.Text = "Freq";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(378, 453);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(31, 13);
-            this.label52.TabIndex = 144;
-            this.label52.Text = "Task";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(422, 453);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(29, 13);
-            this.label53.TabIndex = 145;
-            this.label53.Text = "POS";
+            this.label50.Text = "Preset:";
             // 
             // dgvFlight
             // 
@@ -1408,7 +1387,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(348, 401);
+            this.label12.Location = new System.Drawing.Point(12, 401);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 157;
@@ -1416,7 +1395,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(403, 398);
+            this.textBox1.Location = new System.Drawing.Point(67, 398);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 20);
             this.textBox1.TabIndex = 22;
@@ -1425,7 +1404,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(467, 401);
+            this.label13.Location = new System.Drawing.Point(131, 401);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 159;
@@ -1439,7 +1418,7 @@
             "Echelon right",
             "Trail",
             "Finger four"});
-            this.cbRejoin.Location = new System.Drawing.Point(513, 398);
+            this.cbRejoin.Location = new System.Drawing.Point(177, 398);
             this.cbRejoin.Name = "cbRejoin";
             this.cbRejoin.Size = new System.Drawing.Size(91, 21);
             this.cbRejoin.TabIndex = 23;
@@ -1454,11 +1433,74 @@
             this.label5.TabIndex = 161;
             this.label5.Text = "Support";
             // 
+            // txtAltitude1
+            // 
+            this.txtAltitude1.Location = new System.Drawing.Point(558, 457);
+            this.txtAltitude1.Name = "txtAltitude1";
+            this.txtAltitude1.Size = new System.Drawing.Size(48, 20);
+            this.txtAltitude1.TabIndex = 162;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(558, 478);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(48, 20);
+            this.textBox2.TabIndex = 163;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(558, 499);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(48, 20);
+            this.textBox3.TabIndex = 164;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(196, 500);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 13);
+            this.label15.TabIndex = 165;
+            this.label15.Text = "Channel:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(139, 497);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(51, 20);
+            this.textBox4.TabIndex = 166;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(251, 497);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(69, 20);
+            this.textBox5.TabIndex = 167;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(372, 498);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(32, 20);
+            this.numericUpDown1.TabIndex = 168;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 901);
+            this.ClientSize = new System.Drawing.Size(619, 750);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAltitude1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbRejoin);
             this.Controls.Add(this.label13);
@@ -1469,9 +1511,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgvSupport);
             this.Controls.Add(this.dgvFlight);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.label52);
-            this.Controls.Add(this.label51);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label10);
@@ -1573,6 +1612,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirbase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1668,9 +1708,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.DataGridView dgvFlight;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCallsign;
@@ -1703,6 +1740,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbRejoin;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAltitude1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

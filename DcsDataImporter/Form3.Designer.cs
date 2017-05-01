@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -592,7 +592,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(271, 219);
+            this.label21.Location = new System.Drawing.Point(277, 219);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(42, 13);
             this.label21.TabIndex = 189;
@@ -600,7 +600,7 @@
             // 
             // txtAbort1
             // 
-            this.txtAbort1.Location = new System.Drawing.Point(316, 233);
+            this.txtAbort1.Location = new System.Drawing.Point(322, 233);
             this.txtAbort1.Name = "txtAbort1";
             this.txtAbort1.Size = new System.Drawing.Size(48, 20);
             this.txtAbort1.TabIndex = 16;
@@ -609,7 +609,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(288, 199);
+            this.label22.Location = new System.Drawing.Point(294, 199);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 191;
@@ -618,7 +618,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(316, 219);
+            this.label23.Location = new System.Drawing.Point(322, 219);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(46, 13);
             this.label23.TabIndex = 193;
@@ -650,7 +650,7 @@
             // 
             // txtAltitude1
             // 
-            this.txtAltitude1.Location = new System.Drawing.Point(267, 233);
+            this.txtAltitude1.Location = new System.Drawing.Point(273, 233);
             this.txtAltitude1.Name = "txtAltitude1";
             this.txtAltitude1.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude1.TabIndex = 15;
@@ -879,14 +879,14 @@
             // 
             // txtAltitude2
             // 
-            this.txtAltitude2.Location = new System.Drawing.Point(267, 256);
+            this.txtAltitude2.Location = new System.Drawing.Point(273, 256);
             this.txtAltitude2.Name = "txtAltitude2";
             this.txtAltitude2.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude2.TabIndex = 27;
             // 
             // txtAbort2
             // 
-            this.txtAbort2.Location = new System.Drawing.Point(316, 256);
+            this.txtAbort2.Location = new System.Drawing.Point(322, 256);
             this.txtAbort2.Name = "txtAbort2";
             this.txtAbort2.Size = new System.Drawing.Size(48, 20);
             this.txtAbort2.TabIndex = 28;
@@ -1053,14 +1053,14 @@
             // 
             // txtAltitude3
             // 
-            this.txtAltitude3.Location = new System.Drawing.Point(267, 409);
+            this.txtAltitude3.Location = new System.Drawing.Point(273, 409);
             this.txtAltitude3.Name = "txtAltitude3";
             this.txtAltitude3.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude3.TabIndex = 40;
             // 
             // txtAbort3
             // 
-            this.txtAbort3.Location = new System.Drawing.Point(316, 409);
+            this.txtAbort3.Location = new System.Drawing.Point(322, 409);
             this.txtAbort3.Name = "txtAbort3";
             this.txtAbort3.Size = new System.Drawing.Size(48, 20);
             this.txtAbort3.TabIndex = 41;
@@ -1227,14 +1227,14 @@
             // 
             // txtAltitude4
             // 
-            this.txtAltitude4.Location = new System.Drawing.Point(267, 432);
+            this.txtAltitude4.Location = new System.Drawing.Point(273, 432);
             this.txtAltitude4.Name = "txtAltitude4";
             this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude4.TabIndex = 52;
             // 
             // txtAbort4
             // 
-            this.txtAbort4.Location = new System.Drawing.Point(316, 432);
+            this.txtAbort4.Location = new System.Drawing.Point(322, 432);
             this.txtAbort4.Name = "txtAbort4";
             this.txtAbort4.Size = new System.Drawing.Size(48, 20);
             this.txtAbort4.TabIndex = 53;
@@ -1371,7 +1371,7 @@
             "Wedge"});
             this.cbFormation1.Location = new System.Drawing.Point(193, 233);
             this.cbFormation1.Name = "cbFormation1";
-            this.cbFormation1.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation1.Size = new System.Drawing.Size(57, 21);
             this.cbFormation1.TabIndex = 14;
             // 
             // label33
@@ -1446,7 +1446,7 @@
             "Wedge"});
             this.cbFormation2.Location = new System.Drawing.Point(193, 255);
             this.cbFormation2.Name = "cbFormation2";
-            this.cbFormation2.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation2.Size = new System.Drawing.Size(57, 21);
             this.cbFormation2.TabIndex = 26;
             // 
             // cbFormation3
@@ -1459,7 +1459,7 @@
             "Wedge"});
             this.cbFormation3.Location = new System.Drawing.Point(193, 409);
             this.cbFormation3.Name = "cbFormation3";
-            this.cbFormation3.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation3.Size = new System.Drawing.Size(57, 21);
             this.cbFormation3.TabIndex = 39;
             // 
             // cbFormation4
@@ -1472,7 +1472,7 @@
             "Wedge"});
             this.cbFormation4.Location = new System.Drawing.Point(193, 431);
             this.cbFormation4.Name = "cbFormation4";
-            this.cbFormation4.Size = new System.Drawing.Size(42, 21);
+            this.cbFormation4.Size = new System.Drawing.Size(57, 21);
             this.cbFormation4.TabIndex = 51;
             // 
             // txtEgressIP2
@@ -1828,7 +1828,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(288, 376);
+            this.label24.Location = new System.Drawing.Point(294, 376);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(53, 13);
             this.label24.TabIndex = 288;
@@ -2014,7 +2014,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(316, 395);
+            this.label30.Location = new System.Drawing.Point(322, 395);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(46, 13);
             this.label30.TabIndex = 308;
@@ -2023,7 +2023,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(271, 395);
+            this.label36.Location = new System.Drawing.Point(277, 395);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(42, 13);
             this.label36.TabIndex = 307;
@@ -2098,14 +2098,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2117,8 +2117,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 500);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPackage.Size = new System.Drawing.Size(589, 155);
             this.dgvPackage.TabIndex = 59;
             // 
@@ -2356,7 +2356,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 901);
+            this.ClientSize = new System.Drawing.Size(619, 750);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label48);
