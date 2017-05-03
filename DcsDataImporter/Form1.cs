@@ -149,10 +149,11 @@ namespace DcsDataImporter
             init();
 
             // Clear out default zeroes
-            txtAwacsPreset.Text = txtTacpPreset.Text = txtIfrnPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = "";
+            txtAwacsPreset.Text = txtTacpPreset.Text = txtIfrnPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = txtPackagePreset.Text = txtPackageBackupPreset.Text = "";
 
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
+            disablePackage();
 
             /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
@@ -646,7 +647,14 @@ namespace DcsDataImporter
 
             if (type.ToLower().Equals("internal"))
             {
-                txtInternalBackupChannel.Text = channel;
+                if (backup)
+                {
+                    txtInternalBackupChannel.Text = channel;
+                } else
+                {
+                    txtInternalChannel.Text = channel;
+                }
+                
             }
         }
 
@@ -868,6 +876,22 @@ namespace DcsDataImporter
                     channel = tuple.getChannel();
                 }
 
+                if (textbox.Name.Equals("txtPackageChannel") && txtPackageFreq.Text == "" && txtPackagePreset.Text == "")
+                {
+                    txtPackageFreq.Text = freq;
+                    txtPackagePreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
+                }
+
+                if (textbox.Name.Equals("txtPackageBackupChannel") && txtPackageBackupFreq.Text == "" && txtPackageBackupPreset.Text == "")
+                {
+                    txtPackageBackupFreq.Text = freq;
+                    txtPackageBackupPreset.Text = preset;
+
+                    textbox.Text = textbox.Text.ToUpper();
+                }
+
                 if (textbox.Name.Equals("txtAwacsChannel") && txtAwacsFreq.Text == "" && txtAwacsPreset.Text == "")
                 {
                     txtAwacsFreq.Text = freq;
@@ -910,6 +934,20 @@ namespace DcsDataImporter
                 {
                     txtInternalBackupFreq.Text = freq;
                     txtInternalBackupPreset.Text = preset;
+                }
+
+                if (textbox.Name.Equals("txtPackageFreq") && txtPackageChannel.Text == "" && txtPackagePreset.Text == "")
+                {
+                    txtPackageChannel.Text = channel;
+                    txtPackagePreset.Text = preset;
+                    txtPackageFreq.Text = freq;
+                }
+
+                if (textbox.Name.Equals("txtPackageBackupFreq") && txtPackageBackupChannel.Text == "" && txtPackageBackupPreset.Text == "")
+                {
+                    txtPackageBackupChannel.Text = channel;
+                    txtPackageBackupPreset.Text = preset;
+                    txtPackageBackupFreq.Text = freq;
                 }
 
                 if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
@@ -1440,6 +1478,35 @@ namespace DcsDataImporter
             }
         }
 
+        private void setPackageFreq(string freq, string channel, int preset, string bkpFreq, string bkpChannel, int bkpPreset)
+        {
+            txtPackageFreq.Text = freq;
+            txtPackageChannel.Text = channel;
+
+            if (preset == 0)
+            {
+                txtPackagePreset.Value = 0;
+                txtPackagePreset.Text = "";
+            }
+            else
+            {
+                txtPackagePreset.Value = preset;
+            }
+
+            txtPackageBackupFreq.Text = bkpFreq;
+            txtPackageBackupChannel.Text = bkpChannel;
+
+            if (bkpPreset == 0)
+            {
+                txtPackageBackupPreset.Value = 0;
+                txtPackageBackupPreset.Text = "";
+            }
+            else
+            {
+                txtPackageBackupPreset.Value = bkpPreset;
+            }
+        }
+
         private void setAwacsFreq(string freq, string channel, int preset, string bkpFreq, string bkpChannel, int bkpPreset)
         {
             txtAwacsFreq.Text = freq;
@@ -1476,6 +1543,11 @@ namespace DcsDataImporter
             txtAwacsCp.Text = "";
         }
 
+        private void clearPackageFreq()
+        {
+            setPackageFreq("", "", 0, "", "", 0);
+        }
+
         private void CheckCheck(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox cb = sender as System.Windows.Forms.CheckBox;
@@ -1486,6 +1558,25 @@ namespace DcsDataImporter
             {
                 HandleUncheck(sender, e);
             }
+        }
+
+        private void disablePackage()
+        {
+            txtPackageFreq.Enabled = txtPackageChannel.Enabled = txtPackagePreset.Enabled = false;
+            txtPackageBackupFreq.Enabled = txtPackageBackupChannel.Enabled = txtPackageBackupPreset.Enabled = false;
+            lblPackageFreq.Enabled = lblPackageChannel.Enabled = lblPackagePreset.Enabled = false;
+            lblPackageBackupFreq.Enabled = lblPackageBackupChannel.Enabled = lblPackageBackupPreset.Enabled = false;
+            clearPackageFreq();
+            chkPackage.Checked = false;
+        }
+
+        private void enablePackage()
+        {
+            txtPackageFreq.Enabled = txtPackageChannel.Enabled = txtPackagePreset.Enabled = true;
+            txtPackageBackupFreq.Enabled = txtPackageBackupChannel.Enabled = txtPackageBackupPreset.Enabled = true;
+            lblPackageFreq.Enabled = lblPackageChannel.Enabled = lblPackagePreset.Enabled = true;
+            lblPackageBackupFreq.Enabled = lblPackageBackupChannel.Enabled = lblPackageBackupPreset.Enabled = true;
+            chkPackage.Checked = true;
         }
 
         private void disableAwacs()
@@ -1536,6 +1627,9 @@ namespace DcsDataImporter
             } else if (cb.Name == "chkTacp")
             {
                 enableTacp();
+            } else if (cb.Name == "chkPackage")
+            {
+                enablePackage();
             }
         }
 
@@ -1548,6 +1642,9 @@ namespace DcsDataImporter
             } else if (cb.Name == "chkTacp")
             {
                 disableTacp();
+            } else if (cb.Name == "chkPackage")
+            {
+                disablePackage();
             }
         }
 

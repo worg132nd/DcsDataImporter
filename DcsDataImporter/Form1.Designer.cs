@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtCallsign = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -134,7 +134,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lblPackagePreset = new System.Windows.Forms.Label();
             this.dgvFlight = new System.Windows.Forms.DataGridView();
             this.colPos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCallsign = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,10 +162,18 @@
             this.txtAltitude1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblPackageChannel = new System.Windows.Forms.Label();
+            this.txtPackageFreq = new System.Windows.Forms.TextBox();
+            this.txtPackageChannel = new System.Windows.Forms.TextBox();
+            this.txtPackagePreset = new System.Windows.Forms.NumericUpDown();
+            this.lblPackageBackupFreq = new System.Windows.Forms.Label();
+            this.lblPackageBackupChannel = new System.Windows.Forms.Label();
+            this.txtPackageBackupChannel = new System.Windows.Forms.TextBox();
+            this.txtPackageBackupFreq = new System.Windows.Forms.TextBox();
+            this.txtPackageBackupPreset = new System.Windows.Forms.NumericUpDown();
+            this.lblPackageBackupPreset = new System.Windows.Forms.Label();
+            this.chkPackage = new System.Windows.Forms.CheckBox();
+            this.lblPackageFreq = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacpPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIfrnPreset)).BeginInit();
@@ -176,7 +184,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirbase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPackagePreset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPackageBackupPreset)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCallsign
@@ -564,7 +573,7 @@
             this.chkAwacs.AutoSize = true;
             this.chkAwacs.Checked = true;
             this.chkAwacs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAwacs.Location = new System.Drawing.Point(64, 536);
+            this.chkAwacs.Location = new System.Drawing.Point(71, 536);
             this.chkAwacs.Name = "chkAwacs";
             this.chkAwacs.Size = new System.Drawing.Size(15, 14);
             this.chkAwacs.TabIndex = 24;
@@ -908,14 +917,14 @@
             this.dgvAirbase.AllowUserToDeleteRows = false;
             this.dgvAirbase.AllowUserToResizeColumns = false;
             this.dgvAirbase.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAirbase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAirbase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvAirbase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAirbase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAirbase,
@@ -928,24 +937,24 @@
             this.colILS});
             this.dgvAirbase.Location = new System.Drawing.Point(111, 273);
             this.dgvAirbase.Name = "dgvAirbase";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAirbase.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAirbase.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvAirbase.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvAirbase.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvAirbase.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvAirbase.Size = new System.Drawing.Size(493, 89);
             this.dgvAirbase.TabIndex = 17;
             // 
             // colAirbase
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colAirbase.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colAirbase.DefaultCellStyle = dataGridViewCellStyle12;
             this.colAirbase.HeaderText = "Airbase";
             this.colAirbase.Name = "colAirbase";
             this.colAirbase.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -988,8 +997,8 @@
             // 
             // colRwy
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colRwy.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colRwy.DefaultCellStyle = dataGridViewCellStyle13;
             this.colRwy.HeaderText = "RWY";
             this.colRwy.Name = "colRwy";
             this.colRwy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1162,20 +1171,20 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(12, 500);
+            this.label49.Location = new System.Drawing.Point(12, 472);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(121, 13);
+            this.label49.Size = new System.Drawing.Size(57, 13);
             this.label49.TabIndex = 141;
-            this.label49.Text = "Package frequency:";
+            this.label49.Text = "Package";
             // 
-            // label50
+            // lblPackagePreset
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(326, 500);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(40, 13);
-            this.label50.TabIndex = 142;
-            this.label50.Text = "Preset:";
+            this.lblPackagePreset.AutoSize = true;
+            this.lblPackagePreset.Location = new System.Drawing.Point(361, 472);
+            this.lblPackagePreset.Name = "lblPackagePreset";
+            this.lblPackagePreset.Size = new System.Drawing.Size(40, 13);
+            this.lblPackagePreset.TabIndex = 142;
+            this.lblPackagePreset.Text = "Preset:";
             // 
             // dgvFlight
             // 
@@ -1183,14 +1192,14 @@
             this.dgvFlight.AllowUserToDeleteRows = false;
             this.dgvFlight.AllowUserToResizeColumns = false;
             this.dgvFlight.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvFlight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFlight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPos,
@@ -1202,17 +1211,17 @@
             this.colNotes});
             this.dgvFlight.Location = new System.Drawing.Point(15, 63);
             this.dgvFlight.Name = "dgvFlight";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvFlight.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvFlight.Size = new System.Drawing.Size(589, 111);
             this.dgvFlight.TabIndex = 6;
             // 
@@ -1278,14 +1287,14 @@
             this.dgvSupport.AllowUserToDeleteRows = false;
             this.dgvSupport.AllowUserToResizeColumns = false;
             this.dgvSupport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvSupport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTypeSupport,
@@ -1298,8 +1307,8 @@
             this.dgvSupport.Location = new System.Drawing.Point(15, 677);
             this.dgvSupport.Name = "dgvSupport";
             this.dgvSupport.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvSupport.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSupport.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvSupport.Size = new System.Drawing.Size(589, 155);
             this.dgvSupport.TabIndex = 42;
             this.dgvSupport.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupport_CellValueChanged);
@@ -1357,7 +1366,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(80, 536);
+            this.label11.Location = new System.Drawing.Point(87, 536);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 13);
             this.label11.TabIndex = 153;
@@ -1454,50 +1463,134 @@
             this.textBox3.Size = new System.Drawing.Size(48, 20);
             this.textBox3.TabIndex = 164;
             // 
-            // label15
+            // lblPackageChannel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(196, 500);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 13);
-            this.label15.TabIndex = 165;
-            this.label15.Text = "Channel:";
+            this.lblPackageChannel.AutoSize = true;
+            this.lblPackageChannel.Location = new System.Drawing.Point(231, 472);
+            this.lblPackageChannel.Name = "lblPackageChannel";
+            this.lblPackageChannel.Size = new System.Drawing.Size(49, 13);
+            this.lblPackageChannel.TabIndex = 165;
+            this.lblPackageChannel.Text = "Channel:";
             // 
-            // textBox4
+            // txtPackageFreq
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 497);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(51, 20);
-            this.textBox4.TabIndex = 166;
+            this.txtPackageFreq.Location = new System.Drawing.Point(174, 469);
+            this.txtPackageFreq.Name = "txtPackageFreq";
+            this.txtPackageFreq.Size = new System.Drawing.Size(51, 20);
+            this.txtPackageFreq.TabIndex = 166;
+            this.txtPackageFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
-            // textBox5
+            // txtPackageChannel
             // 
-            this.textBox5.Location = new System.Drawing.Point(251, 497);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(69, 20);
-            this.textBox5.TabIndex = 167;
+            this.txtPackageChannel.Location = new System.Drawing.Point(286, 469);
+            this.txtPackageChannel.Name = "txtPackageChannel";
+            this.txtPackageChannel.Size = new System.Drawing.Size(69, 20);
+            this.txtPackageChannel.TabIndex = 167;
+            this.txtPackageChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
             // 
-            // numericUpDown1
+            // txtPackagePreset
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(372, 498);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.txtPackagePreset.Location = new System.Drawing.Point(407, 470);
+            this.txtPackagePreset.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(32, 20);
-            this.numericUpDown1.TabIndex = 168;
+            this.txtPackagePreset.Name = "txtPackagePreset";
+            this.txtPackagePreset.Size = new System.Drawing.Size(32, 20);
+            this.txtPackagePreset.TabIndex = 168;
+            // 
+            // lblPackageBackupFreq
+            // 
+            this.lblPackageBackupFreq.AutoSize = true;
+            this.lblPackageBackupFreq.Location = new System.Drawing.Point(121, 498);
+            this.lblPackageBackupFreq.Name = "lblPackageBackupFreq";
+            this.lblPackageBackupFreq.Size = new System.Drawing.Size(47, 13);
+            this.lblPackageBackupFreq.TabIndex = 172;
+            this.lblPackageBackupFreq.Text = "Backup:";
+            // 
+            // lblPackageBackupChannel
+            // 
+            this.lblPackageBackupChannel.AutoSize = true;
+            this.lblPackageBackupChannel.Location = new System.Drawing.Point(231, 498);
+            this.lblPackageBackupChannel.Name = "lblPackageBackupChannel";
+            this.lblPackageBackupChannel.Size = new System.Drawing.Size(49, 13);
+            this.lblPackageBackupChannel.TabIndex = 171;
+            this.lblPackageBackupChannel.Text = "Channel:";
+            // 
+            // txtPackageBackupChannel
+            // 
+            this.txtPackageBackupChannel.Location = new System.Drawing.Point(286, 495);
+            this.txtPackageBackupChannel.Name = "txtPackageBackupChannel";
+            this.txtPackageBackupChannel.Size = new System.Drawing.Size(69, 20);
+            this.txtPackageBackupChannel.TabIndex = 170;
+            this.txtPackageBackupChannel.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
+            // 
+            // txtPackageBackupFreq
+            // 
+            this.txtPackageBackupFreq.Location = new System.Drawing.Point(174, 495);
+            this.txtPackageBackupFreq.Name = "txtPackageBackupFreq";
+            this.txtPackageBackupFreq.Size = new System.Drawing.Size(51, 20);
+            this.txtPackageBackupFreq.TabIndex = 169;
+            this.txtPackageBackupFreq.Leave += new System.EventHandler(this.textboxLeaveEventHandler);
+            // 
+            // txtPackageBackupPreset
+            // 
+            this.txtPackageBackupPreset.Location = new System.Drawing.Point(407, 496);
+            this.txtPackageBackupPreset.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.txtPackageBackupPreset.Name = "txtPackageBackupPreset";
+            this.txtPackageBackupPreset.Size = new System.Drawing.Size(32, 20);
+            this.txtPackageBackupPreset.TabIndex = 174;
+            // 
+            // lblPackageBackupPreset
+            // 
+            this.lblPackageBackupPreset.AutoSize = true;
+            this.lblPackageBackupPreset.Location = new System.Drawing.Point(361, 498);
+            this.lblPackageBackupPreset.Name = "lblPackageBackupPreset";
+            this.lblPackageBackupPreset.Size = new System.Drawing.Size(40, 13);
+            this.lblPackageBackupPreset.TabIndex = 173;
+            this.lblPackageBackupPreset.Text = "Preset:";
+            // 
+            // chkPackage
+            // 
+            this.chkPackage.AutoSize = true;
+            this.chkPackage.Location = new System.Drawing.Point(71, 472);
+            this.chkPackage.Name = "chkPackage";
+            this.chkPackage.Size = new System.Drawing.Size(15, 14);
+            this.chkPackage.TabIndex = 175;
+            this.chkPackage.UseVisualStyleBackColor = true;
+            this.chkPackage.CheckedChanged += new System.EventHandler(this.CheckCheck);
+            // 
+            // lblPackageFreq
+            // 
+            this.lblPackageFreq.AutoSize = true;
+            this.lblPackageFreq.Location = new System.Drawing.Point(137, 472);
+            this.lblPackageFreq.Name = "lblPackageFreq";
+            this.lblPackageFreq.Size = new System.Drawing.Size(31, 13);
+            this.lblPackageFreq.TabIndex = 176;
+            this.lblPackageFreq.Text = "Freq:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 750);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label15);
+            this.ClientSize = new System.Drawing.Size(619, 898);
+            this.Controls.Add(this.lblPackageFreq);
+            this.Controls.Add(this.chkPackage);
+            this.Controls.Add(this.txtPackageBackupPreset);
+            this.Controls.Add(this.lblPackageBackupPreset);
+            this.Controls.Add(this.lblPackageBackupFreq);
+            this.Controls.Add(this.lblPackageBackupChannel);
+            this.Controls.Add(this.txtPackageBackupChannel);
+            this.Controls.Add(this.txtPackageBackupFreq);
+            this.Controls.Add(this.txtPackagePreset);
+            this.Controls.Add(this.txtPackageChannel);
+            this.Controls.Add(this.txtPackageFreq);
+            this.Controls.Add(this.lblPackageChannel);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtAltitude1);
@@ -1511,7 +1604,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgvSupport);
             this.Controls.Add(this.dgvFlight);
-            this.Controls.Add(this.label50);
+            this.Controls.Add(this.lblPackagePreset);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -1612,7 +1705,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirbase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPackagePreset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPackageBackupPreset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1707,7 +1801,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lblPackagePreset;
         private System.Windows.Forms.DataGridView dgvFlight;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCallsign;
@@ -1743,10 +1837,18 @@
         private System.Windows.Forms.TextBox txtAltitude1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lblPackageChannel;
+        private System.Windows.Forms.TextBox txtPackageFreq;
+        private System.Windows.Forms.TextBox txtPackageChannel;
+        private System.Windows.Forms.NumericUpDown txtPackagePreset;
+        private System.Windows.Forms.Label lblPackageBackupFreq;
+        private System.Windows.Forms.Label lblPackageBackupChannel;
+        private System.Windows.Forms.TextBox txtPackageBackupChannel;
+        private System.Windows.Forms.TextBox txtPackageBackupFreq;
+        private System.Windows.Forms.NumericUpDown txtPackageBackupPreset;
+        private System.Windows.Forms.Label lblPackageBackupPreset;
+        private System.Windows.Forms.CheckBox chkPackage;
+        private System.Windows.Forms.Label lblPackageFreq;
     }
 }
 
