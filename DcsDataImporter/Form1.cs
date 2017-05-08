@@ -150,7 +150,7 @@ namespace DcsDataImporter
 
             // Clear out default zeroes
             txtAwacsPreset.Text = txtTacpPreset.Text = txtIfrnPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = txtPackagePreset.Text = txtPackageBackupPreset.Text = "";
-
+            
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
             disablePackage();
@@ -1536,18 +1536,6 @@ namespace DcsDataImporter
             }
         }
 
-        private void clearAwacsFreq()
-        {
-            setAwacsFreq("", "", 0, "", "", 0);
-            txtAwacsCallsign.Text = "";
-            txtAwacsCp.Text = "";
-        }
-
-        private void clearPackageFreq()
-        {
-            setPackageFreq("", "", 0, "", "", 0);
-        }
-
         private void CheckCheck(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox cb = sender as System.Windows.Forms.CheckBox;
@@ -1560,62 +1548,103 @@ namespace DcsDataImporter
             }
         }
 
-        private void disablePackage()
+        private Control findObj(string obj, char rowNr)
         {
-            txtPackageFreq.Enabled = txtPackageChannel.Enabled = txtPackagePreset.Enabled = false;
-            txtPackageBackupFreq.Enabled = txtPackageBackupChannel.Enabled = txtPackageBackupPreset.Enabled = false;
-            lblPackageFreq.Enabled = lblPackageChannel.Enabled = lblPackagePreset.Enabled = false;
-            lblPackageBackupFreq.Enabled = lblPackageBackupChannel.Enabled = lblPackageBackupPreset.Enabled = false;
-            clearPackageFreq();
-            chkPackage.Checked = false;
-        }
+            Control[] list = this.Controls.Find(obj + rowNr, true);
 
-        private void enablePackage()
-        {
-            txtPackageFreq.Enabled = txtPackageChannel.Enabled = txtPackagePreset.Enabled = true;
-            txtPackageBackupFreq.Enabled = txtPackageBackupChannel.Enabled = txtPackageBackupPreset.Enabled = true;
-            lblPackageFreq.Enabled = lblPackageChannel.Enabled = lblPackagePreset.Enabled = true;
-            lblPackageBackupFreq.Enabled = lblPackageBackupChannel.Enabled = lblPackageBackupPreset.Enabled = true;
-            chkPackage.Checked = true;
+            if (list[0] != null)
+            {
+                return list[0];
+            }
+            return null;
         }
 
         private void disableAwacs()
         {
-            txtAwacsCallsign.Enabled = txtAwacsFreq.Enabled = txtAwacsChannel.Enabled = txtAwacsPreset.Enabled = txtAwacsCp.Enabled = false;
-            txtAwacsBackupFreq.Enabled = txtAwacsBackupChannel.Enabled = txtAwacsBackupPreset.Enabled = false;
-            lblAwacsCallsign.Enabled = lblAwacsFreq.Enabled = lblAwacsChannel.Enabled = lblAwacsPreset.Enabled = lblAwacsCp.Enabled = false;
-            lblAwacsBackupFreq.Enabled = lblAwacsBackupChannel.Enabled = lblAwacsBackupPreset.Enabled = false;
-            clearAwacsFreq();
-            chkAwacs.Checked = false;
+            setFreq("awacs", false);
         }
 
         private void enableAwacs()
         {
-            txtAwacsCallsign.Enabled = txtAwacsFreq.Enabled = txtAwacsChannel.Enabled = txtAwacsPreset.Enabled = txtAwacsCp.Enabled = true;
-            txtAwacsBackupFreq.Enabled = txtAwacsBackupChannel.Enabled = txtAwacsBackupPreset.Enabled = true;
-            lblAwacsCallsign.Enabled = lblAwacsFreq.Enabled = lblAwacsChannel.Enabled = lblAwacsPreset.Enabled = lblAwacsCp.Enabled = true;
-            lblAwacsBackupFreq.Enabled = lblAwacsBackupChannel.Enabled = lblAwacsBackupPreset.Enabled = true;
-            chkAwacs.Checked = true;
+            setFreq("awacs", true);
         }
 
         private void disableTacp()
         {
-            txtTacpCallsign.Enabled = txtTacpFreq.Enabled = txtTacpChannel.Enabled = txtTacpPreset.Enabled = txtTacpCp.Enabled = false;
-            txtTacpBackupFreq.Enabled = txtTacpBackupChannel.Enabled = txtTacpBackupPreset.Enabled = false;
-            lblTacpCallsign.Enabled = lblTacpFreq.Enabled = lblTacpChannel.Enabled = lblTacpPreset.Enabled = lblTacpCp.Enabled = false;
-            lblTacpBackupFreq.Enabled = lblTacpBackupChannel.Enabled = lblTacpBackupPreset.Enabled = false;
-            clearTacpFreq();
-            chkTacp.Checked = false;
+            setFreq("tacp", false);
             lblJTAC.Text = "JTAC";
         }
 
         private void enableTacp()
         {
-            txtTacpCallsign.Enabled = txtTacpFreq.Enabled = txtTacpChannel.Enabled = txtTacpPreset.Enabled = txtTacpCp.Enabled = true;
-            txtTacpBackupFreq.Enabled = txtTacpBackupChannel.Enabled = txtTacpBackupPreset.Enabled = true;
-            lblTacpCallsign.Enabled = lblTacpFreq.Enabled = lblTacpChannel.Enabled = lblTacpPreset.Enabled = lblTacpCp.Enabled = true;
-            lblTacpBackupFreq.Enabled = lblTacpBackupChannel.Enabled = lblTacpBackupPreset.Enabled = true;
-            chkTacp.Checked = true;
+            setFreq("tacp", true);
+        }
+
+        private void disablePackage()
+        {
+            setFreq("package", false);
+        }
+
+        private void enablePackage()
+        {
+            setFreq("package", true);
+        }
+
+        /* 
+         * name has to be either awacs, tacp, package (or internal)
+         */
+        private void setFreq(string name, Boolean value)
+        {
+            setControl("txt" + name.First().ToString().ToUpper() + name.Substring(1), value);
+            setControl("txt" + name.First().ToString().ToUpper() + name.Substring(1) + "Backup", value);
+            setControl("lbl" + name.First().ToString().ToUpper() + name.Substring(1), value);
+            setControl("lbl" + name.First().ToString().ToUpper() + name.Substring(1) + "Backup", value);
+            setCheckBox(name, value);
+            setCallsignAndCpIfExists(name, value);
+        }
+
+        private void setCallsignAndCpIfExists(string name, Boolean value)
+        {
+            setControl(this.Controls.Find("txt" + name + "Callsign", true), value);
+            setControl(this.Controls.Find("txt" + name + "Cp", true), value);
+            setControl(this.Controls.Find("lbl" + name + "Callsign", true), value);
+            setControl(this.Controls.Find("lbl" + name + "Cp", true), value);
+        }
+
+        private void setControl(Control[]c, Boolean value)
+        {
+            if (c != null && c.Length > 0)
+            {
+                if (c[0].Name.Contains("txt") && value == false)
+                {
+                    c[0].Text = "";
+                }
+                c[0].Enabled = value;
+            }
+        }
+
+        private void setCheckBox(string name, Boolean value)
+        {
+            CheckBox cb = this.Controls.Find("chk" + name, true)[0] as CheckBox;
+            cb.Checked = value;
+        }
+
+        private void setControl(string name, Boolean value)
+        {
+            setFreqItem(name + "Freq", value);
+            setFreqItem(name + "Channel", value);
+            setFreqItem(name + "Preset", value);
+        }
+
+        private void setFreqItem(string name, Boolean value)
+        {
+            Control c = this.Controls.Find(name, true)[0];
+            if (value == false && name.Contains("txt"))
+            {
+                // clears frequency/channel,preset when disabled
+                c.Text = "";
+            }
+            c.Enabled = value;
         }
 
         private void HandleCheck(object sender, EventArgs e)
