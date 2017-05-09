@@ -2521,7 +2521,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.panel1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Weapon Profiles and Deliveries";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).EndInit();
