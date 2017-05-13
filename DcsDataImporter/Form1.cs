@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-//using Microsoft.Office.Interop.Word;
+using Microsoft.Office.Interop.Word;
 
 /* storeAsPdf-method contains code that is commented out temporarily */
 
@@ -1625,7 +1625,7 @@ namespace DcsDataImporter
 
         private void setCheckBox(string name, Boolean value)
         {
-            CheckBox cb = this.Controls.Find("chk" + name, true)[0] as CheckBox;
+            System.Windows.Forms.CheckBox cb = this.Controls.Find("chk" + name, true)[0] as System.Windows.Forms.CheckBox;
             cb.Checked = value;
         }
 
@@ -2588,11 +2588,11 @@ namespace DcsDataImporter
                 path += @"\";
             }
 
-            //Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
-            //Document wordDocument = appWord.Documents.Open(path + wordDoc);
-            //wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
+            Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+            Document wordDocument = appWord.Documents.Open(path + wordDoc);
+            wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            //wordDocument.Close();
+            wordDocument.Close();
         }
 
         void splitPdf(string path)
@@ -2865,6 +2865,23 @@ namespace DcsDataImporter
         {
             ComboBox cb = (ComboBox)sender;
             setFlightTable(cb.Text);
+
+            if (cb.Text.Equals("1")) {
+                lblTaxi.Enabled = false;
+                cbTaxi.Enabled = false;
+                lblSpacing.Enabled = false;
+                txtSpacing.Enabled = false;
+                lblRejoin.Enabled = false;
+                cbRejoin.Enabled = false;
+            } else
+            {
+                lblTaxi.Enabled = true;
+                cbTaxi.Enabled = true;
+                lblSpacing.Enabled = true;
+                txtSpacing.Enabled = true;
+                lblRejoin.Enabled = true;
+                cbRejoin.Enabled = true;
+            }
         }
 
         private void setFlightTable(string nr)
