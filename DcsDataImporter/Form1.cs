@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using Microsoft.Office.Interop.Word;
+// using Microsoft.Office.Interop.Word;
 
 /* storeAsPdf-method contains code that is commented out temporarily */
 
@@ -2580,7 +2580,7 @@ namespace DcsDataImporter
 
         void storeAsPdf(string path)
         {
-            string wordDoc = "temp.docm";
+            /* string wordDoc = "temp.docm";
             string pdfDoc = "temp.pdf";
 
             if (!path.EndsWith(@"\"))
@@ -2592,7 +2592,7 @@ namespace DcsDataImporter
             Document wordDocument = appWord.Documents.Open(path + wordDoc);
             wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close();
+            wordDocument.Close(); */
         }
 
         void splitPdf(string path)
