@@ -149,7 +149,7 @@ namespace DcsDataImporter
             init();
 
             // Clear out default zeroes
-            txtAwacsPreset.Text = txtTacpPreset.Text = txtIfrnPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = txtPackagePreset.Text = txtPackageBackupPreset.Text = "";
+            txtAwacsPreset.Text = txtTacpPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = txtPackagePreset.Text = txtPackageBackupPreset.Text = "";
             
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
@@ -225,9 +225,9 @@ namespace DcsDataImporter
             tuple = list.Find(x => x.getName().ToLower().Contains("flight report".ToLower()));
             if (tuple != null)
             {
-                txtIfrnPreset.Text = tuple.getPreset();
-                txtIfrnFreq.Text = tuple.getFreq();
-                txtIfrnChannel.Text = tuple.getChannel();
+                setIfrnDgvPreset(tuple.getPreset());
+                setIfrnDgvFreq(tuple.getFreq());
+                setIfrnDgvChannel(tuple.getChannel());
             }
 
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
@@ -245,7 +245,7 @@ namespace DcsDataImporter
         {
             initDataGridView(dgvAirbase, 3);
             initDataGridView(dgvFlight, 4);
-            initDataGridView(dgvSupport, 6);
+            initDataGridView(dgvSupport, 8);
             initSupport();
         }
 
@@ -280,6 +280,10 @@ namespace DcsDataImporter
             row.Cells["colTypeSupport"].Value = "Tanker 2";
             row = dgvSupport.Rows[5];
             row.Cells["colTypeSupport"].Value = "JSTAR";
+            row = dgvSupport.Rows[6];
+            row.Cells["colTypeSupport"].Value = "In-Flight Report";
+            row = dgvSupport.Rows[7];
+            row.Cells["colTypeSupport"].Value = "SCAR";
         }
 
         private void loadPrevMission()
@@ -325,9 +329,9 @@ namespace DcsDataImporter
         /* Loads IFRN data from last form */
         private void loadIfrn()
         {
-            txtIfrnFreq.Text = Properties.Settings.Default.prevTxtIfrnFreq;
-            txtIfrnChannel.Text = Properties.Settings.Default.prevTxtIfrnChannel;
-            txtIfrnPreset.Text = Properties.Settings.Default.prevTxtIfrnPreset;
+            setIfrnDgvFreq(Properties.Settings.Default.prevTxtIfrnFreq);
+            setIfrnDgvChannel(Properties.Settings.Default.prevTxtIfrnChannel);
+            setIfrnDgvPreset(Properties.Settings.Default.prevTxtIfrnPreset);
         }
 
         /* Loads selected airbases from last form */
@@ -528,6 +532,60 @@ namespace DcsDataImporter
             if (cp != null)
             {
                 var row = dgvSupport.Rows[2];
+                row.Cells["colNotesSupport"].Value = "Contact point " + cp;
+            }
+        }
+
+        private void setIfrnDgvCallsign(string callsign)
+        {
+            if (callsign != null)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colCallsignSupport"].Value = callsign;
+            }
+        }
+
+        private void setIfrnDgvFreq(string freq)
+        {
+            if (freq != null)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colFreqSupport"].Value = freq;
+            }
+        }
+
+        private void setIfrnDgvChannel(string channel)
+        {
+            if (channel != null)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colChannelSupport"].Value = channel;
+            }
+        }
+
+        private void setIfrnDgvPreset(string preset)
+        {
+            if (preset != null)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colPresetSupport"].Value = preset;
+            }
+        }
+
+        private void setIfrnDgvBackup(string backup)
+        {
+            if (backup != null)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colBackupSupport"].Value = backup;
+            }
+        }
+
+        private void setIfrnDgvCp(string cp)
+        {
+            if (cp != null)
+            {
+                var row = dgvSupport.Rows[6];
                 row.Cells["colNotesSupport"].Value = "Contact point " + cp;
             }
         }
@@ -1747,10 +1805,12 @@ namespace DcsDataImporter
             SearchAndReplace("/MSN#/", txtMsnNr.Text);
             SearchAndReplace("/TASKING/", txtTasking.Text);
 
+            row = dgvSupport.Rows[5];
+
             // IFRN
-            SearchAndReplace("/IFRNFRQ/", txtIfrnFreq.Text.TrimEnd("0".ToCharArray()));
-            SearchAndReplace("/IFRNCNL/", txtIfrnChannel.Text);
-            SearchAndReplace("/IFRNPST/", "P" + txtIfrnPreset.Text);
+            SearchAndReplace("/IFRNFRQ/", row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray()));
+            SearchAndReplace("/IFRNCNL/", row.Cells["colChannelSupport"].Value as string);
+            SearchAndReplace("/IFRNPST/", "P" + row.Cells["colPresetSupport"].Value as string);
 
             SearchAndReplace("one by ALPHA 10 CHARLIEs", "singleship ALPHA 10 CHARLIE"); // TODO: Does not work, maybe because one is still /#AC/? Then I would have to wait before searching and replacing.
         }
@@ -1982,10 +2042,12 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtTacpBackupChannel = txtTacpBackupChannel.Text;
             Properties.Settings.Default.prevTxtTacpBackupPreset = txtTacpBackupPreset.Text;
 
+            var row = dgvSupport.Rows[6];
+
             /* IFRN */
-            Properties.Settings.Default.prevTxtIfrnFreq = txtIfrnFreq.Text;
-            Properties.Settings.Default.prevTxtIfrnChannel = txtIfrnChannel.Text;
-            Properties.Settings.Default.prevTxtIfrnPreset = txtIfrnPreset.Text;
+            Properties.Settings.Default.prevTxtIfrnFreq = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+            Properties.Settings.Default.prevTxtIfrnChannel = row.Cells["colChannelSupport"].Value as string;
+            Properties.Settings.Default.prevTxtIfrnPreset = row.Cells["colPresetSupport"].Value as string;
 
             /* INTERNAL */
             Properties.Settings.Default.prevTxtInternalFreq = txtInternalFreq.Text;
