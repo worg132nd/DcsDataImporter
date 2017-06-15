@@ -126,6 +126,12 @@ namespace DcsDataImporter
         public List<Tuple> list;
         public bool standardTrainingSet = false;
 
+        private int lblJtacPosLeft = 0;
+        private int lblJtacPosTop = 0;
+
+        private int chkTacpPosLeft = 0;
+        private int chkTacpPosTop = 0;
+
         /* Constructor for empty form
          * used when pressing Back on next form
          */
@@ -149,11 +155,10 @@ namespace DcsDataImporter
             init();
 
             // Clear out default zeroes
-            txtAwacsPreset.Text = txtTacpPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = txtPackagePreset.Text = txtPackageBackupPreset.Text = "";
+            txtAwacsPreset.Text = txtTacpPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = "";
             
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
-            disablePackage();
 
             /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
@@ -184,7 +189,7 @@ namespace DcsDataImporter
 
             if (!takeoffTime.Equals("-") && !takeoffTime.Equals(""))
             {
-                txtTakeoffTime.Text = takeoffTime;
+                txtTakeoffTime.Text = takeoffTime[0].ToString() + takeoffTime[1].ToString() + ":" + takeoffTime[2].ToString() + takeoffTime[3].ToString();
             }
 
             if (standardTraining)
@@ -245,7 +250,7 @@ namespace DcsDataImporter
         {
             initDataGridView(dgvAirbase, 3);
             initDataGridView(dgvFlight, 4);
-            initDataGridView(dgvSupport, 8);
+            initDataGridView(dgvSupport, 10);
             initSupport();
         }
 
@@ -283,7 +288,9 @@ namespace DcsDataImporter
             row = dgvSupport.Rows[6];
             row.Cells["colTypeSupport"].Value = "In-Flight Report";
             row = dgvSupport.Rows[7];
-            row.Cells["colTypeSupport"].Value = "SCAR";
+            row.Cells["colTypeSupport"].Value = "CSAR";
+            row = dgvSupport.Rows[8];
+            row.Cells["colTypeSupport"].Value = "Package";
         }
 
         private void loadPrevMission()
@@ -298,7 +305,6 @@ namespace DcsDataImporter
             loadDGVAirbases();
             loadAwacs();
             loadTacp();
-            loadIfrn();
             loadTextBoxes();
             loadInternalFrequencies();
             loadDGVSupport();
@@ -322,16 +328,12 @@ namespace DcsDataImporter
         /* Loads takeoff and landing time data from last form */
         private void loadTimes()
         {
+            txtStepTime.Text = Properties.Settings.Default.prevTxtStepTime;
+            txtTaxiTime.Text = Properties.Settings.Default.prevTxtTaxiTime;
             txtTakeoffTime.Text = Properties.Settings.Default.prevTxtTakeoffTime;
+            txtVulStart.Text = Properties.Settings.Default.prevTxtVulStart;
+            txtVulEnd.Text = Properties.Settings.Default.prevTxtVulEnd;
             txtLandingTime.Text = Properties.Settings.Default.prevTxtLandingTime;
-        }
-
-        /* Loads IFRN data from last form */
-        private void loadIfrn()
-        {
-            setIfrnDgvFreq(Properties.Settings.Default.prevTxtIfrnFreq);
-            setIfrnDgvChannel(Properties.Settings.Default.prevTxtIfrnChannel);
-            setIfrnDgvPreset(Properties.Settings.Default.prevTxtIfrnPreset);
         }
 
         /* Loads selected airbases from last form */
@@ -934,22 +936,6 @@ namespace DcsDataImporter
                     channel = tuple.getChannel();
                 }
 
-                if (textbox.Name.Equals("txtPackageChannel") && txtPackageFreq.Text == "" && txtPackagePreset.Text == "")
-                {
-                    txtPackageFreq.Text = freq;
-                    txtPackagePreset.Text = preset;
-
-                    textbox.Text = textbox.Text.ToUpper();
-                }
-
-                if (textbox.Name.Equals("txtPackageBackupChannel") && txtPackageBackupFreq.Text == "" && txtPackageBackupPreset.Text == "")
-                {
-                    txtPackageBackupFreq.Text = freq;
-                    txtPackageBackupPreset.Text = preset;
-
-                    textbox.Text = textbox.Text.ToUpper();
-                }
-
                 if (textbox.Name.Equals("txtAwacsChannel") && txtAwacsFreq.Text == "" && txtAwacsPreset.Text == "")
                 {
                     txtAwacsFreq.Text = freq;
@@ -992,20 +978,6 @@ namespace DcsDataImporter
                 {
                     txtInternalBackupFreq.Text = freq;
                     txtInternalBackupPreset.Text = preset;
-                }
-
-                if (textbox.Name.Equals("txtPackageFreq") && txtPackageChannel.Text == "" && txtPackagePreset.Text == "")
-                {
-                    txtPackageChannel.Text = channel;
-                    txtPackagePreset.Text = preset;
-                    txtPackageFreq.Text = freq;
-                }
-
-                if (textbox.Name.Equals("txtPackageBackupFreq") && txtPackageBackupChannel.Text == "" && txtPackageBackupPreset.Text == "")
-                {
-                    txtPackageBackupChannel.Text = channel;
-                    txtPackageBackupPreset.Text = preset;
-                    txtPackageBackupFreq.Text = freq;
                 }
 
                 if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
@@ -1373,6 +1345,7 @@ namespace DcsDataImporter
         {
             TextBox textbox = (TextBox)sender;
             string s = textbox.Text;
+            restore();
 
             string tianeti = "Tianeti range";
             string dusheti = "Dusheti range";
@@ -1536,35 +1509,6 @@ namespace DcsDataImporter
             }
         }
 
-        private void setPackageFreq(string freq, string channel, int preset, string bkpFreq, string bkpChannel, int bkpPreset)
-        {
-            txtPackageFreq.Text = freq;
-            txtPackageChannel.Text = channel;
-
-            if (preset == 0)
-            {
-                txtPackagePreset.Value = 0;
-                txtPackagePreset.Text = "";
-            }
-            else
-            {
-                txtPackagePreset.Value = preset;
-            }
-
-            txtPackageBackupFreq.Text = bkpFreq;
-            txtPackageBackupChannel.Text = bkpChannel;
-
-            if (bkpPreset == 0)
-            {
-                txtPackageBackupPreset.Value = 0;
-                txtPackageBackupPreset.Text = "";
-            }
-            else
-            {
-                txtPackageBackupPreset.Value = bkpPreset;
-            }
-        }
-
         private void setAwacsFreq(string freq, string channel, int preset, string bkpFreq, string bkpChannel, int bkpPreset)
         {
             txtAwacsFreq.Text = freq;
@@ -1630,7 +1574,6 @@ namespace DcsDataImporter
         private void disableTacp()
         {
             setFreq("tacp", false);
-            lblJTAC.Text = "JTAC";
         }
 
         private void enableTacp()
@@ -1638,18 +1581,8 @@ namespace DcsDataImporter
             setFreq("tacp", true);
         }
 
-        private void disablePackage()
-        {
-            setFreq("package", false);
-        }
-
-        private void enablePackage()
-        {
-            setFreq("package", true);
-        }
-
         /* 
-         * name has to be either awacs, tacp, package (or internal)
+         * name has to be either awacs, tacp, (or internal)
          */
         private void setFreq(string name, Boolean value)
         {
@@ -1714,9 +1647,6 @@ namespace DcsDataImporter
             } else if (cb.Name == "chkTacp")
             {
                 enableTacp();
-            } else if (cb.Name == "chkPackage")
-            {
-                enablePackage();
             }
         }
 
@@ -1729,9 +1659,6 @@ namespace DcsDataImporter
             } else if (cb.Name == "chkTacp")
             {
                 disableTacp();
-            } else if (cb.Name == "chkPackage")
-            {
-                disablePackage();
             }
         }
 
@@ -2010,8 +1937,13 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevCmbAirbaseArr = cmbAirbaseArr.Text;
             Properties.Settings.Default.prevCmbAirbaseAlt = cmbAirbaseAlt.Text;
 
+            Properties.Settings.Default.prevTxtStepTime = txtStepTime.Text;
+            Properties.Settings.Default.prevTxtTaxiTime = txtTaxiTime.Text;
             Properties.Settings.Default.prevTxtTakeoffTime = txtTakeoffTime.Text;
-
+            Properties.Settings.Default.prevTxtVulStart = txtVulStart.Text;
+            Properties.Settings.Default.prevTxtVulEnd = txtVulEnd.Text;
+            Properties.Settings.Default.prevTxtLandingTime = txtLandingTime.Text;
+            
             saveDGVAirbases();
 
             /* AWACS */
@@ -2058,8 +1990,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtInternalBackupPreset = txtInternalBackupPreset.Text;
 
             Properties.Settings.Default.prevTxtMetar = txtMetar.Text;
-
-            Properties.Settings.Default.prevTxtLandingTime = txtLandingTime.Text;
 
             /* TAXI and REJOIN */
             Properties.Settings.Default.prevCbRejoin = cbRejoin.Text;
@@ -3136,6 +3066,92 @@ namespace DcsDataImporter
                 row.Cells["colFreqSupport"].Value = freq;
                 row.Cells["colPresetSupport"].Value = preset;
             }
+        }
+
+        private void txtTasking_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            if (cb.Text.Equals("AR") || cb.Text.Equals("XAR") || cb.Text.Equals("GAR") || cb.Text.Equals("SCAR"))
+            {
+                lblJTAC.Text = "SCAR";
+                restore();
+            }
+            else if (cb.Text.Contains("CAS") && cb.Text.Length <= 4)
+            {
+                lblJTAC.Text = "JTAC";
+                restore();
+            }
+            else if (cb.Text.Equals("FAC(A)"))
+            {
+                lblJTAC.Text = "FAC(A)";
+                restore();
+            }
+            else if (cb.Text.Equals("CSAR") || cb.Text.Contains("EVAC") || cb.Text.Contains("SANDY"))
+            {
+                lblJTAC.Text = "CSAR";
+                restore();
+            }
+            else if (cb.Text.Contains("AI") || cb.Text.Equals("OCA") || cb.Text.Equals("SEAD") || cb.Text.Equals("SWP") || cb.Text.Equals("ATK") || cb.Text.Equals("Escort") || cb.Text.Contains("CAP") || cb.Text.Equals("Aerial Delivery") || cb.Text.Equals("Air Assault"))
+            {
+                lblJTAC.Text = "Package";
+                moveTacpCallsign();
+                hideTacpCallsign();
+            }
+        }
+
+        private void restore()
+        {
+            restoreTacpCallsign();
+            showTacpCallsign();
+        }
+
+        private void moveTacpCallsign()
+        {
+            // store old position if position is different!
+            if (!hasBeenMoved())
+            {
+                lblJtacPosLeft = lblJTAC.Left;
+                lblJtacPosTop = lblJTAC.Top;
+                chkTacpPosLeft = chkTacp.Left;
+                chkTacpPosTop = chkTacp.Top;
+            }
+
+            // move to new position
+            lblJTAC.Location = lblTacpCallsign.Location;
+            chkTacp.Location = txtTacpCallsign.Location;
+            chkTacp.Top += 3;
+        }
+
+        private Boolean hasBeenMoved()
+        {
+            if (lblJtacPosLeft != 0 || lblJtacPosTop != 0 || chkTacpPosLeft != 0 || chkTacpPosTop != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void restoreTacpCallsign()
+        {
+            if (lblJtacPosLeft != 0 && lblJtacPosTop != 0 && chkTacpPosLeft != 0 && chkTacpPosTop != 0)
+            {
+                lblJTAC.Left = lblJtacPosLeft;
+                lblJTAC.Top = lblJtacPosTop;
+                chkTacp.Left = chkTacpPosLeft;
+                chkTacp.Top = chkTacpPosTop;
+            }
+        }
+
+        private void hideTacpCallsign()
+        {
+            lblTacpCallsign.Hide();
+            txtTacpCallsign.Hide();
+        }
+
+        private void showTacpCallsign()
+        {
+            lblTacpCallsign.Show();
+            txtTacpCallsign.Show();
         }
     }
 

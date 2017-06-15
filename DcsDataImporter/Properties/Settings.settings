@@ -98,15 +98,6 @@
     <Setting Name="prevTxtTacpBackupPreset" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="prevTxtIfrnFreq" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtIfrnChannel" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="prevTxtIfrnPreset" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="prevTxtAmp" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -459,6 +450,27 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="prevAmpn" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtIfrnFreq" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtIfrnChannel" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtIfrnPreset" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtVulStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtVulEnd" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtStepTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prevTxtTaxiTime" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

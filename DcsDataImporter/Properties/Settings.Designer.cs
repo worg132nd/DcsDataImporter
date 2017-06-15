@@ -410,42 +410,6 @@ namespace DcsDataImporter.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtIfrnFreq {
-            get {
-                return ((string)(this["prevTxtIfrnFreq"]));
-            }
-            set {
-                this["prevTxtIfrnFreq"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtIfrnChannel {
-            get {
-                return ((string)(this["prevTxtIfrnChannel"]));
-            }
-            set {
-                this["prevTxtIfrnChannel"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prevTxtIfrnPreset {
-            get {
-                return ((string)(this["prevTxtIfrnPreset"]));
-            }
-            set {
-                this["prevTxtIfrnPreset"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string prevTxtAmp {
             get {
                 return ((string)(this["prevTxtAmp"]));
@@ -1856,6 +1820,90 @@ namespace DcsDataImporter.Properties {
             }
             set {
                 this["prevAmpn"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtIfrnFreq {
+            get {
+                return ((string)(this["prevTxtIfrnFreq"]));
+            }
+            set {
+                this["prevTxtIfrnFreq"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtIfrnChannel {
+            get {
+                return ((string)(this["prevTxtIfrnChannel"]));
+            }
+            set {
+                this["prevTxtIfrnChannel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtIfrnPreset {
+            get {
+                return ((string)(this["prevTxtIfrnPreset"]));
+            }
+            set {
+                this["prevTxtIfrnPreset"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtVulStart {
+            get {
+                return ((string)(this["prevTxtVulStart"]));
+            }
+            set {
+                this["prevTxtVulStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtVulEnd {
+            get {
+                return ((string)(this["prevTxtVulEnd"]));
+            }
+            set {
+                this["prevTxtVulEnd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtStepTime {
+            get {
+                return ((string)(this["prevTxtStepTime"]));
+            }
+            set {
+                this["prevTxtStepTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtTaxiTime {
+            get {
+                return ((string)(this["prevTxtTaxiTime"]));
+            }
+            set {
+                this["prevTxtTaxiTime"] = value;
             }
         }
     }

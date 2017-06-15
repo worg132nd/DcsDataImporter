@@ -44,7 +44,8 @@ namespace DcsDataImporter
             txtTac.Text = tac;
             txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
             txtNotes.Text = Properties.Settings.Default.prevAmpn;
-
+            txtVulStart.Text = Properties.Settings.Default.prevTxtVulStart;
+            txtVulEnd.Text = Properties.Settings.Default.prevTxtVulEnd;
         }
 
         private void initTgtDgv(DataGridView dgv)
