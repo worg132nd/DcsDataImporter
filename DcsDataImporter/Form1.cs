@@ -126,6 +126,8 @@ namespace DcsDataImporter
         public List<Tuple> list;
         public bool standardTrainingSet = false;
 
+        private bool hasTma;
+
         private int lblJtacPosLeft = 0;
         private int lblJtacPosTop = 0;
 
@@ -150,7 +152,7 @@ namespace DcsDataImporter
         }    
 
         /* Constructor when ATO is filled out */
-        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime)
+        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime, bool tma, bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers)
         {
             init();
 
@@ -176,7 +178,10 @@ namespace DcsDataImporter
             txtLocation.Text = location;
             Properties.Settings.Default.prevAmpn = amplification;
             initFuel();
+            hasTma = tma;
 
+            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
+            
             // Set correct tasking
             if (tasking.Equals("TR"))
             {
@@ -263,13 +268,7 @@ namespace DcsDataImporter
 
         private void initSupport()
         {
-
-            int i = 0;
-            while (i < dgvSupport.Rows.Count)
-            {
-                initSupportRow(i);
-                i++;
-            }
+            /* fillSupportWithDash();
 
             var row = dgvSupport.Rows[0];
             row.Cells["colTypeSupport"].Value = "AWACS A-G";
@@ -291,6 +290,105 @@ namespace DcsDataImporter
             row.Cells["colTypeSupport"].Value = "CSAR";
             row = dgvSupport.Rows[8];
             row.Cells["colTypeSupport"].Value = "Package";
+            */
+        }
+
+        /* Overloaded method with checkbox as arguments */
+        private void initSupport(bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers)
+        {
+            fillSupportWithDash();
+            int i = 0;
+
+            var row = dgvSupport.Rows[0];
+            if (chkAwacsAG && i < dgvSupport.Rows.Count)
+            {
+                row.Cells["colTypeSupport"].Value = "AWACS A-G";
+                row.Cells["colNotesSupport"].Value = "WD";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkAwacsAA)
+            {
+                row.Cells["colTypeSupport"].Value = "AWACS A-A";
+                row.Cells["colNotesSupport"].Value = "WD";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkExtraAwacsAG)
+            {
+                row.Cells["colTypeSupport"].Value = "AWACS A-G 2";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkExtraAwacsAA)
+            {
+                row.Cells["colTypeSupport"].Value = "AWACS A-A 2";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkFaca)
+            {
+                row.Cells["colTypeSupport"].Value = "FAC(A)";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkCsar)
+            {
+                row.Cells["colTypeSupport"].Value = "CSAR";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkJstar)
+            {
+                row.Cells["colTypeSupport"].Value = "JSTAR";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkScramble)
+            {
+                row.Cells["colTypeSupport"].Value = "Scramble";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkExtraJtac)
+            {
+                row.Cells["colTypeSupport"].Value = "JTAC 2";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkExtraPackage)
+            {
+                row.Cells["colTypeSupport"].Value = "Package";
+                i++;
+            }
+
+            for (int x = 0; x < Int32.Parse(numTankers); x++) {
+                row = dgvSupport.Rows[i];
+                row.Cells["colTypeSupport"].Value = "Tanker " + (x+1).ToString();
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            row.Cells["colTypeSupport"].Value = "In-Flight Report";
+        }
+
+        private void fillSupportWithDash()
+        {
+            int i = 0;
+            while (i < dgvSupport.Rows.Count)
+            {
+                initSupportRow(i);
+                i++;
+            }
         }
 
         private void loadPrevMission()
@@ -309,8 +407,8 @@ namespace DcsDataImporter
             loadInternalFrequencies();
             loadDGVSupport();
 
-            if (Properties.Settings.Default.prevChkTma == "true") chkTma.Checked = true;
-            else chkTma.Checked = false;
+            if (Properties.Settings.Default.prevChkTma == "true") hasTma = true;
+            else hasTma = false;
         }
 
         private void loadTaxiAndRejoin()
@@ -1291,7 +1389,7 @@ namespace DcsDataImporter
 
         private void disableTma()
         {
-            chkTma.Checked = false;
+            hasTma = false;
             // txtTma.Enabled = false;
             // txtTmaFreq.Enabled = false;
             // txtTma.Text = "";
@@ -1299,7 +1397,7 @@ namespace DcsDataImporter
 
         private void enableTma()
         {
-            chkTma.Checked = true;
+            hasTma = true;
             // txtTma.Enabled = true;
             // txtTmaFreq.Enabled = true;
         }
@@ -1803,12 +1901,12 @@ namespace DcsDataImporter
         private string chooseTemplate()
         {
             string fnIn = "Communications.docm";
-            if (chkTma.Checked == false && chkAwacs.Checked)
+            if (hasTma == false && chkAwacs.Checked)
             {
                 fnIn = "CommunicationsNoTma.docm";
             }
 
-            if (chkTma.Checked && chkAwacs.Checked == false)
+            if (hasTma && chkAwacs.Checked == false)
             {
                 fnIn = "CommunicationsNoAwacs.docm";
             }
@@ -1891,6 +1989,8 @@ namespace DcsDataImporter
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             createCommunicationHelp();
+
+            btnSubmit.Hide();
 
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
@@ -1998,7 +2098,7 @@ namespace DcsDataImporter
             saveDGVSupport();
             saveDGVFlight();
 
-            if (chkTma.Checked == true) Properties.Settings.Default.prevChkTma = "true";
+            if (hasTma == true) Properties.Settings.Default.prevChkTma = "true";
             else Properties.Settings.Default.prevChkTma = "false";
 
             Properties.Settings.Default.Save();

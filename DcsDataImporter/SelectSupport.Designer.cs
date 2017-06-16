@@ -28,128 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.chkFaca = new System.Windows.Forms.CheckBox();
+            this.chkJstar = new System.Windows.Forms.CheckBox();
+            this.chkCsar = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkExtraAwacsAA = new System.Windows.Forms.CheckBox();
+            this.chkExtraAwacsAG = new System.Windows.Forms.CheckBox();
+            this.chkAwacsAG = new System.Windows.Forms.CheckBox();
+            this.chkAwacsAA = new System.Windows.Forms.CheckBox();
             this.chkTma = new System.Windows.Forms.CheckBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.chkExtraPackage = new System.Windows.Forms.CheckBox();
+            this.chkExtraJtac = new System.Windows.Forms.CheckBox();
+            this.chkScramble = new System.Windows.Forms.CheckBox();
+            this.numTankers = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTankers)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox4
+            // chkFaca
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(14, 107);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(59, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "FAC(A)";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkFaca.AutoSize = true;
+            this.chkFaca.Location = new System.Drawing.Point(35, 144);
+            this.chkFaca.Name = "chkFaca";
+            this.chkFaca.Size = new System.Drawing.Size(59, 17);
+            this.chkFaca.TabIndex = 3;
+            this.chkFaca.Text = "FAC(A)";
+            this.chkFaca.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkJstar
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(109, 130);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(83, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Extra tanker";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkJstar.AutoSize = true;
+            this.chkJstar.Location = new System.Drawing.Point(35, 190);
+            this.chkJstar.Name = "chkJstar";
+            this.chkJstar.Size = new System.Drawing.Size(60, 17);
+            this.chkJstar.TabIndex = 5;
+            this.chkJstar.Text = "JSTAR";
+            this.chkJstar.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkCsar
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(14, 153);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(60, 17);
-            this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "JSTAR";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(14, 130);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(55, 17);
-            this.checkBox7.TabIndex = 6;
-            this.checkBox7.Text = "CSAR";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkCsar.AutoSize = true;
+            this.chkCsar.Location = new System.Drawing.Point(35, 167);
+            this.chkCsar.Name = "chkCsar";
+            this.chkCsar.Size = new System.Drawing.Size(55, 17);
+            this.chkCsar.TabIndex = 6;
+            this.chkCsar.Text = "CSAR";
+            this.chkCsar.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(84, 9);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(99, 28);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 303;
             this.label8.Text = "AWACS";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Location = new System.Drawing.Point(10, 16);
+            this.panel1.Controls.Add(this.chkExtraAwacsAA);
+            this.panel1.Controls.Add(this.chkExtraAwacsAG);
+            this.panel1.Controls.Add(this.chkAwacsAG);
+            this.panel1.Controls.Add(this.chkAwacsAA);
+            this.panel1.Location = new System.Drawing.Point(21, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 82);
+            this.panel1.Size = new System.Drawing.Size(210, 103);
             this.panel1.TabIndex = 302;
             // 
-            // checkBox3
+            // chkExtraAwacsAA
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 32);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(113, 17);
-            this.checkBox3.TabIndex = 306;
-            this.checkBox3.Text = "Extra AWACS A-G";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkExtraAwacsAA.AutoSize = true;
+            this.chkExtraAwacsAA.Checked = true;
+            this.chkExtraAwacsAA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkExtraAwacsAA.Location = new System.Drawing.Point(13, 80);
+            this.chkExtraAwacsAA.Name = "chkExtraAwacsAA";
+            this.chkExtraAwacsAA.Size = new System.Drawing.Size(112, 17);
+            this.chkExtraAwacsAA.TabIndex = 307;
+            this.chkExtraAwacsAA.Text = "Extra AWACS A-A";
+            this.chkExtraAwacsAA.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkExtraAwacsAG
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 55);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(85, 17);
-            this.checkBox2.TabIndex = 305;
-            this.checkBox2.Text = "AWACS A-A";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkExtraAwacsAG.AutoSize = true;
+            this.chkExtraAwacsAG.Location = new System.Drawing.Point(13, 57);
+            this.chkExtraAwacsAG.Name = "chkExtraAwacsAG";
+            this.chkExtraAwacsAG.Size = new System.Drawing.Size(113, 17);
+            this.chkExtraAwacsAG.TabIndex = 306;
+            this.chkExtraAwacsAG.Text = "Extra AWACS A-G";
+            this.chkExtraAwacsAG.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkAwacsAG
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 9);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
-            this.checkBox1.TabIndex = 304;
-            this.checkBox1.Text = "AWACS A-G";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkAwacsAG.AutoSize = true;
+            this.chkAwacsAG.Checked = true;
+            this.chkAwacsAG.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAwacsAG.Location = new System.Drawing.Point(13, 11);
+            this.chkAwacsAG.Name = "chkAwacsAG";
+            this.chkAwacsAG.Size = new System.Drawing.Size(86, 17);
+            this.chkAwacsAG.TabIndex = 304;
+            this.chkAwacsAG.Text = "AWACS A-G";
+            this.chkAwacsAG.UseVisualStyleBackColor = true;
+            // 
+            // chkAwacsAA
+            // 
+            this.chkAwacsAA.AutoSize = true;
+            this.chkAwacsAA.Checked = true;
+            this.chkAwacsAA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAwacsAA.Location = new System.Drawing.Point(13, 34);
+            this.chkAwacsAA.Name = "chkAwacsAA";
+            this.chkAwacsAA.Size = new System.Drawing.Size(85, 17);
+            this.chkAwacsAA.TabIndex = 305;
+            this.chkAwacsAA.Text = "AWACS A-A";
+            this.chkAwacsAA.UseVisualStyleBackColor = true;
             // 
             // chkTma
             // 
             this.chkTma.AutoSize = true;
             this.chkTma.Checked = true;
             this.chkTma.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTma.Location = new System.Drawing.Point(10, 202);
+            this.chkTma.Location = new System.Drawing.Point(12, 267);
             this.chkTma.Name = "chkTma";
-            this.chkTma.Size = new System.Drawing.Size(114, 17);
+            this.chkTma.Size = new System.Drawing.Size(49, 17);
             this.chkTma.TabIndex = 304;
-            this.chkTma.Text = "Has mission TMA?";
+            this.chkTma.Text = "TMA";
             this.chkTma.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(131, 198);
+            this.btnNext.Location = new System.Drawing.Point(165, 263);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 305;
@@ -157,63 +170,124 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // checkBox8
+            // chkExtraPackage
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(109, 153);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(95, 17);
-            this.checkBox8.TabIndex = 306;
-            this.checkBox8.Text = "Extra package";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkExtraPackage.AutoSize = true;
+            this.chkExtraPackage.Location = new System.Drawing.Point(130, 167);
+            this.chkExtraPackage.Name = "chkExtraPackage";
+            this.chkExtraPackage.Size = new System.Drawing.Size(95, 17);
+            this.chkExtraPackage.TabIndex = 306;
+            this.chkExtraPackage.Text = "Extra package";
+            this.chkExtraPackage.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // chkExtraJtac
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(109, 107);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(79, 17);
-            this.checkBox9.TabIndex = 307;
-            this.checkBox9.Text = "Extra JTAC";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.chkExtraJtac.AutoSize = true;
+            this.chkExtraJtac.Location = new System.Drawing.Point(130, 144);
+            this.chkExtraJtac.Name = "chkExtraJtac";
+            this.chkExtraJtac.Size = new System.Drawing.Size(79, 17);
+            this.chkExtraJtac.TabIndex = 307;
+            this.chkExtraJtac.Text = "Extra JTAC";
+            this.chkExtraJtac.UseVisualStyleBackColor = true;
+            // 
+            // chkScramble
+            // 
+            this.chkScramble.AutoSize = true;
+            this.chkScramble.Checked = true;
+            this.chkScramble.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkScramble.Location = new System.Drawing.Point(35, 213);
+            this.chkScramble.Name = "chkScramble";
+            this.chkScramble.Size = new System.Drawing.Size(70, 17);
+            this.chkScramble.TabIndex = 308;
+            this.chkScramble.Text = "Scramble";
+            this.chkScramble.UseVisualStyleBackColor = true;
+            // 
+            // numTankers
+            // 
+            this.numTankers.Location = new System.Drawing.Point(130, 189);
+            this.numTankers.Name = "numTankers";
+            this.numTankers.Size = new System.Drawing.Size(26, 20);
+            this.numTankers.TabIndex = 309;
+            this.numTankers.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(162, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 310;
+            this.label1.Text = "Tankers";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(229, 230);
+            this.panel2.TabIndex = 311;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 312;
+            this.label2.Text = "Frequencies";
             // 
             // SelectSupport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(218, 227);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
+            this.ClientSize = new System.Drawing.Size(253, 298);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numTankers);
+            this.Controls.Add(this.chkScramble);
+            this.Controls.Add(this.chkExtraJtac);
+            this.Controls.Add(this.chkExtraPackage);
             this.Controls.Add(this.chkTma);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.chkCsar);
+            this.Controls.Add(this.chkJstar);
+            this.Controls.Add(this.chkFaca);
+            this.Controls.Add(this.panel2);
             this.Name = "SelectSupport";
             this.Text = "SelectSupport";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTankers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox chkFaca;
+        private System.Windows.Forms.CheckBox chkJstar;
+        private System.Windows.Forms.CheckBox chkCsar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chkExtraAwacsAG;
+        private System.Windows.Forms.CheckBox chkAwacsAG;
+        private System.Windows.Forms.CheckBox chkAwacsAA;
         private System.Windows.Forms.CheckBox chkTma;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox chkExtraPackage;
+        private System.Windows.Forms.CheckBox chkExtraJtac;
+        private System.Windows.Forms.CheckBox chkExtraAwacsAA;
+        private System.Windows.Forms.CheckBox chkScramble;
+        private System.Windows.Forms.NumericUpDown numTankers;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }

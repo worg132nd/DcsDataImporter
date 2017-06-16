@@ -589,6 +589,10 @@ namespace DcsDataImporter
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            btnNext.Hide();
+            btnBack.Hide();
+            btnImportMissionFile.Hide();
+
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
