@@ -158,7 +158,8 @@ namespace DcsDataImporter
 
             // Clear out default zeroes
             txtAwacsPreset.Text = txtTacpPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = "";
-            
+            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
+
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
 
@@ -180,8 +181,6 @@ namespace DcsDataImporter
             initFuel();
             hasTma = tma;
 
-            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
-            
             // Set correct tasking
             if (tasking.Equals("TR"))
             {
@@ -256,7 +255,7 @@ namespace DcsDataImporter
             initDataGridView(dgvAirbase, 3);
             initDataGridView(dgvFlight, 4);
             initDataGridView(dgvSupport, 10);
-            initSupport();
+            // initSupport();
         }
 
         public void initDataGridView(DataGridView dgv, int rowCount)
@@ -640,7 +639,7 @@ namespace DcsDataImporter
         {
             if (callsign != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colCallsignSupport"].Value = callsign;
             }
         }
@@ -649,7 +648,7 @@ namespace DcsDataImporter
         {
             if (freq != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colFreqSupport"].Value = freq;
             }
         }
@@ -658,7 +657,7 @@ namespace DcsDataImporter
         {
             if (channel != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colChannelSupport"].Value = channel;
             }
         }
@@ -667,7 +666,7 @@ namespace DcsDataImporter
         {
             if (preset != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colPresetSupport"].Value = preset;
             }
         }
@@ -676,7 +675,7 @@ namespace DcsDataImporter
         {
             if (backup != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colBackupSupport"].Value = backup;
             }
         }
@@ -685,9 +684,27 @@ namespace DcsDataImporter
         {
             if (cp != null)
             {
-                var row = dgvSupport.Rows[6];
+                var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colNotesSupport"].Value = "Contact point " + cp;
             }
+        }
+
+        /* MAKE A GENERIC METHOD FOR SETTING ANY colTypeSupport types, not just IFRN. Should be easy using findRow */
+
+        private int findRow(string searchTerm)
+        {
+            int i = 0;
+            while (i < dgvSupport.Rows.Count)
+            {
+                var row = dgvSupport.Rows[i];
+                string colTypeSupport = row.Cells["colTypeSupport"].Value as string;
+                if (colTypeSupport.Contains(searchTerm))
+                {
+                    return i;
+                }
+                i++;
+            }
+            return -1;
         }
 
         private string convertDigitToNumber(string digit)
