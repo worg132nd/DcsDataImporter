@@ -600,11 +600,11 @@ namespace DcsDataImporter
             const string LRS = "Long Range Strafe (LRS)";
             const string TTS = "Two-Target Strafe (TTS)";
 
-            const string LAR = "Low Angle Rocket(LAR)";
+            const string LAR = "Low Angle Rocket (LAR)";
             const string HAR = "High Angle Rocket (HAR)";
             const string LATR = "Low Altitude Tactical Rocket (LATR)";
             const string HATR = "High Altitude Tactical Rocket (HATR)";
-            const string HARR = "High Altitude Release Rocket(HARR)";
+            const string HARR = "High Altitude Release Rocket (HARR)";
             const string LR = "Loft Rocket (LR)";
 
             const string VLD = "Visual Level Delivery (VLD)";

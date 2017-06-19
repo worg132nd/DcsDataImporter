@@ -972,92 +972,92 @@ namespace DcsDataImporter
                     freq = tuple.getFreq();
                     preset = tuple.getPreset();
                     channel = tuple.getChannel();
-                }
 
-                if (textbox.Name.Equals("txtAwacsChannel") && txtAwacsFreq.Text == "" && txtAwacsPreset.Text == "")
-                {
-                    txtAwacsFreq.Text = freq;
-                    txtAwacsPreset.Text = preset;
+                    if (textbox.Name.Equals("txtAwacsChannel") && txtAwacsFreq.Text == "" && txtAwacsPreset.Text == "")
+                    {
+                        txtAwacsFreq.Text = freq;
+                        txtAwacsPreset.Text = preset;
 
-                    textbox.Text = textbox.Text.ToUpper();
-                }
+                        textbox.Text = textbox.Text.ToUpper();
+                    }
 
-                if (textbox.Name.Equals("txtAwacsBackupChannel") && txtAwacsBackupFreq.Text == "" && txtAwacsBackupPreset.Text == "")
-                {
-                    txtAwacsBackupFreq.Text = freq;
-                    txtAwacsBackupPreset.Text = preset;
+                    if (textbox.Name.Equals("txtAwacsBackupChannel") && txtAwacsBackupFreq.Text == "" && txtAwacsBackupPreset.Text == "")
+                    {
+                        txtAwacsBackupFreq.Text = freq;
+                        txtAwacsBackupPreset.Text = preset;
 
-                    textbox.Text = textbox.Text.ToUpper();
-                }
+                        textbox.Text = textbox.Text.ToUpper();
+                    }
 
-                if (textbox.Name.Equals("txtTacpChannel") && txtTacpFreq.Text == "" && txtTacpPreset.Text == "")
-                {
-                    txtTacpFreq.Text = freq;
-                    txtTacpPreset.Text = preset;
+                    if (textbox.Name.Equals("txtTacpChannel") && txtTacpFreq.Text == "" && txtTacpPreset.Text == "")
+                    {
+                        txtTacpFreq.Text = freq;
+                        txtTacpPreset.Text = preset;
 
-                    textbox.Text = textbox.Text.ToUpper();
-                }
+                        textbox.Text = textbox.Text.ToUpper();
+                    }
 
-                if (textbox.Name.Equals("txtTacpBackupChannel") && txtTacpBackupFreq.Text == "" && txtTacpBackupPreset.Text == "")
-                {
-                    txtTacpBackupFreq.Text = freq;
-                    txtTacpBackupPreset.Text = preset;
+                    if (textbox.Name.Equals("txtTacpBackupChannel") && txtTacpBackupFreq.Text == "" && txtTacpBackupPreset.Text == "")
+                    {
+                        txtTacpBackupFreq.Text = freq;
+                        txtTacpBackupPreset.Text = preset;
 
-                    textbox.Text = textbox.Text.ToUpper();
-                }
+                        textbox.Text = textbox.Text.ToUpper();
+                    }
 
-                if (textbox.Name.Equals("txtInternalChannel") && txtInternalFreq.Text == "" && txtInternalPreset.Text == "")
-                {
-                    txtInternalFreq.Text = freq;
-                    txtInternalPreset.Text = preset;
-                }
+                    if (textbox.Name.Equals("txtInternalChannel") && txtInternalFreq.Text == "" && txtInternalPreset.Text == "")
+                    {
+                        txtInternalFreq.Text = freq;
+                        txtInternalPreset.Text = preset;
+                    }
 
-                if (textbox.Name.Equals("txtInternalBackupChannel") && txtInternalBackupFreq.Text == "" && txtInternalBackupPreset.Text == "")
-                {
-                    txtInternalBackupFreq.Text = freq;
-                    txtInternalBackupPreset.Text = preset;
-                }
+                    if (textbox.Name.Equals("txtInternalBackupChannel") && txtInternalBackupFreq.Text == "" && txtInternalBackupPreset.Text == "")
+                    {
+                        txtInternalBackupFreq.Text = freq;
+                        txtInternalBackupPreset.Text = preset;
+                    }
 
-                if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
-                {
-                    txtAwacsChannel.Text = channel;
-                    txtAwacsPreset.Text = preset;
-                    txtAwacsFreq.Text = freq;
-                }
+                    if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
+                    {
+                        txtAwacsChannel.Text = channel;
+                        txtAwacsPreset.Text = preset;
+                        txtAwacsFreq.Text = freq;
+                    }
 
-                if (textbox.Name.Equals("txtAwacsBackupFreq") && txtAwacsBackupChannel.Text == "" && txtAwacsBackupPreset.Text == "")
-                {
-                    txtAwacsBackupChannel.Text = channel;
-                    txtAwacsBackupPreset.Text = preset;
-                    txtAwacsBackupFreq.Text = freq;
-                }
+                    if (textbox.Name.Equals("txtAwacsBackupFreq") && txtAwacsBackupChannel.Text == "" && txtAwacsBackupPreset.Text == "")
+                    {
+                        txtAwacsBackupChannel.Text = channel;
+                        txtAwacsBackupPreset.Text = preset;
+                        txtAwacsBackupFreq.Text = freq;
+                    }
 
-                if (textbox.Name.Equals("txtTacpFreq") && txtTacpChannel.Text == "" && txtTacpPreset.Text == "")
-                {
-                    txtTacpChannel.Text = channel;
-                    txtTacpPreset.Text = preset;
-                    txtTacpFreq.Text = freq;
-                }
+                    if (textbox.Name.Equals("txtTacpFreq") && txtTacpChannel.Text == "" && txtTacpPreset.Text == "")
+                    {
+                        txtTacpChannel.Text = channel;
+                        txtTacpPreset.Text = preset;
+                        txtTacpFreq.Text = freq;
+                    }
 
-                if (textbox.Name.Equals("txtTacpBackupFreq") && txtTacpBackupChannel.Text == "" && txtTacpBackupPreset.Text == "")
-                {
-                    txtTacpBackupChannel.Text = channel;
-                    txtTacpBackupPreset.Text = preset;
-                    txtTacpBackupFreq.Text = freq;
-                }
+                    if (textbox.Name.Equals("txtTacpBackupFreq") && txtTacpBackupChannel.Text == "" && txtTacpBackupPreset.Text == "")
+                    {
+                        txtTacpBackupChannel.Text = channel;
+                        txtTacpBackupPreset.Text = preset;
+                        txtTacpBackupFreq.Text = freq;
+                    }
 
-                if (textbox.Name.Equals("txtInternalFreq") && txtInternalChannel.Text == "" && txtInternalPreset.Text == "")
-                {
-                    txtInternalChannel.Text = channel;
-                    txtInternalPreset.Text = preset;
-                    txtInternalFreq.Text = freq;
-                }
+                    if (textbox.Name.Equals("txtInternalFreq") && txtInternalChannel.Text == "" && txtInternalPreset.Text == "")
+                    {
+                        txtInternalChannel.Text = channel;
+                        txtInternalPreset.Text = preset;
+                        txtInternalFreq.Text = freq;
+                    }
 
-                if (textbox.Name.Equals("txtInternalBackupFreq") && txtInternalBackupChannel.Text == "" && txtInternalBackupPreset.Text == "")
-                {
-                    txtInternalBackupChannel.Text = channel;
-                    txtInternalBackupPreset.Text = preset;
-                    txtInternalBackupFreq.Text = freq;
+                    if (textbox.Name.Equals("txtInternalBackupFreq") && txtInternalBackupChannel.Text == "" && txtInternalBackupPreset.Text == "")
+                    {
+                        txtInternalBackupChannel.Text = channel;
+                        txtInternalBackupPreset.Text = preset;
+                        txtInternalBackupFreq.Text = freq;
+                    }
                 }
             }
         }
