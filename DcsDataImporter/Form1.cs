@@ -158,7 +158,6 @@ namespace DcsDataImporter
 
             // Clear out default zeroes
             txtAwacsPreset.Text = txtTacpPreset.Text = txtInternalPreset.Text = txtInternalBackupPreset.Text = txtAwacsBackupPreset.Text = txtTacpBackupPreset.Text = "";
-            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
 
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
@@ -173,6 +172,7 @@ namespace DcsDataImporter
             txtAwacsCp.Text = AwacsCp;
             txtTacpCallsign.Text = Tacp;
             setJtacLbl(TacpType);
+            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
             //setTacpDgvCallsign(Tacp);
             setSupportCell("JTAC", "callsign", Tacp);
             txtTacpCp.Text = TacpCp;
@@ -302,15 +302,13 @@ namespace DcsDataImporter
             var row = dgvSupport.Rows[0];
             if (chkAwacsAG && i < dgvSupport.Rows.Count)
             {
-                row.Cells["colTypeSupport"].Value = "AWACS A-G";
-                row.Cells["colNotesSupport"].Value = "WD";
-                i++;
-            }
-
-            row = dgvSupport.Rows[i];
-            if (chkAwacsAA)
-            {
-                row.Cells["colTypeSupport"].Value = "AWACS A-A";
+                if (chkExtraAwacsAG)
+                {
+                    row.Cells["colTypeSupport"].Value = "AWACS A-G #1";
+                } else
+                {
+                    row.Cells["colTypeSupport"].Value = "AWACS A-G";
+                }
                 row.Cells["colNotesSupport"].Value = "WD";
                 i++;
             }
@@ -318,14 +316,31 @@ namespace DcsDataImporter
             row = dgvSupport.Rows[i];
             if (chkExtraAwacsAG)
             {
-                row.Cells["colTypeSupport"].Value = "AWACS A-G 2";
+                row.Cells["colTypeSupport"].Value = "AWACS A-G #2";
+                row.Cells["colNotesSupport"].Value = "WD";
+                i++;
+            }
+
+            row = dgvSupport.Rows[i];
+            if (chkAwacsAA)
+            {
+                if (chkExtraAwacsAA)
+                {
+                    row.Cells["colTypeSupport"].Value = "AWACS A-A #1";
+                } else
+                {
+                    row.Cells["colTypeSupport"].Value = "AWACS A-A";
+                }
+                
+                row.Cells["colNotesSupport"].Value = "WD";
                 i++;
             }
 
             row = dgvSupport.Rows[i];
             if (chkExtraAwacsAA)
             {
-                row.Cells["colTypeSupport"].Value = "AWACS A-A 2";
+                row.Cells["colTypeSupport"].Value = "AWACS A-A #2";
+                row.Cells["colNotesSupport"].Value = "WD";
                 i++;
             }
 
@@ -360,7 +375,13 @@ namespace DcsDataImporter
             row = dgvSupport.Rows[i];
             if (chkExtraJtac)
             {
-                row.Cells["colTypeSupport"].Value = "JTAC 2";
+                string value = "JTAC";
+                if (lblJTAC.Text == "JTAC")
+                {
+                    value += " #2";
+                }
+
+                row.Cells["colTypeSupport"].Value = value;
                 i++;
             }
 
@@ -3099,6 +3120,7 @@ namespace DcsDataImporter
             {
                 lblJTAC.Text = "JTAC";
                 restore();
+                setSupportCell("JTAC", "type", "JTAC #2");
             }
             else if (cb.Text.Equals("FAC(A)"))
             {

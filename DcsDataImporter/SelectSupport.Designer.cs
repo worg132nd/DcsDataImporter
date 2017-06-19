@@ -109,9 +109,9 @@
             this.chkExtraAwacsAA.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkExtraAwacsAA.Location = new System.Drawing.Point(13, 80);
             this.chkExtraAwacsAA.Name = "chkExtraAwacsAA";
-            this.chkExtraAwacsAA.Size = new System.Drawing.Size(112, 17);
+            this.chkExtraAwacsAA.Size = new System.Drawing.Size(134, 17);
             this.chkExtraAwacsAA.TabIndex = 307;
-            this.chkExtraAwacsAA.Text = "Extra AWACS A-A";
+            this.chkExtraAwacsAA.Text = "Additional AWACS A-A";
             this.chkExtraAwacsAA.UseVisualStyleBackColor = true;
             // 
             // chkExtraAwacsAG
@@ -119,9 +119,9 @@
             this.chkExtraAwacsAG.AutoSize = true;
             this.chkExtraAwacsAG.Location = new System.Drawing.Point(13, 57);
             this.chkExtraAwacsAG.Name = "chkExtraAwacsAG";
-            this.chkExtraAwacsAG.Size = new System.Drawing.Size(113, 17);
+            this.chkExtraAwacsAG.Size = new System.Drawing.Size(135, 17);
             this.chkExtraAwacsAG.TabIndex = 306;
-            this.chkExtraAwacsAG.Text = "Extra AWACS A-G";
+            this.chkExtraAwacsAG.Text = "Additional AWACS A-G";
             this.chkExtraAwacsAG.UseVisualStyleBackColor = true;
             // 
             // chkAwacsAG
@@ -175,9 +175,9 @@
             this.chkExtraPackage.AutoSize = true;
             this.chkExtraPackage.Location = new System.Drawing.Point(130, 167);
             this.chkExtraPackage.Name = "chkExtraPackage";
-            this.chkExtraPackage.Size = new System.Drawing.Size(95, 17);
+            this.chkExtraPackage.Size = new System.Drawing.Size(90, 17);
             this.chkExtraPackage.TabIndex = 306;
-            this.chkExtraPackage.Text = "Extra package";
+            this.chkExtraPackage.Text = "Add package";
             this.chkExtraPackage.UseVisualStyleBackColor = true;
             // 
             // chkExtraJtac
@@ -185,9 +185,9 @@
             this.chkExtraJtac.AutoSize = true;
             this.chkExtraJtac.Location = new System.Drawing.Point(130, 144);
             this.chkExtraJtac.Name = "chkExtraJtac";
-            this.chkExtraJtac.Size = new System.Drawing.Size(79, 17);
+            this.chkExtraJtac.Size = new System.Drawing.Size(74, 17);
             this.chkExtraJtac.TabIndex = 307;
-            this.chkExtraJtac.Text = "Extra JTAC";
+            this.chkExtraJtac.Text = "Add JTAC";
             this.chkExtraJtac.UseVisualStyleBackColor = true;
             // 
             // chkScramble
