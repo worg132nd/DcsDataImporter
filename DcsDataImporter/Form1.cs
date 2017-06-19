@@ -173,9 +173,10 @@ namespace DcsDataImporter
             txtAwacsCp.Text = AwacsCp;
             txtTacpCallsign.Text = Tacp;
             setJtacLbl(TacpType);
-            setTacpDgvCallsign(Tacp);
+            //setTacpDgvCallsign(Tacp);
+            setSupportCell("JTAC", "callsign", Tacp);
             txtTacpCp.Text = TacpCp;
-            setTacpDgvCp(TacpCp);
+            setSupportCell("JTAC", "notes", "Contact point " + TacpCp);
             txtLocation.Text = location;
             Properties.Settings.Default.prevAmpn = amplification;
             initFuel();
@@ -200,7 +201,7 @@ namespace DcsDataImporter
             {
                 standardTrainingSet = true;
                 txtTacpCp.Text = "MUKHRANI"; //default
-                setTacpDgvCp("MUKHRANI");
+                setSupportCell("JTAC", "notes", "MUKHRANI");
                 disableAwacs();
             }
 
@@ -234,9 +235,9 @@ namespace DcsDataImporter
             tuple = list.Find(x => x.getName().ToLower().Contains("flight report".ToLower()));
             if (tuple != null)
             {
-                setSupportPreset("In-flight Report", tuple.getPreset());
-                setSupportFreq("In-flight Report", tuple.getFreq());
-                setSupportChannel("In-flight Report", tuple.getChannel());
+                setSupportCell("in-flight report", "preset", tuple.getPreset());
+                setSupportCell("in-flight report", "freq", tuple.getFreq());
+                setSupportCell("in-flight report", "channel", tuple.getChannel());
             }
 
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
@@ -581,167 +582,17 @@ namespace DcsDataImporter
             return digit;
         }
 
-        private void setTacpDgvCallsign(string callsign)
+        /* col is a string containing either "callsign", "freq", "channel", "preset", "backup" or "notes" */
+        private void setSupportCell(string searchField, string col, string value)
         {
-            /* if (callsign != null)
+            if (value != null)
             {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colCallsignSupport"].Value = callsign;
-            } */
-        }
-
-        private void setTacpDgvFreq(string freq)
-        {
-            /*if (freq != null)
-            {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colFreqSupport"].Value = freq;
-            }*/
-        }
-
-        private void setTacpDgvChannel(string channel)
-        {
-            /*if (channel != null)
-            {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colChannelSupport"].Value = channel;
-            }*/
-        }
-
-        private void setTacpDgvPreset(string preset)
-        {
-            /*if (preset != null)
-            {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colPresetSupport"].Value = preset;
-            }*/
-        }
-
-        private void setTacpDgvBackup(string backup)
-        {
-            /*if (backup != null)
-            {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colBackupSupport"].Value = backup;
-            }*/
-        }
-
-        private void setTacpDgvCp(string cp)
-        {
-            /*if (cp != null)
-            {
-                var row = dgvSupport.Rows[2];
-                row.Cells["colNotesSupport"].Value = "Contact point " + cp;
-            }*/
-        }
-
-        /*private void setIfrnDgvCallsign(string callsign)
-        {
-            if (callsign != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colCallsignSupport"].Value = callsign;
-            }
-        }
-
-        private void setIfrnDgvFreq(string freq)
-        {
-            if (freq != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colFreqSupport"].Value = freq;
-            }
-        }
-
-        private void setIfrnDgvChannel(string channel)
-        {
-            if (channel != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colChannelSupport"].Value = channel;
-            }
-        }
-
-        private void setIfrnDgvPreset(string preset)
-        {
-            if (preset != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colPresetSupport"].Value = preset;
-            }
-        }
-
-        private void setIfrnDgvBackup(string backup)
-        {
-            if (backup != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colBackupSupport"].Value = backup;
-            }
-        }
-
-        private void setIfrnDgvCp(string cp)
-        {
-            if (cp != null)
-            {
-                var row = dgvSupport.Rows[findRow("In-Flight Report")];
-                row.Cells["colNotesSupport"].Value = "Contact point " + cp;
-            }
-        }*/
-
-
-
-        private void setSupportCp(string type, string cp)
-        {
-            if (cp != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colNotesSupport"].Value = "Contact point " + cp;
-            }
-        }
-
-        private void setSupportBackup(string type, string backup)
-        {
-            if (backup != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colBackupSupport"].Value = backup;
-            }
-        }
-
-        private void setSupportPreset(string type, string preset)
-        {
-            if (preset != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colPresetSupport"].Value = preset;
-            }
-        }
-
-        private void setSupportChannel(string type, string channel)
-        {
-            if (channel != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colChannelSupport"].Value = channel;
-            }
-        }
-
-        private void setSupportFreq(string type, string freq)
-        {
-            if (freq != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colFreqSupport"].Value = freq;
-            }
-        }
-
-        private void setSupportCallsign(string type, string callsign)
-        {
-            if (callsign != null)
-            {
-                var row = dgvSupport.Rows[findRow(type)];
-                row.Cells["colChannelSupport"].Value = callsign;
+                if (findRow(searchField) != -1)
+                {
+                    var row = dgvSupport.Rows[findRow(searchField)];
+                    string colName = "col" + col.First().ToString().ToUpper() + col.Substring(1).ToLower() + "Support";
+                    row.Cells[colName].Value = value;
+                }
             }
         }
 
@@ -754,7 +605,7 @@ namespace DcsDataImporter
             {
                 var row = dgvSupport.Rows[i];
                 string colTypeSupport = row.Cells["colTypeSupport"].Value as string;
-                if (colTypeSupport.ToLower().Contains(searchTerm.ToLower()))
+                if (colTypeSupport != null && colTypeSupport.ToLower().Contains(searchTerm.ToLower()))
                 {
                     return i;
                 }
@@ -867,12 +718,12 @@ namespace DcsDataImporter
                 if (backup)
                 {
                     txtTacpBackupChannel.Text = channel;
-                    setTacpDgvBackup(channel);
+                    setSupportCell("JTAC", "backup", channel);
                 }
                 else
                 {
                     txtTacpChannel.Text = channel;
-                    setTacpDgvChannel(channel);
+                    setSupportCell("JTAC", "channel", channel);
                 }
             }
 
@@ -920,7 +771,7 @@ namespace DcsDataImporter
             txtTacpBackupFreq.Text = tuple.getFreq();
             txtTacpBackupPreset.Text = tuple.getPreset();
 
-            setTacpDgvBackup(tuple.getFreq()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
+            setSupportCell("JTAC", "backup", tuple.getFreq()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
         }
 
         /* Set internal main radio frequency values in the form */
