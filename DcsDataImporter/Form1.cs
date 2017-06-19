@@ -234,9 +234,9 @@ namespace DcsDataImporter
             tuple = list.Find(x => x.getName().ToLower().Contains("flight report".ToLower()));
             if (tuple != null)
             {
-                setIfrnDgvPreset(tuple.getPreset());
-                setIfrnDgvFreq(tuple.getFreq());
-                setIfrnDgvChannel(tuple.getChannel());
+                setSupportPreset("In-flight Report", tuple.getPreset());
+                setSupportFreq("In-flight Report", tuple.getFreq());
+                setSupportChannel("In-flight Report", tuple.getChannel());
             }
 
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
@@ -583,59 +583,59 @@ namespace DcsDataImporter
 
         private void setTacpDgvCallsign(string callsign)
         {
-            if (callsign != null)
+            /* if (callsign != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colCallsignSupport"].Value = callsign;
-            }
+            } */
         }
 
         private void setTacpDgvFreq(string freq)
         {
-            if (freq != null)
+            /*if (freq != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colFreqSupport"].Value = freq;
-            }
+            }*/
         }
 
         private void setTacpDgvChannel(string channel)
         {
-            if (channel != null)
+            /*if (channel != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colChannelSupport"].Value = channel;
-            }
+            }*/
         }
 
         private void setTacpDgvPreset(string preset)
         {
-            if (preset != null)
+            /*if (preset != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colPresetSupport"].Value = preset;
-            }
+            }*/
         }
 
         private void setTacpDgvBackup(string backup)
         {
-            if (backup != null)
+            /*if (backup != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colBackupSupport"].Value = backup;
-            }
+            }*/
         }
 
         private void setTacpDgvCp(string cp)
         {
-            if (cp != null)
+            /*if (cp != null)
             {
                 var row = dgvSupport.Rows[2];
                 row.Cells["colNotesSupport"].Value = "Contact point " + cp;
-            }
+            }*/
         }
 
-        private void setIfrnDgvCallsign(string callsign)
+        /*private void setIfrnDgvCallsign(string callsign)
         {
             if (callsign != null)
             {
@@ -687,6 +687,62 @@ namespace DcsDataImporter
                 var row = dgvSupport.Rows[findRow("In-Flight Report")];
                 row.Cells["colNotesSupport"].Value = "Contact point " + cp;
             }
+        }*/
+
+
+
+        private void setSupportCp(string type, string cp)
+        {
+            if (cp != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colNotesSupport"].Value = "Contact point " + cp;
+            }
+        }
+
+        private void setSupportBackup(string type, string backup)
+        {
+            if (backup != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colBackupSupport"].Value = backup;
+            }
+        }
+
+        private void setSupportPreset(string type, string preset)
+        {
+            if (preset != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colPresetSupport"].Value = preset;
+            }
+        }
+
+        private void setSupportChannel(string type, string channel)
+        {
+            if (channel != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colChannelSupport"].Value = channel;
+            }
+        }
+
+        private void setSupportFreq(string type, string freq)
+        {
+            if (freq != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colFreqSupport"].Value = freq;
+            }
+        }
+
+        private void setSupportCallsign(string type, string callsign)
+        {
+            if (callsign != null)
+            {
+                var row = dgvSupport.Rows[findRow(type)];
+                row.Cells["colChannelSupport"].Value = callsign;
+            }
         }
 
         /* MAKE A GENERIC METHOD FOR SETTING ANY colTypeSupport types, not just IFRN. Should be easy using findRow */
@@ -698,7 +754,7 @@ namespace DcsDataImporter
             {
                 var row = dgvSupport.Rows[i];
                 string colTypeSupport = row.Cells["colTypeSupport"].Value as string;
-                if (colTypeSupport.Contains(searchTerm))
+                if (colTypeSupport.ToLower().Contains(searchTerm.ToLower()))
                 {
                     return i;
                 }
@@ -855,11 +911,6 @@ namespace DcsDataImporter
             txtTacpChannel.Text = tuple.getChannel();
             txtTacpFreq.Text = tuple.getFreq();
             txtTacpPreset.Text = tuple.getPreset();
-
-            // set the dataGridView table as well?
-            setTacpDgvChannel(tuple.getChannel()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
-            setTacpDgvFreq(tuple.getFreq()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
-            setTacpDgvPreset(tuple.getPreset()); //TODO: Consider removing (can be removed if you don't want TAC-data in dgvSupport)
         }
 
         /* Set TACP backup radio frequency values in the form */
