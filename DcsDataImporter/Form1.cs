@@ -152,7 +152,7 @@ namespace DcsDataImporter
         }    
 
         /* Constructor when ATO is filled out */
-        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime, bool tma, bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers)
+        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime, bool tma, bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers, Form selectSupport)
         {
             init();
 
@@ -172,8 +172,7 @@ namespace DcsDataImporter
             txtAwacsCp.Text = AwacsCp;
             txtTacpCallsign.Text = Tacp;
             setJtacLbl(TacpType);
-            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers);
-            //setTacpDgvCallsign(Tacp);
+            initSupport(chkAwacsAG, chkAwacsAA, chkExtraAwacsAG, chkExtraAwacsAA, chkFaca, chkCsar, chkJstar, chkScramble, chkExtraJtac, chkExtraPackage, numTankers, selectSupport);
             setSupportCell("JTAC", "callsign", Tacp);
             txtTacpCp.Text = TacpCp;
             setSupportCell("JTAC", "notes", "Contact point " + TacpCp);
@@ -294,7 +293,7 @@ namespace DcsDataImporter
         }
 
         /* Overloaded method with checkbox as arguments */
-        private void initSupport(bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers)
+        private void initSupport(bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers, Form selectSupport)
         {
             fillSupportWithDash();
             int i = 0;
@@ -305,7 +304,8 @@ namespace DcsDataImporter
                 if (chkExtraAwacsAG)
                 {
                     row.Cells["colTypeSupport"].Value = "AWACS A-G #1";
-                } else
+                }
+                else
                 {
                     row.Cells["colTypeSupport"].Value = "AWACS A-G";
                 }
@@ -327,11 +327,12 @@ namespace DcsDataImporter
                 if (chkExtraAwacsAA)
                 {
                     row.Cells["colTypeSupport"].Value = "AWACS A-A #1";
-                } else
+                }
+                else
                 {
                     row.Cells["colTypeSupport"].Value = "AWACS A-A";
                 }
-                
+
                 row.Cells["colNotesSupport"].Value = "WD";
                 i++;
             }
@@ -391,10 +392,10 @@ namespace DcsDataImporter
                 row.Cells["colTypeSupport"].Value = "Package";
                 i++;
             }
-
-            for (int x = 0; x < Int32.Parse(numTankers); x++) {
+            for (int x = 0; x < Int32.Parse(numTankers); x++)
+            {
                 row = dgvSupport.Rows[i];
-                row.Cells["colTypeSupport"].Value = "Tanker " + (x+1).ToString();
+                row.Cells["colTypeSupport"].Value = "Tanker " + (x + 1).ToString();
                 i++;
             }
 
