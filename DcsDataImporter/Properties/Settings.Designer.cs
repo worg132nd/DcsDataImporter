@@ -1906,5 +1906,845 @@ namespace DcsDataImporter.Properties {
                 this["prevTxtTaxiTime"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow6 {
+            get {
+                return ((string)(this["supportTypeRow6"]));
+            }
+            set {
+                this["supportTypeRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow6 {
+            get {
+                return ((string)(this["supportCallsignRow6"]));
+            }
+            set {
+                this["supportCallsignRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow6 {
+            get {
+                return ((string)(this["supportFreqRow6"]));
+            }
+            set {
+                this["supportFreqRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow6 {
+            get {
+                return ((string)(this["supportChannelRow6"]));
+            }
+            set {
+                this["supportChannelRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow6 {
+            get {
+                return ((string)(this["supportPresetRow6"]));
+            }
+            set {
+                this["supportPresetRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow6 {
+            get {
+                return ((string)(this["supportBackupRow6"]));
+            }
+            set {
+                this["supportBackupRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow6 {
+            get {
+                return ((string)(this["supportNotesRow6"]));
+            }
+            set {
+                this["supportNotesRow6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow5 {
+            get {
+                return ((string)(this["supportTypeRow5"]));
+            }
+            set {
+                this["supportTypeRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow5 {
+            get {
+                return ((string)(this["supportCallsignRow5"]));
+            }
+            set {
+                this["supportCallsignRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow5 {
+            get {
+                return ((string)(this["supportFreqRow5"]));
+            }
+            set {
+                this["supportFreqRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow5 {
+            get {
+                return ((string)(this["supportChannelRow5"]));
+            }
+            set {
+                this["supportChannelRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow5 {
+            get {
+                return ((string)(this["supportPresetRow5"]));
+            }
+            set {
+                this["supportPresetRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow5 {
+            get {
+                return ((string)(this["supportBackupRow5"]));
+            }
+            set {
+                this["supportBackupRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow5 {
+            get {
+                return ((string)(this["supportNotesRow5"]));
+            }
+            set {
+                this["supportNotesRow5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow4 {
+            get {
+                return ((string)(this["supportTypeRow4"]));
+            }
+            set {
+                this["supportTypeRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow4 {
+            get {
+                return ((string)(this["supportCallsignRow4"]));
+            }
+            set {
+                this["supportCallsignRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow4 {
+            get {
+                return ((string)(this["supportFreqRow4"]));
+            }
+            set {
+                this["supportFreqRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow4 {
+            get {
+                return ((string)(this["supportChannelRow4"]));
+            }
+            set {
+                this["supportChannelRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow4 {
+            get {
+                return ((string)(this["supportPresetRow4"]));
+            }
+            set {
+                this["supportPresetRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow4 {
+            get {
+                return ((string)(this["supportBackupRow4"]));
+            }
+            set {
+                this["supportBackupRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow4 {
+            get {
+                return ((string)(this["supportNotesRow4"]));
+            }
+            set {
+                this["supportNotesRow4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow3 {
+            get {
+                return ((string)(this["supportTypeRow3"]));
+            }
+            set {
+                this["supportTypeRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow3 {
+            get {
+                return ((string)(this["supportCallsignRow3"]));
+            }
+            set {
+                this["supportCallsignRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow3 {
+            get {
+                return ((string)(this["supportFreqRow3"]));
+            }
+            set {
+                this["supportFreqRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow3 {
+            get {
+                return ((string)(this["supportChannelRow3"]));
+            }
+            set {
+                this["supportChannelRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow3 {
+            get {
+                return ((string)(this["supportPresetRow3"]));
+            }
+            set {
+                this["supportPresetRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow3 {
+            get {
+                return ((string)(this["supportBackupRow3"]));
+            }
+            set {
+                this["supportBackupRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow3 {
+            get {
+                return ((string)(this["supportNotesRow3"]));
+            }
+            set {
+                this["supportNotesRow3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow2 {
+            get {
+                return ((string)(this["supportTypeRow2"]));
+            }
+            set {
+                this["supportTypeRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow2 {
+            get {
+                return ((string)(this["supportCallsignRow2"]));
+            }
+            set {
+                this["supportCallsignRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow2 {
+            get {
+                return ((string)(this["supportFreqRow2"]));
+            }
+            set {
+                this["supportFreqRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow2 {
+            get {
+                return ((string)(this["supportChannelRow2"]));
+            }
+            set {
+                this["supportChannelRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow2 {
+            get {
+                return ((string)(this["supportPresetRow2"]));
+            }
+            set {
+                this["supportPresetRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow2 {
+            get {
+                return ((string)(this["supportBackupRow2"]));
+            }
+            set {
+                this["supportBackupRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow2 {
+            get {
+                return ((string)(this["supportNotesRow2"]));
+            }
+            set {
+                this["supportNotesRow2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow1 {
+            get {
+                return ((string)(this["supportTypeRow1"]));
+            }
+            set {
+                this["supportTypeRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow1 {
+            get {
+                return ((string)(this["supportCallsignRow1"]));
+            }
+            set {
+                this["supportCallsignRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow1 {
+            get {
+                return ((string)(this["supportFreqRow1"]));
+            }
+            set {
+                this["supportFreqRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow1 {
+            get {
+                return ((string)(this["supportChannelRow1"]));
+            }
+            set {
+                this["supportChannelRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow1 {
+            get {
+                return ((string)(this["supportPresetRow1"]));
+            }
+            set {
+                this["supportPresetRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow1 {
+            get {
+                return ((string)(this["supportBackupRow1"]));
+            }
+            set {
+                this["supportBackupRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow1 {
+            get {
+                return ((string)(this["supportNotesRow1"]));
+            }
+            set {
+                this["supportNotesRow1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow0 {
+            get {
+                return ((string)(this["supportTypeRow0"]));
+            }
+            set {
+                this["supportTypeRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow0 {
+            get {
+                return ((string)(this["supportCallsignRow0"]));
+            }
+            set {
+                this["supportCallsignRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow0 {
+            get {
+                return ((string)(this["supportFreqRow0"]));
+            }
+            set {
+                this["supportFreqRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow0 {
+            get {
+                return ((string)(this["supportChannelRow0"]));
+            }
+            set {
+                this["supportChannelRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow0 {
+            get {
+                return ((string)(this["supportPresetRow0"]));
+            }
+            set {
+                this["supportPresetRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow0 {
+            get {
+                return ((string)(this["supportBackupRow0"]));
+            }
+            set {
+                this["supportBackupRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow0 {
+            get {
+                return ((string)(this["supportNotesRow0"]));
+            }
+            set {
+                this["supportNotesRow0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow7 {
+            get {
+                return ((string)(this["supportTypeRow7"]));
+            }
+            set {
+                this["supportTypeRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow7 {
+            get {
+                return ((string)(this["supportCallsignRow7"]));
+            }
+            set {
+                this["supportCallsignRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow7 {
+            get {
+                return ((string)(this["supportFreqRow7"]));
+            }
+            set {
+                this["supportFreqRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow7 {
+            get {
+                return ((string)(this["supportChannelRow7"]));
+            }
+            set {
+                this["supportChannelRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow7 {
+            get {
+                return ((string)(this["supportPresetRow7"]));
+            }
+            set {
+                this["supportPresetRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow7 {
+            get {
+                return ((string)(this["supportBackupRow7"]));
+            }
+            set {
+                this["supportBackupRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow7 {
+            get {
+                return ((string)(this["supportNotesRow7"]));
+            }
+            set {
+                this["supportNotesRow7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow8 {
+            get {
+                return ((string)(this["supportTypeRow8"]));
+            }
+            set {
+                this["supportTypeRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow8 {
+            get {
+                return ((string)(this["supportCallsignRow8"]));
+            }
+            set {
+                this["supportCallsignRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow8 {
+            get {
+                return ((string)(this["supportFreqRow8"]));
+            }
+            set {
+                this["supportFreqRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow8 {
+            get {
+                return ((string)(this["supportChannelRow8"]));
+            }
+            set {
+                this["supportChannelRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow8 {
+            get {
+                return ((string)(this["supportPresetRow8"]));
+            }
+            set {
+                this["supportPresetRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow8 {
+            get {
+                return ((string)(this["supportBackupRow8"]));
+            }
+            set {
+                this["supportBackupRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow8 {
+            get {
+                return ((string)(this["supportNotesRow8"]));
+            }
+            set {
+                this["supportNotesRow8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportTypeRow9 {
+            get {
+                return ((string)(this["supportTypeRow9"]));
+            }
+            set {
+                this["supportTypeRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportCallsignRow9 {
+            get {
+                return ((string)(this["supportCallsignRow9"]));
+            }
+            set {
+                this["supportCallsignRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportFreqRow9 {
+            get {
+                return ((string)(this["supportFreqRow9"]));
+            }
+            set {
+                this["supportFreqRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportChannelRow9 {
+            get {
+                return ((string)(this["supportChannelRow9"]));
+            }
+            set {
+                this["supportChannelRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportPresetRow9 {
+            get {
+                return ((string)(this["supportPresetRow9"]));
+            }
+            set {
+                this["supportPresetRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportBackupRow9 {
+            get {
+                return ((string)(this["supportBackupRow9"]));
+            }
+            set {
+                this["supportBackupRow9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string supportNotesRow9 {
+            get {
+                return ((string)(this["supportNotesRow9"]));
+            }
+            set {
+                this["supportNotesRow9"] = value;
+            }
+        }
     }
 }

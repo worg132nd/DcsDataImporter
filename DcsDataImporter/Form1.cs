@@ -2015,13 +2015,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtTacpBackupChannel = txtTacpBackupChannel.Text;
             Properties.Settings.Default.prevTxtTacpBackupPreset = txtTacpBackupPreset.Text;
 
-            var row = dgvSupport.Rows[6];
-
-            /* IFRN */
-            Properties.Settings.Default.prevTxtIfrnFreq = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
-            Properties.Settings.Default.prevTxtIfrnChannel = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevTxtIfrnPreset = row.Cells["colPresetSupport"].Value as string;
-
             /* INTERNAL */
             Properties.Settings.Default.prevTxtInternalFreq = txtInternalFreq.Text;
             Properties.Settings.Default.prevTxtInternalChannel = txtInternalChannel.Text;
@@ -2043,6 +2036,272 @@ namespace DcsDataImporter
             else Properties.Settings.Default.prevChkTma = "false";
 
             Properties.Settings.Default.Save();
+        }
+
+        private void saveSupportRow(int rowNr)
+        {
+            if (rowNr == 0)
+            {
+                var row = dgvSupport.Rows[0];
+                Properties.Settings.Default.supportTypeRow0 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow0 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow0 = "";
+                else Properties.Settings.Default.supportFreqRow0 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow0 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow0 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow0 = "";
+                else Properties.Settings.Default.supportBackupRow0 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow0 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 1)
+            {
+                var row = dgvSupport.Rows[1];
+                Properties.Settings.Default.supportTypeRow1 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow1 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow1 = "";
+                else Properties.Settings.Default.supportFreqRow1 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow1 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow1 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow1 = "";
+                else Properties.Settings.Default.supportBackupRow1 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow1 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 2)
+            {
+                var row = dgvSupport.Rows[2];
+                Properties.Settings.Default.supportTypeRow2 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow2 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow2 = "";
+                else Properties.Settings.Default.supportFreqRow2 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow2 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow2 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow2 = "";
+                else Properties.Settings.Default.supportBackupRow2 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow2 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 3)
+            {
+                var row = dgvSupport.Rows[3];
+                Properties.Settings.Default.supportTypeRow3 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow3 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow3 = "";
+                else Properties.Settings.Default.supportFreqRow3 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow3 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow3 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow3 = "";
+                else Properties.Settings.Default.supportBackupRow3 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow3 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 4)
+            {
+                var row = dgvSupport.Rows[4];
+                Properties.Settings.Default.supportTypeRow4 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow4 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow4 = "";
+                else Properties.Settings.Default.supportFreqRow4 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow4 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow4 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow4 = "";
+                else Properties.Settings.Default.supportBackupRow4 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow4 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 5)
+            {
+                var row = dgvSupport.Rows[5];
+                Properties.Settings.Default.supportTypeRow5 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow5 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow5 = "";
+                else Properties.Settings.Default.supportFreqRow5 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow5 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow5 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow5 = "";
+                else Properties.Settings.Default.supportBackupRow5 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow5 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 6)
+            {
+                var row = dgvSupport.Rows[6];
+                Properties.Settings.Default.supportTypeRow6 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow6 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow6 = "";
+                else Properties.Settings.Default.supportFreqRow6 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow6 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow6 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow6 = "";
+                else Properties.Settings.Default.supportBackupRow6 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow6 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 7)
+            {
+                var row = dgvSupport.Rows[7];
+                Properties.Settings.Default.supportTypeRow7 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow7 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow7 = "";
+                else Properties.Settings.Default.supportFreqRow7 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow7 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow7 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow7 = "";
+                else Properties.Settings.Default.supportBackupRow7 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow7 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 8)
+            {
+                var row = dgvSupport.Rows[8];
+                Properties.Settings.Default.supportTypeRow8 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow8 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow8 = "";
+                else Properties.Settings.Default.supportFreqRow8 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow8 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow8 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow8 = "";
+                else Properties.Settings.Default.supportBackupRow8 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow8 = row.Cells["colNotesSupport"].Value as string;
+            }
+
+            if (rowNr == 9)
+            {
+                var row = dgvSupport.Rows[9];
+                Properties.Settings.Default.supportTypeRow9 = row.Cells["colTypeSupport"].Value as string;
+                Properties.Settings.Default.supportCallsignRow9 = row.Cells["colCallsignSupport"].Value as string;
+                if (row.Cells["colFreqSupport"].Value == null) Properties.Settings.Default.supportFreqRow9 = "";
+                else Properties.Settings.Default.supportFreqRow9 = row.Cells["colFreqSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportChannelRow9 = row.Cells["colChannelSupport"].Value as string;
+                Properties.Settings.Default.supportPresetRow9 = row.Cells["colPresetSupport"].Value as string;
+                if (row.Cells["colBackupSupport"].Value == null) Properties.Settings.Default.supportBackupRow9 = "";
+                else Properties.Settings.Default.supportBackupRow9 = row.Cells["colBackupSupport"].Value.ToString().TrimEnd("0".ToCharArray());
+                Properties.Settings.Default.supportNotesRow9 = row.Cells["colNotesSupport"].Value as string;
+            }
+        }
+
+        private void loadSupportRow(int rowNr)
+        {
+            if (rowNr == 0)
+            {
+                var row = dgvSupport.Rows[0];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow0;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow0;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow0;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow0;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow0;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow0;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow0;
+            }
+
+            if (rowNr == 1)
+            {
+                var row = dgvSupport.Rows[1];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow1;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow1;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow1;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow1;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow1;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow1;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow1;
+            }
+
+            if (rowNr == 2)
+            {
+                var row = dgvSupport.Rows[2];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow2;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow2;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow2;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow2;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow2;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow2;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow2;
+            }
+
+            if (rowNr == 3)
+            {
+                var row = dgvSupport.Rows[3];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow3;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow3;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow3;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow3;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow3;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow3;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow3;
+            }
+
+            if (rowNr == 4)
+            {
+                var row = dgvSupport.Rows[4];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow4;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow4;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow4;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow4;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow4;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow4;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow4;
+            }
+
+            if (rowNr == 5)
+            {
+                var row = dgvSupport.Rows[5];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow5;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow5;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow5;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow5;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow5;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow5;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow5;
+            }
+
+            if (rowNr == 6)
+            {
+                var row = dgvSupport.Rows[6];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow6;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow6;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow6;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow6;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow6;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow6;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow6;
+            }
+
+            if (rowNr == 7)
+            {
+                var row = dgvSupport.Rows[7];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow7;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow7;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow7;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow7;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow7;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow7;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow7;
+            }
+
+            if (rowNr == 8)
+            {
+                var row = dgvSupport.Rows[8];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow8;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow8;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow8;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow8;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow8;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow8;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow8;
+            }
+
+            if (rowNr == 9)
+            {
+                var row = dgvSupport.Rows[9];
+                row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow9;
+                row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow9;
+                row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow9;
+                row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow9;
+                row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow9;
+                row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow9;
+                row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow9;
+            }
         }
 
         private void saveDGVAirbases()
@@ -2087,7 +2346,13 @@ namespace DcsDataImporter
 
         private void loadDGVSupport()
         {
-            /* AWACS A-G */
+            for (int i = 0; i < dgvSupport.Rows.Count; i++)
+            {
+                loadSupportRow(i);
+            }
+            
+            /*
+            // AWACS A-G
             
             var row = dgvSupport.Rows[0];     
 
@@ -2099,7 +2364,7 @@ namespace DcsDataImporter
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupAwacsAGSupport;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesAwacsAGSupport;
 
-            /* AWACS A-A */
+            // AWACS A-A
             row = dgvSupport.Rows[1];
 
             row.Cells["colTypeSupport"].Value = Properties.Settings.Default.prevColTypeAwacsAASupport;
@@ -2110,7 +2375,7 @@ namespace DcsDataImporter
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupAwacsAASupport;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesAwacsAASupport;
 
-            /* FAC(A) */
+            // FAC(A)
             row = dgvSupport.Rows[2];
 
             row.Cells["colTypeSupport"].Value = Properties.Settings.Default.prevColTypeFACASupport;
@@ -2121,7 +2386,7 @@ namespace DcsDataImporter
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupFACASupport;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesFACASupport;
 
-            /* Tanker 1 */
+            // Tanker 1
             row = dgvSupport.Rows[3];
 
             row.Cells["colTypeSupport"].Value = Properties.Settings.Default.prevColTypeTanker1Support;
@@ -2132,7 +2397,7 @@ namespace DcsDataImporter
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupTanker1Support;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesTanker1Support;
 
-            /* Tanker 2 */
+            // Tanker 2
             row = dgvSupport.Rows[4];
 
             row.Cells["colTypeSupport"].Value = Properties.Settings.Default.prevColTypeTanker2Support;
@@ -2143,7 +2408,7 @@ namespace DcsDataImporter
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupTanker2Support;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesTanker2Support;
 
-            /* JSTAR */
+            // JSTAR
             row = dgvSupport.Rows[5];
 
             row.Cells["colTypeSupport"].Value = Properties.Settings.Default.prevColTypeJSTARSupport;
@@ -2153,6 +2418,17 @@ namespace DcsDataImporter
             row.Cells["colPresetSupport"].Value = Properties.Settings.Default.prevColPresetJSTARSupport;
             row.Cells["colBackupSupport"].Value = Properties.Settings.Default.prevColBackupJSTARSupport;
             row.Cells["colNotesSupport"].Value = Properties.Settings.Default.prevColNotesJSTARSupport;
+
+            row = dgvSupport.Rows[6];
+
+            row.Cells["colTypeSupport"].Value = Properties.Settings.Default.supportTypeRow6;
+            row.Cells["colCallsignSupport"].Value = Properties.Settings.Default.supportCallsignRow6;
+            row.Cells["colFreqSupport"].Value = Properties.Settings.Default.supportFreqRow6;
+            row.Cells["colChannelSupport"].Value = Properties.Settings.Default.supportChannelRow6;
+            row.Cells["colPresetSupport"].Value = Properties.Settings.Default.supportPresetRow6;
+            row.Cells["colBackupSupport"].Value = Properties.Settings.Default.supportBackupRow6;
+            row.Cells["colNotesSupport"].Value = Properties.Settings.Default.supportNotesRow6;
+            */
         }
 
         private void loadDGVFlight()
@@ -2290,7 +2566,13 @@ namespace DcsDataImporter
 
         private void saveDGVSupport()
         {
-            /* AWACS A-G */
+            for (int i = 0; i < dgvSupport.Rows.Count; i++)
+            {
+                saveSupportRow(i);
+            }
+
+            /*
+            // AWACS A-G
             var row = dgvSupport.Rows[0];
 
             Properties.Settings.Default.prevColTypeAwacsAGSupport = row.Cells["colTypeSupport"].Value as string;
@@ -2301,7 +2583,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColBackupAwacsAGSupport = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesAwacsAGSupport = row.Cells["colNotesSupport"].Value as string;
 
-            /* AWACS A-A */
+            // AWACS A-A
             row = dgvSupport.Rows[1];
 
             Properties.Settings.Default.prevColTypeAwacsAASupport = row.Cells["colTypeSupport"].Value as string;
@@ -2312,7 +2594,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColBackupAwacsAASupport = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesAwacsAASupport = row.Cells["colNotesSupport"].Value as string;
 
-            /* FAC(A) */
+            // FAC(A)
             row = dgvSupport.Rows[2];
 
             Properties.Settings.Default.prevColTypeFACASupport = row.Cells["colTypeSupport"].Value as string;
@@ -2323,7 +2605,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColBackupFACASupport = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesFACASupport = row.Cells["colNotesSupport"].Value as string;
 
-            /* Tanker 1 */
+            // Tanker 1
             row = dgvSupport.Rows[3];
 
             Properties.Settings.Default.prevColTypeTanker1Support = row.Cells["colTypeSupport"].Value as string;
@@ -2334,7 +2616,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColBackupTanker1Support = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesTanker1Support = row.Cells["colNotesSupport"].Value as string;
 
-            /* Tanker 2 */
+            // Tanker 2
             row = dgvSupport.Rows[4];
 
             Properties.Settings.Default.prevColTypeTanker2Support = row.Cells["colTypeSupport"].Value as string;
@@ -2345,7 +2627,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColBackupTanker2Support = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesTanker2Support = row.Cells["colNotesSupport"].Value as string;
 
-            /* JSTAR */
+            // JSTAR
             row = dgvSupport.Rows[5];
 
             Properties.Settings.Default.prevColTypeJSTARSupport = row.Cells["colTypeSupport"].Value as string;
@@ -2355,6 +2637,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPresetJSTARSupport = row.Cells["colPresetSupport"].Value as string;
             Properties.Settings.Default.prevColBackupJSTARSupport = row.Cells["colBackupSupport"].Value as string;
             Properties.Settings.Default.prevColNotesJSTARSupport = row.Cells["colNotesSupport"].Value as string;
+            */
         }
 
         /* Select kneeboardbuilder file and save path */
