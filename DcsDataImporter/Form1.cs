@@ -124,6 +124,7 @@ namespace DcsDataImporter
         public const string Z = "ZULU";
 
         public List<Tuple> list;
+        public List<Airbase> airbases;
         public bool standardTrainingSet = false;
 
         private bool hasTma;
@@ -161,6 +162,8 @@ namespace DcsDataImporter
 
             if (Tacp == null) disableTacp();
             if (Awacs == null) disableAwacs();
+
+            genAirbaseObj();
 
             /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
@@ -255,7 +258,6 @@ namespace DcsDataImporter
             initDataGridView(dgvAirbase, 3);
             initDataGridView(dgvFlight, 4);
             initDataGridView(dgvSupport, 10);
-            // initSupport();
         }
 
         public void initDataGridView(DataGridView dgv, int rowCount)
@@ -263,33 +265,6 @@ namespace DcsDataImporter
             dgv.RowCount = rowCount;
             dgv.DefaultCellStyle.SelectionBackColor = dgv.DefaultCellStyle.BackColor;
             dgv.DefaultCellStyle.SelectionForeColor = dgv.DefaultCellStyle.ForeColor;
-        }
-
-        private void initSupport()
-        {
-            /* fillSupportWithDash();
-
-            var row = dgvSupport.Rows[0];
-            row.Cells["colTypeSupport"].Value = "AWACS A-G";
-            //row.Cells["colNotesSupport"].Value = "WD";
-            row = dgvSupport.Rows[1];
-            row.Cells["colTypeSupport"].Value = "AWACS A-A";
-            //row.Cells["colNotesSupport"].Value = "WD";
-            row = dgvSupport.Rows[2];
-            row.Cells["colTypeSupport"].Value = "FAC(A)";
-            row = dgvSupport.Rows[3];
-            row.Cells["colTypeSupport"].Value = "Tanker 1";
-            row = dgvSupport.Rows[4];
-            row.Cells["colTypeSupport"].Value = "Tanker 2";
-            row = dgvSupport.Rows[5];
-            row.Cells["colTypeSupport"].Value = "JSTAR";
-            row = dgvSupport.Rows[6];
-            row.Cells["colTypeSupport"].Value = "In-Flight Report";
-            row = dgvSupport.Rows[7];
-            row.Cells["colTypeSupport"].Value = "CSAR";
-            row = dgvSupport.Rows[8];
-            row.Cells["colTypeSupport"].Value = "Package";
-            */
         }
 
         /* Overloaded method with checkbox as arguments */
@@ -1093,96 +1068,8 @@ namespace DcsDataImporter
             }
 
             /* GEORGIA MAP */
-            // Use configuration files for airbases instead. This makes the user capable of changing airbase data himself.
+            setAirbase(row, stripArrlocAndDeplocFromAirportIdentifier(identifier));
 
-            /* Kobuleti */
-            if (identifier.EndsWith("UG5X"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Kobuleti"; */
-            }
-
-            /* Gudauta */
-            else if (identifier.EndsWith("UG23"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Gudauta"; */
-            }
-
-            /* Soganlug */
-            else if (identifier.EndsWith("UG24"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Soganlug"; */
-            }
-
-            /* Vaziani */
-            else if (identifier.EndsWith("UG27"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Vaziani"; */
-                setVaziani(row, identifier);
-            }
-
-            /* Kutaisi - Kopitnari */
-            else if (identifier.EndsWith("UGKO"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Kutaisi"; */
-            }
-
-            /* Senaki - Kolkhi */
-            else if (identifier.EndsWith("UGKS"))
-            {
-                setSenaki(row, identifier);
-            }
-
-            /* Batumi */
-            else if (identifier.EndsWith("UGSB"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Batumi"; */
-            }
-
-            /* Sukhumi - Babashara */
-            else if (identifier.EndsWith("UGSS"))
-            {
-                /* txtTma.Text = "";
-                txtAirportName.Text = "Sukhumi"; */
-            }
-
-            /* Tblisi Lochini */
-            else if (identifier.EndsWith("UGTB"))
-            {
-                setTbilisi(row, identifier);
-            }
-            else
-            {
-                // clear current row
-                if (identifier.StartsWith("DEPLOC:"))
-                {
-                    clearRow(0);
-                } else if (identifier.StartsWith("ARRLOC:"))
-                {
-                    clearRow(1);
-                } else if (identifier.StartsWith("ALTLOC:"))
-                {
-                    clearRow(2);
-                }
-            }
-        }
-
-        private void clearRow(int i)
-        {
-            var row = dgvAirbase.Rows[i];
-            row.Cells["colAirbase"].Value = "";
-            row.Cells["colTcn"].Value = "";
-            row.Cells["colGnd"].Value = "";
-            row.Cells["colTwr"].Value = "";
-            row.Cells["colTma"].Value = "";
-            row.Cells["colElev"].Value = "";
-            row.Cells["colRwy"].Value = "";
-            row.Cells["colIls"].Value = "";
         }
 
         private void initSupportRow(int i)
@@ -1221,9 +1108,170 @@ namespace DcsDataImporter
             setAirport(identifier);
         }
 
+        private void genAirbaseObj()
+        {
+            airbases = new List<Airbase>();
+
+            string path = Environment.CurrentDirectory + "\\" + "airbases-caucasus.csv";   
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                while (reader.Peek() >= 0)
+                {
+                    string line = reader.ReadLine();
+
+                    string id, name, tcn, gnd, twr, tma, elev, rws, ils;
+                    id = name = tcn = gnd = twr = tma = elev = rws = ils = null;
+
+                    int valueNr = 0;
+                    foreach (string word in line.Split(','))
+                    {
+                        if (valueNr == 0) id = word.Trim();
+                        if (valueNr == 1) name = word.Trim();
+                        if (valueNr == 2) tcn = word.Trim();
+                        if (valueNr == 3) gnd = word.Trim();
+                        if (valueNr == 4) twr = word.Trim();
+                        if (valueNr == 5) tma = word.Trim();
+                        if (valueNr == 6) elev = word.Trim();
+                        if (valueNr == 7) rws = word.Trim();
+                        if (valueNr == 8) ils = word.Trim();
+
+                        valueNr++;
+                    }
+                    Airbase ab = new Airbase(id, name, tcn, gnd, twr, tma, elev, rws, ils);
+                    airbases.Add(ab);
+                }
+            }
+        }
+
+        private void setAirbase(DataGridViewRow r, string id)
+        {
+            Airbase ab = airbases.Find(x => x.getIdentifier(id).Equals(id));
+            var row = r;
+
+            if (ab == null)
+            {
+                MessageBox.Show("Airbase was not found in the .csv file");
+            } else
+            {
+                row.Cells[0].Value = ab.getName();
+                row.Cells[1].Value = ab.getTacan();
+                row.Cells[2].Value = ab.getGround();
+                row.Cells[3].Value = ab.getTower();
+                row.Cells[4].Value = ab.getTma();
+                row.Cells[5].Value = ab.getElevation();
+                row.Cells[6].Value = ab.getRunways();
+                row.Cells[7].Value = ab.getIls();
+            }
+        }
+
         private void setTbilisi(DataGridViewRow r, string identifier)
         {
-            var row = r;
+
+            if (identifier.StartsWith("DEPLOC:"))
+            {
+                txtParking.Text = "APRON 1";
+            }
+
+            enableTma();
+            /*string path = Environment.CurrentDirectory + "\\" + "airbases-caucasus.csv";
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                while (reader.Peek() >= 0)
+                {
+                    string line = reader.ReadLine();
+                    if (line.StartsWith("UGTB"))
+                    {
+                        int valueNr = 0;
+                        bool first = true;
+                        foreach (string word in line.Split(','))
+                        {
+                            // hopp over første
+                            if (first)
+                            {
+                                first = false;
+                            } else
+                            {
+                                var row = r;
+                                row.Cells[valueNr].Value = word;
+                                valueNr++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (identifier.StartsWith("DEPLOC:"))
+            {
+                txtParking.Text = "APRON 1";
+            }
+
+            enableTma();*/
+
+            /*using (PdfReader reader = new PdfReader(path))
+            {
+                StringBuilder text = new StringBuilder();
+
+                for (int i = 1; i <= reader.NumberOfPages; i++)
+                {
+                    text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
+                }
+                return text.ToString();
+            }*/
+
+            /*string presetsTextCleaned = CleanPresets(ExtractTextFromPdf(Properties.Settings.Default.frequencyPresetFilename));
+
+            bool lastWordWasChannel = false;
+            Tuple tuple = null;
+
+            list = new List<Tuple>();
+
+            foreach (string word in presetsTextCleaned.Split(' '))
+            {
+
+                if (lastWordWasChannel && isNumber(word))
+                {
+                    // Number following a channel
+                    lastWordWasChannel = false;
+
+                    // Add color to item already in list
+                    list.Find(x => x.getFreq().Equals(tuple.getFreq())).setChannel(word);
+                }
+                else
+                {
+
+                    if (isNumber(word))
+                    {
+                        // Preset
+                        tuple = new Tuple(); // Create new item when encountering new preset
+                        tuple.setPreset(word);
+                    }
+
+                    else if (isFreq(word))
+                    {
+                        // Freq
+                        tuple.setFreq(word);
+                        list.Add(tuple); // Add item to list here because all items has a frequency
+                    }
+
+                    else if (isColor(word))
+                    {
+                        // Channel color
+                        lastWordWasChannel = true;
+                        tuple.setChannel(word);
+
+                        // Name
+                    }
+                    else
+                    {
+                        // Everything not identified is the name
+                        tuple.setName(word);
+                    }
+                }
+            }*/
+
+            /* var row = r;
 
             row.Cells["colAirbase"].Value = "Tbilisi-Lochini"; // Remember to add only Lochini to the kneeboard
             row.Cells["colTcn"].Value = "25X";
@@ -1232,12 +1280,7 @@ namespace DcsDataImporter
             row.Cells["colTma"].Value = "127.2";
             row.Cells["colElev"].Value = "1473";
             row.Cells["colRwy"].Value = "31L/13R";
-            row.Cells["colIls"].Value = "108.90/110.30";
-
-            if (identifier.StartsWith("DEPLOC:"))
-            {
-                txtParking.Text = "APRON 1";
-            }
+            row.Cells["colIls"].Value = "108.90/110.30"; */
 
             /*txtAirportName.Text = "Lochini";
             txtRunwayRight.Text = "13R";
@@ -1251,7 +1294,6 @@ namespace DcsDataImporter
             txtILS.Text = "13R:110.30 31L:108.90";*/
 
             /* Enabling TMA since Tbilisi has an approach */
-            enableTma();
 
             // txtTma.Text = "Tblisi";
 
@@ -3477,6 +3519,77 @@ namespace DcsDataImporter
         {
             lblTacpCallsign.Show();
             txtTacpCallsign.Show();
+        }
+    }
+
+    public class Airbase
+    {
+        string identifier;
+        string name;
+        string tacan;
+        string ground;
+        string tower;
+        string tma;
+        string elevation;
+        string runways;
+        string ils;
+
+        public Airbase(string identifier, string name, string tacan, string ground, string tower, string tma, string elevation, string runways, string ils)
+        {
+            this.identifier = identifier;
+            this.name = name;
+            this.tacan = tacan;
+            this.ground = ground;
+            this.tower = tower;
+            this.tma = tma;
+            this.elevation = elevation;
+            this.runways = runways;
+            this.ils = ils;
+        }
+
+        public string getIdentifier(string id)
+        {
+            return this.identifier;
+        }
+
+        public string getName()
+        {
+            return this.name;
+        }
+
+        public string getTacan()
+        {
+            return this.tacan;
+        }
+
+        public string getGround()
+        {
+            return this.ground;
+        }
+
+        public string getTower()
+        {
+            return this.tower;
+        }
+
+        public string getTma()
+        {
+            return this.tma;
+        }
+
+        public string getElevation()
+        {
+            return this.elevation;
+        }
+
+        public string getRunways()
+        {
+            return this.runways;
+        }
+
+        public string getIls()
+        {
+            return this.ils;
         }
     }
 
