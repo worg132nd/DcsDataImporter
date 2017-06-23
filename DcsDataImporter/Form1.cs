@@ -1068,8 +1068,102 @@ namespace DcsDataImporter
             }
 
             /* GEORGIA MAP */
+            // Use configuration files for airbases instead. This makes the user capable of changing airbase data himself.
+
             setAirbase(row, stripArrlocAndDeplocFromAirportIdentifier(identifier));
 
+            /*
+            // Kobuleti
+            if (identifier.EndsWith("UG5X"))
+            {
+                //setAirbase(row, "UG5X");
+                // txtTma.Text = "";
+                txtAirportName.Text = "Kobuleti";
+            }
+
+            // Gudauta
+            else if (identifier.EndsWith("UG23"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Gudauta";
+            }
+
+            // Soganlug
+            else if (identifier.EndsWith("UG24"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Soganlug";
+            }
+
+            // Vaziani
+            else if (identifier.EndsWith("UG27"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Vaziani";
+                setVaziani(row, identifier);
+            }
+
+            // Kutaisi - Kopitnari
+            else if (identifier.EndsWith("UGKO"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Kutaisi";
+            }
+
+            // Senaki - Kolkhi
+            else if (identifier.EndsWith("UGKS"))
+            {
+                setSenaki(row, identifier);
+            }
+
+            // Batumi
+            else if (identifier.EndsWith("UGSB"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Batumi";
+            }
+
+            // Sukhumi - Babashara
+            else if (identifier.EndsWith("UGSS"))
+            {
+                // txtTma.Text = "";
+                txtAirportName.Text = "Sukhumi";
+            }
+
+            // Tblisi Lochini
+            else if (identifier.EndsWith("UGTB"))
+            {
+                // setTbilisi(row, identifier);
+                setAirbase(row, "UGTB");
+            }
+            else
+            {
+                // clear current row
+                if (identifier.StartsWith("DEPLOC:"))
+                {
+                    clearRow(0);
+                } else if (identifier.StartsWith("ARRLOC:"))
+                {
+                    clearRow(1);
+                } else if (identifier.StartsWith("ALTLOC:"))
+                {
+                    clearRow(2);
+                }
+            }
+            */
+        }
+
+        private void clearRow(int i)
+        {
+            var row = dgvAirbase.Rows[i];
+            row.Cells["colAirbase"].Value = "";
+            row.Cells["colTcn"].Value = "";
+            row.Cells["colGnd"].Value = "";
+            row.Cells["colTwr"].Value = "";
+            row.Cells["colTma"].Value = "";
+            row.Cells["colElev"].Value = "";
+            row.Cells["colRwy"].Value = "";
+            row.Cells["colIls"].Value = "";
         }
 
         private void initSupportRow(int i)

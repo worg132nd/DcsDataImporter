@@ -589,6 +589,8 @@ namespace DcsDataImporter
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            // ToDo: Deselect the blue squares on currentcell in dgv's (doesn't work due to bug)
+
             btnNext.Hide();
             btnBack.Hide();
             btnImportMissionFile.Hide();

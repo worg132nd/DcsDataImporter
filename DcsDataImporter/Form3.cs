@@ -29,9 +29,110 @@ namespace DcsDataImporter
         {
             initTgtDgv(dgvTgtLead);
             initTgtDgv(dgvTgtElem);
+            
+            // Disable second element if less than 3 in the flight
+            if (Int32.Parse(Properties.Settings.Default.prevTxtNrOfAc) < 3){
+                disableSecElem();
+                moveSecElemUp(132);
+            }
+
             initProfiles();
             initPackageDgv();
             initForm(tac);
+        }
+
+        private void disableSecElem()
+        {
+            lblElement2.Hide();
+            lblAttack2.Hide();
+            lblRelease2.Hide();
+            lblEgress2.Hide();
+            lblProfile2.Hide();
+            lblDelivery2.Hide();
+            lblIpAttack2.Hide();
+            lblScSs2.Hide();
+            lblFormation2.Hide();
+            lblFAH2.Hide();
+            lblAltitude2.Hide();
+            lblAbort2.Hide();
+            lblSem2.Hide();
+            lblLeftRight2.Hide();
+            lblCardinal2.Hide();
+            lblHeading2.Hide();
+            lblIpEgress2.Hide();
+            //txtProfileAttack3.Hide();
+            //txtProfileAttack4.Hide();
+            //cbDelivery3.Hide();
+            //cbDelivery4.Hide();
+            //txtAttackIP3.Hide();
+            //txtAttackIP4.Hide();
+            //cbSCSS3.Hide();
+            //cbSCSS4.Hide();
+            //cbFormation3.Hide();
+            //cbFormation4.Hide();
+            //txtAltitude3.Hide();
+            //txtAltitude4.Hide();
+            //txtAbort3.Hide();
+            //txtAbort4.Hide();
+            //cbSem3.Hide();
+            //cbSem4.Hide();
+            //cbEgressDirection3.Hide();
+            //cbEgressDirection4.Hide();
+            //cbEgressCardinal3.Hide();
+            //cbEgressCardinal4.Hide();
+            //numEgressHeading3.Hide();
+            //numEgressHeading4.Hide();
+            //txtEgressIP3.Hide();
+            //txtEgressIP4.Hide();
+            panel1.Height = 233;
+            dgvTgtElem.Hide();
+        }
+
+        private void moveSecElemUp(int h)
+        {
+            lblElement2.Top -= h;
+            lblAttack2.Top -= h;
+            lblRelease2.Top -= h;
+            lblEgress2.Top -= h;
+            lblProfile2.Top -= h;
+            lblDelivery2.Top -= h;
+            lblIpAttack2.Top -= h;
+            lblScSs2.Top -= h;
+            lblFormation2.Top -= h;
+            lblFAH2.Top -= h;
+            lblAltitude2.Top -= h;
+            lblAbort2.Top -= h;
+            lblSem2.Top -= h;
+            lblLeftRight2.Top -= h;
+            lblCardinal2.Top -= h;
+            lblHeading2.Top -= h;
+            lblIpEgress2.Top -= h;
+            txtProfileAttack3.Top -= h;
+            txtProfileAttack4.Top -= h;
+            cbDelivery3.Top -= h;
+            cbDelivery4.Top -= h;
+            txtAttackIP3.Top -= h;
+            txtAttackIP4.Top -= h;
+            cbSCSS3.Top -= h;
+            cbSCSS4.Top -= h;
+            cbFormation3.Top -= h;
+            cbFormation4.Top -= h;
+            numFAH3.Top -= h;
+            numFAH4.Top -= h;
+            txtAltitude3.Top -= h;
+            txtAltitude4.Top -= h;
+            txtAbort3.Top -= h;
+            txtAbort4.Top -= h;
+            cbSem3.Top -= h;
+            cbSem4.Top -= h;
+            cbEgressDirection3.Top -= h;
+            cbEgressDirection4.Top -= h;
+            cbEgressCardinal3.Top -= h;
+            cbEgressCardinal4.Top -= h;
+            numEgressHeading3.Top -= h;
+            numEgressHeading4.Top -= h;
+            txtEgressIP3.Top -= h;
+            txtEgressIP4.Top -= h;
         }
 
         private void initForm(string tac)
