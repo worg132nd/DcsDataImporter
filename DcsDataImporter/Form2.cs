@@ -27,9 +27,11 @@ namespace DcsDataImporter
 
             initFp();
             initTma();
+
+            loadWaypoints(); // load waypoints when coming from form3 using back
         }
 
-        public Form2(string dep, string arr, string alt, string loc, string tac)
+        public Form2(string dep, string arr, string alt, string loc, string tac, bool loadPrev)
         {
             InitializeComponent();
             initFp();
@@ -46,6 +48,11 @@ namespace DcsDataImporter
                 setKillbox(loc);
             }
             tacticalAirControl = tac;
+
+            if (loadPrev) // if loadPrev has been sent from form1, load the previous waypoints
+            {
+                loadWaypoints(); // load waypoints when coming from form1 using next
+            }
         }
 
         private bool isRange(string loc)
@@ -293,6 +300,8 @@ namespace DcsDataImporter
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            saveForm();
+
             Form1 form1 = new Form1();
             form1.Show();
             Hide();
@@ -494,8 +503,6 @@ namespace DcsDataImporter
                     //Console.WriteLine(wp.getDictName());
                     //Console.WriteLine(wp.getDisplayName());
 
-                    // hent ut til man får treff i mission fila: samle alle data
-
                     string line;
                     string prevLine = null;
                     string twoLinesBack = null;
@@ -598,9 +605,579 @@ namespace DcsDataImporter
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
+            saveForm();
+
             Form3 form3 = new Form3(tacticalAirControl);
             form3.Show(); // Show next flight form
             Hide(); // Hide form1
+        }
+
+        private void saveForm()
+        {
+            saveWaypoints();
+            saveTma();
+        }
+
+        private void loadForm()
+        {
+            loadWaypoints();
+            loadTma();
+        }
+
+        private void saveWaypoints()
+        {
+            var row = dgvFlightplan.Rows[0];
+
+            Properties.Settings.Default.wpr0c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr0c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr0c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr0c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr0c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr0c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr0c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[1];
+
+            Properties.Settings.Default.wpr1c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr1c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr1c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr1c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr1c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr1c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr1c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[2];
+
+            Properties.Settings.Default.wpr2c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr2c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr2c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr2c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr2c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr2c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr2c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[3];
+
+            Properties.Settings.Default.wpr3c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr3c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr3c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr3c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr3c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr3c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr3c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[4];
+
+            Properties.Settings.Default.wpr4c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr4c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr4c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr4c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr4c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr4c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr4c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[5];
+
+            Properties.Settings.Default.wpr5c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr5c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr5c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr5c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr5c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr5c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr5c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[6];
+
+            Properties.Settings.Default.wpr6c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr6c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr6c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr6c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr6c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr6c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr6c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[7];
+
+            Properties.Settings.Default.wpr7c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr7c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr7c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr7c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr7c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr7c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr7c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[8];
+
+            Properties.Settings.Default.wpr8c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr8c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr8c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr8c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr8c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr8c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr8c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[9];
+
+            Properties.Settings.Default.wpr9c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr9c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr9c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr9c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr9c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr9c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr9c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[10];
+
+            Properties.Settings.Default.wpr10c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr10c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr10c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr10c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr10c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr10c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr10c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[11];
+
+            Properties.Settings.Default.wpr11c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr11c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr11c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr11c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr11c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr11c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr11c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[12];
+
+            Properties.Settings.Default.wpr12c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr12c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr12c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr12c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr12c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr12c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr12c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[13];
+
+            Properties.Settings.Default.wpr13c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr13c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr13c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr13c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr13c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr13c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr13c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[14];
+
+            Properties.Settings.Default.wpr14c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr14c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr14c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr14c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr14c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr14c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr14c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[15];
+
+            Properties.Settings.Default.wpr15c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr15c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr15c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr15c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr15c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr15c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr15c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[16];
+
+            Properties.Settings.Default.wpr16c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr16c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr16c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr16c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr16c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr16c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr16c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[17];
+
+            Properties.Settings.Default.wpr17c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr17c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr17c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr17c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr17c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr17c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr17c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[18];
+
+            Properties.Settings.Default.wpr18c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr18c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr18c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr18c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr18c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr18c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr18c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[19];
+
+            Properties.Settings.Default.wpr19c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr19c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr19c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr19c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr19c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr19c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr19c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[20];
+
+            Properties.Settings.Default.wpr20c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr20c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr20c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr20c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr20c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr20c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr20c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[21];
+
+            Properties.Settings.Default.wpr21c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr21c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr21c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr21c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr21c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr21c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr21c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[22];
+
+            Properties.Settings.Default.wpr22c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr22c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr22c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr22c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr22c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr22c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr22c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[23];
+
+            Properties.Settings.Default.wpr23c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr23c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr23c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr23c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr23c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr23c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr23c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[24];
+
+            Properties.Settings.Default.wpr24c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr24c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr24c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr24c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr24c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr24c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr24c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[25];
+
+            Properties.Settings.Default.wpr25c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr25c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr25c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr25c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr25c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr25c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr25c7 = row.Cells[7].Value as string;
+
+            row = dgvFlightplan.Rows[26];
+
+            Properties.Settings.Default.wpr26c1 = row.Cells[1].Value as string;
+            Properties.Settings.Default.wpr26c2 = row.Cells[2].Value as string;
+            Properties.Settings.Default.wpr26c3 = row.Cells[3].Value as string;
+            Properties.Settings.Default.wpr26c4 = row.Cells[4].Value as string;
+            Properties.Settings.Default.wpr26c5 = row.Cells[5].Value as string;
+            Properties.Settings.Default.wpr26c6 = row.Cells[6].Value as string;
+            Properties.Settings.Default.wpr26c7 = row.Cells[7].Value as string;
+        }
+
+        private void loadWaypoints()
+        {
+            var row = dgvFlightplan.Rows[0];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr0c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr0c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr0c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr0c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr0c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr0c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr0c7;
+
+            row = dgvFlightplan.Rows[1];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr1c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr1c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr1c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr1c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr1c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr1c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr1c7;
+
+            row = dgvFlightplan.Rows[2];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr2c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr2c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr2c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr2c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr2c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr2c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr2c7;
+
+            row = dgvFlightplan.Rows[3];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr3c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr3c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr3c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr3c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr3c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr3c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr3c7;
+
+            row = dgvFlightplan.Rows[4];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr4c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr4c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr4c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr4c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr4c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr4c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr4c7;
+
+            row = dgvFlightplan.Rows[5];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr5c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr5c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr5c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr5c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr5c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr5c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr5c7;
+
+            row = dgvFlightplan.Rows[6];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr6c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr6c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr6c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr6c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr6c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr6c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr6c7;
+
+            row = dgvFlightplan.Rows[7];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr7c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr7c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr7c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr7c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr7c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr7c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr7c7;
+
+            row = dgvFlightplan.Rows[8];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr8c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr8c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr8c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr8c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr8c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr8c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr8c7;
+
+            row = dgvFlightplan.Rows[9];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr9c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr9c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr9c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr9c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr9c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr9c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr9c7;
+
+            row = dgvFlightplan.Rows[10];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr10c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr10c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr10c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr10c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr10c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr10c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr10c7;
+
+            row = dgvFlightplan.Rows[11];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr11c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr11c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr11c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr11c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr11c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr11c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr11c7;
+
+            row = dgvFlightplan.Rows[12];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr12c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr12c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr12c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr12c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr12c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr12c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr12c7;
+
+            row = dgvFlightplan.Rows[13];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr13c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr13c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr13c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr13c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr13c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr13c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr13c7;
+
+            row = dgvFlightplan.Rows[14];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr14c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr14c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr14c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr14c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr14c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr14c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr14c7;
+
+            row = dgvFlightplan.Rows[15];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr15c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr15c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr15c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr15c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr15c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr15c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr15c7;
+
+            row = dgvFlightplan.Rows[16];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr16c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr16c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr16c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr16c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr16c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr16c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr16c7;
+
+            row = dgvFlightplan.Rows[17];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr17c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr17c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr17c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr17c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr17c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr17c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr17c7;
+
+            row = dgvFlightplan.Rows[18];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr18c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr18c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr18c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr18c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr18c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr18c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr18c7;
+
+            row = dgvFlightplan.Rows[19];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr19c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr19c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr19c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr19c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr19c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr19c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr19c7;
+
+            row = dgvFlightplan.Rows[20];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr20c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr20c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr20c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr20c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr20c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr20c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr20c7;
+
+            row = dgvFlightplan.Rows[21];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr21c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr21c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr21c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr21c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr21c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr21c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr21c7;
+
+            row = dgvFlightplan.Rows[22];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr22c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr22c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr22c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr22c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr22c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr22c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr22c7;
+
+            row = dgvFlightplan.Rows[23];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr23c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr23c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr23c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr23c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr23c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr23c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr23c7;
+
+            row = dgvFlightplan.Rows[24];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr24c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr24c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr24c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr24c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr24c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr24c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr24c7;
+
+            row = dgvFlightplan.Rows[25];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr25c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr25c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr25c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr25c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr25c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr25c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr25c7;
+
+            row = dgvFlightplan.Rows[26];
+
+            row.Cells[1].Value = Properties.Settings.Default.wpr26c1;
+            row.Cells[2].Value = Properties.Settings.Default.wpr26c2;
+            row.Cells[3].Value = Properties.Settings.Default.wpr26c3;
+            row.Cells[4].Value = Properties.Settings.Default.wpr26c4;
+            row.Cells[5].Value = Properties.Settings.Default.wpr26c5;
+            row.Cells[6].Value = Properties.Settings.Default.wpr26c6;
+            row.Cells[7].Value = Properties.Settings.Default.wpr26c7;
+        }
+
+        private void saveTma()
+        {
+            // TBD.
+        }
+
+        private void loadTma()
+        {
+            // TBD.
         }
 
         private void captureScreen(string path)

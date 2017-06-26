@@ -128,6 +128,7 @@ namespace DcsDataImporter
         public bool standardTrainingSet = false;
 
         private bool hasTma;
+        private bool loadPrev = false;
 
         private int lblJtacPosLeft = 0;
         private int lblJtacPosTop = 0;
@@ -142,14 +143,16 @@ namespace DcsDataImporter
         {
             init();
             loadPrevMission();
+            loadPrev = true;
         }
 
-        /* Constructor with no ATO */
+        /* Constructor with no ATO: Used when pressing the <Load prev.> button */
         public Form1(bool standardTraining)
         {
             if (standardTraining) standardTrainingSet = true;
             init();
             loadPrevMission();
+            loadPrev = true;
         }    
 
         /* Constructor when ATO is filled out */
@@ -2003,7 +2006,7 @@ namespace DcsDataImporter
             row = dgvAirbase.Rows[2];
             string alt = (string)row.Cells["colAirbase"].Value;
 
-            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text, selectTac());
+            Form2 form2 = new Form2(blank(dep), blank(arr), blank(alt), txtLocation.Text, selectTac(), loadPrev);
             form2.Show(); // Show next flight form
             Hide(); // Hide form1
         }

@@ -2746,5 +2746,2273 @@ namespace DcsDataImporter.Properties {
                 this["supportNotesRow9"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c1 {
+            get {
+                return ((string)(this["wpr0c1"]));
+            }
+            set {
+                this["wpr0c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c2 {
+            get {
+                return ((string)(this["wpr0c2"]));
+            }
+            set {
+                this["wpr0c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c3 {
+            get {
+                return ((string)(this["wpr0c3"]));
+            }
+            set {
+                this["wpr0c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c4 {
+            get {
+                return ((string)(this["wpr0c4"]));
+            }
+            set {
+                this["wpr0c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c5 {
+            get {
+                return ((string)(this["wpr0c5"]));
+            }
+            set {
+                this["wpr0c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c6 {
+            get {
+                return ((string)(this["wpr0c6"]));
+            }
+            set {
+                this["wpr0c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr0c7 {
+            get {
+                return ((string)(this["wpr0c7"]));
+            }
+            set {
+                this["wpr0c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c1 {
+            get {
+                return ((string)(this["wpr1c1"]));
+            }
+            set {
+                this["wpr1c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c2 {
+            get {
+                return ((string)(this["wpr1c2"]));
+            }
+            set {
+                this["wpr1c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c3 {
+            get {
+                return ((string)(this["wpr1c3"]));
+            }
+            set {
+                this["wpr1c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c4 {
+            get {
+                return ((string)(this["wpr1c4"]));
+            }
+            set {
+                this["wpr1c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c5 {
+            get {
+                return ((string)(this["wpr1c5"]));
+            }
+            set {
+                this["wpr1c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c6 {
+            get {
+                return ((string)(this["wpr1c6"]));
+            }
+            set {
+                this["wpr1c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr1c7 {
+            get {
+                return ((string)(this["wpr1c7"]));
+            }
+            set {
+                this["wpr1c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c1 {
+            get {
+                return ((string)(this["wpr2c1"]));
+            }
+            set {
+                this["wpr2c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c2 {
+            get {
+                return ((string)(this["wpr2c2"]));
+            }
+            set {
+                this["wpr2c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c3 {
+            get {
+                return ((string)(this["wpr2c3"]));
+            }
+            set {
+                this["wpr2c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c4 {
+            get {
+                return ((string)(this["wpr2c4"]));
+            }
+            set {
+                this["wpr2c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c5 {
+            get {
+                return ((string)(this["wpr2c5"]));
+            }
+            set {
+                this["wpr2c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c6 {
+            get {
+                return ((string)(this["wpr2c6"]));
+            }
+            set {
+                this["wpr2c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr2c7 {
+            get {
+                return ((string)(this["wpr2c7"]));
+            }
+            set {
+                this["wpr2c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c1 {
+            get {
+                return ((string)(this["wpr3c1"]));
+            }
+            set {
+                this["wpr3c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c2 {
+            get {
+                return ((string)(this["wpr3c2"]));
+            }
+            set {
+                this["wpr3c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c3 {
+            get {
+                return ((string)(this["wpr3c3"]));
+            }
+            set {
+                this["wpr3c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c4 {
+            get {
+                return ((string)(this["wpr3c4"]));
+            }
+            set {
+                this["wpr3c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c5 {
+            get {
+                return ((string)(this["wpr3c5"]));
+            }
+            set {
+                this["wpr3c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c6 {
+            get {
+                return ((string)(this["wpr3c6"]));
+            }
+            set {
+                this["wpr3c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr3c7 {
+            get {
+                return ((string)(this["wpr3c7"]));
+            }
+            set {
+                this["wpr3c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c1 {
+            get {
+                return ((string)(this["wpr4c1"]));
+            }
+            set {
+                this["wpr4c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c1 {
+            get {
+                return ((string)(this["wpr5c1"]));
+            }
+            set {
+                this["wpr5c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c2 {
+            get {
+                return ((string)(this["wpr5c2"]));
+            }
+            set {
+                this["wpr5c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c3 {
+            get {
+                return ((string)(this["wpr5c3"]));
+            }
+            set {
+                this["wpr5c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c4 {
+            get {
+                return ((string)(this["wpr5c4"]));
+            }
+            set {
+                this["wpr5c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c5 {
+            get {
+                return ((string)(this["wpr5c5"]));
+            }
+            set {
+                this["wpr5c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c6 {
+            get {
+                return ((string)(this["wpr5c6"]));
+            }
+            set {
+                this["wpr5c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr5c7 {
+            get {
+                return ((string)(this["wpr5c7"]));
+            }
+            set {
+                this["wpr5c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c1 {
+            get {
+                return ((string)(this["wpr6c1"]));
+            }
+            set {
+                this["wpr6c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c2 {
+            get {
+                return ((string)(this["wpr6c2"]));
+            }
+            set {
+                this["wpr6c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c3 {
+            get {
+                return ((string)(this["wpr6c3"]));
+            }
+            set {
+                this["wpr6c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c4 {
+            get {
+                return ((string)(this["wpr6c4"]));
+            }
+            set {
+                this["wpr6c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c5 {
+            get {
+                return ((string)(this["wpr6c5"]));
+            }
+            set {
+                this["wpr6c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c6 {
+            get {
+                return ((string)(this["wpr6c6"]));
+            }
+            set {
+                this["wpr6c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr6c7 {
+            get {
+                return ((string)(this["wpr6c7"]));
+            }
+            set {
+                this["wpr6c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c1 {
+            get {
+                return ((string)(this["wpr7c1"]));
+            }
+            set {
+                this["wpr7c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c2 {
+            get {
+                return ((string)(this["wpr7c2"]));
+            }
+            set {
+                this["wpr7c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c3 {
+            get {
+                return ((string)(this["wpr7c3"]));
+            }
+            set {
+                this["wpr7c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c4 {
+            get {
+                return ((string)(this["wpr7c4"]));
+            }
+            set {
+                this["wpr7c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c5 {
+            get {
+                return ((string)(this["wpr7c5"]));
+            }
+            set {
+                this["wpr7c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c6 {
+            get {
+                return ((string)(this["wpr7c6"]));
+            }
+            set {
+                this["wpr7c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr7c7 {
+            get {
+                return ((string)(this["wpr7c7"]));
+            }
+            set {
+                this["wpr7c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c1 {
+            get {
+                return ((string)(this["wpr8c1"]));
+            }
+            set {
+                this["wpr8c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c2 {
+            get {
+                return ((string)(this["wpr8c2"]));
+            }
+            set {
+                this["wpr8c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c3 {
+            get {
+                return ((string)(this["wpr8c3"]));
+            }
+            set {
+                this["wpr8c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c4 {
+            get {
+                return ((string)(this["wpr8c4"]));
+            }
+            set {
+                this["wpr8c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c5 {
+            get {
+                return ((string)(this["wpr8c5"]));
+            }
+            set {
+                this["wpr8c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c6 {
+            get {
+                return ((string)(this["wpr8c6"]));
+            }
+            set {
+                this["wpr8c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr8c7 {
+            get {
+                return ((string)(this["wpr8c7"]));
+            }
+            set {
+                this["wpr8c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c1 {
+            get {
+                return ((string)(this["wpr9c1"]));
+            }
+            set {
+                this["wpr9c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c2 {
+            get {
+                return ((string)(this["wpr9c2"]));
+            }
+            set {
+                this["wpr9c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c3 {
+            get {
+                return ((string)(this["wpr9c3"]));
+            }
+            set {
+                this["wpr9c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c4 {
+            get {
+                return ((string)(this["wpr9c4"]));
+            }
+            set {
+                this["wpr9c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c5 {
+            get {
+                return ((string)(this["wpr9c5"]));
+            }
+            set {
+                this["wpr9c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c6 {
+            get {
+                return ((string)(this["wpr9c6"]));
+            }
+            set {
+                this["wpr9c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr9c7 {
+            get {
+                return ((string)(this["wpr9c7"]));
+            }
+            set {
+                this["wpr9c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c1 {
+            get {
+                return ((string)(this["wpr10c1"]));
+            }
+            set {
+                this["wpr10c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c2 {
+            get {
+                return ((string)(this["wpr10c2"]));
+            }
+            set {
+                this["wpr10c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c3 {
+            get {
+                return ((string)(this["wpr10c3"]));
+            }
+            set {
+                this["wpr10c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c4 {
+            get {
+                return ((string)(this["wpr10c4"]));
+            }
+            set {
+                this["wpr10c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c5 {
+            get {
+                return ((string)(this["wpr10c5"]));
+            }
+            set {
+                this["wpr10c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c6 {
+            get {
+                return ((string)(this["wpr10c6"]));
+            }
+            set {
+                this["wpr10c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr10c7 {
+            get {
+                return ((string)(this["wpr10c7"]));
+            }
+            set {
+                this["wpr10c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c1 {
+            get {
+                return ((string)(this["wpr11c1"]));
+            }
+            set {
+                this["wpr11c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c2 {
+            get {
+                return ((string)(this["wpr11c2"]));
+            }
+            set {
+                this["wpr11c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c3 {
+            get {
+                return ((string)(this["wpr11c3"]));
+            }
+            set {
+                this["wpr11c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c4 {
+            get {
+                return ((string)(this["wpr11c4"]));
+            }
+            set {
+                this["wpr11c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c5 {
+            get {
+                return ((string)(this["wpr11c5"]));
+            }
+            set {
+                this["wpr11c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c6 {
+            get {
+                return ((string)(this["wpr11c6"]));
+            }
+            set {
+                this["wpr11c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr11c7 {
+            get {
+                return ((string)(this["wpr11c7"]));
+            }
+            set {
+                this["wpr11c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c1 {
+            get {
+                return ((string)(this["wpr12c1"]));
+            }
+            set {
+                this["wpr12c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c2 {
+            get {
+                return ((string)(this["wpr12c2"]));
+            }
+            set {
+                this["wpr12c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c3 {
+            get {
+                return ((string)(this["wpr12c3"]));
+            }
+            set {
+                this["wpr12c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c4 {
+            get {
+                return ((string)(this["wpr12c4"]));
+            }
+            set {
+                this["wpr12c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c5 {
+            get {
+                return ((string)(this["wpr12c5"]));
+            }
+            set {
+                this["wpr12c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c6 {
+            get {
+                return ((string)(this["wpr12c6"]));
+            }
+            set {
+                this["wpr12c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr12c7 {
+            get {
+                return ((string)(this["wpr12c7"]));
+            }
+            set {
+                this["wpr12c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c1 {
+            get {
+                return ((string)(this["wpr13c1"]));
+            }
+            set {
+                this["wpr13c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c2 {
+            get {
+                return ((string)(this["wpr13c2"]));
+            }
+            set {
+                this["wpr13c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c3 {
+            get {
+                return ((string)(this["wpr13c3"]));
+            }
+            set {
+                this["wpr13c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c4 {
+            get {
+                return ((string)(this["wpr13c4"]));
+            }
+            set {
+                this["wpr13c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c5 {
+            get {
+                return ((string)(this["wpr13c5"]));
+            }
+            set {
+                this["wpr13c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c6 {
+            get {
+                return ((string)(this["wpr13c6"]));
+            }
+            set {
+                this["wpr13c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr13c7 {
+            get {
+                return ((string)(this["wpr13c7"]));
+            }
+            set {
+                this["wpr13c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c1 {
+            get {
+                return ((string)(this["wpr14c1"]));
+            }
+            set {
+                this["wpr14c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c2 {
+            get {
+                return ((string)(this["wpr14c2"]));
+            }
+            set {
+                this["wpr14c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c3 {
+            get {
+                return ((string)(this["wpr14c3"]));
+            }
+            set {
+                this["wpr14c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c4 {
+            get {
+                return ((string)(this["wpr14c4"]));
+            }
+            set {
+                this["wpr14c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c5 {
+            get {
+                return ((string)(this["wpr14c5"]));
+            }
+            set {
+                this["wpr14c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c6 {
+            get {
+                return ((string)(this["wpr14c6"]));
+            }
+            set {
+                this["wpr14c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr14c7 {
+            get {
+                return ((string)(this["wpr14c7"]));
+            }
+            set {
+                this["wpr14c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c1 {
+            get {
+                return ((string)(this["wpr15c1"]));
+            }
+            set {
+                this["wpr15c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c2 {
+            get {
+                return ((string)(this["wpr15c2"]));
+            }
+            set {
+                this["wpr15c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c3 {
+            get {
+                return ((string)(this["wpr15c3"]));
+            }
+            set {
+                this["wpr15c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c4 {
+            get {
+                return ((string)(this["wpr15c4"]));
+            }
+            set {
+                this["wpr15c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c5 {
+            get {
+                return ((string)(this["wpr15c5"]));
+            }
+            set {
+                this["wpr15c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c6 {
+            get {
+                return ((string)(this["wpr15c6"]));
+            }
+            set {
+                this["wpr15c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr15c7 {
+            get {
+                return ((string)(this["wpr15c7"]));
+            }
+            set {
+                this["wpr15c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c1 {
+            get {
+                return ((string)(this["wpr16c1"]));
+            }
+            set {
+                this["wpr16c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c2 {
+            get {
+                return ((string)(this["wpr16c2"]));
+            }
+            set {
+                this["wpr16c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c3 {
+            get {
+                return ((string)(this["wpr16c3"]));
+            }
+            set {
+                this["wpr16c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c4 {
+            get {
+                return ((string)(this["wpr16c4"]));
+            }
+            set {
+                this["wpr16c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c5 {
+            get {
+                return ((string)(this["wpr16c5"]));
+            }
+            set {
+                this["wpr16c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c6 {
+            get {
+                return ((string)(this["wpr16c6"]));
+            }
+            set {
+                this["wpr16c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr16c7 {
+            get {
+                return ((string)(this["wpr16c7"]));
+            }
+            set {
+                this["wpr16c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c1 {
+            get {
+                return ((string)(this["wpr17c1"]));
+            }
+            set {
+                this["wpr17c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c2 {
+            get {
+                return ((string)(this["wpr17c2"]));
+            }
+            set {
+                this["wpr17c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c3 {
+            get {
+                return ((string)(this["wpr17c3"]));
+            }
+            set {
+                this["wpr17c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c4 {
+            get {
+                return ((string)(this["wpr17c4"]));
+            }
+            set {
+                this["wpr17c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c5 {
+            get {
+                return ((string)(this["wpr17c5"]));
+            }
+            set {
+                this["wpr17c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c6 {
+            get {
+                return ((string)(this["wpr17c6"]));
+            }
+            set {
+                this["wpr17c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr17c7 {
+            get {
+                return ((string)(this["wpr17c7"]));
+            }
+            set {
+                this["wpr17c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c1 {
+            get {
+                return ((string)(this["wpr18c1"]));
+            }
+            set {
+                this["wpr18c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c2 {
+            get {
+                return ((string)(this["wpr18c2"]));
+            }
+            set {
+                this["wpr18c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c3 {
+            get {
+                return ((string)(this["wpr18c3"]));
+            }
+            set {
+                this["wpr18c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c4 {
+            get {
+                return ((string)(this["wpr18c4"]));
+            }
+            set {
+                this["wpr18c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c5 {
+            get {
+                return ((string)(this["wpr18c5"]));
+            }
+            set {
+                this["wpr18c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c6 {
+            get {
+                return ((string)(this["wpr18c6"]));
+            }
+            set {
+                this["wpr18c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr18c7 {
+            get {
+                return ((string)(this["wpr18c7"]));
+            }
+            set {
+                this["wpr18c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c1 {
+            get {
+                return ((string)(this["wpr19c1"]));
+            }
+            set {
+                this["wpr19c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c2 {
+            get {
+                return ((string)(this["wpr19c2"]));
+            }
+            set {
+                this["wpr19c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c3 {
+            get {
+                return ((string)(this["wpr19c3"]));
+            }
+            set {
+                this["wpr19c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c4 {
+            get {
+                return ((string)(this["wpr19c4"]));
+            }
+            set {
+                this["wpr19c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c5 {
+            get {
+                return ((string)(this["wpr19c5"]));
+            }
+            set {
+                this["wpr19c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c6 {
+            get {
+                return ((string)(this["wpr19c6"]));
+            }
+            set {
+                this["wpr19c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr19c7 {
+            get {
+                return ((string)(this["wpr19c7"]));
+            }
+            set {
+                this["wpr19c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c1 {
+            get {
+                return ((string)(this["wpr20c1"]));
+            }
+            set {
+                this["wpr20c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c2 {
+            get {
+                return ((string)(this["wpr20c2"]));
+            }
+            set {
+                this["wpr20c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c3 {
+            get {
+                return ((string)(this["wpr20c3"]));
+            }
+            set {
+                this["wpr20c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c4 {
+            get {
+                return ((string)(this["wpr20c4"]));
+            }
+            set {
+                this["wpr20c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c5 {
+            get {
+                return ((string)(this["wpr20c5"]));
+            }
+            set {
+                this["wpr20c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c6 {
+            get {
+                return ((string)(this["wpr20c6"]));
+            }
+            set {
+                this["wpr20c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr20c7 {
+            get {
+                return ((string)(this["wpr20c7"]));
+            }
+            set {
+                this["wpr20c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c1 {
+            get {
+                return ((string)(this["wpr21c1"]));
+            }
+            set {
+                this["wpr21c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c2 {
+            get {
+                return ((string)(this["wpr21c2"]));
+            }
+            set {
+                this["wpr21c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c3 {
+            get {
+                return ((string)(this["wpr21c3"]));
+            }
+            set {
+                this["wpr21c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c4 {
+            get {
+                return ((string)(this["wpr21c4"]));
+            }
+            set {
+                this["wpr21c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c5 {
+            get {
+                return ((string)(this["wpr21c5"]));
+            }
+            set {
+                this["wpr21c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c6 {
+            get {
+                return ((string)(this["wpr21c6"]));
+            }
+            set {
+                this["wpr21c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr21c7 {
+            get {
+                return ((string)(this["wpr21c7"]));
+            }
+            set {
+                this["wpr21c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c1 {
+            get {
+                return ((string)(this["wpr22c1"]));
+            }
+            set {
+                this["wpr22c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c2 {
+            get {
+                return ((string)(this["wpr22c2"]));
+            }
+            set {
+                this["wpr22c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c3 {
+            get {
+                return ((string)(this["wpr22c3"]));
+            }
+            set {
+                this["wpr22c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c4 {
+            get {
+                return ((string)(this["wpr22c4"]));
+            }
+            set {
+                this["wpr22c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c5 {
+            get {
+                return ((string)(this["wpr22c5"]));
+            }
+            set {
+                this["wpr22c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c6 {
+            get {
+                return ((string)(this["wpr22c6"]));
+            }
+            set {
+                this["wpr22c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr22c7 {
+            get {
+                return ((string)(this["wpr22c7"]));
+            }
+            set {
+                this["wpr22c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c1 {
+            get {
+                return ((string)(this["wpr23c1"]));
+            }
+            set {
+                this["wpr23c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c2 {
+            get {
+                return ((string)(this["wpr23c2"]));
+            }
+            set {
+                this["wpr23c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c3 {
+            get {
+                return ((string)(this["wpr23c3"]));
+            }
+            set {
+                this["wpr23c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c4 {
+            get {
+                return ((string)(this["wpr23c4"]));
+            }
+            set {
+                this["wpr23c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c5 {
+            get {
+                return ((string)(this["wpr23c5"]));
+            }
+            set {
+                this["wpr23c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c6 {
+            get {
+                return ((string)(this["wpr23c6"]));
+            }
+            set {
+                this["wpr23c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr23c7 {
+            get {
+                return ((string)(this["wpr23c7"]));
+            }
+            set {
+                this["wpr23c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c1 {
+            get {
+                return ((string)(this["wpr24c1"]));
+            }
+            set {
+                this["wpr24c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c2 {
+            get {
+                return ((string)(this["wpr24c2"]));
+            }
+            set {
+                this["wpr24c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c3 {
+            get {
+                return ((string)(this["wpr24c3"]));
+            }
+            set {
+                this["wpr24c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c4 {
+            get {
+                return ((string)(this["wpr24c4"]));
+            }
+            set {
+                this["wpr24c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c5 {
+            get {
+                return ((string)(this["wpr24c5"]));
+            }
+            set {
+                this["wpr24c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c6 {
+            get {
+                return ((string)(this["wpr24c6"]));
+            }
+            set {
+                this["wpr24c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr24c7 {
+            get {
+                return ((string)(this["wpr24c7"]));
+            }
+            set {
+                this["wpr24c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c1 {
+            get {
+                return ((string)(this["wpr25c1"]));
+            }
+            set {
+                this["wpr25c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c2 {
+            get {
+                return ((string)(this["wpr25c2"]));
+            }
+            set {
+                this["wpr25c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c3 {
+            get {
+                return ((string)(this["wpr25c3"]));
+            }
+            set {
+                this["wpr25c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c4 {
+            get {
+                return ((string)(this["wpr25c4"]));
+            }
+            set {
+                this["wpr25c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c5 {
+            get {
+                return ((string)(this["wpr25c5"]));
+            }
+            set {
+                this["wpr25c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c6 {
+            get {
+                return ((string)(this["wpr25c6"]));
+            }
+            set {
+                this["wpr25c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr25c7 {
+            get {
+                return ((string)(this["wpr25c7"]));
+            }
+            set {
+                this["wpr25c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c1 {
+            get {
+                return ((string)(this["wpr26c1"]));
+            }
+            set {
+                this["wpr26c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c2 {
+            get {
+                return ((string)(this["wpr26c2"]));
+            }
+            set {
+                this["wpr26c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c3 {
+            get {
+                return ((string)(this["wpr26c3"]));
+            }
+            set {
+                this["wpr26c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c4 {
+            get {
+                return ((string)(this["wpr26c4"]));
+            }
+            set {
+                this["wpr26c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c5 {
+            get {
+                return ((string)(this["wpr26c5"]));
+            }
+            set {
+                this["wpr26c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c6 {
+            get {
+                return ((string)(this["wpr26c6"]));
+            }
+            set {
+                this["wpr26c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr26c7 {
+            get {
+                return ((string)(this["wpr26c7"]));
+            }
+            set {
+                this["wpr26c7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c2 {
+            get {
+                return ((string)(this["wpr4c2"]));
+            }
+            set {
+                this["wpr4c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c3 {
+            get {
+                return ((string)(this["wpr4c3"]));
+            }
+            set {
+                this["wpr4c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c4 {
+            get {
+                return ((string)(this["wpr4c4"]));
+            }
+            set {
+                this["wpr4c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c5 {
+            get {
+                return ((string)(this["wpr4c5"]));
+            }
+            set {
+                this["wpr4c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c6 {
+            get {
+                return ((string)(this["wpr4c6"]));
+            }
+            set {
+                this["wpr4c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string wpr4c7 {
+            get {
+                return ((string)(this["wpr4c7"]));
+            }
+            set {
+                this["wpr4c7"] = value;
+            }
+        }
     }
 }
