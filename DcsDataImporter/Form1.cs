@@ -391,6 +391,7 @@ namespace DcsDataImporter
         private void loadPrevMission()
         {
             buildList();
+            genAirbaseObj();
 
             loadFirstLineOfMDC();
             loadDGVFlight();
