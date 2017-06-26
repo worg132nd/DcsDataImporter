@@ -3618,6 +3618,93 @@ namespace DcsDataImporter
             lblTacpCallsign.Show();
             txtTacpCallsign.Show();
         }
+
+        /* If leads lasercode is changed, the rest of the flight gets the appropriate lasercode as well */
+        private void dgvFlight_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (dgv.CurrentCell != null)
+            {
+                string currentCellContent = dgv.CurrentCell.Value as string;
+
+                // LASERCODE
+                if (currentCellContent != null && dgv.CurrentRow.Index == 0 && dgv.CurrentCell.OwningColumn.HeaderText == "LSR")
+                {
+                    if (validLaser(currentCellContent)) {
+                        for (int i = 1; i < Int32.Parse(cmbNrOfAc.Text); i++)
+                        {
+                            dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent) + i;
+                        }
+                    }
+                }
+
+                // TACAN
+                if (currentCellContent != null && dgv.CurrentRow.Index == 0 && dgv.CurrentCell.OwningColumn.HeaderText == "TCN")
+                {
+                    if (validTacan(currentCellContent))
+                    {
+                        for (int i = 1; i < Int32.Parse(cmbNrOfAc.Text); i++)
+                        {
+                            if (currentCellContent.Length == 2)
+                            {
+                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 1)) + 63 + "Y";
+                            }
+
+                            if (currentCellContent.Length == 3)
+                            {
+                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 2)) + 63 + "Y";
+                            }
+                        }
+                    }
+                }
+
+                // GID/OID
+                if (currentCellContent != null && dgv.CurrentRow.Index == 0 && dgv.CurrentCell.OwningColumn.HeaderText == "GID/OID")
+                {
+                    if (validGidOid(currentCellContent))
+                    {
+                        for (int i = 1; i < Int32.Parse(cmbNrOfAc.Text); i++)
+                        {
+                            dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 2)) + "/" + (Int32.Parse(currentCellContent.Substring(3, 2)) + i);
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool validTacan(string tacan)
+        {
+            string s = tacan;
+
+            if (s.Length == 2 && Char.IsDigit(s[0]) && Char.IsLetter(s[1]))
+            {
+                return true;
+            } else if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsLetter(s[2]))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool validLaser(string lasercode)
+        {
+            string s = lasercode;
+            if (s.Length == 4 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsDigit(s[2]) && Char.IsDigit(s[3]))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool validGidOid(string gidOid)
+        {
+            string s = gidOid;
+            if (s.Length == 5 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '/' && Char.IsDigit(s[3]) && Char.IsDigit(s[4]))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 
     public class Airbase
