@@ -2037,12 +2037,15 @@ namespace DcsDataImporter
             while (rowNr < dgvSupport.RowCount)
             {
                 var row = dgvSupport.Rows[rowNr];
-                if (row.Cells["colTypeSupport"].Value.Equals("AWACS A-G"))
+                string value = row.Cells["colTypeSupport"].Value as string;
+                if (value.Contains("AWACS A-G"))
                 {
-                    if (!row.Cells["colCallsignSupport"].Value.Equals("") && !row.Cells["colCallsignSupport"].Value.Equals("-"))
+                    //if (!row.Cells["colCallsignSupport"].Value.Equals("") && !row.Cells["colCallsignSupport"].Value.Equals("-"))
+                    if (isFreq(row.Cells["colFreqSupport"].Value.ToString()))
                     {
                         return true;
                     }
+                    break;
                 }
                 rowNr++;
             }
@@ -2055,12 +2058,16 @@ namespace DcsDataImporter
             while (rowNr < dgvSupport.RowCount)
             {
                 var row = dgvSupport.Rows[rowNr];
-                if (row.Cells["colTypeSupport"].Value.Equals("AWACS A-G"))
+                if (row.Cells["colTypeSupport"].Value.ToString().Contains("AWACS A-G"))
                 {
                     if (!row.Cells["colCallsignSupport"].Value.Equals("") && !row.Cells["colCallsignSupport"].Value.Equals("-"))
                     {
                         return row.Cells["colCallsignSupport"].Value.ToString();
+                    } else
+                    {
+                        return row.Cells["colTypeSupport"].Value.ToString();
                     }
+                    break;
                 }
                 rowNr++;
             }
@@ -2915,6 +2922,7 @@ namespace DcsDataImporter
                     gid += "3" + GetFirstDigit(txtCallsign.Text).ToCharArray()[0];
                 }
             }
+            
             return gid;
         }
 
