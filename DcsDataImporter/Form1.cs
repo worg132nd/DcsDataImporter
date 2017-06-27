@@ -129,6 +129,8 @@ namespace DcsDataImporter
 
         private bool hasTma;
         private bool loadPrev = false;
+        private bool fromBack = false;
+        private string oldCallsign;
 
         private int lblJtacPosLeft = 0;
         private int lblJtacPosTop = 0;
@@ -144,6 +146,9 @@ namespace DcsDataImporter
             init();
             loadPrevMission();
             loadPrev = true;
+            // store old callsign to make sure that when the user goes back, the txtCallsign_leave event is triggered and updateFlight activated (used to be a bug)
+            oldCallsign = txtCallsign.Text;
+            fromBack = true;
         }
 
         /* Constructor with no ATO: Used when pressing the <Load prev.> button */
@@ -448,6 +453,7 @@ namespace DcsDataImporter
         private void loadFirstLineOfMDC()
         {
             txtCallsign.Text = Properties.Settings.Default.prevTxtCallsign;
+            oldCallsign = txtCallsign.Text;
             cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
             txtMsnNr.Text = Properties.Settings.Default.prevTxtMsnNr;
             txtTasking.Text = Properties.Settings.Default.prevTxtTasking;
@@ -2180,8 +2186,6 @@ namespace DcsDataImporter
 
             if (hasTma == true) Properties.Settings.Default.prevChkTma = "true";
             else Properties.Settings.Default.prevChkTma = "false";
-
-            Properties.Settings.Default.Save();
         }
 
         private void saveSupportRow(int rowNr)
@@ -2500,8 +2504,8 @@ namespace DcsDataImporter
 
         private void loadDGVFlight()
         {
-            /* Lead */
-            var row = dgvFlight.Rows[0];
+           /* Lead */
+           var row = dgvFlight.Rows[0];
 
             row.Cells["colPos"].Value = Properties.Settings.Default.prevColPosLead;
             row.Cells["colCallsign"].Value = Properties.Settings.Default.prevColCallsignLead;
@@ -2530,6 +2534,7 @@ namespace DcsDataImporter
             row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotElement;
             row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidElement;
             row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickElement;
+            string test1 = Properties.Settings.Default.prevColLsrElement;
             row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrElement;
             row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesElement;
 
@@ -2594,7 +2599,10 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPilotLead = row.Cells["colPilot"].Value as string;
             Properties.Settings.Default.prevColGidOidLead = row.Cells["colGidOid"].Value as string;
             Properties.Settings.Default.prevColYardstickLead = row.Cells["colYardstick"].Value as string;
-            Properties.Settings.Default.prevColLsrLead = row.Cells["colLsr"].Value.ToString();
+            if (row.Cells["colLsr"].Value != null)
+            {
+                Properties.Settings.Default.prevColLsrLead = row.Cells["colLsr"].Value.ToString();
+            }
             Properties.Settings.Default.prevColNotesLead = row.Cells["colNotes"].Value as string;
 
             /* Wing */
@@ -2605,7 +2613,10 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPilotWing = row.Cells["colPilot"].Value as string;
             Properties.Settings.Default.prevColGidOidWing = row.Cells["colGidOid"].Value as string;
             Properties.Settings.Default.prevColYardstickWing = row.Cells["colYardstick"].Value as string;
-            Properties.Settings.Default.prevColLsrWing = row.Cells["colLsr"].Value.ToString();
+            if (row.Cells["colLsr"].Value != null)
+            {
+                Properties.Settings.Default.prevColLsrWing = row.Cells["colLsr"].Value.ToString();
+            }
             Properties.Settings.Default.prevColNotesWing = row.Cells["colNotes"].Value as string;
 
             /* Element */
@@ -2616,7 +2627,11 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPilotElement = row.Cells["colPilot"].Value as string;
             Properties.Settings.Default.prevColGidOidElement = row.Cells["colGidOid"].Value as string;
             Properties.Settings.Default.prevColYardstickElement = row.Cells["colYardstick"].Value as string;
-            Properties.Settings.Default.prevColLsrElement = row.Cells["colLsr"].Value.ToString();
+            string test2 = row.Cells["colLsr"].Value.ToString();
+            if (row.Cells["colLsr"].Value != null)
+            {
+                Properties.Settings.Default.prevColLsrElement = row.Cells["colLsr"].Value.ToString();
+            }
             Properties.Settings.Default.prevColNotesElement = row.Cells["colNotes"].Value as string;
 
             /* Wing 2: trail */
@@ -2627,7 +2642,10 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPilotTrail = row.Cells["colPilot"].Value as string;
             Properties.Settings.Default.prevColGidOidTrail = row.Cells["colGidOid"].Value as string;
             Properties.Settings.Default.prevColYardstickTrail = row.Cells["colYardstick"].Value as string;
-            Properties.Settings.Default.prevColLsrTrail = row.Cells["colLsr"].Value.ToString();
+            if (row.Cells["colLsr"].Value != null)
+            {
+                Properties.Settings.Default.prevColLsrTrail = row.Cells["colLsr"].Value.ToString() as string;
+            }
             Properties.Settings.Default.prevColNotesTrail = row.Cells["colNotes"].Value as string;
         }
 
@@ -2637,74 +2655,6 @@ namespace DcsDataImporter
             {
                 saveSupportRow(i);
             }
-
-            /*
-            // AWACS A-G
-            var row = dgvSupport.Rows[0];
-
-            Properties.Settings.Default.prevColTypeAwacsAGSupport = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignAwacsAGSupport = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqAwacsAGSupport = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelAwacsAGSupport = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetAwacsAGSupport = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupAwacsAGSupport = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesAwacsAGSupport = row.Cells["colNotesSupport"].Value as string;
-
-            // AWACS A-A
-            row = dgvSupport.Rows[1];
-
-            Properties.Settings.Default.prevColTypeAwacsAASupport = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignAwacsAASupport = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqAwacsAASupport = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelAwacsAASupport = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetAwacsAASupport = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupAwacsAASupport = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesAwacsAASupport = row.Cells["colNotesSupport"].Value as string;
-
-            // FAC(A)
-            row = dgvSupport.Rows[2];
-
-            Properties.Settings.Default.prevColTypeFACASupport = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignFACASupport = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqFACASupport = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelFACASupport = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetFACASupport = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupFACASupport = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesFACASupport = row.Cells["colNotesSupport"].Value as string;
-
-            // Tanker 1
-            row = dgvSupport.Rows[3];
-
-            Properties.Settings.Default.prevColTypeTanker1Support = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignTanker1Support = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqTanker1Support = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelTanker1Support = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetTanker1Support = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupTanker1Support = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesTanker1Support = row.Cells["colNotesSupport"].Value as string;
-
-            // Tanker 2
-            row = dgvSupport.Rows[4];
-
-            Properties.Settings.Default.prevColTypeTanker2Support = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignTanker2Support = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqTanker2Support = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelTanker2Support = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetTanker2Support = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupTanker2Support = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesTanker2Support = row.Cells["colNotesSupport"].Value as string;
-
-            // JSTAR
-            row = dgvSupport.Rows[5];
-
-            Properties.Settings.Default.prevColTypeJSTARSupport = row.Cells["colTypeSupport"].Value as string;
-            Properties.Settings.Default.prevColCallsignJSTARSupport = row.Cells["colCallsignSupport"].Value as string;
-            Properties.Settings.Default.prevColFreqJSTARSupport = row.Cells["colFreqSupport"].Value as string;
-            Properties.Settings.Default.prevColChannelJSTARSupport = row.Cells["colChannelSupport"].Value as string;
-            Properties.Settings.Default.prevColPresetJSTARSupport = row.Cells["colPresetSupport"].Value as string;
-            Properties.Settings.Default.prevColBackupJSTARSupport = row.Cells["colBackupSupport"].Value as string;
-            Properties.Settings.Default.prevColNotesJSTARSupport = row.Cells["colNotesSupport"].Value as string;
-            */
         }
 
         /* Select kneeboardbuilder file and save path */
@@ -2716,7 +2666,7 @@ namespace DcsDataImporter
             if (Properties.Settings.Default.pathKneeboardBuilder.Equals("") && Properties.Settings.Default.pathKneeboardBuilder != null)
             {
                 Properties.Settings.Default.pathKneeboardBuilder = getPath(fileDialogText, filter);
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.Save(); // RECENT CHANGE! ERROR WARNING DEBUG GO BACK HERE TO DOUBLE CHECK
             }
             else
             {
@@ -3248,7 +3198,15 @@ namespace DcsDataImporter
         private void cmbNrOfAc_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
-            setFlightTable(cb.Text);
+
+            string callsign = txtCallsign.Text;
+            string old_callsign = oldCallsign;
+
+            // changed (added the if clause) 27.06.2017 DEBUG: Could be that the if clause should be put around the whole content of this method
+            if (txtCallsign.Text != oldCallsign && !fromBack)
+            {
+                setFlightTable(cb.Text);
+            }
 
             if (cb.Text.Equals("1")) {
                 lblTaxi.Enabled = false;
@@ -3329,10 +3287,15 @@ namespace DcsDataImporter
             // JEDI 4-1
 
             string callsign = getCharactersFromCallsign();
-            string flightNr = GetFirstDigit(txtCallsign.Text);
-            string pos = getPosFromCallsign();
 
-            updateFlight(callsign, flightNr);
+            //Do not update the callsign if not changed and coming back from Form2
+            if (callsign != oldCallsign && !fromBack)
+            {
+                string flightNr = GetFirstDigit(txtCallsign.Text);
+                //string pos = getPosFromCallsign();
+
+                updateFlight(callsign, flightNr);
+            }
         }
 
         private void updateFlight(string callsign, string flightNr)
