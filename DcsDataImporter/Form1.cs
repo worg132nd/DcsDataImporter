@@ -2534,7 +2534,6 @@ namespace DcsDataImporter
             row.Cells["colPilot"].Value = Properties.Settings.Default.prevColPilotElement;
             row.Cells["colGidOid"].Value = Properties.Settings.Default.prevColGidOidElement;
             row.Cells["colYardstick"].Value = Properties.Settings.Default.prevColYardstickElement;
-            string test1 = Properties.Settings.Default.prevColLsrElement;
             row.Cells["colLsr"].Value = Properties.Settings.Default.prevColLsrElement;
             row.Cells["colNotes"].Value = Properties.Settings.Default.prevColNotesElement;
 
@@ -2627,7 +2626,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColPilotElement = row.Cells["colPilot"].Value as string;
             Properties.Settings.Default.prevColGidOidElement = row.Cells["colGidOid"].Value as string;
             Properties.Settings.Default.prevColYardstickElement = row.Cells["colYardstick"].Value as string;
-            string test2 = row.Cells["colLsr"].Value.ToString();
             if (row.Cells["colLsr"].Value != null)
             {
                 Properties.Settings.Default.prevColLsrElement = row.Cells["colLsr"].Value.ToString();
@@ -3286,15 +3284,21 @@ namespace DcsDataImporter
             // <CALLSIGN> <FLIGHTNR>-<POS>
             // JEDI 4-1
 
-            string callsign = getCharactersFromCallsign();
+            txtCallsign.Text = txtCallsign.Text.ToUpper();
 
-            //Do not update the callsign if not changed and coming back from Form2
-            if (callsign != oldCallsign && !fromBack)
+            string callsign_without_nr = getCharactersFromCallsign();
+
+            var row = dgvFlight.Rows[0];
+            string callsign_from_dgv = getCharactersFromCallsign(row.Cells[1].Value.ToString());
+            string callsign_from_txt = getCharactersFromCallsign(txtCallsign.Text);
+            
+            // strip bort så bare callsign_without_nr står igjen
+            if (callsign_from_txt != callsign_from_dgv)
             {
                 string flightNr = GetFirstDigit(txtCallsign.Text);
                 //string pos = getPosFromCallsign();
 
-                updateFlight(callsign, flightNr);
+                updateFlight(callsign_without_nr, flightNr);
             }
         }
 
@@ -3324,6 +3328,11 @@ namespace DcsDataImporter
         private string getCharactersFromCallsign()
         {
             return txtCallsign.Text.Trim().Split(' ')[0].ToString();
+        }
+
+        private string getCharactersFromCallsign(string callsign)
+        {
+            return callsign.Trim().Split(' ')[0].ToString() as string;
         }
 
         private string getPosFromCallsign()

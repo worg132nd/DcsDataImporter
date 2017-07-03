@@ -343,6 +343,10 @@ namespace DcsDataImporter
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
+            // save settings is critical to be able to save settings before application closes:
+            // Solved bug with Lsr not being saved between sessions. DO NOT DELETE!
+            Properties.Settings.Default.Save();
+
             System.Windows.Forms.Application.Exit();
         }
 
