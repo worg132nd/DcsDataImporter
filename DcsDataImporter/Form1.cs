@@ -263,7 +263,7 @@ namespace DcsDataImporter
 
         private void initDataGridViews()
         {
-            initDataGridView(dgvAirbase, 3);
+            initDataGridView(dgvAirbase, 4);
             initDataGridView(dgvFlight, 4);
             initDataGridView(dgvSupport, 10);
         }
@@ -552,11 +552,21 @@ namespace DcsDataImporter
 
                     else if (isColor(word))
                     {
-                        // Channel color
-                        lastWordWasChannel = true;
-                        tuple.setChannel(word);
+                        // new: If a word is like YELLOW9, without space between color and digit
+                        if (word.Any(char.IsDigit))
+                        {
+                            string color = Regex.Replace(word, @"[\d-]", string.Empty);
+                            string nr = Int32.Parse(Regex.Match(word, @"\d").Value).ToString();
+                            tuple.setChannel(color);
+                            list.Find(x => x.getFreq().Equals(tuple.getFreq())).setChannel(nr);
+                        } else
+                        {
+                            // Channel color
+                            lastWordWasChannel = true;
+                            tuple.setChannel(word);
 
-                        // Name
+                            // Name
+                        }
                     }
                     else
                     {
@@ -1053,7 +1063,8 @@ namespace DcsDataImporter
             string deploc = "DEPLOC:";
             string arrloc = "ARRLOC:";
             string altloc = "ALTLOC:";
-            if (x.StartsWith(deploc) || x.StartsWith(arrloc) || x.StartsWith(altloc)) {
+            string bckloc = "BCKLOC:";
+            if (x.StartsWith(deploc) || x.StartsWith(arrloc) || x.StartsWith(altloc) || x.StartsWith(bckloc)) {
                 x = x.Remove(0,7);
             }
             return x;
@@ -1075,6 +1086,10 @@ namespace DcsDataImporter
             {
                 row = dgvAirbase.Rows[2];
                 cmbAirbaseAlt.Text = stripArrlocAndDeplocFromAirportIdentifier(identifier);
+            } else if (identifier.StartsWith("BCKLOC:"))
+            {
+                row = dgvAirbase.Rows[3];
+                cmbAirbaseBck.Text = stripArrlocAndDeplocFromAirportIdentifier(identifier);
             }
 
             /* GEORGIA MAP */
@@ -1206,6 +1221,9 @@ namespace DcsDataImporter
                 else if (cb.Name == "cmbAirbaseAlt")
                 {
                     identifier = "ALTLOC:" + combobox.Text;
+                } else if (cb.Name == "cmbAirbaseBck")
+                {
+                    identifier = "BCKLOC:" + combobox.Text;
                 }
             }
 
@@ -2890,6 +2908,33 @@ namespace DcsDataImporter
                 || word.Equals("OLIVE")
                 || word.Equals("BLACK")
                 )
+            {
+                return true;
+            // if color also has a number following it
+            } else if((word.Contains("BLUE")
+                || word.Contains("GREEN")
+                || word.Contains("RED")
+                || word.Contains("YELLOW")
+                || word.Contains("ORANGE")
+                || word.Contains("PURPLE")
+                || word.Contains("WHITE")
+                || word.Contains("GRAY")
+                || word.Contains("PINK")
+                || word.Contains("BROWN")
+                || word.Contains("VIOLET")
+                || word.Contains("AMBER")
+                || word.Contains("AQUA")
+                || word.Contains("CHERRY")
+                || word.Contains("GOLD")
+                || word.Contains("CORAL")
+                || word.Contains("INDIGO")
+                || word.Contains("LEMON")
+                || word.Contains("LIME")
+                || word.Contains("MAROON")
+                || word.Contains("OCHRE")
+                || word.Contains("OLIVE")
+                || word.Contains("BLACK")
+                ) && (char.IsDigit(word[word.Length-1]) || (char.IsDigit(word[word.Length-2]) && char.IsDigit(word[word.Length-1]))))
             {
                 return true;
             } else return false;
