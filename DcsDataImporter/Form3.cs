@@ -795,5 +795,25 @@ namespace DcsDataImporter
             }
             return null;
         }
+
+        private void txtBingo_ValueChanged(object sender, EventArgs e)
+        {
+            int diff = Int32.Parse(txtJoker.Value.ToString()) - Int32.Parse(txtBingo.Value.ToString());
+            if (diff < 500)
+            {
+                int add = 500 - diff;
+                txtJoker.Value += add;
+            }
+        }
+
+        private void txtJoker_ValueChanged(object sender, EventArgs e)
+        {
+            int diff = Int32.Parse(txtJoker.Value.ToString()) - Int32.Parse(txtBingo.Value.ToString());
+            if (diff < 500)
+            {
+                int sub = 500 - diff;
+                txtBingo.Value -= sub;
+            }
+        }
     }
 }

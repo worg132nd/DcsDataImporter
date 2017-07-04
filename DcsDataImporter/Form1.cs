@@ -28,6 +28,8 @@ using iTextSharp.text.pdf.parser;
 
 /* TODO
  * 
+ * Bug: Remove focus from txtTacpCallsign and other Tacp and Awacs textboxes when unchecking TACP or AWACS (disableAwacs/disableTacp)
+ * 
  * Add tanker ATO import functionality (ARINFO)
  * 
  * --------------------------------------------------------------------------------------------------------------------------------------
@@ -53,8 +55,6 @@ using iTextSharp.text.pdf.parser;
  * If a line breaks before //, need to set lines together
  * 
  * If singleship, replace "one by ALPHA 10 CHARLIEs" with "singleship ALPHA 10 CHARLIE"
- * 
- * Samtidig som BINGO økes, økes også JOKER slik at JOKER aldri er mindre enn 500 over BINGO.
  * 
  * Lag også en måte å parse metar på og anbefal loadout basert på været, velg aktiv rullebane, om lead skal ta right eller left på runway etc.) Tenk igjennom og gå igjennom gamle notater hva jeg pleier å skrive ned av items. Interne frekvenser, backup frekvenser etc.
  * 
@@ -1758,12 +1758,20 @@ namespace DcsDataImporter
 
         private void disableTacp()
         {
+            this.ActiveControl = txtMetar;
             setFreq("tacp", false);
+            this.ActiveControl = txtMetar;
         }
 
         private void enableTacp()
         {
             setFreq("tacp", true);
+        }
+
+        void disableFocus()
+        {
+            //lblJTAC.Focus();
+            
         }
 
         /* 
