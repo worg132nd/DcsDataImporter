@@ -5014,5 +5014,149 @@ namespace DcsDataImporter.Properties {
                 this["wpr4c7"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevCmbAirbaseBck {
+            get {
+                return ((string)(this["prevCmbAirbaseBck"]));
+            }
+            set {
+                this["prevCmbAirbaseBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColAirbaseBck {
+            get {
+                return ((string)(this["prevColAirbaseBck"]));
+            }
+            set {
+                this["prevColAirbaseBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColTcnBck {
+            get {
+                return ((string)(this["prevColTcnBck"]));
+            }
+            set {
+                this["prevColTcnBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColGndFreqBck {
+            get {
+                return ((string)(this["prevColGndFreqBck"]));
+            }
+            set {
+                this["prevColGndFreqBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColTwrFreqBck {
+            get {
+                return ((string)(this["prevColTwrFreqBck"]));
+            }
+            set {
+                this["prevColTwrFreqBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColTmaFreqBck {
+            get {
+                return ((string)(this["prevColTmaFreqBck"]));
+            }
+            set {
+                this["prevColTmaFreqBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColElevBck {
+            get {
+                return ((string)(this["prevColElevBck"]));
+            }
+            set {
+                this["prevColElevBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColRwyBck {
+            get {
+                return ((string)(this["prevColRwyBck"]));
+            }
+            set {
+                this["prevColRwyBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevColIlsBck {
+            get {
+                return ((string)(this["prevColIlsBck"]));
+            }
+            set {
+                this["prevColIlsBck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtHard {
+            get {
+                return ((string)(this["prevTxtHard"]));
+            }
+            set {
+                this["prevTxtHard"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtMslFlr {
+            get {
+                return ((string)(this["prevTxtMslFlr"]));
+            }
+            set {
+                this["prevTxtMslFlr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prevTxtCeil {
+            get {
+                return ((string)(this["prevTxtCeil"]));
+            }
+            set {
+                this["prevTxtCeil"] = value;
+            }
+        }
     }
 }

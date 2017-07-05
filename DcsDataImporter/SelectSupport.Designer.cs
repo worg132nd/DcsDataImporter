@@ -73,6 +73,8 @@
             // chkCsar
             // 
             this.chkCsar.AutoSize = true;
+            this.chkCsar.Checked = true;
+            this.chkCsar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCsar.Location = new System.Drawing.Point(35, 167);
             this.chkCsar.Name = "chkCsar";
             this.chkCsar.Size = new System.Drawing.Size(55, 17);
@@ -209,7 +211,7 @@
             this.numTankers.Size = new System.Drawing.Size(26, 20);
             this.numTankers.TabIndex = 309;
             this.numTankers.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});

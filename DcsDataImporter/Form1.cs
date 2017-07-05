@@ -405,6 +405,7 @@ namespace DcsDataImporter
             loadDGVFlight();
             loadSelectedAirbases();
             loadTimes();
+            loadAltAlerts();
             loadTaxiAndRejoin();
             loadDGVAirbases();
             loadAwacs();
@@ -419,6 +420,7 @@ namespace DcsDataImporter
 
         private void loadTaxiAndRejoin()
         {
+            txtParking.Text = Properties.Settings.Default.prevTxtParking;
             cbRejoin.Text = Properties.Settings.Default.prevCbRejoin;
             cbTaxi.Text = Properties.Settings.Default.prevCbTaxi;
         }
@@ -447,6 +449,7 @@ namespace DcsDataImporter
             cmbAirbaseDep.Text = Properties.Settings.Default.prevCmbAirbaseDep;
             cmbAirbaseArr.Text = Properties.Settings.Default.prevCmbAirbaseArr;
             cmbAirbaseAlt.Text = Properties.Settings.Default.prevCmbAirbaseAlt;
+            cmbAirbaseBck.Text = Properties.Settings.Default.prevCmbAirbaseBck;
         }
 
         /* Loads first line of the MDC data from last form */
@@ -858,7 +861,21 @@ namespace DcsDataImporter
             }
             if (!channel.Contains(" ") && !channel.Equals("-") && channel != null)
             {
+                if (!channel.Any(char.IsDigit))
+                {
+                    return null;
+                }
+                /*try
+                {*/
                 channel = channel.Insert(channel.IndexOfAny("0123456789".ToCharArray()), " ");
+                    //channel = channel.ToUpper();
+                /*}*/
+
+                /*catch (ArgumentOutOfRangeException ex) {
+                    //throw ex;
+                }*/
+
+                
             }
             return channel;
         }
@@ -919,7 +936,30 @@ namespace DcsDataImporter
 
                 if (textbox.Name.Contains("Channel"))
                 {
+                    //textbox.Text = formatChannel(textbox.Text);
                     tuple = (Tuple)list.Find(x => x.getChannel().ToLower().Equals(formatChannel(s.ToLower())));
+                    if (tuple == null && isColor(textbox.Text))
+                    {
+                        if (formatChannel(textbox.Text) == null)
+                        {
+                            // valid color without preset but lacks number, e.g. brown
+                            errorInvalidFormat();
+                        }
+
+                        // valid color with valid number, e.g. brown 1 (but nr not found in preset list)
+
+                        textbox.Text = formatChannel(textbox.Text);
+                        textbox.Text = textbox.Text.ToUpper();
+                    } else if (!isColor(textbox.Text))
+                    {
+                        // completely invalid format like asdfasdf
+                        errorInvalidFormat();
+                        textbox.Text = "";
+                    } else if (isColor(textbox.Text))
+                    {
+                        textbox.Text = formatChannel(textbox.Text);
+                        textbox.Text = textbox.Text.ToUpper();
+                    }
                 }
             
                 if (textbox.Name.Contains("Freq"))
@@ -946,10 +986,10 @@ namespace DcsDataImporter
                         s += ".00";
                     } else if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.')
                     {
-                        s += "00";
+                        s += "000";
                     } else if (s.Length == 4 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.' && Char.IsDigit(s[3]))
                     {
-                        s += "0";
+                        s += "00";
                     } else if (s.Length == 5 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.' && Char.IsDigit(s[3]) && Char.IsDigit(s[4]))
                     {
                         /* Can be both length 5 and 6 in the list, so has to find out which it is
@@ -974,7 +1014,7 @@ namespace DcsDataImporter
                         txtAwacsFreq.Text = freq;
                         txtAwacsPreset.Text = preset;
 
-                        textbox.Text = textbox.Text.ToUpper();
+                        textbox.Text = channel; //replaced textbox.Text = textbox.Text.ToUpper(); 04/07-2017
                     }
 
                     if (textbox.Name.Equals("txtAwacsBackupChannel") && txtAwacsBackupFreq.Text == "" && txtAwacsBackupPreset.Text == "")
@@ -982,7 +1022,7 @@ namespace DcsDataImporter
                         txtAwacsBackupFreq.Text = freq;
                         txtAwacsBackupPreset.Text = preset;
 
-                        textbox.Text = textbox.Text.ToUpper();
+                        textbox.Text = channel; //replaced textbox.Text = textbox.Text.ToUpper(); 04/07-2017
                     }
 
                     if (textbox.Name.Equals("txtTacpChannel") && txtTacpFreq.Text == "" && txtTacpPreset.Text == "")
@@ -990,7 +1030,7 @@ namespace DcsDataImporter
                         txtTacpFreq.Text = freq;
                         txtTacpPreset.Text = preset;
 
-                        textbox.Text = textbox.Text.ToUpper();
+                        textbox.Text = channel; //replaced textbox.Text = textbox.Text.ToUpper(); 04/07-2017
                     }
 
                     if (textbox.Name.Equals("txtTacpBackupChannel") && txtTacpBackupFreq.Text == "" && txtTacpBackupPreset.Text == "")
@@ -998,19 +1038,23 @@ namespace DcsDataImporter
                         txtTacpBackupFreq.Text = freq;
                         txtTacpBackupPreset.Text = preset;
 
-                        textbox.Text = textbox.Text.ToUpper();
+                        textbox.Text = channel; //replaced textbox.Text = textbox.Text.ToUpper(); 04/07-2017
                     }
 
                     if (textbox.Name.Equals("txtInternalChannel") && txtInternalFreq.Text == "" && txtInternalPreset.Text == "")
                     {
                         txtInternalFreq.Text = freq;
                         txtInternalPreset.Text = preset;
+
+                        textbox.Text = channel; // added 04/07-2017. Nothing here before
                     }
 
                     if (textbox.Name.Equals("txtInternalBackupChannel") && txtInternalBackupFreq.Text == "" && txtInternalBackupPreset.Text == "")
                     {
                         txtInternalBackupFreq.Text = freq;
                         txtInternalBackupPreset.Text = preset;
+
+                        textbox.Text = channel; // added 04/07-2017. Nnothing here before
                     }
 
                     if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
@@ -1054,8 +1098,57 @@ namespace DcsDataImporter
                         txtInternalBackupPreset.Text = preset;
                         txtInternalBackupFreq.Text = freq;
                     }
+                } else
+                {
+                    // Add formating to frequency that does is not in the preset-file (pdf)
+                    if (textbox.Name.Equals("txtAwacsFreq") && txtAwacsChannel.Text == "" && txtAwacsPreset.Text == "")
+                    {
+                        txtAwacsFreq.Text = s;
+                        txtAwacsChannel.Text = "-";
+                        txtAwacsPreset.Text = "-";
+                    }
+
+                    if (textbox.Name.Equals("txtAwacsBackupFreq") && txtAwacsBackupChannel.Text == "" && txtAwacsBackupPreset.Text == "")
+                    {
+                        txtAwacsBackupFreq.Text = s;
+                        txtAwacsBackupChannel.Text = "-";
+                        txtAwacsBackupPreset.Text = "-";
+                    }
+
+                    if (textbox.Name.Equals("txtTacpFreq") && txtTacpChannel.Text == "" && txtTacpPreset.Text == "")
+                    {
+                        txtTacpFreq.Text = s;
+                        txtTacpChannel.Text = "-";
+                        txtTacpPreset.Text = "-";
+                    }
+
+                    if (textbox.Name.Equals("txtTacpBackupFreq") && txtTacpBackupChannel.Text == "" && txtTacpBackupPreset.Text == "")
+                    {
+                        txtTacpBackupFreq.Text = s;
+                        txtTacpBackupChannel.Text = "-";
+                        txtTacpBackupPreset.Text = "-";
+                    }
+
+                    if (textbox.Name.Equals("txtInternalFreq") && txtInternalChannel.Text == "" && txtInternalPreset.Text == "")
+                    {
+                        txtInternalFreq.Text = s;
+                        txtInternalChannel.Text = "-";
+                        txtInternalPreset.Text = "-";
+                    }
+
+                    if (textbox.Name.Equals("txtInternalBackupFreq") && txtInternalBackupChannel.Text == "" && txtInternalBackupPreset.Text == "")
+                    {
+                        txtInternalBackupFreq.Text = s;
+                        txtInternalBackupChannel.Text = "-";
+                        txtInternalBackupPreset.Text = "-";
+                    }
                 }
             }
+        }
+
+        private void errorInvalidFormat()
+        {
+            MessageBox.Show("Format: COLOR # e.g. YELLOW 9", "INVALID FORMAT");
         }
 
         private string stripArrlocAndDeplocFromAirportIdentifier(string x)
@@ -2105,13 +2198,26 @@ namespace DcsDataImporter
             return null;
         }
 
+        private void txtTime_Leave(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (tb.Text.Length == 4)
+            {
+                tb.Text = tb.Text.Substring(0, 2) + ":" + tb.Text.Substring(2, 2);
+            }
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            lblAltRes.Focus(); // Move focus away so no blue markings appear on screenshot
+            System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
             createCommunicationHelp();
 
             btnSubmit.Hide();
 
             string pathA10c = @"\Kneeboard Groups\A-10C";
+            
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
             saveForm();
@@ -2155,6 +2261,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevCmbAirbaseDep = cmbAirbaseDep.Text;
             Properties.Settings.Default.prevCmbAirbaseArr = cmbAirbaseArr.Text;
             Properties.Settings.Default.prevCmbAirbaseAlt = cmbAirbaseAlt.Text;
+            Properties.Settings.Default.prevCmbAirbaseBck = cmbAirbaseBck.Text;
 
             Properties.Settings.Default.prevTxtStepTime = txtStepTime.Text;
             Properties.Settings.Default.prevTxtTaxiTime = txtTaxiTime.Text;
@@ -2162,6 +2269,8 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevTxtVulStart = txtVulStart.Text;
             Properties.Settings.Default.prevTxtVulEnd = txtVulEnd.Text;
             Properties.Settings.Default.prevTxtLandingTime = txtLandingTime.Text;
+
+            Properties.Settings.Default.prevTxtParking = txtParking.Text;
             
             saveDGVAirbases();
 
@@ -2212,6 +2321,22 @@ namespace DcsDataImporter
 
             if (hasTma == true) Properties.Settings.Default.prevChkTma = "true";
             else Properties.Settings.Default.prevChkTma = "false";
+
+            saveAltAlerts();
+        }
+
+        private void saveAltAlerts()
+        {
+            Properties.Settings.Default.prevTxtHard = txtHard.Text;
+            Properties.Settings.Default.prevTxtMslFlr = txtMslFlr.Text;
+            Properties.Settings.Default.prevTxtCeil = txtCeil.Text;
+        }
+
+        private void loadAltAlerts()
+        {
+            txtHard.Text = Properties.Settings.Default.prevTxtHard;
+            txtMslFlr.Text = Properties.Settings.Default.prevTxtMslFlr;
+            txtCeil.Text = Properties.Settings.Default.prevTxtCeil;
         }
 
         private void saveSupportRow(int rowNr)
@@ -2518,6 +2643,17 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevColRwyAlt = row.Cells["colRwy"].Value as string;
             Properties.Settings.Default.prevColIlsAlt = row.Cells["colIls"].Value as string;
 
+            /* Backup */
+            row = dgvAirbase.Rows[3];
+
+            Properties.Settings.Default.prevColAirbaseBck = row.Cells["colAirbase"].Value as string;
+            Properties.Settings.Default.prevColTcnBck = row.Cells["colTcn"].Value as string;
+            Properties.Settings.Default.prevColGndFreqBck = row.Cells["colGnd"].Value as string;
+            Properties.Settings.Default.prevColTwrFreqBck = row.Cells["colTwr"].Value as string;
+            Properties.Settings.Default.prevColTmaFreqBck = row.Cells["colTma"].Value as string;
+            Properties.Settings.Default.prevColElevBck = row.Cells["colElev"].Value as string;
+            Properties.Settings.Default.prevColRwyBck = row.Cells["colRwy"].Value as string;
+            Properties.Settings.Default.prevColIlsBck = row.Cells["colIls"].Value as string;
         }
 
         private void loadDGVSupport()
@@ -2612,6 +2748,18 @@ namespace DcsDataImporter
             row.Cells["colElev"].Value = Properties.Settings.Default.prevColElevAlt;
             row.Cells["colRwy"].Value = Properties.Settings.Default.prevColRwyAlt;
             row.Cells["colIls"].Value = Properties.Settings.Default.prevColIlsAlt;
+
+            /* Backup */
+            row = dgvAirbase.Rows[3];
+
+            row.Cells["colAirbase"].Value = Properties.Settings.Default.prevColAirbaseBck;
+            row.Cells["colTcn"].Value = Properties.Settings.Default.prevColTcnBck;
+            row.Cells["colGnd"].Value = Properties.Settings.Default.prevColGndFreqBck;
+            row.Cells["colTwr"].Value = Properties.Settings.Default.prevColTwrFreqBck;
+            row.Cells["colTma"].Value = Properties.Settings.Default.prevColTmaFreqBck;
+            row.Cells["colElev"].Value = Properties.Settings.Default.prevColElevBck;
+            row.Cells["colRwy"].Value = Properties.Settings.Default.prevColRwyBck;
+            row.Cells["colIls"].Value = Properties.Settings.Default.prevColIlsBck;
         }
 
         private void saveDGVFlight()
@@ -2884,6 +3032,7 @@ namespace DcsDataImporter
 
         bool isColor(string word)
         {
+            word = word.ToUpper();
             if (word.Equals("BLUE")
                 || word.Equals("GREEN")
                 || word.Equals("RED")
@@ -3404,6 +3553,7 @@ namespace DcsDataImporter
                 if (currentCellContent != null && currentCellContent != "-")
                 {
                     Tuple tuple = null;
+                    var row = dgv.CurrentRow;
 
                     if (dgv.CurrentCell.OwningColumn.Name == "colChannelSupport")
                     {
@@ -3411,11 +3561,23 @@ namespace DcsDataImporter
 
                         if (tuple != null)
                         {
-                            setRadio(dgv, tuple);
+                            // only set cells when the two other cells are empty
+                            if ((row.Cells["colFreqSupport"].Value.ToString() == "-" && row.Cells["colPresetSupport"].Value.ToString() == "-") || (row.Cells["colFreqSupport"].Value.ToString() == "" && row.Cells["colPresetSupport"].Value.ToString() == ""))
+                            {
+                                setRadio(dgv, tuple);
+                            } else
+                            {
+                                row.Cells["colChannelSupport"].Value = formatChannel(row.Cells["colChannelSupport"].Value.ToString().ToUpper());
+                            }
                         } else
                         {
-                            var row = dgv.CurrentRow;
-                            row.Cells["colChannelSupport"].Value = row.Cells["colChannelSupport"].Value.ToString().ToUpper();
+                            if (formatChannel(row.Cells["colChannelSupport"].Value.ToString()) != null) {
+                                row.Cells["colChannelSupport"].Value = formatChannel(row.Cells["colChannelSupport"].Value.ToString()).ToUpper();
+                            } else
+                            {
+                                errorInvalidFormat();
+                                row.Cells["colChannelSupport"].Value = "-";
+                            }
                         }
                     }
 
@@ -3461,7 +3623,14 @@ namespace DcsDataImporter
 
                         if (tuple != null)
                         {
-                            setRadio(dgv, tuple);
+                            // only set cells when the two other cells are empty
+                            if ((row.Cells["colChannelSupport"].Value.ToString() == "-" && row.Cells["colPresetSupport"].Value.ToString() == "-") || (row.Cells["colChannelSupport"].Value.ToString() == "" && row.Cells["colPresetSupport"].Value.ToString() == ""))
+                            {
+                                setRadio(dgv, tuple);
+                            } else
+                            {
+                                row.Cells["colFreqSupport"].Value = formatChannel(row.Cells["colFreqSupport"].Value.ToString().ToUpper());
+                            }
                         }
                     }
                 }
@@ -3600,12 +3769,12 @@ namespace DcsDataImporter
                         {
                             if (currentCellContent.Length == 2)
                             {
-                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 1)) + 63 + "Y";
+                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 1)) + 63 + currentCellContent.Substring(1,1);
                             }
 
                             if (currentCellContent.Length == 3)
                             {
-                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 2)) + 63 + "Y";
+                                dgv.Rows[dgv.CurrentRow.Index + i].Cells[dgv.CurrentCell.ColumnIndex].Value = Int32.Parse(currentCellContent.Substring(0, 2)) + 63 + currentCellContent.Substring(2,1);
                             }
                         }
                     }
@@ -3629,10 +3798,10 @@ namespace DcsDataImporter
         {
             string s = tacan;
 
-            if (s.Length == 2 && Char.IsDigit(s[0]) && Char.IsLetter(s[1]))
+            if (s.Length == 2 && Char.IsDigit(s[0]) && Char.IsLetter(s[1]) && (s[1] == 'X' || s[1] == 'Y'))
             {
                 return true;
-            } else if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsLetter(s[2]))
+            } else if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsLetter(s[2]) && (s[2] == 'X' || s[2] == 'Y'))
             {
                 return true;
             }

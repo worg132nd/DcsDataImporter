@@ -337,6 +337,9 @@ namespace DcsDataImporter
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            lblVulEnd.Focus(); // Move focus away so no blue markings appear on screenshot
+            System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
+
             btnSubmit.Hide();
             btnBack.Hide();
 

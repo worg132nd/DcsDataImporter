@@ -598,6 +598,9 @@ namespace DcsDataImporter
         {
             // ToDo: Deselect the blue squares on currentcell in dgv's (doesn't work due to bug)
 
+            lblKillbox.Focus(); // Move focus away so no blue markings appear on screenshot
+            System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
+
             btnNext.Hide();
             btnBack.Hide();
             btnImportMissionFile.Hide();
