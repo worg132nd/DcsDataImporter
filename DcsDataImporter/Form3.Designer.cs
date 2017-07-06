@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblElement2 = new System.Windows.Forms.Label();
@@ -200,9 +200,9 @@
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numPlaytime = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLoadout = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.cbAbort = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -236,7 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaytime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1830,7 +1830,7 @@
             // 
             this.lblRelease2.AutoSize = true;
             this.lblRelease2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelease2.Location = new System.Drawing.Point(294, 376);
+            this.lblRelease2.Location = new System.Drawing.Point(307, 279);
             this.lblRelease2.Name = "lblRelease2";
             this.lblRelease2.Size = new System.Drawing.Size(53, 13);
             this.lblRelease2.TabIndex = 288;
@@ -1964,6 +1964,9 @@
             this.panel1.Controls.Add(this.txtAbort4);
             this.panel1.Controls.Add(this.txtAltitude4);
             this.panel1.Controls.Add(this.txtAltitude3);
+            this.panel1.Controls.Add(this.lblAltitude2);
+            this.panel1.Controls.Add(this.lblAbort2);
+            this.panel1.Controls.Add(this.lblRelease2);
             this.panel1.Location = new System.Drawing.Point(6, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 370);
@@ -2111,7 +2114,7 @@
             // lblAbort2
             // 
             this.lblAbort2.AutoSize = true;
-            this.lblAbort2.Location = new System.Drawing.Point(322, 395);
+            this.lblAbort2.Location = new System.Drawing.Point(335, 298);
             this.lblAbort2.Name = "lblAbort2";
             this.lblAbort2.Size = new System.Drawing.Size(46, 13);
             this.lblAbort2.TabIndex = 308;
@@ -2120,7 +2123,7 @@
             // lblAltitude2
             // 
             this.lblAltitude2.AutoSize = true;
-            this.lblAltitude2.Location = new System.Drawing.Point(277, 395);
+            this.lblAltitude2.Location = new System.Drawing.Point(290, 298);
             this.lblAltitude2.Name = "lblAltitude2";
             this.lblAltitude2.Size = new System.Drawing.Size(42, 13);
             this.lblAltitude2.TabIndex = 307;
@@ -2195,14 +2198,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2214,8 +2217,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 500);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPackage.Size = new System.Drawing.Size(589, 155);
             this.dgvPackage.TabIndex = 63;
             // 
@@ -2318,18 +2321,18 @@
             this.label45.TabIndex = 386;
             this.label45.Text = "Playtime:";
             // 
-            // numericUpDown1
+            // numPlaytime
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(64, 47);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numPlaytime.Location = new System.Drawing.Point(64, 47);
+            this.numPlaytime.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(38, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numPlaytime.Name = "numPlaytime";
+            this.numPlaytime.Size = new System.Drawing.Size(38, 20);
+            this.numPlaytime.TabIndex = 6;
+            this.numPlaytime.Value = new decimal(new int[] {
             60,
             0,
             0,
@@ -2344,13 +2347,13 @@
             this.label7.TabIndex = 389;
             this.label7.Text = "L/O:";
             // 
-            // textBox1
+            // txtLoadout
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "2x12, 2x38, 4xMav, 7xRock, 7xSmoke, TGP, ECM, SADL, NVG";
+            this.txtLoadout.Location = new System.Drawing.Point(143, 46);
+            this.txtLoadout.Name = "txtLoadout";
+            this.txtLoadout.Size = new System.Drawing.Size(334, 20);
+            this.txtLoadout.TabIndex = 7;
+            this.txtLoadout.Text = "2x12, 2x38, 4xMav, 7xRock, 7xSmoke, TGP, ECM, SADL, NVG";
             // 
             // label47
             // 
@@ -2471,9 +2474,9 @@
             this.Controls.Add(this.label46);
             this.Controls.Add(this.cbAbort);
             this.Controls.Add(this.label47);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLoadout);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numPlaytime);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.label44);
@@ -2488,8 +2491,6 @@
             this.Controls.Add(this.lblFormation2);
             this.Controls.Add(this.lblScSs2);
             this.Controls.Add(this.lblProfile2);
-            this.Controls.Add(this.lblAbort2);
-            this.Controls.Add(this.lblAltitude2);
             this.Controls.Add(this.lblHeading2);
             this.Controls.Add(this.lblCardinal2);
             this.Controls.Add(this.lblLeftRight2);
@@ -2505,7 +2506,6 @@
             this.Controls.Add(this.txtCallsign);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAttack2);
-            this.Controls.Add(this.lblRelease2);
             this.Controls.Add(this.lblEgress2);
             this.Controls.Add(this.txtVulStart);
             this.Controls.Add(this.label11);
@@ -2651,7 +2651,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaytime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2824,9 +2824,9 @@
         private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numPlaytime;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLoadout;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.ComboBox cbAbort;
         private System.Windows.Forms.Label label46;

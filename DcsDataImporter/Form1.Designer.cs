@@ -135,13 +135,6 @@
             this.colLsr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSupport = new System.Windows.Forms.DataGridView();
-            this.colTypeSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCallsignSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFreqSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChannelSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPresetSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBackupSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNotesSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.lblTaxi = new System.Windows.Forms.Label();
             this.cbTaxi = new System.Windows.Forms.ComboBox();
@@ -169,6 +162,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbAirbaseBck = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.colTypeSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCallsignSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFreqSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChannelSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPresetSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBackupSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNotesSupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacpPreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalPreset)).BeginInit();
@@ -1230,55 +1230,6 @@
             this.dgvSupport.TabIndex = 47;
             this.dgvSupport.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupport_CellValueChanged);
             // 
-            // colTypeSupport
-            // 
-            this.colTypeSupport.HeaderText = "Type";
-            this.colTypeSupport.Name = "colTypeSupport";
-            this.colTypeSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTypeSupport.Width = 84;
-            // 
-            // colCallsignSupport
-            // 
-            this.colCallsignSupport.HeaderText = "Callsign";
-            this.colCallsignSupport.Name = "colCallsignSupport";
-            this.colCallsignSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colCallsignSupport.Width = 110;
-            // 
-            // colFreqSupport
-            // 
-            this.colFreqSupport.HeaderText = "Freq";
-            this.colFreqSupport.Name = "colFreqSupport";
-            this.colFreqSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFreqSupport.Width = 47;
-            // 
-            // colChannelSupport
-            // 
-            this.colChannelSupport.HeaderText = "Channel";
-            this.colChannelSupport.Name = "colChannelSupport";
-            this.colChannelSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colChannelSupport.Width = 71;
-            // 
-            // colPresetSupport
-            // 
-            this.colPresetSupport.HeaderText = "Preset";
-            this.colPresetSupport.Name = "colPresetSupport";
-            this.colPresetSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPresetSupport.Width = 35;
-            // 
-            // colBackupSupport
-            // 
-            this.colBackupSupport.HeaderText = "Backup";
-            this.colBackupSupport.Name = "colBackupSupport";
-            this.colBackupSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colBackupSupport.Width = 71;
-            // 
-            // colNotesSupport
-            // 
-            this.colNotesSupport.HeaderText = "Notes";
-            this.colNotesSupport.Name = "colNotesSupport";
-            this.colNotesSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colNotesSupport.Width = 168;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1548,6 +1499,55 @@
             this.label16.TabIndex = 196;
             this.label16.Text = "BCK";
             // 
+            // colTypeSupport
+            // 
+            this.colTypeSupport.HeaderText = "Type";
+            this.colTypeSupport.Name = "colTypeSupport";
+            this.colTypeSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTypeSupport.Width = 84;
+            // 
+            // colCallsignSupport
+            // 
+            this.colCallsignSupport.HeaderText = "Callsign";
+            this.colCallsignSupport.Name = "colCallsignSupport";
+            this.colCallsignSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCallsignSupport.Width = 110;
+            // 
+            // colFreqSupport
+            // 
+            this.colFreqSupport.HeaderText = "Freq";
+            this.colFreqSupport.Name = "colFreqSupport";
+            this.colFreqSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFreqSupport.Width = 50;
+            // 
+            // colChannelSupport
+            // 
+            this.colChannelSupport.HeaderText = "Channel";
+            this.colChannelSupport.Name = "colChannelSupport";
+            this.colChannelSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colChannelSupport.Width = 71;
+            // 
+            // colPresetSupport
+            // 
+            this.colPresetSupport.HeaderText = "Preset";
+            this.colPresetSupport.Name = "colPresetSupport";
+            this.colPresetSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPresetSupport.Width = 35;
+            // 
+            // colBackupSupport
+            // 
+            this.colBackupSupport.HeaderText = "Backup";
+            this.colBackupSupport.Name = "colBackupSupport";
+            this.colBackupSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colBackupSupport.Width = 71;
+            // 
+            // colNotesSupport
+            // 
+            this.colNotesSupport.HeaderText = "Notes";
+            this.colNotesSupport.Name = "colNotesSupport";
+            this.colNotesSupport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNotesSupport.Width = 165;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1796,13 +1796,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtVulEnd;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCallsignSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFreqSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colChannelSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPresetSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBackupSupport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNotesSupport;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel3;
@@ -1810,6 +1803,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbAirbaseBck;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCallsignSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFreqSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colChannelSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPresetSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBackupSupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNotesSupport;
     }
 }
 

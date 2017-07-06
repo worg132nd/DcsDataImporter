@@ -1633,8 +1633,8 @@ namespace DcsDataImporter
             TextBox tb = (TextBox)sender;
             int visibleTime = 10000;
 
-            ToolTip tt = new ToolTip();
-            tt.Show("APRON#/RAMP#/PARKING SPACE#/SHELTER#", tb,visibleTime);
+            //ToolTip tt = new ToolTip();
+            //tt.Show("APRON#/RAMP#/PARKING SPACE#/SHELTER#", tb,visibleTime);
         }
 
         private void textboxLeaveLocationEventHandler(object sender, EventArgs e)

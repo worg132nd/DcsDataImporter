@@ -25,6 +25,13 @@ namespace DcsDataImporter
             initTarget(tac);
         }
 
+        /* From Next from form2 */
+        public Form3()
+        {
+            InitializeComponent();
+            loadForm();
+        }
+
         private void initTarget(string tac)
         {
             initTgtDgv(dgvTgtLead);
@@ -370,6 +377,242 @@ namespace DcsDataImporter
         private void btnBack_Click(object sender, EventArgs e)
         {
             /* Todo: add back functionality */
+
+            saveForm();
+
+            Form2 form2 = new Form2();
+            form2.Show();
+            Hide();
+        }
+
+        private void saveForm()
+        {
+            Properties.Settings.Default.prevForm3TxtTac = txtTac.Text;
+            Properties.Settings.Default.prevForm3TxtCallsign = txtCallsign.Text;
+            Properties.Settings.Default.prevForm3TxtMsnNr = txtMsnNr.Text;
+            Properties.Settings.Default.prevForm3CmbNrOfAc = cmbNrOfAc.Text;
+            Properties.Settings.Default.prevForm3TxtLocation = txtLocation.Text;
+            Properties.Settings.Default.prevForm3NumPlaytime = numPlaytime.Text;
+            Properties.Settings.Default.prevForm3TxtLoadout = txtLoadout.Text;
+            Properties.Settings.Default.prevForm3CbAbort = cbAbort.Text;
+
+            Properties.Settings.Default.prevForm3LblLaser = lblLaser.Text;
+
+            /* TBD dgvElement1 */
+
+            Properties.Settings.Default.prevForm3TxtProfileAttack1 = txtProfileAttack1.Text;
+            Properties.Settings.Default.prevForm3TxtProfileAttack2 = txtProfileAttack2.Text;
+            Properties.Settings.Default.prevForm3TxtProfileAttack3 = txtProfileAttack3.Text;
+            Properties.Settings.Default.prevForm3TxtProfileAttack4 = txtProfileAttack4.Text;
+            Properties.Settings.Default.prevForm3CbDelivery1 = cbDelivery1.Text;
+            Properties.Settings.Default.prevForm3CbDelivery2 = cbDelivery2.Text;
+            Properties.Settings.Default.prevForm3CbDelivery3 = cbDelivery3.Text;
+            Properties.Settings.Default.prevForm3CbDelivery4 = cbDelivery4.Text;
+            Properties.Settings.Default.prevForm3TxtAttackIP1 = txtAttackIP1.Text;
+            Properties.Settings.Default.prevForm3TxtAttackIP2 = txtAttackIP2.Text;
+            Properties.Settings.Default.prevForm3TxtAttackIP3 = txtAttackIP3.Text;
+            Properties.Settings.Default.prevForm3TxtAttackIP4 = txtAttackIP4.Text;
+            Properties.Settings.Default.prevForm3CbSCSS1 = cbSCSS1.Text;
+            Properties.Settings.Default.prevForm3CbSCSS1 = cbSCSS2.Text;
+            Properties.Settings.Default.prevForm3CbSCSS3 = cbSCSS3.Text;
+            Properties.Settings.Default.prevForm3CbSCSS4 = cbSCSS4.Text;
+            Properties.Settings.Default.prevForm3CbFormation1 = cbFormation1.Text;
+            Properties.Settings.Default.prevForm3CbFormation2 = cbFormation2.Text;
+            Properties.Settings.Default.prevForm3CbFormation3 = cbFormation3.Text;
+            Properties.Settings.Default.prevForm3CbFormation4 = cbFormation4.Text;
+            Properties.Settings.Default.prevForm3NumFAH1 = numFAH1.Text;
+            Properties.Settings.Default.prevForm3NumFAH2 = numFAH2.Text;
+            Properties.Settings.Default.prevForm3NumFAH3 = numFAH3.Text;
+            Properties.Settings.Default.prevForm3NumFAH4 = numFAH4.Text;
+            Properties.Settings.Default.prevForm3TxtAltitude1 = txtAltitude1.Text;
+            Properties.Settings.Default.prevForm3TxtAltitude2 = txtAltitude2.Text;
+            Properties.Settings.Default.prevForm3TxtAltitude3 = txtAltitude3.Text;
+            Properties.Settings.Default.prevForm3TxtAltitude4 = txtAltitude4.Text;
+            Properties.Settings.Default.prevForm3TxtAbort1 = txtAbort1.Text;
+            Properties.Settings.Default.prevForm3TxtAbort2 = txtAbort2.Text;
+            Properties.Settings.Default.prevForm3TxtAbort3 = txtAbort3.Text;
+            Properties.Settings.Default.prevForm3TxtAbort4 = txtAbort4.Text;
+            Properties.Settings.Default.prevForm3CbSem1 = cbSem1.Text;
+            Properties.Settings.Default.prevForm3CbSem2 = cbSem2.Text;
+            Properties.Settings.Default.prevForm3CbSem3 = cbSem3.Text;
+            Properties.Settings.Default.prevForm3CbSem4 = cbSem4.Text;
+            Properties.Settings.Default.prevForm3CbEgressDirection1 = cbEgressDirection1.Text;
+            Properties.Settings.Default.prevForm3CbEgressDirection2 = cbEgressDirection2.Text;
+            Properties.Settings.Default.prevForm3CbEgressDirection3 = cbEgressDirection3.Text;
+            Properties.Settings.Default.prevForm3CbEgressDirection4 = cbEgressDirection4.Text;
+            Properties.Settings.Default.prevForm3CbEgressCardinal1 = cbEgressCardinal1.Text;
+            Properties.Settings.Default.prevForm3CbEgressCardinal2 = cbEgressCardinal2.Text;
+            Properties.Settings.Default.prevForm3CbEgressCardinal3 = cbEgressCardinal3.Text;
+            Properties.Settings.Default.prevForm3CbEgressCardinal4 = cbEgressCardinal4.Text;
+            Properties.Settings.Default.prevForm3NumEgressHeading1 = numEgressHeading1.Text;
+            Properties.Settings.Default.prevForm3NumEgressHeading2 = numEgressHeading2.Text;
+            Properties.Settings.Default.prevForm3NumEgressHeading3 = numEgressHeading3.Text;
+            Properties.Settings.Default.prevForm3NumEgressHeading4 = numEgressHeading4.Text;
+            Properties.Settings.Default.prevForm3TxtEgressIP1 = txtEgressIP1.Text;
+            Properties.Settings.Default.prevForm3TxtEgressIP2 = txtEgressIP2.Text;
+            Properties.Settings.Default.prevForm3TxtEgressIP3 = txtEgressIP3.Text;
+            Properties.Settings.Default.prevForm3TxtEgressIP4 = txtEgressIP4.Text;
+            Properties.Settings.Default.prevForm3TxtProfile1 = txtProfile1.Text;
+            Properties.Settings.Default.prevForm3TxtProfile2 = txtProfile2.Text;
+            Properties.Settings.Default.prevForm3TxtProfile3 = txtProfile3.Text;
+            Properties.Settings.Default.prevForm3TxtProfile4 = txtProfile4.Text;
+            Properties.Settings.Default.prevForm3Munitions1 = Munitions1.Text;
+            Properties.Settings.Default.prevForm3Munitions2 = Munitions2.Text;
+            Properties.Settings.Default.prevForm3Munitions3 = Munitions3.Text;
+            Properties.Settings.Default.prevForm3Munitions4 = Munitions4.Text;
+            Properties.Settings.Default.prevForm3Mode1 = Mode1.Text;
+            Properties.Settings.Default.prevForm3Mode2 = Mode2.Text;
+            Properties.Settings.Default.prevForm3Mode3 = Mode3.Text;
+            Properties.Settings.Default.prevForm3Mode4 = Mode4.Text;
+            Properties.Settings.Default.prevForm3Fusing1 = Fusing1.Text;
+            Properties.Settings.Default.prevForm3Fusing2 = Fusing2.Text;
+            Properties.Settings.Default.prevForm3Fusing3 = Fusing3.Text;
+            Properties.Settings.Default.prevForm3Fusing4 = Fusing4.Text;
+            Properties.Settings.Default.prevForm3SGLPAIR1 = SGLPAIR1.Text;
+            Properties.Settings.Default.prevForm3SGLPAIR2 = SGLPAIR2.Text;
+            Properties.Settings.Default.prevForm3SGLPAIR3 = SGLPAIR3.Text;
+            Properties.Settings.Default.prevForm3SGLPAIR4 = SGLPAIR4.Text;
+            Properties.Settings.Default.prevForm3RPL1 = RPL1.Text;
+            Properties.Settings.Default.prevForm3RPL2 = RPL2.Text;
+            Properties.Settings.Default.prevForm3RPL3 = RPL3.Text;
+            Properties.Settings.Default.prevForm3RPL4 = RPL4.Text;
+            Properties.Settings.Default.prevForm3Spacing1 = Spacing1.Text;
+            Properties.Settings.Default.prevForm3Spacing2 = Spacing2.Text;
+            Properties.Settings.Default.prevForm3Spacing3 = Spacing3.Text;
+            Properties.Settings.Default.prevForm3Spacing4 = Spacing4.Text;
+            Properties.Settings.Default.prevForm3HOF1 = HOF1.Text;
+            Properties.Settings.Default.prevForm3HOF2 = HOF2.Text;
+            Properties.Settings.Default.prevForm3HOF3 = HOF3.Text;
+            Properties.Settings.Default.prevForm3HOF4 = HOF4.Text;
+            Properties.Settings.Default.prevForm3RPM1 = RPM1.Text;
+            Properties.Settings.Default.prevForm3RPM2 = RPM2.Text;
+            Properties.Settings.Default.prevForm3RPM3 = RPM3.Text;
+            Properties.Settings.Default.prevForm3RPM4 = RPM4.Text;
+            Properties.Settings.Default.prevForm3TxtNotes = txtNotes.Text;
+            Properties.Settings.Default.prevForm3TxtJoker = txtJoker.Text;
+            Properties.Settings.Default.prevForm3TxtBingo = txtBingo.Text;
+            Properties.Settings.Default.prevForm3TxtVulStart = txtVulStart.Text;
+            Properties.Settings.Default.prevForm3TxtVulEnd = txtVulEnd.Text;
+
+            /* TBD dgvElement2 */
+
+            /* TBD dgvPackage */
+
+        }
+
+        private void loadForm()
+        {
+            txtTac.Text = Properties.Settings.Default.prevForm3TxtTac;
+            txtCallsign.Text = Properties.Settings.Default.prevForm3TxtCallsign;
+            txtMsnNr.Text = Properties.Settings.Default.prevForm3TxtMsnNr;
+            cmbNrOfAc.Text = Properties.Settings.Default.prevForm3CmbNrOfAc;
+            txtLocation.Text = Properties.Settings.Default.prevForm3TxtLocation;
+            numPlaytime.Text = Properties.Settings.Default.prevForm3NumPlaytime;
+            txtLoadout.Text = Properties.Settings.Default.prevForm3TxtLoadout;
+            cbAbort.Text = Properties.Settings.Default.prevForm3CbAbort;
+
+            lblLaser.Text = Properties.Settings.Default.prevForm3LblLaser;
+
+            /* TBD dgvElement1 */
+
+            txtProfileAttack1.Text = Properties.Settings.Default.prevForm3TxtProfileAttack1;
+            txtProfileAttack2.Text = Properties.Settings.Default.prevForm3TxtProfileAttack2;
+            txtProfileAttack3.Text = Properties.Settings.Default.prevForm3TxtProfileAttack3;
+            txtProfileAttack4.Text = Properties.Settings.Default.prevForm3TxtProfileAttack4;
+            cbDelivery1.Text = Properties.Settings.Default.prevForm3CbDelivery1;
+            cbDelivery2.Text = Properties.Settings.Default.prevForm3CbDelivery2;
+            cbDelivery3.Text = Properties.Settings.Default.prevForm3CbDelivery3;
+            cbDelivery4.Text = Properties.Settings.Default.prevForm3CbDelivery4;
+            txtAttackIP1.Text = Properties.Settings.Default.prevForm3TxtAttackIP1;
+            txtAttackIP2.Text = Properties.Settings.Default.prevForm3TxtAttackIP2;
+            txtAttackIP3.Text = Properties.Settings.Default.prevForm3TxtAttackIP3;
+            txtAttackIP4.Text = Properties.Settings.Default.prevForm3TxtAttackIP4;
+            cbSCSS1.Text = Properties.Settings.Default.prevForm3CbSCSS1;
+            cbSCSS2.Text = Properties.Settings.Default.prevForm3CbSCSS1;
+            cbSCSS3.Text = Properties.Settings.Default.prevForm3CbSCSS3;
+            cbSCSS4.Text = Properties.Settings.Default.prevForm3CbSCSS4;
+            cbFormation1.Text = Properties.Settings.Default.prevForm3CbFormation1;
+            cbFormation2.Text = Properties.Settings.Default.prevForm3CbFormation2;
+            cbFormation3.Text = Properties.Settings.Default.prevForm3CbFormation3;
+            cbFormation4.Text = Properties.Settings.Default.prevForm3CbFormation4;
+            numFAH1.Text = Properties.Settings.Default.prevForm3NumFAH1;
+            numFAH2.Text = Properties.Settings.Default.prevForm3NumFAH2;
+            numFAH3.Text = Properties.Settings.Default.prevForm3NumFAH3;
+            numFAH4.Text = Properties.Settings.Default.prevForm3NumFAH4;
+            txtAltitude1.Text = Properties.Settings.Default.prevForm3TxtAltitude1;
+            txtAltitude2.Text = Properties.Settings.Default.prevForm3TxtAltitude2;
+            txtAltitude3.Text = Properties.Settings.Default.prevForm3TxtAltitude3;
+            txtAltitude4.Text = Properties.Settings.Default.prevForm3TxtAltitude4;
+            txtAbort1.Text = Properties.Settings.Default.prevForm3TxtAbort1;
+            txtAbort2.Text = Properties.Settings.Default.prevForm3TxtAbort2;
+            txtAbort3.Text = Properties.Settings.Default.prevForm3TxtAbort3;
+            txtAbort4.Text = Properties.Settings.Default.prevForm3TxtAbort4;
+            cbSem1.Text = Properties.Settings.Default.prevForm3CbSem1;
+            cbSem2.Text = Properties.Settings.Default.prevForm3CbSem2;
+            cbSem3.Text = Properties.Settings.Default.prevForm3CbSem3;
+            cbSem4.Text = Properties.Settings.Default.prevForm3CbSem4;
+            cbEgressDirection1.Text = Properties.Settings.Default.prevForm3CbEgressDirection1;
+            cbEgressDirection2.Text = Properties.Settings.Default.prevForm3CbEgressDirection2;
+            cbEgressDirection3.Text = Properties.Settings.Default.prevForm3CbEgressDirection3;
+            cbEgressDirection4.Text = Properties.Settings.Default.prevForm3CbEgressDirection4;
+            cbEgressCardinal1.Text = Properties.Settings.Default.prevForm3CbEgressCardinal1;
+            cbEgressCardinal2.Text = Properties.Settings.Default.prevForm3CbEgressCardinal2;
+            cbEgressCardinal3.Text = Properties.Settings.Default.prevForm3CbEgressCardinal3;
+            cbEgressCardinal4.Text = Properties.Settings.Default.prevForm3CbEgressCardinal4;
+            numEgressHeading1.Text = Properties.Settings.Default.prevForm3NumEgressHeading1;
+            numEgressHeading2.Text = Properties.Settings.Default.prevForm3NumEgressHeading2;
+            numEgressHeading3.Text = Properties.Settings.Default.prevForm3NumEgressHeading3;
+            numEgressHeading4.Text = Properties.Settings.Default.prevForm3NumEgressHeading4;
+            txtEgressIP1.Text = Properties.Settings.Default.prevForm3TxtEgressIP1;
+            txtEgressIP2.Text = Properties.Settings.Default.prevForm3TxtEgressIP2;
+            txtEgressIP3.Text = Properties.Settings.Default.prevForm3TxtEgressIP3;
+            txtEgressIP4.Text = Properties.Settings.Default.prevForm3TxtEgressIP4;
+            txtProfile1.Text = Properties.Settings.Default.prevForm3TxtProfile1;
+            txtProfile2.Text = Properties.Settings.Default.prevForm3TxtProfile2;
+            txtProfile3.Text = Properties.Settings.Default.prevForm3TxtProfile3;
+            txtProfile4.Text = Properties.Settings.Default.prevForm3TxtProfile4;
+            Munitions1.Text = Properties.Settings.Default.prevForm3Munitions1;
+            Munitions2.Text = Properties.Settings.Default.prevForm3Munitions2;
+            Munitions3.Text = Properties.Settings.Default.prevForm3Munitions3;
+            Munitions4.Text = Properties.Settings.Default.prevForm3Munitions4;
+            Mode1.Text = Properties.Settings.Default.prevForm3Mode1;
+            Mode2.Text = Properties.Settings.Default.prevForm3Mode2;
+            Mode3.Text = Properties.Settings.Default.prevForm3Mode3;
+            Mode4.Text = Properties.Settings.Default.prevForm3Mode4;
+            Fusing1.Text = Properties.Settings.Default.prevForm3Fusing1;
+            Fusing2.Text = Properties.Settings.Default.prevForm3Fusing2;
+            Fusing3.Text = Properties.Settings.Default.prevForm3Fusing3;
+            Fusing4.Text = Properties.Settings.Default.prevForm3Fusing4;
+            SGLPAIR1.Text = Properties.Settings.Default.prevForm3SGLPAIR1;
+            SGLPAIR2.Text = Properties.Settings.Default.prevForm3SGLPAIR2;
+            SGLPAIR3.Text = Properties.Settings.Default.prevForm3SGLPAIR3;
+            SGLPAIR4.Text = Properties.Settings.Default.prevForm3SGLPAIR4;
+            RPL1.Text = Properties.Settings.Default.prevForm3RPL1;
+            RPL2.Text = Properties.Settings.Default.prevForm3RPL2;
+            RPL3.Text = Properties.Settings.Default.prevForm3RPL3;
+            RPL4.Text = Properties.Settings.Default.prevForm3RPL4;
+            Spacing1.Text = Properties.Settings.Default.prevForm3Spacing1;
+            Spacing2.Text = Properties.Settings.Default.prevForm3Spacing2;
+            Spacing3.Text = Properties.Settings.Default.prevForm3Spacing3;
+            Spacing4.Text = Properties.Settings.Default.prevForm3Spacing4;
+            HOF1.Text = Properties.Settings.Default.prevForm3HOF1;
+            HOF2.Text = Properties.Settings.Default.prevForm3HOF2;
+            HOF3.Text = Properties.Settings.Default.prevForm3HOF3;
+            HOF4.Text = Properties.Settings.Default.prevForm3HOF4;
+            RPM1.Text = Properties.Settings.Default.prevForm3RPM1;
+            RPM2.Text = Properties.Settings.Default.prevForm3RPM2;
+            RPM3.Text = Properties.Settings.Default.prevForm3RPM3;
+            RPM4.Text = Properties.Settings.Default.prevForm3RPM4;
+            txtNotes.Text = Properties.Settings.Default.prevForm3TxtNotes;
+            txtJoker.Text = Properties.Settings.Default.prevForm3TxtJoker;
+            txtBingo.Text = Properties.Settings.Default.prevForm3TxtBingo;
+            txtVulStart.Text = Properties.Settings.Default.prevForm3TxtVulStart;
+            txtVulEnd.Text = Properties.Settings.Default.prevForm3TxtVulEnd;
+
+            /* TBD dgvElement2 */
+
+            /* TBD dgvPackage */
+
         }
 
         private void cbMunitions_SelectedIndexChanged(object sender, EventArgs e)

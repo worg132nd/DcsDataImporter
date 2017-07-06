@@ -19,7 +19,7 @@ namespace DcsDataImporter
         Dictionary<string, Waypoint> waypoints = new Dictionary<string, Waypoint>();
         LinkedList<string> waypointIDs = new LinkedList<string>();
         string tacticalAirControl = "";
-
+        bool fromBack = false;
 
         public Form2()
         {
@@ -29,6 +29,7 @@ namespace DcsDataImporter
             initTma();
 
             loadWaypoints(); // load waypoints when coming from form3 using back
+            fromBack = true;
         }
 
         public Form2(string dep, string arr, string alt, string loc, string tac, bool loadPrev)
@@ -610,7 +611,14 @@ namespace DcsDataImporter
 
             saveForm();
 
-            Form3 form3 = new Form3(tacticalAirControl);
+            Form3 form3;
+            if (fromBack)
+            {
+                form3 = new Form3();
+            } else {
+                form3 = new Form3(tacticalAirControl);
+            }
+            
             form3.Show(); // Show next flight form
             Hide(); // Hide form1
         }
