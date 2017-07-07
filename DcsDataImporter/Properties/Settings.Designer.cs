@@ -6382,5 +6382,725 @@ namespace DcsDataImporter.Properties {
                 this["prevForm3TxtVulEnd"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r0c1 {
+            get {
+                return ((string)(this["e1r0c1"]));
+            }
+            set {
+                this["e1r0c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r0c2 {
+            get {
+                return ((string)(this["e1r0c2"]));
+            }
+            set {
+                this["e1r0c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r0c3 {
+            get {
+                return ((string)(this["e1r0c3"]));
+            }
+            set {
+                this["e1r0c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r0c4 {
+            get {
+                return ((string)(this["e1r0c4"]));
+            }
+            set {
+                this["e1r0c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r1c1 {
+            get {
+                return ((string)(this["e1r1c1"]));
+            }
+            set {
+                this["e1r1c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r1c2 {
+            get {
+                return ((string)(this["e1r1c2"]));
+            }
+            set {
+                this["e1r1c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r1c3 {
+            get {
+                return ((string)(this["e1r1c3"]));
+            }
+            set {
+                this["e1r1c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r1c4 {
+            get {
+                return ((string)(this["e1r1c4"]));
+            }
+            set {
+                this["e1r1c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r2c1 {
+            get {
+                return ((string)(this["e1r2c1"]));
+            }
+            set {
+                this["e1r2c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r2c2 {
+            get {
+                return ((string)(this["e1r2c2"]));
+            }
+            set {
+                this["e1r2c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r2c3 {
+            get {
+                return ((string)(this["e1r2c3"]));
+            }
+            set {
+                this["e1r2c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e1r2c4 {
+            get {
+                return ((string)(this["e1r2c4"]));
+            }
+            set {
+                this["e1r2c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r0c1 {
+            get {
+                return ((string)(this["e2r0c1"]));
+            }
+            set {
+                this["e2r0c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r0c2 {
+            get {
+                return ((string)(this["e2r0c2"]));
+            }
+            set {
+                this["e2r0c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r0c3 {
+            get {
+                return ((string)(this["e2r0c3"]));
+            }
+            set {
+                this["e2r0c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r0c4 {
+            get {
+                return ((string)(this["e2r0c4"]));
+            }
+            set {
+                this["e2r0c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r1c1 {
+            get {
+                return ((string)(this["e2r1c1"]));
+            }
+            set {
+                this["e2r1c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r1c2 {
+            get {
+                return ((string)(this["e2r1c2"]));
+            }
+            set {
+                this["e2r1c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r1c3 {
+            get {
+                return ((string)(this["e2r1c3"]));
+            }
+            set {
+                this["e2r1c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r1c4 {
+            get {
+                return ((string)(this["e2r1c4"]));
+            }
+            set {
+                this["e2r1c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r2c1 {
+            get {
+                return ((string)(this["e2r2c1"]));
+            }
+            set {
+                this["e2r2c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r2c2 {
+            get {
+                return ((string)(this["e2r2c2"]));
+            }
+            set {
+                this["e2r2c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r2c3 {
+            get {
+                return ((string)(this["e2r2c3"]));
+            }
+            set {
+                this["e2r2c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string e2r2c4 {
+            get {
+                return ((string)(this["e2r2c4"]));
+            }
+            set {
+                this["e2r2c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c1 {
+            get {
+                return ((string)(this["pr0c1"]));
+            }
+            set {
+                this["pr0c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c2 {
+            get {
+                return ((string)(this["pr0c2"]));
+            }
+            set {
+                this["pr0c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c3 {
+            get {
+                return ((string)(this["pr0c3"]));
+            }
+            set {
+                this["pr0c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c4 {
+            get {
+                return ((string)(this["pr0c4"]));
+            }
+            set {
+                this["pr0c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c5 {
+            get {
+                return ((string)(this["pr0c5"]));
+            }
+            set {
+                this["pr0c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr0c6 {
+            get {
+                return ((string)(this["pr0c6"]));
+            }
+            set {
+                this["pr0c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c1 {
+            get {
+                return ((string)(this["pr1c1"]));
+            }
+            set {
+                this["pr1c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c2 {
+            get {
+                return ((string)(this["pr1c2"]));
+            }
+            set {
+                this["pr1c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c3 {
+            get {
+                return ((string)(this["pr1c3"]));
+            }
+            set {
+                this["pr1c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c4 {
+            get {
+                return ((string)(this["pr1c4"]));
+            }
+            set {
+                this["pr1c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c5 {
+            get {
+                return ((string)(this["pr1c5"]));
+            }
+            set {
+                this["pr1c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr1c6 {
+            get {
+                return ((string)(this["pr1c6"]));
+            }
+            set {
+                this["pr1c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c1 {
+            get {
+                return ((string)(this["pr2c1"]));
+            }
+            set {
+                this["pr2c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c2 {
+            get {
+                return ((string)(this["pr2c2"]));
+            }
+            set {
+                this["pr2c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c3 {
+            get {
+                return ((string)(this["pr2c3"]));
+            }
+            set {
+                this["pr2c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c4 {
+            get {
+                return ((string)(this["pr2c4"]));
+            }
+            set {
+                this["pr2c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c5 {
+            get {
+                return ((string)(this["pr2c5"]));
+            }
+            set {
+                this["pr2c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr2c6 {
+            get {
+                return ((string)(this["pr2c6"]));
+            }
+            set {
+                this["pr2c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c1 {
+            get {
+                return ((string)(this["pr3c1"]));
+            }
+            set {
+                this["pr3c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c2 {
+            get {
+                return ((string)(this["pr3c2"]));
+            }
+            set {
+                this["pr3c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c3 {
+            get {
+                return ((string)(this["pr3c3"]));
+            }
+            set {
+                this["pr3c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c4 {
+            get {
+                return ((string)(this["pr3c4"]));
+            }
+            set {
+                this["pr3c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c5 {
+            get {
+                return ((string)(this["pr3c5"]));
+            }
+            set {
+                this["pr3c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr3c6 {
+            get {
+                return ((string)(this["pr3c6"]));
+            }
+            set {
+                this["pr3c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c1 {
+            get {
+                return ((string)(this["pr4c1"]));
+            }
+            set {
+                this["pr4c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c2 {
+            get {
+                return ((string)(this["pr4c2"]));
+            }
+            set {
+                this["pr4c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c3 {
+            get {
+                return ((string)(this["pr4c3"]));
+            }
+            set {
+                this["pr4c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c4 {
+            get {
+                return ((string)(this["pr4c4"]));
+            }
+            set {
+                this["pr4c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c5 {
+            get {
+                return ((string)(this["pr4c5"]));
+            }
+            set {
+                this["pr4c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr4c6 {
+            get {
+                return ((string)(this["pr4c6"]));
+            }
+            set {
+                this["pr4c6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c1 {
+            get {
+                return ((string)(this["pr5c1"]));
+            }
+            set {
+                this["pr5c1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c2 {
+            get {
+                return ((string)(this["pr5c2"]));
+            }
+            set {
+                this["pr5c2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c3 {
+            get {
+                return ((string)(this["pr5c3"]));
+            }
+            set {
+                this["pr5c3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c4 {
+            get {
+                return ((string)(this["pr5c4"]));
+            }
+            set {
+                this["pr5c4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c5 {
+            get {
+                return ((string)(this["pr5c5"]));
+            }
+            set {
+                this["pr5c5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pr5c6 {
+            get {
+                return ((string)(this["pr5c6"]));
+            }
+            set {
+                this["pr5c6"] = value;
+            }
+        }
     }
 }

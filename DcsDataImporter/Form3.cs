@@ -25,17 +25,24 @@ namespace DcsDataImporter
             initTarget(tac);
         }
 
-        /* From Next from form2 */
+        /* From form2 after back from form3 */
         public Form3()
         {
             InitializeComponent();
+            initDgvs();
             loadForm();
+        }
+
+        private void initDgvs()
+        {
+            initTgtDgv(dgvTgtLead);
+            initTgtDgv(dgvTgtElem);
+            initPackageDgv();
         }
 
         private void initTarget(string tac)
         {
-            initTgtDgv(dgvTgtLead);
-            initTgtDgv(dgvTgtElem);
+            initDgvs();
             
             // Disable second element if less than 3 in the flight
             if (Int32.Parse(Properties.Settings.Default.prevTxtNrOfAc) < 3){
@@ -44,7 +51,6 @@ namespace DcsDataImporter
             }
 
             initProfiles();
-            initPackageDgv();
             initForm(tac);
         }
 
@@ -67,30 +73,6 @@ namespace DcsDataImporter
             lblCardinal2.Hide();
             lblHeading2.Hide();
             lblIpEgress2.Hide();
-            //txtProfileAttack3.Hide();
-            //txtProfileAttack4.Hide();
-            //cbDelivery3.Hide();
-            //cbDelivery4.Hide();
-            //txtAttackIP3.Hide();
-            //txtAttackIP4.Hide();
-            //cbSCSS3.Hide();
-            //cbSCSS4.Hide();
-            //cbFormation3.Hide();
-            //cbFormation4.Hide();
-            //txtAltitude3.Hide();
-            //txtAltitude4.Hide();
-            //txtAbort3.Hide();
-            //txtAbort4.Hide();
-            //cbSem3.Hide();
-            //cbSem4.Hide();
-            //cbEgressDirection3.Hide();
-            //cbEgressDirection4.Hide();
-            //cbEgressCardinal3.Hide();
-            //cbEgressCardinal4.Hide();
-            //numEgressHeading3.Hide();
-            //numEgressHeading4.Hide();
-            //txtEgressIP3.Hide();
-            //txtEgressIP4.Hide();
             panel1.Height = 233;
             dgvTgtElem.Hide();
         }
@@ -398,7 +380,7 @@ namespace DcsDataImporter
 
             Properties.Settings.Default.prevForm3LblLaser = lblLaser.Text;
 
-            /* TBD dgvElement1 */
+            saveDgvElem1();
 
             Properties.Settings.Default.prevForm3TxtProfileAttack1 = txtProfileAttack1.Text;
             Properties.Settings.Default.prevForm3TxtProfileAttack2 = txtProfileAttack2.Text;
@@ -494,10 +476,9 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevForm3TxtVulStart = txtVulStart.Text;
             Properties.Settings.Default.prevForm3TxtVulEnd = txtVulEnd.Text;
 
-            /* TBD dgvElement2 */
+            saveDgvElem2();
 
-            /* TBD dgvPackage */
-
+            saveDgvPackage();
         }
 
         private void loadForm()
@@ -513,7 +494,7 @@ namespace DcsDataImporter
 
             lblLaser.Text = Properties.Settings.Default.prevForm3LblLaser;
 
-            /* TBD dgvElement1 */
+            loadDgvElem1();
 
             txtProfileAttack1.Text = Properties.Settings.Default.prevForm3TxtProfileAttack1;
             txtProfileAttack2.Text = Properties.Settings.Default.prevForm3TxtProfileAttack2;
@@ -609,10 +590,220 @@ namespace DcsDataImporter
             txtVulStart.Text = Properties.Settings.Default.prevForm3TxtVulStart;
             txtVulEnd.Text = Properties.Settings.Default.prevForm3TxtVulEnd;
 
-            /* TBD dgvElement2 */
+            loadDgvElem2();
 
-            /* TBD dgvPackage */
+            loadDgvPackage();
 
+        }
+
+        private void saveDgvElem1()
+        {
+            var row = dgvTgtLead.Rows[0];
+
+            Properties.Settings.Default.e1r0c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e1r0c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e1r0c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e1r0c4 = row.Cells[3].Value as string;
+
+            row = dgvTgtLead.Rows[1];
+
+            Properties.Settings.Default.e1r1c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e1r1c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e1r1c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e1r1c4 = row.Cells[3].Value as string;
+
+            row = dgvTgtLead.Rows[2];
+
+            Properties.Settings.Default.e1r2c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e1r2c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e1r2c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e1r2c4 = row.Cells[3].Value as string;
+        }
+
+        private void saveDgvElem2()
+        {
+            var row = dgvTgtElem.Rows[0];
+
+            Properties.Settings.Default.e2r0c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e2r0c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e2r0c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e2r0c4 = row.Cells[3].Value as string;
+
+            row = dgvTgtElem.Rows[1];
+
+            Properties.Settings.Default.e2r1c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e2r1c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e2r1c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e2r1c4 = row.Cells[3].Value as string;
+
+            row = dgvTgtElem.Rows[2];
+
+            Properties.Settings.Default.e2r2c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.e2r2c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.e2r2c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.e2r2c4 = row.Cells[3].Value as string;
+        }
+
+        private void loadDgvElem1()
+        {
+            var row = dgvTgtLead.Rows[0];
+
+            row.Cells[0].Value = Properties.Settings.Default.e1r0c1;
+            row.Cells[1].Value = Properties.Settings.Default.e1r0c2;
+            row.Cells[2].Value = Properties.Settings.Default.e1r0c3;
+            row.Cells[3].Value = Properties.Settings.Default.e1r0c4;
+
+            row = dgvTgtLead.Rows[1];
+
+            row.Cells[0].Value = Properties.Settings.Default.e1r1c1;
+            row.Cells[1].Value = Properties.Settings.Default.e1r1c2;
+            row.Cells[2].Value = Properties.Settings.Default.e1r1c3;
+            row.Cells[3].Value = Properties.Settings.Default.e1r1c4;
+
+            row = dgvTgtLead.Rows[2];
+
+            row.Cells[0].Value = Properties.Settings.Default.e1r2c1;
+            row.Cells[1].Value = Properties.Settings.Default.e1r2c2;
+            row.Cells[2].Value = Properties.Settings.Default.e1r2c3;
+            row.Cells[3].Value = Properties.Settings.Default.e1r2c4;
+        }
+
+        private void loadDgvElem2()
+        {
+            var row = dgvTgtElem.Rows[0];
+
+            row.Cells[0].Value = Properties.Settings.Default.e2r0c1;
+            row.Cells[1].Value = Properties.Settings.Default.e2r0c2;
+            row.Cells[2].Value = Properties.Settings.Default.e2r0c3;
+            row.Cells[3].Value = Properties.Settings.Default.e2r0c4;
+
+            row = dgvTgtElem.Rows[1];
+
+            row.Cells[0].Value = Properties.Settings.Default.e2r1c1;
+            row.Cells[1].Value = Properties.Settings.Default.e2r1c2;
+            row.Cells[2].Value = Properties.Settings.Default.e2r1c3;
+            row.Cells[3].Value = Properties.Settings.Default.e2r1c4;
+
+            row = dgvTgtElem.Rows[2];
+
+            row.Cells[0].Value = Properties.Settings.Default.e2r2c1;
+            row.Cells[1].Value = Properties.Settings.Default.e2r2c2;
+            row.Cells[2].Value = Properties.Settings.Default.e2r2c3;
+            row.Cells[3].Value = Properties.Settings.Default.e2r2c4;
+        }
+
+        private void saveDgvPackage()
+        {
+            var row = dgvPackage.Rows[0];
+
+            Properties.Settings.Default.pr0c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr0c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr0c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr0c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr0c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr0c6 = row.Cells[5].Value as string;
+
+            row = dgvPackage.Rows[1];
+
+            Properties.Settings.Default.pr1c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr1c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr1c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr1c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr1c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr1c6 = row.Cells[5].Value as string;
+
+            row = dgvPackage.Rows[2];
+
+            Properties.Settings.Default.pr2c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr2c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr2c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr2c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr2c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr2c6 = row.Cells[5].Value as string;
+
+            row = dgvPackage.Rows[3];
+
+            Properties.Settings.Default.pr3c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr3c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr3c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr3c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr3c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr3c6 = row.Cells[5].Value as string;
+
+            row = dgvPackage.Rows[4];
+
+            Properties.Settings.Default.pr4c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr4c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr4c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr4c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr4c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr4c6 = row.Cells[5].Value as string;
+
+            row = dgvPackage.Rows[5];
+
+            Properties.Settings.Default.pr5c1 = row.Cells[0].Value as string;
+            Properties.Settings.Default.pr5c2 = row.Cells[1].Value as string;
+            Properties.Settings.Default.pr5c3 = row.Cells[2].Value as string;
+            Properties.Settings.Default.pr5c4 = row.Cells[3].Value as string;
+            Properties.Settings.Default.pr5c5 = row.Cells[4].Value as string;
+            Properties.Settings.Default.pr5c6 = row.Cells[5].Value as string;
+        }
+
+        private void loadDgvPackage()
+        {
+            var row = dgvPackage.Rows[0];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr0c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr0c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr0c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr0c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr0c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr0c6;
+
+            row = dgvPackage.Rows[1];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr1c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr1c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr1c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr1c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr1c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr1c6;
+
+            row = dgvPackage.Rows[2];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr2c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr2c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr2c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr2c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr2c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr2c6;
+
+            row = dgvPackage.Rows[3];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr3c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr3c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr3c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr3c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr3c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr3c6;
+
+            row = dgvPackage.Rows[4];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr4c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr4c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr4c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr4c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr4c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr4c6;
+
+            row = dgvPackage.Rows[5];
+
+            row.Cells[0].Value = Properties.Settings.Default.pr5c1;
+            row.Cells[1].Value = Properties.Settings.Default.pr5c2;
+            row.Cells[2].Value = Properties.Settings.Default.pr5c3;
+            row.Cells[3].Value = Properties.Settings.Default.pr5c4;
+            row.Cells[4].Value = Properties.Settings.Default.pr5c5;
+            row.Cells[5].Value = Properties.Settings.Default.pr5c6;
         }
 
         private void cbMunitions_SelectedIndexChanged(object sender, EventArgs e)
