@@ -3827,6 +3827,28 @@ namespace DcsDataImporter
             }
             return false;
         }
+
+        private void txtStepTime_KeyUp(object sender, KeyEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (tb.Text.Length == 2)
+            {
+                if (Char.IsDigit(tb.Text[0]) && Char.IsDigit(tb.Text[1]))
+                {
+                    tb.AppendText(":");
+                }
+            }
+        }
+
+        private void txtStepTime_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb.Text.Length == 1 && tb.Text.Equals(":"))
+            {
+                tb.Text = "";
+            }
+        }
     }
 
     public class Airbase
