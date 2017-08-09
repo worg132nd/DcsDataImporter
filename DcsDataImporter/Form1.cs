@@ -207,14 +207,6 @@ namespace DcsDataImporter
                 txtTakeoffTime.Text = takeoffTime[0].ToString() + takeoffTime[1].ToString() + ":" + takeoffTime[2].ToString() + takeoffTime[3].ToString();
             }
 
-            if (standardTraining)
-            {
-                standardTrainingSet = true;
-                txtTacpCp.Text = "MUKHRANI"; //default
-                setSupportCell("JTAC", "notes", "MUKHRANI");
-                disableAwacs();
-            }
-
             buildList();
 
             string airportIdentifier = stripArrlocAndDeplocFromAirportIdentifier(airbaseDep);
@@ -250,9 +242,33 @@ namespace DcsDataImporter
                 setSupportCell("in-flight report", "channel", tuple.getChannel());
             }
 
+            if (standardTraining)
+            {
+                standardTrainingSet = true;
+                initStandardTraining();
+            }
+
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
             setRadio("TACP", formatChannel(TacpChn), formatChannel(TacpBackupChn));
             setRadio("internal", formatChannel(internalFreq), formatChannel(internalBackupFreq));
+        }
+
+        private void initStandardTraining()
+        {
+            setSupportCell("AWACS A-A #1", "channel", "MAROON 3");
+            setSupportCell("AWACS A-A #2", "channel", "BLUE 8");
+            setSupportCell("AWACS A-G", "channel", "GREEN 5");
+            setSupportCell("AWACS A-A #1", "backup", "127.750");
+            setSupportCell("AWACS A-A #2", "backup", "127.750");
+            setSupportCell("AWACS A-G", "backup", "127.750");
+            setSupportCell("SCRAMBLE", "channel", "MAROON 7");
+            txtAwacsBackupChannel.Text = "PURPLE 11";
+
+            setSupportCell("Tanker", "callsign", "TEXACO");
+            setSupportCell("Tanker", "freq", "150");
+
+            txtTacpCp.Text = "MUKHRANI"; //default
+            setSupportCell("JTAC", "notes", "MUKHRANI");
         }
 
         private void init()
@@ -2205,6 +2221,11 @@ namespace DcsDataImporter
             if (tb.Text.Length == 4)
             {
                 tb.Text = tb.Text.Substring(0, 2) + ":" + tb.Text.Substring(2, 2);
+            }
+
+            if (tb.Text.Length == 0)
+            {
+                tb.Text += ":";
             }
         }
 

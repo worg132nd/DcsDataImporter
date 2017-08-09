@@ -169,17 +169,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.numFAH4 = new System.Windows.Forms.NumericUpDown();
             this.numFAH2 = new System.Windows.Forms.NumericUpDown();
+            this.numFAH3 = new System.Windows.Forms.NumericUpDown();
             this.lblFAH2 = new System.Windows.Forms.Label();
             this.numFAH1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtAltitude4 = new System.Windows.Forms.TextBox();
+            this.lblAltitude2 = new System.Windows.Forms.Label();
+            this.lblAbort2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblIpAttack2 = new System.Windows.Forms.Label();
             this.lblIpEgress2 = new System.Windows.Forms.Label();
             this.lblFormation2 = new System.Windows.Forms.Label();
             this.lblScSs2 = new System.Windows.Forms.Label();
             this.lblProfile2 = new System.Windows.Forms.Label();
-            this.lblAbort2 = new System.Windows.Forms.Label();
-            this.lblAltitude2 = new System.Windows.Forms.Label();
             this.lblHeading2 = new System.Windows.Forms.Label();
             this.lblCardinal2 = new System.Windows.Forms.Label();
             this.lblLeftRight2 = new System.Windows.Forms.Label();
@@ -209,8 +211,6 @@
             this.txtTac = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.lblLaser = new System.Windows.Forms.Label();
-            this.numFAH3 = new System.Windows.Forms.NumericUpDown();
-            this.txtAltitude4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).BeginInit();
@@ -234,10 +234,10 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPlaytime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -1810,6 +1810,7 @@
             // txtVulStart
             // 
             this.txtVulStart.Location = new System.Drawing.Point(281, 868);
+            this.txtVulStart.MaxLength = 5;
             this.txtVulStart.Name = "txtVulStart";
             this.txtVulStart.Size = new System.Drawing.Size(42, 20);
             this.txtVulStart.TabIndex = 103;
@@ -2016,6 +2017,28 @@
             0,
             0});
             // 
+            // numFAH3
+            // 
+            this.numFAH3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numFAH3.Location = new System.Drawing.Point(244, 312);
+            this.numFAH3.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numFAH3.Name = "numFAH3";
+            this.numFAH3.Size = new System.Drawing.Size(38, 20);
+            this.numFAH3.TabIndex = 42;
+            this.numFAH3.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            // 
             // lblFAH2
             // 
             this.lblFAH2.AutoSize = true;
@@ -2055,6 +2078,31 @@
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "FAH";
+            // 
+            // txtAltitude4
+            // 
+            this.txtAltitude4.Location = new System.Drawing.Point(286, 335);
+            this.txtAltitude4.Name = "txtAltitude4";
+            this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
+            this.txtAltitude4.TabIndex = 56;
+            // 
+            // lblAltitude2
+            // 
+            this.lblAltitude2.AutoSize = true;
+            this.lblAltitude2.Location = new System.Drawing.Point(290, 298);
+            this.lblAltitude2.Name = "lblAltitude2";
+            this.lblAltitude2.Size = new System.Drawing.Size(42, 13);
+            this.lblAltitude2.TabIndex = 307;
+            this.lblAltitude2.Text = "Altitude";
+            // 
+            // lblAbort2
+            // 
+            this.lblAbort2.AutoSize = true;
+            this.lblAbort2.Location = new System.Drawing.Point(335, 298);
+            this.lblAbort2.Name = "lblAbort2";
+            this.lblAbort2.Size = new System.Drawing.Size(46, 13);
+            this.lblAbort2.TabIndex = 308;
+            this.lblAbort2.Text = "Abort alt";
             // 
             // label8
             // 
@@ -2110,24 +2158,6 @@
             this.lblProfile2.Size = new System.Drawing.Size(36, 13);
             this.lblProfile2.TabIndex = 309;
             this.lblProfile2.Text = "Profile";
-            // 
-            // lblAbort2
-            // 
-            this.lblAbort2.AutoSize = true;
-            this.lblAbort2.Location = new System.Drawing.Point(335, 298);
-            this.lblAbort2.Name = "lblAbort2";
-            this.lblAbort2.Size = new System.Drawing.Size(46, 13);
-            this.lblAbort2.TabIndex = 308;
-            this.lblAbort2.Text = "Abort alt";
-            // 
-            // lblAltitude2
-            // 
-            this.lblAltitude2.AutoSize = true;
-            this.lblAltitude2.Location = new System.Drawing.Point(290, 298);
-            this.lblAltitude2.Name = "lblAltitude2";
-            this.lblAltitude2.Size = new System.Drawing.Size(42, 13);
-            this.lblAltitude2.TabIndex = 307;
-            this.lblAltitude2.Text = "Altitude";
             // 
             // lblHeading2
             // 
@@ -2186,6 +2216,7 @@
             // txtVulEnd
             // 
             this.txtVulEnd.Location = new System.Drawing.Point(381, 868);
+            this.txtVulEnd.MaxLength = 5;
             this.txtVulEnd.Name = "txtVulEnd";
             this.txtVulEnd.Size = new System.Drawing.Size(42, 20);
             this.txtVulEnd.TabIndex = 104;
@@ -2434,35 +2465,6 @@
             this.lblLaser.TabIndex = 395;
             this.lblLaser.Text = "XXXX";
             // 
-            // numFAH3
-            // 
-            this.numFAH3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numFAH3.Location = new System.Drawing.Point(244, 312);
-            this.numFAH3.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numFAH3.Name = "numFAH3";
-            this.numFAH3.Size = new System.Drawing.Size(38, 20);
-            this.numFAH3.TabIndex = 42;
-            this.numFAH3.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // txtAltitude4
-            // 
-            this.txtAltitude4.Location = new System.Drawing.Point(286, 335);
-            this.txtAltitude4.Name = "txtAltitude4";
-            this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
-            this.txtAltitude4.TabIndex = 56;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2649,10 +2651,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPlaytime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
