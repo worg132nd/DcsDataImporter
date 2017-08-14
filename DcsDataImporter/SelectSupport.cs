@@ -66,6 +66,11 @@ namespace DcsDataImporter
             this.amplification = amplification;
             this.standardTraining = chkTraining;
             this.AmsndatTakeoffTime = AmsndatTakeoffTime;
+
+            if (standardTraining)
+            {
+                chkCsar.Checked = false;
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)

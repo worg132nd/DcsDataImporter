@@ -256,19 +256,46 @@ namespace DcsDataImporter
         private void initStandardTraining()
         {
             setSupportCell("AWACS A-A #1", "channel", "MAROON 3");
+            setSupportCell("AWACS A-A #1", "freq", "239.500");
+            setSupportCell("AWACS A-A #1", "preset", "10");
+
             setSupportCell("AWACS A-A #2", "channel", "BLUE 8");
+            setSupportCell("AWACS A-A #2", "freq", "226.250");
+            setSupportCell("AWACS A-A #2", "preset", "3");
+
             setSupportCell("AWACS A-G", "channel", "GREEN 5");
+            setSupportCell("AWACS A-G", "freq", "230.250");
+            setSupportCell("AWACS A-G", "preset", "4");
+
             setSupportCell("AWACS A-A #1", "backup", "127.750");
             setSupportCell("AWACS A-A #2", "backup", "127.750");
             setSupportCell("AWACS A-G", "backup", "127.750");
+
             setSupportCell("SCRAMBLE", "channel", "MAROON 7");
+            setSupportCell("SCRAMBLE", "freq", "240.750");
+            setSupportCell("SCRAMBLE", "preset", "5");
+
             txtAwacsBackupChannel.Text = "PURPLE 11";
+            txtAwacsBackupFreq.Text = "127.750";
+            txtAwacsBackupPreset.Text = "15";
 
             setSupportCell("Tanker", "callsign", "TEXACO");
-            setSupportCell("Tanker", "freq", "150");
+            setSupportCell("Tanker", "freq", "150.000");
+            setSupportCell("Tanker", "channel", "OLIVE 6");
+            setSupportCell("Tanker", "preset", "8");
+            setSupportCell("Tanker", "notes", "TCN5Y FL115 220KT Gori S33");
 
             txtTacpCp.Text = "MUKHRANI"; //default
             setSupportCell("JTAC", "notes", "MUKHRANI");
+            txtParking.Text = "Apron 1, parking space 13";
+
+            cmbAirbaseAlt.Text = "UG27";
+
+            enableAwacs();
+            txtAwacsFreq.Text = "237.000";
+            txtAwacsChannel.Text = "BLUE 3";
+            txtAwacsPreset.Text = "2";
+
         }
 
         private void init()
@@ -394,7 +421,13 @@ namespace DcsDataImporter
             for (int x = 0; x < Int32.Parse(numTankers); x++)
             {
                 row = dgvSupport.Rows[i];
-                row.Cells["colTypeSupport"].Value = "Tanker " + (x + 1).ToString();
+                if (numTankers.Equals("1"))
+                {
+                    row.Cells["colTypeSupport"].Value = "Tanker";
+                } else
+                {
+                    row.Cells["colTypeSupport"].Value = "Tanker " + (x + 1).ToString();
+                }
                 i++;
             }
 
