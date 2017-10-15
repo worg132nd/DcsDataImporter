@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-// using Microsoft.Office.Interop.Word;
+using Microsoft.Office.Interop.Word;
 
 /* storeAsPdf-method contains code that is commented out temporarily */
 
@@ -622,8 +622,11 @@ namespace DcsDataImporter
                     }
                     else
                     {
-                        // Everything not identified is the name
-                        tuple.setName(word);
+                        if (tuple != null)
+                        {
+                            // Everything not identified is the name
+                            tuple.setName(word);
+                        }
                     }
                 }
             }
@@ -937,10 +940,10 @@ namespace DcsDataImporter
 
         private static void SearchAndReplace(string search, string replacement)
         {
+            System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
             if (replacement != null && replacement != "")
             {
                 string path = Environment.CurrentDirectory + @"\" + "temp.docm"; // TODO: use currently active directory or select using a browse function instead. Save this in a document so it remembers it for each run of the application, so you don't have to do it more than once
-
                 try
                 {
                     using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(path, true))
@@ -967,7 +970,7 @@ namespace DcsDataImporter
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Error: ", e.ToString());
+                    MessageBox.Show(e.ToString(), "Error");
                     Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
                 }
             }
@@ -3168,7 +3171,7 @@ namespace DcsDataImporter
 
         void storeAsPdf(string path)
         {
-            /* string wordDoc = "temp.docm";
+            string wordDoc = "temp.docm";
             string pdfDoc = "temp.pdf";
 
             if (!path.EndsWith(@"\"))
@@ -3180,13 +3183,13 @@ namespace DcsDataImporter
             Document wordDocument = appWord.Documents.Open(path + wordDoc);
             wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close(); */
+            wordDocument.Close();
         }
 
         void splitPdf(string path)
         {
             if (!path.EndsWith(@"\")) path += @"\";
-
+            
             string filename = "cpdf.exe";
             string arguments = "-split temp.pdf -o page%%.pdf";
 
@@ -3344,7 +3347,7 @@ namespace DcsDataImporter
 
         void saveAsPng(string pdfFileName, string path)
         {
-
+            System.Threading.Thread.Sleep(50);
             while (!File.Exists(Environment.CurrentDirectory + "\\" + pdfFileName + ".pdf"))
             {
                 System.Threading.Thread.Sleep(50);
