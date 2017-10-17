@@ -335,6 +335,8 @@ namespace DcsDataImporter
             string pathA10c = @"\Kneeboard Groups\A-10C";
             captureScreen(Properties.Settings.Default.pathKneeboardBuilder + pathA10c);
 
+            Properties.Settings.Default.prev_training = Form1.MyGlobals.global_training;
+
             // save settings is critical to be able to save settings before application closes:
             // Solved bug with Lsr not being saved between sessions. DO NOT DELETE!
             Properties.Settings.Default.Save();
@@ -351,8 +353,20 @@ namespace DcsDataImporter
                 {
                     g.CopyFromScreen(new System.Drawing.Point(bounds.Left + 3, bounds.Top + 30), System.Drawing.Point.Empty, bounds.Size);
                 }
-                System.IO.Directory.CreateDirectory(path + @"\MDC");
-                bitmap.Save(path + @"\MDC\MDC-002.png");
+
+                if (Form1.MyGlobals.global_training == true)
+                {
+                    System.IO.Directory.CreateDirectory(path + @"\TR");
+                    bitmap.Save(path + @"\TR\TR-006.png");
+                }
+                else
+                {
+                    System.IO.Directory.CreateDirectory(path + @"\MSN");
+                    bitmap.Save(path + @"\MSN\MSN-006.png");
+                }
+
+                /*System.IO.Directory.CreateDirectory(path + @"\MDC");
+                bitmap.Save(path + @"\MDC\MDC-002.png");*/
             }
         }
 

@@ -1204,8 +1204,16 @@ namespace DcsDataImporter
                     g.CopyFromScreen(new System.Drawing.Point(bounds.Left + 3, bounds.Top + 30), System.Drawing.Point.Empty, bounds.Size);
                 }
                 /* Save it to kneeboard */
-                Directory.CreateDirectory(path + @"\MDC");
-                bitmap.Save(path + @"\MDC\MDC-001.png");
+
+                if (Form1.MyGlobals.global_training == true)
+                {
+                    Directory.CreateDirectory(path + @"\TR");
+                    bitmap.Save(path + @"\TR\TR-005.png");
+                } else
+                {
+                    Directory.CreateDirectory(path + @"\MSN");
+                    bitmap.Save(path + @"\MSN\MSN-005.png");
+                }
             }
         }
     }

@@ -154,7 +154,11 @@ namespace DcsDataImporter
         /* Constructor with no ATO: Used when pressing the <Load prev.> button */
         public Form1(bool standardTraining)
         {
-            if (standardTraining) standardTrainingSet = true;
+            if (standardTraining)
+            {
+                standardTrainingSet = true;
+                MyGlobals.global_training = true;
+            }
             init();
             loadPrevMission();
             loadPrev = true;
@@ -245,12 +249,18 @@ namespace DcsDataImporter
             if (standardTraining)
             {
                 standardTrainingSet = true;
+                MyGlobals.global_training = true;
                 initStandardTraining();
             }
 
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
             setRadio("TACP", formatChannel(TacpChn), formatChannel(TacpBackupChn));
             setRadio("internal", formatChannel(internalFreq), formatChannel(internalBackupFreq));
+        }
+
+        public static class MyGlobals
+        {
+            public static bool global_training = false;
         }
 
         private void initStandardTraining()
@@ -940,7 +950,7 @@ namespace DcsDataImporter
 
         private static void SearchAndReplace(string search, string replacement)
         {
-            System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
+            
             if (replacement != null && replacement != "")
             {
                 string path = Environment.CurrentDirectory + @"\" + "temp.docm"; // TODO: use currently active directory or select using a browse function instead. Save this in a document so it remembers it for each run of the application, so you don't have to do it more than once
@@ -967,6 +977,12 @@ namespace DcsDataImporter
                 {
                     MessageBox.Show("The file is corrupt or not in the expected format. Closing application.");
                     Environment.Exit(1); // ToDo: Best practice to use Application.Exit() when using a Windows form
+                }
+                catch (System.IO.IOException)
+                {
+                    System.Threading.Thread.Sleep(50); // sleep to make sure focus is moved
+                    SearchAndReplace(search, replacement);
+                    return;
                 }
                 catch (Exception e)
                 {
@@ -3228,6 +3244,14 @@ namespace DcsDataImporter
 
         void toKneeboardBuilder(string path)
         {
+            if (standardTrainingSet)
+            {
+                // save in /TR/
+            } else
+            {
+                // save in /MSN/
+            }
+
             saveAsPng("com1-sta", path);
             saveAsPng("com2-to", path);
             saveAsPng("com3-dep", path);
@@ -3253,97 +3277,18 @@ namespace DcsDataImporter
                     g.CopyFromScreen(new System.Drawing.Point(bounds.Left+3, bounds.Top+30), System.Drawing.Point.Empty, bounds.Size);
                 }
                 /* Save it to kneeboard */
-                Directory.CreateDirectory(path + @"\MDC");
-                bitmap.Save(path + @"\MDC\MDC-000.png");
+                if (MyGlobals.global_training == true)
+                {
+                    Directory.CreateDirectory(path + @"\TR");
+                    bitmap.Save(path + @"\TR\TR-004.png");
+                } else
+                {
+                    Directory.CreateDirectory(path + @"\MSN");
+                    bitmap.Save(path + @"\MSN\MSN-004.png");
+                }
+                
             }
         }
-
-        /* void saveAsPngTwo(string pdfFileName, string savePath)
-        {
-            string pdfPath = Environment.CurrentDirectory + "\\" + pdfFileName + ".pdf";
-
-            Console.WriteLine(pdfPath);
-
-            while (!File.Exists(pdfPath))
-            {
-                System.Threading.Thread.Sleep(50);
-            }
-
-            // File exists when arriving here
-
-            if (!savePath.EndsWith("\\"))
-            {
-                savePath += "\\";
-            }
-
-            Console.WriteLine(pdfFileName);
-            
-            // Do NOT save com5-aci and com7-aco
-            if (pdfFileName == "com1-sta")
-            {
-                savePath += "StandardTraining-004";
-            } else if (pdfFileName == "com2-to")
-            {
-                savePath += "StandardTraining-006";
-            } else if (pdfFileName == "com3-dep")
-            {
-                savePath += "StandardTraining-008";
-            } else if (pdfFileName == "com4-tma")
-            {
-                savePath += "StandardTraining-011";
-            } else if (pdfFileName == "com6-cas")
-            {
-                savePath += "StandardTraining-013";
-            } else if (pdfFileName == "com8-arr")
-            {
-                savePath += "StandardTraining-021";
-            } else if (pdfFileName == "com9-lan")
-            {
-                savePath += "StandardTraining-022";
-            } else if (pdfFileName == "com10-tax")
-            {
-                savePath += "StandardTraining-024";
-            }
-
-            Console.WriteLine("SavePath: " + savePath);
-
-            convertPdfToPng(pdfPath, savePath);
-        }*/
-
-        /* private void convertPdfToPng(string pdfPath, string output)
-        {
-            if (File.Exists(pdfPath))
-            {
-                // Generate GhostscriptSettings
-                GhostscriptSharp.GhostscriptSettings settingsForConvert = new GhostscriptSharp.GhostscriptSettings(); // set device
-
-                // GhostscriptSettings.GhostscriptDevices;
-                // settingsForConvert.Device = new GhostscriptSharp.Settings.GhostscriptDevices();
-                settingsForConvert.Device = GhostscriptSharp.Settings.GhostscriptDevices.png256; // 3 sets output format as png256
-
-                // GhostscriptSettings.Size
-                GhostscriptSharp.Settings.GhostscriptPageSize pageSize = new GhostscriptSharp.Settings.GhostscriptPageSize();
-                pageSize.Native = new GhostscriptSharp.Settings.GhostscriptPageSizes();
-                pageSize.Native = GhostscriptSharp.Settings.GhostscriptPageSizes.a4;
-                settingsForConvert.Size = pageSize;
-
-                settingsForConvert.Resolution = new System.Drawing.Size(150, 150); // sets 150 PPI/DPI
-
-                GhostscriptSharp.GhostscriptWrapper.GenerateOutput(pdfPath, output, settingsForConvert);
-            } else
-            {
-                Console.WriteLine("File does not exist");
-            }            
-        } */
-
-
-
-
-
-
-
-
-
 
         void saveAsPng(string pdfFileName, string path)
         {
@@ -3354,6 +3299,7 @@ namespace DcsDataImporter
                 Console.WriteLine("Sleeping: cannot find file " + Environment.CurrentDirectory + "\\" + pdfFileName + ".pdf");
             }
 
+            // for each pdf-file:
             if (File.Exists(Environment.CurrentDirectory + "\\" + pdfFileName + ".pdf"))
             {
                 if (!path.EndsWith("\\"))
@@ -3363,11 +3309,22 @@ namespace DcsDataImporter
 
                 string pdfPath = Environment.CurrentDirectory + "\\" + pdfFileName + ".pdf";
                 string dir = pdfFileName.ToUpper().Replace('-', ' ');
-                string outFileName = dir + "-000.png";
-                dir += "\\";
+                string outFileName = "";
+
+                if (standardTrainingSet)
+                {
+                    dir = "TR\\";
+                    outFileName = "TR-";
+                } else
+                {
+                    dir = "MSN\\";
+                    outFileName = "MSN-";
+                }
+
+                outFileName += setOutFile(pdfFileName, path + dir);
+                outFileName += ".png";
 
                 // TODO: Check that directory exists, and if not, create it before saving
-                // TODO: If the file has more than one page, need to add 001, 002 and so on, instead of always overwriting 000
 
                 string output = path + dir + outFileName;
 
@@ -3394,6 +3351,26 @@ namespace DcsDataImporter
 
         }
 
+        string setOutFile(string pdfFileName, string path)
+        {
+            // count nr of documents in folder
+            DirectoryInfo myDir = new DirectoryInfo(path);
+            int count = myDir.GetFiles().Length;
+
+            string outFileName = "";
+            if (pdfFileName.Contains("com1-sta")) outFileName += "007";
+            else if (pdfFileName.Contains("com2-to")) outFileName += "009";
+            else if (pdfFileName.Contains("com3-dep")) outFileName += "011";
+            else if (pdfFileName.Contains("com4-tma")) outFileName += "014";
+            else if (pdfFileName.Contains("com5-aci")) outFileName += "015";
+            else if (pdfFileName.Contains("com6-cas")) outFileName += "018";
+            else if (pdfFileName.Contains("com7-aco")) outFileName += "0" + (count - 7).ToString();
+            else if (pdfFileName.Contains("com8-arr")) outFileName += "0" + (count - 5).ToString();
+            else if (pdfFileName.Contains("com9-lan")) outFileName += "0" + (count - 4).ToString();
+            else if (pdfFileName.Contains("com10-tax")) outFileName += "0" + (count - 2).ToString();
+            return outFileName;
+        }
+
         void runCommand(string filename, string arguments)
         {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -3415,7 +3392,17 @@ namespace DcsDataImporter
             {
                 if (File.Exists(replaceFp))
                 {
-                    if (File.Exists(replacementFp)) File.Delete(replacementFp);
+                    if (File.Exists(replacementFp)) {
+                        try {
+                            File.Delete(replacementFp);
+                        }
+                        catch (System.IO.IOException)
+                        {
+                            System.Threading.Thread.Sleep(50);
+                            save(replaceFp, replacementFp);
+                            return;
+                        }
+                    }
                     File.Move(replaceFp, replacementFp);
                 }
             }
@@ -3673,7 +3660,7 @@ namespace DcsDataImporter
                         {
                             /* Can be both length 5 and 6 in the list, so has to find out which it is
                              * If it is 6, meaning search will yield no match, add a zero */
-                            tuple = (Tuple)list.Find(x => x.getFreq().ToLower().Equals(s.ToLower()));
+                    tuple = (Tuple)list.Find(x => x.getFreq().ToLower().Equals(s.ToLower()));
                             if (tuple == null) s += "0";
                         }
                         tuple = (Tuple)list.Find(x => x.getFreq().ToLower().Equals(s.ToLower()));

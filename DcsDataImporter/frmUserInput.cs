@@ -396,9 +396,20 @@ namespace DcsDataImporter
 
         private void btnLoadPrev_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1(chkTraining.Checked);
+
+            //Form1 form1 = new Form1(chkTraining.Checked);
+            Form1 form1;
+            try
+            {
+                form1 = new Form1(Properties.Settings.Default.prev_training);
+                
+            } catch (NullReferenceException)
+            {
+                form1 = new Form1(chkTraining.Checked);
+            }
             Hide(); // Hide initial loading form
             form1.Show(); // Show second flight form
+
         }
     }
 

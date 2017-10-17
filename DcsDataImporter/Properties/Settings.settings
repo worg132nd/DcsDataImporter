@@ -1772,5 +1772,8 @@
     <Setting Name="pr5c6" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="prev_training" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
