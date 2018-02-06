@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using Microsoft.Office.Interop.Word;
+//using Microsoft.Office.Interop.Word;
 
 /* storeAsPdf-method contains code that is commented out temporarily */
 
@@ -125,6 +125,7 @@ namespace DcsDataImporter
 
         public List<Tuple> list;
         public List<Airbase> airbases;
+        public List<Range> ranges;
         public bool standardTrainingSet = false;
 
         private bool hasTma;
@@ -176,6 +177,7 @@ namespace DcsDataImporter
             if (Awacs == null) disableAwacs();
 
             genAirbaseObj();
+            genRangeObj();
 
             /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
@@ -1253,90 +1255,8 @@ namespace DcsDataImporter
                 cmbAirbaseBck.Text = stripArrlocAndDeplocFromAirportIdentifier(identifier);
             }
 
-            /* GEORGIA MAP */
-            // Use configuration files for airbases instead. This makes the user capable of changing airbase data himself.
-
+            /* GEORGIA MAP: Using configuration files for all airbases, one for each theatre */
             setAirbase(row, stripArrlocAndDeplocFromAirportIdentifier(identifier));
-
-            /*
-            // Kobuleti
-            if (identifier.EndsWith("UG5X"))
-            {
-                //setAirbase(row, "UG5X");
-                // txtTma.Text = "";
-                txtAirportName.Text = "Kobuleti";
-            }
-
-            // Gudauta
-            else if (identifier.EndsWith("UG23"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Gudauta";
-            }
-
-            // Soganlug
-            else if (identifier.EndsWith("UG24"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Soganlug";
-            }
-
-            // Vaziani
-            else if (identifier.EndsWith("UG27"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Vaziani";
-                setVaziani(row, identifier);
-            }
-
-            // Kutaisi - Kopitnari
-            else if (identifier.EndsWith("UGKO"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Kutaisi";
-            }
-
-            // Senaki - Kolkhi
-            else if (identifier.EndsWith("UGKS"))
-            {
-                setSenaki(row, identifier);
-            }
-
-            // Batumi
-            else if (identifier.EndsWith("UGSB"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Batumi";
-            }
-
-            // Sukhumi - Babashara
-            else if (identifier.EndsWith("UGSS"))
-            {
-                // txtTma.Text = "";
-                txtAirportName.Text = "Sukhumi";
-            }
-
-            // Tblisi Lochini
-            else if (identifier.EndsWith("UGTB"))
-            {
-                // setTbilisi(row, identifier);
-                setAirbase(row, "UGTB");
-            }
-            else
-            {
-                // clear current row
-                if (identifier.StartsWith("DEPLOC:"))
-                {
-                    clearRow(0);
-                } else if (identifier.StartsWith("ARRLOC:"))
-                {
-                    clearRow(1);
-                } else if (identifier.StartsWith("ALTLOC:"))
-                {
-                    clearRow(2);
-                }
-            }
-            */
         }
 
         private void clearRow(int i)
@@ -1427,6 +1347,63 @@ namespace DcsDataImporter
             }
         }
 
+        private void genRangeObj()
+        {
+            ranges = new List<Range>();
+
+            string path = Environment.CurrentDirectory + "\\" + "ranges-caucasus.csv";
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                /* initialize variables */
+                string range, cp, abbrev, joker, bingo, freq, backup, fp, amp;
+                range = cp = abbrev = joker = bingo = freq = backup = fp = amp = null;
+
+                /* read lines */
+                int lineNr = 0;
+                while (reader.Peek() >= 0)
+                {
+                    string line = reader.ReadLine();
+
+                    /* reading line 1 */
+                    if (lineNr % 3 == 0)
+                    {
+                        range = cp = abbrev = joker = bingo = freq = backup = fp = amp = null;
+
+                        int wordNr = 0;
+                        foreach (string word in line.Split(','))
+                        {
+                            if (wordNr == 0) range = word.Trim();
+                            if (wordNr == 1) cp = word.Trim();
+                            if (wordNr == 2) abbrev = word.Trim();
+                            if (wordNr == 3) joker = word.Trim();
+                            if (wordNr == 4) bingo = word.Trim();
+                            if (wordNr == 5) freq = word.Trim();
+                            if (wordNr == 6) backup = word.Trim();
+
+                            wordNr++;
+                        }
+
+                    /* reading line 2 */
+                    } else if (lineNr % 3 == 1)
+                    {
+                        fp = line.Trim();
+                    
+                    /* reading line 3 */
+                    } else if (lineNr % 3 == 2)
+                    {
+                        amp = line.Trim();
+
+                        /* Done with reading one range object: Save */
+                        Range rng = new Range(range, cp, abbrev, joker, bingo, freq, backup, fp, amp);
+                        ranges.Add(rng);
+                    }
+
+                    lineNr++;
+                }
+            }
+        }
+
         private void setAirbase(DataGridViewRow r, string id)
         {
             Airbase ab = airbases.Find(x => x.getIdentifier(id).Equals(id));
@@ -1457,128 +1434,6 @@ namespace DcsDataImporter
             }
 
             enableTma();
-            /*string path = Environment.CurrentDirectory + "\\" + "airbases-caucasus.csv";
-
-            using (StreamReader reader = new StreamReader(path))
-            {
-                while (reader.Peek() >= 0)
-                {
-                    string line = reader.ReadLine();
-                    if (line.StartsWith("UGTB"))
-                    {
-                        int valueNr = 0;
-                        bool first = true;
-                        foreach (string word in line.Split(','))
-                        {
-                            // hopp over første
-                            if (first)
-                            {
-                                first = false;
-                            } else
-                            {
-                                var row = r;
-                                row.Cells[valueNr].Value = word;
-                                valueNr++;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (identifier.StartsWith("DEPLOC:"))
-            {
-                txtParking.Text = "APRON 1";
-            }
-
-            enableTma();*/
-
-            /*using (PdfReader reader = new PdfReader(path))
-            {
-                StringBuilder text = new StringBuilder();
-
-                for (int i = 1; i <= reader.NumberOfPages; i++)
-                {
-                    text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
-                }
-                return text.ToString();
-            }*/
-
-            /*string presetsTextCleaned = CleanPresets(ExtractTextFromPdf(Properties.Settings.Default.frequencyPresetFilename));
-
-            bool lastWordWasChannel = false;
-            Tuple tuple = null;
-
-            list = new List<Tuple>();
-
-            foreach (string word in presetsTextCleaned.Split(' '))
-            {
-
-                if (lastWordWasChannel && isNumber(word))
-                {
-                    // Number following a channel
-                    lastWordWasChannel = false;
-
-                    // Add color to item already in list
-                    list.Find(x => x.getFreq().Equals(tuple.getFreq())).setChannel(word);
-                }
-                else
-                {
-
-                    if (isNumber(word))
-                    {
-                        // Preset
-                        tuple = new Tuple(); // Create new item when encountering new preset
-                        tuple.setPreset(word);
-                    }
-
-                    else if (isFreq(word))
-                    {
-                        // Freq
-                        tuple.setFreq(word);
-                        list.Add(tuple); // Add item to list here because all items has a frequency
-                    }
-
-                    else if (isColor(word))
-                    {
-                        // Channel color
-                        lastWordWasChannel = true;
-                        tuple.setChannel(word);
-
-                        // Name
-                    }
-                    else
-                    {
-                        // Everything not identified is the name
-                        tuple.setName(word);
-                    }
-                }
-            }*/
-
-            /* var row = r;
-
-            row.Cells["colAirbase"].Value = "Tbilisi-Lochini"; // Remember to add only Lochini to the kneeboard
-            row.Cells["colTcn"].Value = "25X";
-            row.Cells["colGnd"].Value = "138.1";
-            row.Cells["colTwr"].Value = "138.2";
-            row.Cells["colTma"].Value = "127.2";
-            row.Cells["colElev"].Value = "1473";
-            row.Cells["colRwy"].Value = "31L/13R";
-            row.Cells["colIls"].Value = "108.90/110.30"; */
-
-            /*txtAirportName.Text = "Lochini";
-            txtRunwayRight.Text = "13R";
-            txtRunwayLeft.Text = "31L";
-            lblRunwayRight.Text = "Right runway";
-            lblRunwayLeft.Text = "Left runway";
-            txtTmaFreq.Text = "127.2";
-            txtTowerFreq.Text = "138.2";
-            txtGroundFreq.Text = "138.1";
-            txtTACAN.Text = "25X";
-            txtILS.Text = "13R:110.30 31L:108.90";*/
-
-            /* Enabling TMA since Tbilisi has an approach */
-
-            // txtTma.Text = "Tblisi";
 
             string fpTma = "UGTB3," // TMA          // UGTB3-8                              tma
                          + "UGTB4,"
@@ -1630,27 +1485,6 @@ namespace DcsDataImporter
                              + "DEDON,"                 // DEDON (reconsider)
                              + "TBILISILOCH,"           // TBILISILOCH, INIT POSIT
                              + "INIT POSIT";            // NOTE: Also considered LAMUS, DEDON, SAMGORI and UG27 FOXTROTT also, but MAYBE overkill.Can always insert waypoint live if needed.Only take the most likely ones.The rest can be inserted live if needed. */
-        }
-
-        private void setVaziani(DataGridViewRow r, string identifier)
-        {
-            var row = r;
-
-            row.Cells["colAirbase"].Value = "Vaziani"; // Remember to add only Lochini to the kneeboard
-            row.Cells["colTcn"].Value = "22X";
-            row.Cells["colGnd"].Value = "140.1";
-            row.Cells["colTwr"].Value = "140.2";
-            row.Cells["colTma"].Value = "127.2";
-            row.Cells["colElev"].Value = "1492";
-            row.Cells["colRwy"].Value = "13/31";
-            row.Cells["colIls"].Value = "108.75/108.75";
-
-            if (identifier.StartsWith("DEPLOC:"))
-            {
-                txtParking.Text = "Unknown";
-            }
-
-            enableTma();
         }
 
         private void disableTma()
@@ -1783,23 +1617,25 @@ namespace DcsDataImporter
                 /* TIANETI */
                 if (tianeti.ToLower().Contains(s.ToLower()))
                 {
-                    string amp = "FAH 360 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized. CBU's only allowed on the artillery firing locations.";
+                    setRange("TIA");
+                    /*string amp = "FAH 360 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized. CBU's only allowed on the artillery firing locations.";
                     setRangeInfo(tianeti, "MUKHRANI", fpTia, "TIA", amp, 3100, 2100);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("225.750", "INDIGO 10", 8, "131.750", "CHERRY 10", 18);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tianeti";
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tianeti";*/
 
                     /* DUSHETI */
                 }
                 else if (dusheti.ToLower().Contains(s.ToLower()))
                 {
-                    string amp = "FAH 022 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
+                    setRange("DUSHEX");
+                    /* string amp = "FAH 022 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
                     setRangeInfo(dusheti, "GIMUR", fpDushex, "DUSHEX", amp, 2900, 1900);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("247.500", "LIME 11", 6, "140.750", "INDIGO 9", 0);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Dusheti";
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Dusheti";*/
 
                     /* TETRA */
                 }
@@ -1808,12 +1644,14 @@ namespace DcsDataImporter
                     /* BAGEM is in the middle of TETRA.
                      * LAGAS is in the far west of TETRA, at the westernmost border of the range
                      */
-                    string amp = "No FAH restrictions. All conventional ordnance authorized. No use of CBU's in the villages.";
+
+                    setRange("TET");
+                    /* string amp = "No FAH restrictions. All conventional ordnance authorized. No use of CBU's in the villages.";
                     setRangeInfo(tetra, "GIMUR", fpTet, "TET", amp, 2800, 1800);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("243.500", "RED 10", 9, "127.750", "PURPLE 11", 15); // Backup channel has conflicts with AWACS backup frequency
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tetra";
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tetra"; */
 
                     /* MARNUELI */
                 }
@@ -1822,12 +1660,14 @@ namespace DcsDataImporter
                     /* Obora is in the Tbilisi TMA, and very close to MUKHRANI.
                      * TISOT is in MARNUELI
                      */
-                    string amp = "FAH 225 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
+                    setRange("MAR");
+
+                    /*string amp = "FAH 225 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
                     setRangeInfo(marnueli, "OBORA", fpMar, "MAR", amp, 2900, 1900);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("248.500", "PURPLE 1", 7, "124.750", "AMBER 1", 0);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Marnueli";
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Marnueli";*/
 
                     /* KUTAISI */
                 }
@@ -1872,7 +1712,36 @@ namespace DcsDataImporter
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "MOA North";
                 }
 
+            }
         }
+
+        private void setRange(string abbrev)
+        {
+            /* find correct range */
+            Range rng = ranges.Find(x => x.getAbbrev().Equals(abbrev));
+
+            if (rng != null)
+            {
+                setRangeInfo(rng.getRange(), rng.getCp(), rng.getFp(), rng.getAbbrev(), rng.getAmp(), Int32.Parse(rng.getJoker()), Int32.Parse(rng.getBingo()));
+                enableTacp();
+                lblJTAC.Text = "Range";
+                setRadio("TACP", formatChannel(rng.getFreq()), formatChannel(rng.getBackup()));
+                setRangeCallsign(txtTacpCallsign.Text, rng.getRange());
+            }
+        }
+
+        private void setRangeCallsign(string callsign, string range)
+        {
+            if (callsign == "")
+            {
+                if (range.ToLower().Contains("range"))
+                {
+                    txtTacpCallsign.Text = range.Split(' ')[0].ToString();
+                } else
+                {
+                    txtTacpCallsign.Text = range;
+                }
+            }
         }
 
         private void setRangeInfo(string loc, string cp, string fp, string lbl, string amp, int joker, int bingo)
@@ -3246,11 +3115,11 @@ namespace DcsDataImporter
                 path += @"\";
             }
 
-            Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
-            Document wordDocument = appWord.Documents.Open(path + wordDoc);
-            wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
+            //Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+            //Document wordDocument = appWord.Documents.Open(path + wordDoc);
+            //wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close();
+            //wordDocument.Close();
         }
 
         void splitPdf(string path)
@@ -3943,6 +3812,77 @@ namespace DcsDataImporter
             {
                 tb.Text = "";
             }
+        }
+    }
+
+    public class Range
+    {
+        string range;
+        string cp;
+        string abbrev; //abbreviated version of the range
+        string joker;
+        string bingo;
+        string freq;
+        string backup;
+        string fp;
+        string amp;
+
+        public Range(string range, string cp, string abbrev, string joker, string bingo, string freq, string backup, string fp, string amp)
+        {
+            this.range = range;
+            this.cp = cp;
+            this.abbrev = abbrev;
+            this.joker = joker;
+            this.bingo = bingo;
+            this.freq = freq;
+            this.backup = backup;
+            this.fp = fp;
+            this.amp = amp;
+        }
+
+        public string getRange()
+        {
+            return this.range;
+        }
+
+        public string getCp()
+        {
+            return this.cp;
+        }
+
+        public string getAbbrev()
+        {
+            return this.abbrev;
+        }
+
+        public string getJoker()
+        {
+            return this.joker;
+        }
+
+        public string getBingo()
+        {
+            return this.bingo;
+        }
+
+        public string getFreq()
+        {
+            return this.freq;
+        }
+
+        public string getBackup()
+        {
+            return this.backup;
+        }
+
+        public string getFp()
+        {
+            return this.fp;
+        }
+
+        public string getAmp()
+        {
+            return this.amp;
         }
     }
 
