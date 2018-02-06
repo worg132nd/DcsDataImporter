@@ -1715,6 +1715,10 @@ namespace DcsDataImporter
             string dusheti = "Dusheti range";
             string tetra = "Tetra range";
             string marnueli = "Marnueli range";
+            string kutaisi = "Kutaisi range";
+            string tkibuli = "Tkibuli range";
+            string moas = "MOA South";
+            string moan = "MOA North";
 
             string fpTet = "MUKHRANI/NDB," // TIA   // MUKHRANI/NDB, OBORA, GIMUR/NDB
                          + "OBORA,"
@@ -1777,7 +1781,8 @@ namespace DcsDataImporter
             {
 
                 /* TIANETI */
-                if (tianeti.ToLower().Contains(s.ToLower())) {
+                if (tianeti.ToLower().Contains(s.ToLower()))
+                {
                     string amp = "FAH 360 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized. CBU's only allowed on the artillery firing locations.";
                     setRangeInfo(tianeti, "MUKHRANI", fpTia, "TIA", amp, 3100, 2100);
                     enableTacp();
@@ -1785,8 +1790,9 @@ namespace DcsDataImporter
                     setTacpFreq("225.750", "INDIGO 10", 8, "131.750", "CHERRY 10", 18);
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tianeti";
 
-                /* DUSHETI */
-                } else if (dusheti.ToLower().Contains(s.ToLower()))
+                    /* DUSHETI */
+                }
+                else if (dusheti.ToLower().Contains(s.ToLower()))
                 {
                     string amp = "FAH 022 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.";
                     setRangeInfo(dusheti, "GIMUR", fpDushex, "DUSHEX", amp, 2900, 1900);
@@ -1795,8 +1801,9 @@ namespace DcsDataImporter
                     setTacpFreq("247.500", "LIME 11", 6, "140.750", "INDIGO 9", 0);
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Dusheti";
 
-                /* TETRA */
-                } else if (tetra.ToLower().Contains(s.ToLower()))
+                    /* TETRA */
+                }
+                else if (tetra.ToLower().Contains(s.ToLower()))
                 {
                     /* BAGEM is in the middle of TETRA.
                      * LAGAS is in the far west of TETRA, at the westernmost border of the range
@@ -1808,8 +1815,9 @@ namespace DcsDataImporter
                     setTacpFreq("243.500", "RED 10", 9, "127.750", "PURPLE 11", 15); // Backup channel has conflicts with AWACS backup frequency
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tetra";
 
-                /* MARNUELI */
-                } else if (marnueli.ToLower().Contains(s.ToLower()))
+                    /* MARNUELI */
+                }
+                else if (marnueli.ToLower().Contains(s.ToLower()))
                 {
                     /* Obora is in the Tbilisi TMA, and very close to MUKHRANI.
                      * TISOT is in MARNUELI
@@ -1820,8 +1828,51 @@ namespace DcsDataImporter
                     lblJTAC.Text = "Range";
                     setTacpFreq("248.500", "PURPLE 1", 7, "124.750", "AMBER 1", 0);
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Marnueli";
+
+                    /* KUTAISI */
                 }
-            }
+                else if (kutaisi.ToLower().Contains(s.ToLower()))
+                {
+                    string amp = "PLACEHOLDER AMPLIFICATION KUTAISI";
+                    setRangeInfo(kutaisi, "GIMUR", null, "KUT", amp, 4500, 3500);
+                    enableTacp();
+                    lblJTAC.Text = "Range";
+                    setTacpFreq("233.000", "PINK 1", 0, "", "", 0);
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Kutaisi";
+
+                    /* TKIBULI */
+                } else if (tkibuli.ToLower().Contains(s.ToLower()))
+                {
+                    string amp = "PLACEHOLDER AMPLIFICATION TKIBULI";
+                    setRangeInfo(tkibuli, "GIMUR", null, "TKI", amp, 4000, 3000);
+                    enableTacp();
+                    lblJTAC.Text = "Range";
+                    setTacpFreq("230.000", "YELLOW 6", 0, "", "", 0);
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tkibuli";
+
+                    /* MOA SOUTH */
+                } else if (moas.ToLower().Contains(s.ToLower()))
+                {
+                    string amp = "PLACEHOLDER AMPLIFICATION MOA SOUTH";
+                    setRangeInfo(moas, "GIMUR", null, "MOAS", amp, 5000, 4000);
+                    enableTacp();
+                    lblJTAC.Text = "Range";
+                    setTacpFreq("237.000", "BLUE 3", 2, "", "", 0);
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "MOA South";
+
+                    /* MOA NORTH */
+                }
+                else if (moan.ToLower().Contains(s.ToLower()))
+                {
+                    string amp = "PLACEHOLDER AMPLIFICATION MOA NORTH";
+                    setRangeInfo(moan, "GIMUR", null, "MOAN", amp, 4000, 3000);
+                    enableTacp();
+                    lblJTAC.Text = "Range";
+                    setTacpFreq("237.000", "BLUE 3", 2, "", "", 0);
+                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "MOA North";
+                }
+
+        }
         }
 
         private void setRangeInfo(string loc, string cp, string fp, string lbl, string amp, int joker, int bingo)
