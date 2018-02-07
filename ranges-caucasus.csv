@@ -7,6 +7,18 @@ FAH 022 +-30. All conventional ordnance authorized. On the strafe panels, only g
 Tetra range,GIMUR,TET,2800,1800,RED 10,PURPLE 11
 MUKHRANI,OBORA,GIMUR,OBORA,GIMUR,J05,J04,J03,J02,J01,TE1,TE2,TE3,TE4,TE5,TE1
 No FAH restrictions. All conventional ordnance authorized. No use of CBU's in the villages.
-Marnueli range,OBORA,MAR,2900,1900,PURPLE 1,AMBER 1,
+Marnueli range,OBORA,MAR,2900,1900,PURPLE 1,AMBER 1
 MR1,MR2,MR3,MR4
 FAH 225 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized.
+Kutaisi range,GIMUR,KUT,4500,3500,PINK 1
+
+
+Tkibuli range,GIMUR,TKI,5000,4000,YELLOW 6
+
+
+MOA South,GIMUR,MOAS,5000,4000,BLUE 3
+
+
+MOA North,GIMUR,MOAN,4000,3000,BLUE 3
+
+

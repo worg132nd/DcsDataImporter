@@ -177,7 +177,6 @@ namespace DcsDataImporter
             if (Awacs == null) disableAwacs();
 
             genAirbaseObj();
-            genRangeObj();
 
             /* Initialize form based on ATO */
             txtMsnNr.Text = AmsndatMsnNumber;
@@ -314,6 +313,7 @@ namespace DcsDataImporter
         {
             InitializeComponent();
             initDataGridViews();
+            genRangeObj();
         }
 
         private void initDataGridViews()
@@ -1347,6 +1347,7 @@ namespace DcsDataImporter
             }
         }
 
+        /* Populates range objects based on the ranges-caucasus.csv file */
         private void genRangeObj()
         {
             ranges = new List<Range>();
@@ -1618,12 +1619,6 @@ namespace DcsDataImporter
                 if (tianeti.ToLower().Contains(s.ToLower()))
                 {
                     setRange("TIA");
-                    /*string amp = "FAH 360 +-30. All conventional ordnance authorized. On the strafe panels, only guns is authorized. CBU's only allowed on the artillery firing locations.";
-                    setRangeInfo(tianeti, "MUKHRANI", fpTia, "TIA", amp, 3100, 2100);
-                    enableTacp();
-                    lblJTAC.Text = "Range";
-                    setTacpFreq("225.750", "INDIGO 10", 8, "131.750", "CHERRY 10", 18);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tianeti";*/
 
                     /* DUSHETI */
                 }
@@ -1646,12 +1641,6 @@ namespace DcsDataImporter
                      */
 
                     setRange("TET");
-                    /* string amp = "No FAH restrictions. All conventional ordnance authorized. No use of CBU's in the villages.";
-                    setRangeInfo(tetra, "GIMUR", fpTet, "TET", amp, 2800, 1800);
-                    enableTacp();
-                    lblJTAC.Text = "Range";
-                    setTacpFreq("243.500", "RED 10", 9, "127.750", "PURPLE 11", 15); // Backup channel has conflicts with AWACS backup frequency
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tetra"; */
 
                     /* MARNUELI */
                 }
@@ -1673,45 +1662,42 @@ namespace DcsDataImporter
                 }
                 else if (kutaisi.ToLower().Contains(s.ToLower()))
                 {
-                    string amp = "PLACEHOLDER AMPLIFICATION KUTAISI";
+                    setRange("KUT");
+                    /*string amp = "PLACEHOLDER AMPLIFICATION KUTAISI";
                     setRangeInfo(kutaisi, "GIMUR", null, "KUT", amp, 4500, 3500);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("233.000", "PINK 1", 0, "", "", 0);
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Kutaisi";
+                    */
 
                     /* TKIBULI */
-                } else if (tkibuli.ToLower().Contains(s.ToLower()))
+                }
+                else if (tkibuli.ToLower().Contains(s.ToLower()))
                 {
+                    setRange("TKI");
+                    /*
                     string amp = "PLACEHOLDER AMPLIFICATION TKIBULI";
                     setRangeInfo(tkibuli, "GIMUR", null, "TKI", amp, 4000, 3000);
                     enableTacp();
                     lblJTAC.Text = "Range";
                     setTacpFreq("230.000", "YELLOW 6", 0, "", "", 0);
                     if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "Tkibuli";
+                    */
 
                     /* MOA SOUTH */
-                } else if (moas.ToLower().Contains(s.ToLower()))
+                }
+                else if (moas.ToLower().Contains(s.ToLower()))
                 {
-                    string amp = "PLACEHOLDER AMPLIFICATION MOA SOUTH";
-                    setRangeInfo(moas, "GIMUR", null, "MOAS", amp, 5000, 4000);
-                    enableTacp();
-                    lblJTAC.Text = "Range";
-                    setTacpFreq("237.000", "BLUE 3", 2, "", "", 0);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "MOA South";
+                    setRange("MOAS");
 
                     /* MOA NORTH */
                 }
                 else if (moan.ToLower().Contains(s.ToLower()))
                 {
-                    string amp = "PLACEHOLDER AMPLIFICATION MOA NORTH";
-                    setRangeInfo(moan, "GIMUR", null, "MOAN", amp, 4000, 3000);
-                    enableTacp();
-                    lblJTAC.Text = "Range";
-                    setTacpFreq("237.000", "BLUE 3", 2, "", "", 0);
-                    if (txtTacpCallsign.Text == "") txtTacpCallsign.Text = "MOA North";
-                }
+                    setRange("MOAN");
 
+                }
             }
         }
 
