@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Packaging;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using Microsoft.Office.Interop.Word;
+// using Microsoft.Office.Interop.Word;
 
 /* storeAsPdf-method contains code that is commented out temporarily */
 
@@ -642,6 +642,7 @@ namespace DcsDataImporter
                     }
                 }
             }
+            parseOperationalFreq();
         }
 
         private string convertNumberToDigit(string number)
@@ -1345,6 +1346,87 @@ namespace DcsDataImporter
                     airbases.Add(ab);
                 }
             }
+        }
+
+        /* Parses 132nd operational frequencies, but remember to open, view source, and mark and copy code from the newest operational frequencies table and putting it in /bin/debug manually before running. */
+        private void parseOperationalFreq()
+        {
+            Tuple t;
+
+            string path = Environment.CurrentDirectory + "\\" + "view-source_www.132virtualwing.org_index.php_page_freqlist.html";
+
+            string table = null;
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                while (reader.Peek() >= 0)
+                {
+                    string line = reader.ReadLine();
+                    if (line.StartsWith("<table id=\"freqlist\""))
+                    {
+                        // found the correct line that contains the whole frequency table
+                        table = line;
+                        break;
+                    }
+                }
+            }
+
+            string color = null;
+            string freq = null;
+            int nr = 1;
+            Tuple tuple = null;
+
+            // need to split up the table
+            foreach (string word in table.Split('<', '>')) {
+                if (isColor(word))
+                {
+                    color = word;
+                }
+                else if (isFreq(word))
+                {
+                    freq = word;
+
+                    // does frequency exist from before, from the preset list?
+                    try
+                    {
+                        tuple = (Tuple)list.Find(x => x.getChannel().ToLower().Equals(formatChannel((color + ' ' + nr.ToString()).ToLower())));
+                    } catch (NullReferenceException)
+                    {
+                        tuple = null;
+                    }
+
+                    if (tuple == null)
+                    {
+                        // if not, add the frequency
+                        tuple = new Tuple(); // Create new item when encountering new preset
+                        tuple.setChannel(color.ToUpper() + ' ' + nr);
+                        tuple.setFreq(word);
+                        list.Add(tuple); // Add item to list here because all items has a frequency
+                    }
+
+                    if (nr == 11)
+                    {
+                        // reset: important for blank frequency slots being filtered out
+                        nr = 1;
+                        color = freq = null;
+                        tuple = null;
+                    } else
+                    {
+                        nr++;
+                    }
+                // removes blank frequency slots in table
+                } else if (word.Trim().Equals("") && color != null)
+                {
+                    nr++;
+                }
+            }
+
+            //t = new Tuple();
+
+
+
+            //t.setFreq("123.250");
+            //list.Add(t);
         }
 
         /* Populates range objects based on the ranges-caucasus.csv file */
@@ -3088,6 +3170,18 @@ namespace DcsDataImporter
                 return true;
             }
 
+            // ### important for 132nd operational frequencies table to work. Do not remove!
+            if (word.Length == 6 && Char.IsDigit(word[0]) && Char.IsDigit(word[1]) && Char.IsDigit(word[2]) && word[3] == '.' && Char.IsDigit(word[4]) && Char.IsDigit(word[5]))
+            {
+                return true;
+            }
+
+            // ### important for 132nd operational frequencies table to work. Do not remove!
+            if (word.Length == 3 && Char.IsDigit(word[0]) && Char.IsDigit(word[1]) && Char.IsDigit(word[2]))
+            {
+                return true;
+            }
+
             return false;
         }
 
@@ -3101,11 +3195,11 @@ namespace DcsDataImporter
                 path += @"\";
             }
 
-            Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+            /*Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
             Document wordDocument = appWord.Documents.Open(path + wordDoc);
             wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close();
+            wordDocument.Close();*/
         }
 
         void splitPdf(string path)
