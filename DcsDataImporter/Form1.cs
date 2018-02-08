@@ -1420,13 +1420,6 @@ namespace DcsDataImporter
                     nr++;
                 }
             }
-
-            //t = new Tuple();
-
-
-
-            //t.setFreq("123.250");
-            //list.Add(t);
         }
 
         /* Populates range objects based on the ranges-caucasus.csv file */
