@@ -131,6 +131,7 @@ namespace DcsDataImporter
             if (ofd1.ShowDialog() == DialogResult.OK)
             {
                 StreamReader file = new StreamReader(@ofd1.FileName);
+                Properties.Settings.Default.pathAto = @ofd1.FileName;
 
                 string line;
                 while ((line = file.ReadLine()) != null)

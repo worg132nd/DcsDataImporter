@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 /* TODO:
  * 
@@ -19,11 +20,13 @@ namespace DcsDataImporter
 {
     public partial class Form3 : Form
     {
+        public List<ATO> ATOs;
+
         public Form3(string tac)
         {
             InitializeComponent();
             initTarget(tac);
-            loadLasercode();
+            commonInit();
         }
 
         /* From form2 after back from form3 */
@@ -32,7 +35,97 @@ namespace DcsDataImporter
             InitializeComponent();
             initDgvs();
             loadForm();
+            commonInit();
+        }
+
+        private void commonInit()
+        {
             loadLasercode();
+            parseATO();
+        }
+
+        private void parseATO()
+        {
+            ATOs = new List<ATO>();
+
+            string path = Properties.Settings.Default.pathAto;
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                while (reader.Peek() >= 0)
+                {
+                    string line = reader.ReadLine();
+
+                    string nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq;
+                    nrAc = type = callsignAndNr = priConf = secConf = priFreq = secFreq = null;
+
+                    if (line.StartsWith("MSNACFT"))
+                    {
+                        int valueNr = 0;
+                        foreach (string word in line.Split('/'))
+                        {
+                            if (valueNr == 0) ;
+                            if (valueNr == 1) nrAc = word.Trim();
+                            if (valueNr == 2) type = word.Trim();
+                            if (valueNr == 3) callsignAndNr = word.Trim();
+                            if (valueNr == 4) priConf = word.Trim();
+                            if (valueNr == 5) secConf = word.Trim();
+                            if (valueNr == 6) priFreq = word.Trim();
+                            if (valueNr == 7) secFreq = word.Trim();
+
+                            valueNr++;
+                        }
+                        /* MessageBox.Show( //debug
+                            "nrAc: " + nrAc + '\n'
+                            + "type: " + type + '\n'
+                            + "callsignAndNr: " + callsignAndNr + '\n'
+                            + "priConf: " + priConf + '\n'
+                            + "secConf: " + secConf + '\n'
+                            + "priFreq: " + priFreq + '\n'
+                            + "secFreq: " + secFreq); */
+                        if (isFlight(type) && !isCallsignMe(callsignAndNr))
+                        {
+                            ATO ato = new ATO(nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq);
+                            ATOs.Add(ato);
+                            setPkgFlight(ato);
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool isCallsignMe(string callsignAndNr)
+        {
+            string justCallsignMe = new string(txtCallsign.Text.Where(Char.IsLetter).ToArray()).ToUpper();
+            string justCallsignAto = new string(callsignAndNr.Where(Char.IsLetter).ToArray()).ToUpper();
+
+            if (justCallsignMe.Equals(justCallsignAto))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void setPkgFlight(ATO ato)
+        {
+
+            /* Set name of last waypoint */
+            if (ATOs.Count < 7)
+            {
+                var row = dgvPackage.Rows[ATOs.Count - 1];
+                row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
+                row.Cells["colAircraftType"].Value = ato.getTypeOfAc();
+            }
+        }
+
+        private bool isFlight(string type)
+        {
+            type = type.ToLower();
+
+            if (!type.Equals("ground") && (!type.Equals("e-3")) && (!type.Equals("e-2"))) {
+                return true;
+            }
+            return false;
         }
 
         private void loadLasercode()
@@ -1288,6 +1381,119 @@ namespace DcsDataImporter
                 int sub = 500 - diff;
                 txtBingo.Value -= sub;
             }
+        }
+    }
+
+    /* public class ATO
+    {
+        string id;
+        MSNACFT msnacft;
+
+        public ATO(string id)
+        {
+            this.id = id;
+        }
+
+        public void setMsnacft(MSNACFT msnacft)
+        {
+            this.msnacft = msnacft;
+        }
+
+        public MSNACFT getMsnacft()
+        {
+            return this.msnacft;
+        }
+    }*/
+
+    public class ATO
+    {
+        string nrAc;
+        string typeOfAc;
+        string callsignAndNr;
+        string priConf;
+        string secConf;
+        string priFreq;
+        string secFreq;
+
+        public ATO(string nrAc, string typeOfAc, string callsignAndNr, string priConf, string secConf, string priFreq, string secFreq)
+        {
+            this.nrAc = nrAc;
+            this.typeOfAc = typeOfAc;
+            this.callsignAndNr = callsignAndNr;
+            this.priConf = priConf;
+            this.secConf = secConf;
+            this.priFreq = priFreq;
+            this.secFreq = secFreq;
+        }
+
+        public void setNrAc(string nrAc)
+        {
+            this.nrAc = nrAc;
+        }
+
+        public string getNrAc()
+        {
+            return this.nrAc;
+        }
+
+        public void setTypeOfAc(string typeOfAc)
+        {
+            this.typeOfAc = typeOfAc;
+        }
+
+        public string getTypeOfAc()
+        {
+            return this.typeOfAc;
+        }
+
+        public void setCallsignAndNr(string callsignAndNr)
+        {
+            this.callsignAndNr = callsignAndNr;
+        }
+
+        public string getCallsignAndNr()
+        {
+            return this.callsignAndNr;
+        }
+
+        public void setPriConf(string priConf)
+        {
+            this.priConf = priConf;
+        }
+
+        public string getPriConf()
+        {
+            return this.priConf;
+        }
+
+        public void setSecConf(string secConf)
+        {
+            this.secConf = secConf;
+        }
+
+        public string getSecConf()
+        {
+            return this.secConf;
+        }
+
+        public void setPriFreq(string priFreq)
+        {
+            this.priFreq = priFreq;
+        }
+
+        public string getPriFreq()
+        {
+            return this.priFreq;
+        }
+
+        public void setSecFreq(string secFreq)
+        {
+            this.secFreq = secFreq;
+        }
+
+        public string getSecFreq()
+        {
+            return this.secFreq;
         }
     }
 }

@@ -3188,11 +3188,11 @@ namespace DcsDataImporter
                 path += @"\";
             }
 
-            /*Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+            /* Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
             Document wordDocument = appWord.Documents.Open(path + wordDoc);
             wordDocument.ExportAsFixedFormat(path + pdfDoc, WdExportFormat.wdExportFormatPDF);
 
-            wordDocument.Close();*/
+            wordDocument.Close(); */
         }
 
         void splitPdf(string path)
