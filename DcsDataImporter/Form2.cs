@@ -282,6 +282,8 @@ namespace DcsDataImporter
                 row.Cells["colWpt"].Value = counter + 1;
                 counter++;
             }
+
+            setWaypoint("INIT", "INIT POS", "T/O", "0", null, Properties.Settings.Default.prevCbRejoin,null);
         }
 
         private void initTma()
@@ -460,6 +462,27 @@ namespace DcsDataImporter
             row.Cells["colName"].Value = displayName;
         }
 
+        private void setWaypoint(string dictName, string displayName, string action, string alt, string tot, string formation, string remark)
+        {
+            Waypoint wp = new Waypoint(dictName);
+            wp.setDisplayName(displayName);
+            wp.setAction(action);
+            wp.setAlt(alt);
+            wp.setTot(tot);
+            wp.setFormation(formation);
+            wp.setRemark(remark);
+
+            waypoints.Add(dictName, wp);
+
+            var row = dgvFlightplan.Rows[waypoints.Count - 1];
+            row.Cells["colName"].Value = displayName;
+            row.Cells["colAction"].Value = action;
+            row.Cells["colAlt"].Value = alt;
+            row.Cells["colSpd"].Value = tot;
+            row.Cells["colFormation"].Value = formation;
+            row.Cells["colRemark"].Value = remark;
+        }
+
         private int extractIdFromLineInDictionaryFile(string line)
         {
             int id = 0;
@@ -547,7 +570,9 @@ namespace DcsDataImporter
                     /* add waypoint information to datagridview */
                     var row = dgvFlightplan.Rows[nrOfWpt];
                     row.Cells["colName"].Value = wp.getDisplayName();
+                    row.Cells["colAction"].Value = wp.getAction();
                     row.Cells["colPos"].Value = wp.getX() + ", " + wp.getY();
+                    row.Cells["colSpd"].Value = wp.getTot();
 
                     nrOfWpt++;
                 }
@@ -1228,6 +1253,10 @@ namespace DcsDataImporter
         string speed;
         string eta;
         string alt;
+        string action;
+        string tot;
+        string formation;
+        string remark;
 
         public Waypoint(string dictName)
         {
@@ -1272,6 +1301,56 @@ namespace DcsDataImporter
         public string getY()
         {
             return this.y;
+        }
+
+        public void setAction(string action)
+        {
+            this.action = action;
+        }
+
+        public string getAction()
+        {
+            return this.action;
+        }
+
+        public void setAlt(string alt)
+        {
+            this.alt = alt;
+        }
+
+        public string getAlt()
+        {
+            return this.alt;
+        }
+
+        public void setTot(string tot)
+        {
+            this.tot = tot;
+        }
+
+        public string getTot()
+        {
+            return this.tot;
+        }
+
+        public void setFormation(string formation)
+        {
+            this.formation = formation;
+        }
+
+        public string getFormation()
+        {
+            return this.formation;
+        }
+
+        public void setRemark(string remark)
+        {
+            this.remark = remark;
+        }
+
+        public string getRemark()
+        {
+            return this.remark;
         }
     }
 

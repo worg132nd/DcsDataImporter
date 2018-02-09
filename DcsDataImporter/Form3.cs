@@ -23,6 +23,7 @@ namespace DcsDataImporter
         {
             InitializeComponent();
             initTarget(tac);
+            loadLasercode();
         }
 
         /* From form2 after back from form3 */
@@ -31,6 +32,28 @@ namespace DcsDataImporter
             InitializeComponent();
             initDgvs();
             loadForm();
+            loadLasercode();
+        }
+
+        private void loadLasercode()
+        {
+            int acNr = Int32.Parse(Properties.Settings.Default.prevTxtCallsign.Last().ToString());
+
+            switch (acNr)
+            {
+                case 1:
+                    lblLaser.Text = Properties.Settings.Default.prevColLsrLead;
+                    break;
+                case 2:
+                    lblLaser.Text = Properties.Settings.Default.prevColLsrWing;
+                    break;
+                case 3:
+                    lblLaser.Text = Properties.Settings.Default.prevColLsrElement;
+                    break;
+                case 4:
+                    lblLaser.Text = Properties.Settings.Default.prevColLsrTrail;
+                    break;
+            }
         }
 
         private void initDgvs()
