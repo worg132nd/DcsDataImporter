@@ -316,7 +316,7 @@ namespace DcsDataImporter
                 // AMPN
                 string amplification = AmpnAmplification;
 
-                SelectSupport selectSupport = new SelectSupport(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpType, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, chkTraining.Checked, AmsndatTakeoffTime);
+                SelectSupport selectSupport = new SelectSupport(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpType, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, chkTraining.Checked, AmsndatTakeoffTime, AmsnlocTimeFrom, AmsnlocTimeTo);
                 selectSupport.Show();
             }
         }

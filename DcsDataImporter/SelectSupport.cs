@@ -35,13 +35,15 @@ namespace DcsDataImporter
         string amplification;
         bool standardTraining;
         string AmsndatTakeoffTime;
+        string timeFrom;
+        string timeTo;
 
         public SelectSupport()
         {
             InitializeComponent();
         }
 
-        public SelectSupport(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string InternalChn, string InternalBackupChn, string amplification, bool chkTraining, string AmsndatTakeoffTime)
+        public SelectSupport(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string InternalChn, string InternalBackupChn, string amplification, bool chkTraining, string AmsndatTakeoffTime, string timeFrom, string timeTo)
         {
             InitializeComponent();
 
@@ -66,6 +68,8 @@ namespace DcsDataImporter
             this.amplification = amplification;
             this.standardTraining = chkTraining;
             this.AmsndatTakeoffTime = AmsndatTakeoffTime;
+            this.timeFrom = timeFrom;
+            this.timeTo = timeTo;
 
             if (standardTraining)
             {
@@ -81,7 +85,7 @@ namespace DcsDataImporter
             } else
             {
                 Hide();
-                Form1 form1 = new Form1(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpType, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, standardTraining, AmsndatTakeoffTime, chkTma.Checked, chkAwacsAG.Checked, chkAwacsAA.Checked, chkExtraAwacsAG.Checked, chkExtraAwacsAA.Checked, chkFaca.Checked, chkCsar.Checked, chkJstar.Checked, chkScramble.Checked, chkExtraJtac.Checked, chkExtraPackage.Checked, numTankers.Text, this);
+                Form1 form1 = new Form1(AmsndatMsnNumber, airbaseDep, airbaseArr, NrAc, Callsign, Awacs, AwacsChn, AwacsBackupChn, AwacsCp, Tacp, TacpType, TacpChn, TacpBackupChn, TacpCp, location, tasking, InternalChn, InternalBackupChn, amplification, standardTraining, AmsndatTakeoffTime, chkTma.Checked, chkAwacsAG.Checked, chkAwacsAA.Checked, chkExtraAwacsAG.Checked, chkExtraAwacsAA.Checked, chkFaca.Checked, chkCsar.Checked, chkJstar.Checked, chkScramble.Checked, chkExtraJtac.Checked, chkExtraPackage.Checked, numTankers.Text, this, timeFrom, timeTo);
                 form1.Show();
             }
         }

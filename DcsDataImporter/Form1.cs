@@ -166,7 +166,7 @@ namespace DcsDataImporter
         }    
 
         /* Constructor when ATO is filled out */
-        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime, bool tma, bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers, Form selectSupport)
+        public Form1(string AmsndatMsnNumber, string airbaseDep, string airbaseArr, string NrAc, string Callsign, string Awacs, string AwacsChn, string AwacsBackupChn, string AwacsCp, string Tacp, string TacpType, string TacpChn, string TacpBackupChn, string TacpCp, string location, string tasking, string internalFreq, string internalBackupFreq, string amplification, bool standardTraining, string takeoffTime, bool tma, bool chkAwacsAG, bool chkAwacsAA, bool chkExtraAwacsAG, bool chkExtraAwacsAA, bool chkFaca, bool chkCsar, bool chkJstar, bool chkScramble, bool chkExtraJtac, bool chkExtraPackage, string numTankers, Form selectSupport, string timeFrom, string timeTo)
         {
             init();
 
@@ -196,6 +196,7 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevAmpn = amplification;
             initFuel();
             hasTma = tma;
+            txtVulEnd.Text = timeTo;
 
             // Set correct tasking
             if (tasking.Equals("TR"))
@@ -207,10 +208,10 @@ namespace DcsDataImporter
                 txtTasking.Text = tasking;
             }
 
-            if (!takeoffTime.Equals("-") && !takeoffTime.Equals(""))
-            {
-                txtTakeoffTime.Text = takeoffTime[0].ToString() + takeoffTime[1].ToString() + ":" + takeoffTime[2].ToString() + takeoffTime[3].ToString();
-            }
+            // Set times (takeoff time, vul start, vul end)
+            formatAndSetTime(takeoffTime, txtTakeoffTime);
+            formatAndSetTime(timeFrom, txtVulStart);
+            formatAndSetTime(timeTo, txtVulEnd);
 
             buildList();
 
@@ -257,6 +258,15 @@ namespace DcsDataImporter
             setRadio("AWACS", formatChannel(AwacsChn), formatChannel(AwacsBackupChn));
             setRadio("TACP", formatChannel(TacpChn), formatChannel(TacpBackupChn));
             setRadio("internal", formatChannel(internalFreq), formatChannel(internalBackupFreq));
+        }
+
+        // Convert from format 0730 to 07:30 and set the correct text box
+        private void formatAndSetTime(string time, Control textBox) 
+        {
+            if (!time.Equals("-") && !time.Equals(""))
+            {
+                textBox.Text = time[0].ToString() + time[1].ToString() + ":" + time[2].ToString() + time[3].ToString();
+            }
         }
 
         public static class MyGlobals
