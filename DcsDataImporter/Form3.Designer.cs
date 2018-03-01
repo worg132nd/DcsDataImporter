@@ -1062,7 +1062,7 @@
             // 
             // txtAltitude3
             // 
-            this.txtAltitude3.Location = new System.Drawing.Point(286, 309);
+            this.txtAltitude3.Location = new System.Drawing.Point(286, 312);
             this.txtAltitude3.Name = "txtAltitude3";
             this.txtAltitude3.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude3.TabIndex = 43;
@@ -1236,7 +1236,7 @@
             // 
             // txtAbort4
             // 
-            this.txtAbort4.Location = new System.Drawing.Point(335, 332);
+            this.txtAbort4.Location = new System.Drawing.Point(335, 335);
             this.txtAbort4.Name = "txtAbort4";
             this.txtAbort4.Size = new System.Drawing.Size(48, 20);
             this.txtAbort4.TabIndex = 57;
@@ -1980,7 +1980,7 @@
             0,
             0,
             0});
-            this.numFAH4.Location = new System.Drawing.Point(244, 332);
+            this.numFAH4.Location = new System.Drawing.Point(244, 335);
             this.numFAH4.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2002,7 +2002,7 @@
             0,
             0,
             0});
-            this.numFAH2.Location = new System.Drawing.Point(244, 156);
+            this.numFAH2.Location = new System.Drawing.Point(244, 159);
             this.numFAH2.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2024,7 +2024,7 @@
             0,
             0,
             0});
-            this.numFAH3.Location = new System.Drawing.Point(244, 309);
+            this.numFAH3.Location = new System.Drawing.Point(244, 312);
             this.numFAH3.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2042,7 +2042,7 @@
             // lblFAH2
             // 
             this.lblFAH2.AutoSize = true;
-            this.lblFAH2.Location = new System.Drawing.Point(241, 295);
+            this.lblFAH2.Location = new System.Drawing.Point(241, 298);
             this.lblFAH2.Name = "lblFAH2";
             this.lblFAH2.Size = new System.Drawing.Size(28, 13);
             this.lblFAH2.TabIndex = 0;
@@ -2055,7 +2055,7 @@
             0,
             0,
             0});
-            this.numFAH1.Location = new System.Drawing.Point(244, 133);
+            this.numFAH1.Location = new System.Drawing.Point(244, 136);
             this.numFAH1.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2073,7 +2073,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 119);
+            this.label2.Location = new System.Drawing.Point(241, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 0;
@@ -2081,7 +2081,7 @@
             // 
             // txtAltitude4
             // 
-            this.txtAltitude4.Location = new System.Drawing.Point(286, 332);
+            this.txtAltitude4.Location = new System.Drawing.Point(286, 335);
             this.txtAltitude4.Name = "txtAltitude4";
             this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude4.TabIndex = 56;
@@ -2089,7 +2089,7 @@
             // lblAltitude2
             // 
             this.lblAltitude2.AutoSize = true;
-            this.lblAltitude2.Location = new System.Drawing.Point(290, 295);
+            this.lblAltitude2.Location = new System.Drawing.Point(290, 298);
             this.lblAltitude2.Name = "lblAltitude2";
             this.lblAltitude2.Size = new System.Drawing.Size(42, 13);
             this.lblAltitude2.TabIndex = 307;
@@ -2098,7 +2098,7 @@
             // lblAbort2
             // 
             this.lblAbort2.AutoSize = true;
-            this.lblAbort2.Location = new System.Drawing.Point(335, 295);
+            this.lblAbort2.Location = new System.Drawing.Point(335, 298);
             this.lblAbort2.Name = "lblAbort2";
             this.lblAbort2.Size = new System.Drawing.Size(46, 13);
             this.lblAbort2.TabIndex = 308;
