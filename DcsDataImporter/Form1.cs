@@ -1785,7 +1785,7 @@ namespace DcsDataImporter
             {
                 setRangeInfo(rng.getRange(), rng.getCp(), rng.getFp(), rng.getAbbrev(), rng.getAmp(), Int32.Parse(rng.getJoker()), Int32.Parse(rng.getBingo()));
                 enableTacp();
-                lblJTAC.Text = "Range";
+                // lblJTAC.Text = "Range";
                 setRadio("TACP", formatChannel(rng.getFreq()), formatChannel(rng.getBackup()));
                 setRangeCallsign(txtTacpCallsign.Text, rng.getRange());
             }
