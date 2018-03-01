@@ -86,7 +86,7 @@ namespace DcsDataImporter
                         }
                         if (isFlight(type) && !isCallsignMe(callsignAndNr))
                         {
-                            MessageBox.Show( //debug
+                            /*MessageBox.Show( //debug
                             "nrAc: " + nrAc + '\n'
                             + "type: " + type + '\n'
                             + "callsignAndNr: " + callsignAndNr + '\n'
@@ -94,7 +94,7 @@ namespace DcsDataImporter
                             + "secConf: " + secConf + '\n'
                             + "priFreq: " + priFreq + '\n'
                             + "secFreq: " + secFreq + '\n'
-                            + "tasking: " + tasking);
+                            + "tasking: " + tasking);*/
 
                             ATO ato = new ATO(nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking);
                             ATOs.Add(ato);
@@ -122,7 +122,7 @@ namespace DcsDataImporter
         {
 
             /* Set name of last waypoint */
-            if (ATOs.Count < 7)
+            if (ATOs.Count < 8)
             {
                 var row = dgvPackage.Rows[ATOs.Count - 1];
                 row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
@@ -284,7 +284,7 @@ namespace DcsDataImporter
 
         private void initPackageDgv()
         {
-            dgvPackage.RowCount = 6;
+            dgvPackage.RowCount = 7;
             dgvPackage.DefaultCellStyle.SelectionBackColor = dgvPackage.DefaultCellStyle.BackColor;
             dgvPackage.DefaultCellStyle.SelectionForeColor = dgvPackage.DefaultCellStyle.ForeColor;
 

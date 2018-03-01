@@ -254,7 +254,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 108);
+            this.label1.Location = new System.Drawing.Point(12, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 157;
@@ -264,7 +264,7 @@
             // 
             this.lblElement2.AutoSize = true;
             this.lblElement2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElement2.Location = new System.Drawing.Point(12, 284);
+            this.lblElement2.Location = new System.Drawing.Point(12, 281);
             this.lblElement2.Name = "lblElement2";
             this.lblElement2.Size = new System.Drawing.Size(75, 13);
             this.lblElement2.TabIndex = 158;
@@ -283,7 +283,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvTgtLead.Location = new System.Drawing.Point(15, 124);
+            this.dgvTgtLead.Location = new System.Drawing.Point(15, 121);
             this.dgvTgtLead.Name = "dgvTgtLead";
             this.dgvTgtLead.RowHeadersVisible = false;
             this.dgvTgtLead.Size = new System.Drawing.Size(589, 69);
@@ -334,7 +334,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvTgtElem.Location = new System.Drawing.Point(15, 300);
+            this.dgvTgtElem.Location = new System.Drawing.Point(15, 297);
             this.dgvTgtElem.Name = "dgvTgtElem";
             this.dgvTgtElem.RowHeadersVisible = false;
             this.dgvTgtElem.Size = new System.Drawing.Size(589, 69);
@@ -376,7 +376,7 @@
             // lblMunitions
             // 
             this.lblMunitions.AutoSize = true;
-            this.lblMunitions.Location = new System.Drawing.Point(78, 662);
+            this.lblMunitions.Location = new System.Drawing.Point(78, 668);
             this.lblMunitions.Name = "lblMunitions";
             this.lblMunitions.Size = new System.Drawing.Size(52, 13);
             this.lblMunitions.TabIndex = 173;
@@ -406,7 +406,7 @@
             "Low Altitude Toss (LAT)",
             "Medium Altitude Toss (MAT)",
             "Popup"});
-            this.cbDelivery1.Location = new System.Drawing.Point(68, 233);
+            this.cbDelivery1.Location = new System.Drawing.Point(68, 230);
             this.cbDelivery1.Name = "cbDelivery1";
             this.cbDelivery1.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery1.TabIndex = 11;
@@ -416,7 +416,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(71, 219);
+            this.label12.Location = new System.Drawing.Point(71, 216);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 175;
@@ -430,7 +430,7 @@
             "TRN",
             "CLM",
             "NONE"});
-            this.cbSem1.Location = new System.Drawing.Point(393, 233);
+            this.cbSem1.Location = new System.Drawing.Point(393, 230);
             this.cbSem1.Name = "cbSem1";
             this.cbSem1.Size = new System.Drawing.Size(53, 21);
             this.cbSem1.TabIndex = 18;
@@ -438,7 +438,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(406, 219);
+            this.label15.Location = new System.Drawing.Point(406, 216);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 13);
             this.label15.TabIndex = 177;
@@ -450,7 +450,7 @@
             this.cbEgressDirection1.Items.AddRange(new object[] {
             "Left",
             "Right"});
-            this.cbEgressDirection1.Location = new System.Drawing.Point(447, 233);
+            this.cbEgressDirection1.Location = new System.Drawing.Point(447, 230);
             this.cbEgressDirection1.Name = "cbEgressDirection1";
             this.cbEgressDirection1.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection1.TabIndex = 19;
@@ -458,7 +458,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(443, 219);
+            this.label16.Location = new System.Drawing.Point(443, 216);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 13);
             this.label16.TabIndex = 179;
@@ -467,7 +467,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(494, 219);
+            this.label17.Location = new System.Drawing.Point(494, 216);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(45, 13);
             this.label17.TabIndex = 180;
@@ -486,7 +486,7 @@
             "W",
             "NW",
             "N/A"});
-            this.cbEgressCardinal1.Location = new System.Drawing.Point(495, 233);
+            this.cbEgressCardinal1.Location = new System.Drawing.Point(495, 230);
             this.cbEgressCardinal1.Name = "cbEgressCardinal1";
             this.cbEgressCardinal1.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal1.TabIndex = 20;
@@ -496,7 +496,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(473, 199);
+            this.label18.Location = new System.Drawing.Point(473, 196);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 13);
             this.label18.TabIndex = 180;
@@ -505,7 +505,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(535, 219);
+            this.label19.Location = new System.Drawing.Point(535, 216);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 184;
@@ -548,7 +548,7 @@
             "TGM-65G",
             "CATM-65K",
             "TGM-65H"});
-            this.Munitions1.Location = new System.Drawing.Point(67, 678);
+            this.Munitions1.Location = new System.Drawing.Point(67, 684);
             this.Munitions1.Name = "Munitions1";
             this.Munitions1.Size = new System.Drawing.Size(81, 21);
             this.Munitions1.TabIndex = 65;
@@ -561,7 +561,7 @@
             0,
             0,
             0});
-            this.numEgressHeading1.Location = new System.Drawing.Point(539, 233);
+            this.numEgressHeading1.Location = new System.Drawing.Point(539, 230);
             this.numEgressHeading1.Maximum = new decimal(new int[] {
             360,
             0,
@@ -584,7 +584,7 @@
             "CCIP",
             "CCIP 3/9",
             "CCIP 5 MIL"});
-            this.Mode1.Location = new System.Drawing.Point(149, 678);
+            this.Mode1.Location = new System.Drawing.Point(149, 684);
             this.Mode1.Name = "Mode1";
             this.Mode1.Size = new System.Drawing.Size(76, 21);
             this.Mode1.TabIndex = 66;
@@ -592,7 +592,7 @@
             // lblMode
             // 
             this.lblMode.AutoSize = true;
-            this.lblMode.Location = new System.Drawing.Point(168, 662);
+            this.lblMode.Location = new System.Drawing.Point(168, 668);
             this.lblMode.Name = "lblMode";
             this.lblMode.Size = new System.Drawing.Size(34, 13);
             this.lblMode.TabIndex = 188;
@@ -601,7 +601,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(297, 219);
+            this.label21.Location = new System.Drawing.Point(297, 216);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(42, 13);
             this.label21.TabIndex = 189;
@@ -609,7 +609,7 @@
             // 
             // txtAbort1
             // 
-            this.txtAbort1.Location = new System.Drawing.Point(342, 233);
+            this.txtAbort1.Location = new System.Drawing.Point(342, 230);
             this.txtAbort1.Name = "txtAbort1";
             this.txtAbort1.Size = new System.Drawing.Size(48, 20);
             this.txtAbort1.TabIndex = 17;
@@ -618,7 +618,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(314, 199);
+            this.label22.Location = new System.Drawing.Point(314, 196);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 191;
@@ -627,7 +627,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(342, 219);
+            this.label23.Location = new System.Drawing.Point(342, 216);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(46, 13);
             this.label23.TabIndex = 193;
@@ -642,7 +642,7 @@
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.SGLPAIR1.Location = new System.Drawing.Point(274, 678);
+            this.SGLPAIR1.Location = new System.Drawing.Point(274, 684);
             this.SGLPAIR1.Name = "SGLPAIR1";
             this.SGLPAIR1.Size = new System.Drawing.Size(65, 21);
             this.SGLPAIR1.TabIndex = 68;
@@ -651,7 +651,7 @@
             // lblSGLPAIR
             // 
             this.lblSGLPAIR.AutoSize = true;
-            this.lblSGLPAIR.Location = new System.Drawing.Point(277, 663);
+            this.lblSGLPAIR.Location = new System.Drawing.Point(277, 669);
             this.lblSGLPAIR.Name = "lblSGLPAIR";
             this.lblSGLPAIR.Size = new System.Drawing.Size(58, 13);
             this.lblSGLPAIR.TabIndex = 194;
@@ -659,7 +659,7 @@
             // 
             // txtAltitude1
             // 
-            this.txtAltitude1.Location = new System.Drawing.Point(293, 233);
+            this.txtAltitude1.Location = new System.Drawing.Point(293, 230);
             this.txtAltitude1.Name = "txtAltitude1";
             this.txtAltitude1.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude1.TabIndex = 16;
@@ -667,7 +667,7 @@
             // lblRPL
             // 
             this.lblRPL.AutoSize = true;
-            this.lblRPL.Location = new System.Drawing.Point(341, 663);
+            this.lblRPL.Location = new System.Drawing.Point(341, 669);
             this.lblRPL.Name = "lblRPL";
             this.lblRPL.Size = new System.Drawing.Size(28, 13);
             this.lblRPL.TabIndex = 196;
@@ -676,7 +676,7 @@
             // lblSpacing
             // 
             this.lblSpacing.AutoSize = true;
-            this.lblSpacing.Location = new System.Drawing.Point(368, 663);
+            this.lblSpacing.Location = new System.Drawing.Point(368, 669);
             this.lblSpacing.Name = "lblSpacing";
             this.lblSpacing.Size = new System.Drawing.Size(46, 13);
             this.lblSpacing.TabIndex = 197;
@@ -684,7 +684,7 @@
             // 
             // RPL1
             // 
-            this.RPL1.Location = new System.Drawing.Point(340, 678);
+            this.RPL1.Location = new System.Drawing.Point(340, 684);
             this.RPL1.Maximum = new decimal(new int[] {
             99,
             0,
@@ -701,7 +701,7 @@
             0,
             0,
             0});
-            this.Spacing1.Location = new System.Drawing.Point(373, 678);
+            this.Spacing1.Location = new System.Drawing.Point(373, 684);
             this.Spacing1.Maximum = new decimal(new int[] {
             999,
             0,
@@ -714,7 +714,7 @@
             // lblFusing
             // 
             this.lblFusing.AutoSize = true;
-            this.lblFusing.Location = new System.Drawing.Point(230, 662);
+            this.lblFusing.Location = new System.Drawing.Point(230, 668);
             this.lblFusing.Name = "lblFusing";
             this.lblFusing.Size = new System.Drawing.Size(38, 13);
             this.lblFusing.TabIndex = 201;
@@ -728,14 +728,14 @@
             "Tail",
             "N/T",
             "N/A"});
-            this.Fusing1.Location = new System.Drawing.Point(226, 678);
+            this.Fusing1.Location = new System.Drawing.Point(226, 684);
             this.Fusing1.Name = "Fusing1";
             this.Fusing1.Size = new System.Drawing.Size(47, 21);
             this.Fusing1.TabIndex = 67;
             // 
             // HOF1
             // 
-            this.HOF1.Location = new System.Drawing.Point(412, 678);
+            this.HOF1.Location = new System.Drawing.Point(412, 684);
             this.HOF1.Name = "HOF1";
             this.HOF1.Size = new System.Drawing.Size(48, 20);
             this.HOF1.TabIndex = 71;
@@ -743,7 +743,7 @@
             // lblProfile
             // 
             this.lblProfile.AutoSize = true;
-            this.lblProfile.Location = new System.Drawing.Point(23, 662);
+            this.lblProfile.Location = new System.Drawing.Point(23, 668);
             this.lblProfile.Name = "lblProfile";
             this.lblProfile.Size = new System.Drawing.Size(36, 13);
             this.lblProfile.TabIndex = 206;
@@ -751,14 +751,14 @@
             // 
             // txtProfile1
             // 
-            this.txtProfile1.Location = new System.Drawing.Point(14, 678);
+            this.txtProfile1.Location = new System.Drawing.Point(14, 684);
             this.txtProfile1.Name = "txtProfile1";
             this.txtProfile1.Size = new System.Drawing.Size(52, 20);
             this.txtProfile1.TabIndex = 64;
             // 
             // txtProfileAttack1
             // 
-            this.txtProfileAttack1.Location = new System.Drawing.Point(15, 233);
+            this.txtProfileAttack1.Location = new System.Drawing.Point(15, 230);
             this.txtProfileAttack1.Name = "txtProfileAttack1";
             this.txtProfileAttack1.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack1.TabIndex = 10;
@@ -766,7 +766,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(24, 219);
+            this.label31.Location = new System.Drawing.Point(24, 216);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(36, 13);
             this.label31.TabIndex = 206;
@@ -775,7 +775,7 @@
             // lblHOF
             // 
             this.lblHOF.AutoSize = true;
-            this.lblHOF.Location = new System.Drawing.Point(420, 663);
+            this.lblHOF.Location = new System.Drawing.Point(420, 669);
             this.lblHOF.Name = "lblHOF";
             this.lblHOF.Size = new System.Drawing.Size(29, 13);
             this.lblHOF.TabIndex = 204;
@@ -785,7 +785,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(111, 199);
+            this.label32.Location = new System.Drawing.Point(111, 196);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(44, 13);
             this.label32.TabIndex = 209;
@@ -793,7 +793,7 @@
             // 
             // txtProfileAttack2
             // 
-            this.txtProfileAttack2.Location = new System.Drawing.Point(15, 256);
+            this.txtProfileAttack2.Location = new System.Drawing.Point(15, 253);
             this.txtProfileAttack2.Name = "txtProfileAttack2";
             this.txtProfileAttack2.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack2.TabIndex = 23;
@@ -822,7 +822,7 @@
             "Low Altitude Toss (LAT)",
             "Medium Altitude Toss (MAT)",
             "Popup"});
-            this.cbDelivery2.Location = new System.Drawing.Point(68, 255);
+            this.cbDelivery2.Location = new System.Drawing.Point(68, 252);
             this.cbDelivery2.Name = "cbDelivery2";
             this.cbDelivery2.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery2.TabIndex = 24;
@@ -867,7 +867,7 @@
             "TGM-65G",
             "CATM-65K",
             "TGM-65H"});
-            this.Munitions2.Location = new System.Drawing.Point(67, 700);
+            this.Munitions2.Location = new System.Drawing.Point(67, 706);
             this.Munitions2.Name = "Munitions2";
             this.Munitions2.Size = new System.Drawing.Size(81, 21);
             this.Munitions2.TabIndex = 74;
@@ -881,21 +881,21 @@
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.Mode2.Location = new System.Drawing.Point(149, 700);
+            this.Mode2.Location = new System.Drawing.Point(149, 706);
             this.Mode2.Name = "Mode2";
             this.Mode2.Size = new System.Drawing.Size(76, 21);
             this.Mode2.TabIndex = 75;
             // 
             // txtAltitude2
             // 
-            this.txtAltitude2.Location = new System.Drawing.Point(293, 256);
+            this.txtAltitude2.Location = new System.Drawing.Point(293, 253);
             this.txtAltitude2.Name = "txtAltitude2";
             this.txtAltitude2.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude2.TabIndex = 29;
             // 
             // txtAbort2
             // 
-            this.txtAbort2.Location = new System.Drawing.Point(342, 256);
+            this.txtAbort2.Location = new System.Drawing.Point(342, 253);
             this.txtAbort2.Name = "txtAbort2";
             this.txtAbort2.Size = new System.Drawing.Size(48, 20);
             this.txtAbort2.TabIndex = 30;
@@ -908,7 +908,7 @@
             "TRN",
             "CLM",
             "NONE"});
-            this.cbSem2.Location = new System.Drawing.Point(393, 255);
+            this.cbSem2.Location = new System.Drawing.Point(393, 252);
             this.cbSem2.Name = "cbSem2";
             this.cbSem2.Size = new System.Drawing.Size(53, 21);
             this.cbSem2.TabIndex = 31;
@@ -919,7 +919,7 @@
             this.cbEgressDirection2.Items.AddRange(new object[] {
             "Left",
             "Right"});
-            this.cbEgressDirection2.Location = new System.Drawing.Point(447, 255);
+            this.cbEgressDirection2.Location = new System.Drawing.Point(447, 252);
             this.cbEgressDirection2.Name = "cbEgressDirection2";
             this.cbEgressDirection2.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection2.TabIndex = 32;
@@ -937,7 +937,7 @@
             "W",
             "NW",
             "N/A"});
-            this.cbEgressCardinal2.Location = new System.Drawing.Point(495, 255);
+            this.cbEgressCardinal2.Location = new System.Drawing.Point(495, 252);
             this.cbEgressCardinal2.Name = "cbEgressCardinal2";
             this.cbEgressCardinal2.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal2.TabIndex = 33;
@@ -950,7 +950,7 @@
             0,
             0,
             0});
-            this.numEgressHeading2.Location = new System.Drawing.Point(539, 256);
+            this.numEgressHeading2.Location = new System.Drawing.Point(539, 253);
             this.numEgressHeading2.Maximum = new decimal(new int[] {
             360,
             0,
@@ -967,7 +967,7 @@
             // 
             // txtProfileAttack3
             // 
-            this.txtProfileAttack3.Location = new System.Drawing.Point(15, 409);
+            this.txtProfileAttack3.Location = new System.Drawing.Point(15, 406);
             this.txtProfileAttack3.Name = "txtProfileAttack3";
             this.txtProfileAttack3.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack3.TabIndex = 37;
@@ -996,7 +996,7 @@
             "Low Altitude Toss (LAT)",
             "Medium Altitude Toss (MAT)",
             "Popup"});
-            this.cbDelivery3.Location = new System.Drawing.Point(68, 409);
+            this.cbDelivery3.Location = new System.Drawing.Point(68, 406);
             this.cbDelivery3.Name = "cbDelivery3";
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery3.TabIndex = 38;
@@ -1041,7 +1041,7 @@
             "TGM-65G",
             "CATM-65K",
             "TGM-65H"});
-            this.Munitions3.Location = new System.Drawing.Point(67, 722);
+            this.Munitions3.Location = new System.Drawing.Point(67, 728);
             this.Munitions3.Name = "Munitions3";
             this.Munitions3.Size = new System.Drawing.Size(81, 21);
             this.Munitions3.TabIndex = 83;
@@ -1055,21 +1055,21 @@
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.Mode3.Location = new System.Drawing.Point(149, 722);
+            this.Mode3.Location = new System.Drawing.Point(149, 728);
             this.Mode3.Name = "Mode3";
             this.Mode3.Size = new System.Drawing.Size(76, 21);
             this.Mode3.TabIndex = 84;
             // 
             // txtAltitude3
             // 
-            this.txtAltitude3.Location = new System.Drawing.Point(286, 312);
+            this.txtAltitude3.Location = new System.Drawing.Point(286, 309);
             this.txtAltitude3.Name = "txtAltitude3";
             this.txtAltitude3.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude3.TabIndex = 43;
             // 
             // txtAbort3
             // 
-            this.txtAbort3.Location = new System.Drawing.Point(342, 409);
+            this.txtAbort3.Location = new System.Drawing.Point(342, 406);
             this.txtAbort3.Name = "txtAbort3";
             this.txtAbort3.Size = new System.Drawing.Size(48, 20);
             this.txtAbort3.TabIndex = 44;
@@ -1082,7 +1082,7 @@
             "TRN",
             "CLM",
             "NONE"});
-            this.cbSem3.Location = new System.Drawing.Point(393, 409);
+            this.cbSem3.Location = new System.Drawing.Point(393, 406);
             this.cbSem3.Name = "cbSem3";
             this.cbSem3.Size = new System.Drawing.Size(53, 21);
             this.cbSem3.TabIndex = 45;
@@ -1093,7 +1093,7 @@
             this.cbEgressDirection3.Items.AddRange(new object[] {
             "Left",
             "Right"});
-            this.cbEgressDirection3.Location = new System.Drawing.Point(447, 409);
+            this.cbEgressDirection3.Location = new System.Drawing.Point(447, 406);
             this.cbEgressDirection3.Name = "cbEgressDirection3";
             this.cbEgressDirection3.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection3.TabIndex = 46;
@@ -1111,7 +1111,7 @@
             "W",
             "NW",
             "N/A"});
-            this.cbEgressCardinal3.Location = new System.Drawing.Point(495, 409);
+            this.cbEgressCardinal3.Location = new System.Drawing.Point(495, 406);
             this.cbEgressCardinal3.Name = "cbEgressCardinal3";
             this.cbEgressCardinal3.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal3.TabIndex = 47;
@@ -1124,7 +1124,7 @@
             0,
             0,
             0});
-            this.numEgressHeading3.Location = new System.Drawing.Point(539, 409);
+            this.numEgressHeading3.Location = new System.Drawing.Point(539, 406);
             this.numEgressHeading3.Maximum = new decimal(new int[] {
             360,
             0,
@@ -1141,7 +1141,7 @@
             // 
             // txtProfileAttack4
             // 
-            this.txtProfileAttack4.Location = new System.Drawing.Point(15, 432);
+            this.txtProfileAttack4.Location = new System.Drawing.Point(15, 429);
             this.txtProfileAttack4.Name = "txtProfileAttack4";
             this.txtProfileAttack4.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack4.TabIndex = 50;
@@ -1170,7 +1170,7 @@
             "Low Altitude Toss (LAT)",
             "Medium Altitude Toss (MAT)",
             "Popup"});
-            this.cbDelivery4.Location = new System.Drawing.Point(68, 431);
+            this.cbDelivery4.Location = new System.Drawing.Point(68, 428);
             this.cbDelivery4.Name = "cbDelivery4";
             this.cbDelivery4.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery4.TabIndex = 51;
@@ -1215,7 +1215,7 @@
             "TGM-65G",
             "CATM-65K",
             "TGM-65H"});
-            this.Munitions4.Location = new System.Drawing.Point(67, 744);
+            this.Munitions4.Location = new System.Drawing.Point(67, 750);
             this.Munitions4.Name = "Munitions4";
             this.Munitions4.Size = new System.Drawing.Size(81, 21);
             this.Munitions4.TabIndex = 92;
@@ -1229,14 +1229,14 @@
             "CCIP",
             "3/9 line",
             "5 mils"});
-            this.Mode4.Location = new System.Drawing.Point(149, 744);
+            this.Mode4.Location = new System.Drawing.Point(149, 750);
             this.Mode4.Name = "Mode4";
             this.Mode4.Size = new System.Drawing.Size(76, 21);
             this.Mode4.TabIndex = 93;
             // 
             // txtAbort4
             // 
-            this.txtAbort4.Location = new System.Drawing.Point(335, 335);
+            this.txtAbort4.Location = new System.Drawing.Point(335, 332);
             this.txtAbort4.Name = "txtAbort4";
             this.txtAbort4.Size = new System.Drawing.Size(48, 20);
             this.txtAbort4.TabIndex = 57;
@@ -1249,7 +1249,7 @@
             "TRN",
             "CLM",
             "NONE"});
-            this.cbSem4.Location = new System.Drawing.Point(393, 431);
+            this.cbSem4.Location = new System.Drawing.Point(393, 428);
             this.cbSem4.Name = "cbSem4";
             this.cbSem4.Size = new System.Drawing.Size(53, 21);
             this.cbSem4.TabIndex = 58;
@@ -1260,7 +1260,7 @@
             this.cbEgressDirection4.Items.AddRange(new object[] {
             "Left",
             "Right"});
-            this.cbEgressDirection4.Location = new System.Drawing.Point(447, 431);
+            this.cbEgressDirection4.Location = new System.Drawing.Point(447, 428);
             this.cbEgressDirection4.Name = "cbEgressDirection4";
             this.cbEgressDirection4.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection4.TabIndex = 59;
@@ -1278,7 +1278,7 @@
             "W",
             "NW",
             "N/A"});
-            this.cbEgressCardinal4.Location = new System.Drawing.Point(495, 431);
+            this.cbEgressCardinal4.Location = new System.Drawing.Point(495, 428);
             this.cbEgressCardinal4.Name = "cbEgressCardinal4";
             this.cbEgressCardinal4.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal4.TabIndex = 60;
@@ -1291,7 +1291,7 @@
             0,
             0,
             0});
-            this.numEgressHeading4.Location = new System.Drawing.Point(539, 432);
+            this.numEgressHeading4.Location = new System.Drawing.Point(539, 429);
             this.numEgressHeading4.Maximum = new decimal(new int[] {
             360,
             0,
@@ -1313,7 +1313,7 @@
             "S-C",
             "S-S",
             "N/A"});
-            this.cbSCSS1.Location = new System.Drawing.Point(149, 233);
+            this.cbSCSS1.Location = new System.Drawing.Point(149, 230);
             this.cbSCSS1.Name = "cbSCSS1";
             this.cbSCSS1.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS1.TabIndex = 13;
@@ -1321,7 +1321,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(147, 219);
+            this.label28.Location = new System.Drawing.Point(147, 216);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(46, 13);
             this.label28.TabIndex = 241;
@@ -1334,7 +1334,7 @@
             "S-C",
             "S-S",
             "N/A"});
-            this.cbSCSS2.Location = new System.Drawing.Point(149, 255);
+            this.cbSCSS2.Location = new System.Drawing.Point(149, 252);
             this.cbSCSS2.Name = "cbSCSS2";
             this.cbSCSS2.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS2.TabIndex = 26;
@@ -1346,7 +1346,7 @@
             "S-C",
             "S-S",
             "N/A"});
-            this.cbSCSS3.Location = new System.Drawing.Point(149, 409);
+            this.cbSCSS3.Location = new System.Drawing.Point(149, 406);
             this.cbSCSS3.Name = "cbSCSS3";
             this.cbSCSS3.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS3.TabIndex = 40;
@@ -1358,7 +1358,7 @@
             "S-C",
             "S-S",
             "N/A"});
-            this.cbSCSS4.Location = new System.Drawing.Point(149, 431);
+            this.cbSCSS4.Location = new System.Drawing.Point(149, 428);
             this.cbSCSS4.Name = "cbSCSS4";
             this.cbSCSS4.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS4.TabIndex = 53;
@@ -1371,7 +1371,7 @@
             "Line",
             "Trail",
             "Wedge"});
-            this.cbFormation1.Location = new System.Drawing.Point(193, 233);
+            this.cbFormation1.Location = new System.Drawing.Point(193, 230);
             this.cbFormation1.Name = "cbFormation1";
             this.cbFormation1.Size = new System.Drawing.Size(57, 21);
             this.cbFormation1.TabIndex = 14;
@@ -1379,7 +1379,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(188, 219);
+            this.label33.Location = new System.Drawing.Point(188, 216);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(53, 13);
             this.label33.TabIndex = 246;
@@ -1387,7 +1387,7 @@
             // 
             // txtEgressIP1
             // 
-            this.txtEgressIP1.Location = new System.Drawing.Point(578, 233);
+            this.txtEgressIP1.Location = new System.Drawing.Point(578, 230);
             this.txtEgressIP1.Name = "txtEgressIP1";
             this.txtEgressIP1.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP1.TabIndex = 22;
@@ -1395,7 +1395,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(583, 219);
+            this.label34.Location = new System.Drawing.Point(583, 216);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(17, 13);
             this.label34.TabIndex = 248;
@@ -1403,7 +1403,7 @@
             // 
             // txtAttackIP1
             // 
-            this.txtAttackIP1.Location = new System.Drawing.Point(122, 233);
+            this.txtAttackIP1.Location = new System.Drawing.Point(122, 230);
             this.txtAttackIP1.Name = "txtAttackIP1";
             this.txtAttackIP1.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP1.TabIndex = 12;
@@ -1411,7 +1411,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(127, 219);
+            this.label35.Location = new System.Drawing.Point(127, 216);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(17, 13);
             this.label35.TabIndex = 250;
@@ -1419,21 +1419,21 @@
             // 
             // txtAttackIP2
             // 
-            this.txtAttackIP2.Location = new System.Drawing.Point(122, 256);
+            this.txtAttackIP2.Location = new System.Drawing.Point(122, 253);
             this.txtAttackIP2.Name = "txtAttackIP2";
             this.txtAttackIP2.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP2.TabIndex = 25;
             // 
             // txtAttackIP3
             // 
-            this.txtAttackIP3.Location = new System.Drawing.Point(122, 409);
+            this.txtAttackIP3.Location = new System.Drawing.Point(122, 406);
             this.txtAttackIP3.Name = "txtAttackIP3";
             this.txtAttackIP3.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP3.TabIndex = 39;
             // 
             // txtAttackIP4
             // 
-            this.txtAttackIP4.Location = new System.Drawing.Point(122, 432);
+            this.txtAttackIP4.Location = new System.Drawing.Point(122, 429);
             this.txtAttackIP4.Name = "txtAttackIP4";
             this.txtAttackIP4.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP4.TabIndex = 52;
@@ -1446,7 +1446,7 @@
             "Line",
             "Trail",
             "Wedge"});
-            this.cbFormation2.Location = new System.Drawing.Point(193, 255);
+            this.cbFormation2.Location = new System.Drawing.Point(193, 252);
             this.cbFormation2.Name = "cbFormation2";
             this.cbFormation2.Size = new System.Drawing.Size(57, 21);
             this.cbFormation2.TabIndex = 27;
@@ -1459,7 +1459,7 @@
             "Line",
             "Trail",
             "Wedge"});
-            this.cbFormation3.Location = new System.Drawing.Point(193, 409);
+            this.cbFormation3.Location = new System.Drawing.Point(193, 406);
             this.cbFormation3.Name = "cbFormation3";
             this.cbFormation3.Size = new System.Drawing.Size(57, 21);
             this.cbFormation3.TabIndex = 41;
@@ -1472,49 +1472,49 @@
             "Line",
             "Trail",
             "Wedge"});
-            this.cbFormation4.Location = new System.Drawing.Point(193, 431);
+            this.cbFormation4.Location = new System.Drawing.Point(193, 428);
             this.cbFormation4.Name = "cbFormation4";
             this.cbFormation4.Size = new System.Drawing.Size(57, 21);
             this.cbFormation4.TabIndex = 54;
             // 
             // txtEgressIP2
             // 
-            this.txtEgressIP2.Location = new System.Drawing.Point(578, 256);
+            this.txtEgressIP2.Location = new System.Drawing.Point(578, 253);
             this.txtEgressIP2.Name = "txtEgressIP2";
             this.txtEgressIP2.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP2.TabIndex = 35;
             // 
             // txtEgressIP3
             // 
-            this.txtEgressIP3.Location = new System.Drawing.Point(578, 410);
+            this.txtEgressIP3.Location = new System.Drawing.Point(578, 407);
             this.txtEgressIP3.Name = "txtEgressIP3";
             this.txtEgressIP3.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP3.TabIndex = 49;
             // 
             // txtEgressIP4
             // 
-            this.txtEgressIP4.Location = new System.Drawing.Point(578, 432);
+            this.txtEgressIP4.Location = new System.Drawing.Point(578, 429);
             this.txtEgressIP4.Name = "txtEgressIP4";
             this.txtEgressIP4.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP4.TabIndex = 62;
             // 
             // txtProfile2
             // 
-            this.txtProfile2.Location = new System.Drawing.Point(14, 701);
+            this.txtProfile2.Location = new System.Drawing.Point(14, 707);
             this.txtProfile2.Name = "txtProfile2";
             this.txtProfile2.Size = new System.Drawing.Size(52, 20);
             this.txtProfile2.TabIndex = 73;
             // 
             // txtProfile3
             // 
-            this.txtProfile3.Location = new System.Drawing.Point(14, 722);
+            this.txtProfile3.Location = new System.Drawing.Point(14, 728);
             this.txtProfile3.Name = "txtProfile3";
             this.txtProfile3.Size = new System.Drawing.Size(52, 20);
             this.txtProfile3.TabIndex = 82;
             // 
             // txtProfile4
             // 
-            this.txtProfile4.Location = new System.Drawing.Point(14, 745);
+            this.txtProfile4.Location = new System.Drawing.Point(14, 751);
             this.txtProfile4.Name = "txtProfile4";
             this.txtProfile4.Size = new System.Drawing.Size(52, 20);
             this.txtProfile4.TabIndex = 91;
@@ -1527,7 +1527,7 @@
             "Tail",
             "N/T",
             "N/A"});
-            this.Fusing2.Location = new System.Drawing.Point(226, 700);
+            this.Fusing2.Location = new System.Drawing.Point(226, 706);
             this.Fusing2.Name = "Fusing2";
             this.Fusing2.Size = new System.Drawing.Size(47, 21);
             this.Fusing2.TabIndex = 76;
@@ -1540,7 +1540,7 @@
             "Tail",
             "N/T",
             "N/A"});
-            this.Fusing3.Location = new System.Drawing.Point(226, 722);
+            this.Fusing3.Location = new System.Drawing.Point(226, 728);
             this.Fusing3.Name = "Fusing3";
             this.Fusing3.Size = new System.Drawing.Size(47, 21);
             this.Fusing3.TabIndex = 85;
@@ -1553,7 +1553,7 @@
             "Tail",
             "N/T",
             "N/A"});
-            this.Fusing4.Location = new System.Drawing.Point(226, 744);
+            this.Fusing4.Location = new System.Drawing.Point(226, 750);
             this.Fusing4.Name = "Fusing4";
             this.Fusing4.Size = new System.Drawing.Size(47, 21);
             this.Fusing4.TabIndex = 94;
@@ -1567,7 +1567,7 @@
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.SGLPAIR2.Location = new System.Drawing.Point(274, 700);
+            this.SGLPAIR2.Location = new System.Drawing.Point(274, 706);
             this.SGLPAIR2.Name = "SGLPAIR2";
             this.SGLPAIR2.Size = new System.Drawing.Size(65, 21);
             this.SGLPAIR2.TabIndex = 77;
@@ -1582,7 +1582,7 @@
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.SGLPAIR3.Location = new System.Drawing.Point(274, 722);
+            this.SGLPAIR3.Location = new System.Drawing.Point(274, 728);
             this.SGLPAIR3.Name = "SGLPAIR3";
             this.SGLPAIR3.Size = new System.Drawing.Size(65, 21);
             this.SGLPAIR3.TabIndex = 86;
@@ -1597,7 +1597,7 @@
             "RIP SGL",
             "RIP PRS",
             "N/A"});
-            this.SGLPAIR4.Location = new System.Drawing.Point(274, 744);
+            this.SGLPAIR4.Location = new System.Drawing.Point(274, 750);
             this.SGLPAIR4.Name = "SGLPAIR4";
             this.SGLPAIR4.Size = new System.Drawing.Size(65, 21);
             this.SGLPAIR4.TabIndex = 95;
@@ -1605,7 +1605,7 @@
             // 
             // RPL2
             // 
-            this.RPL2.Location = new System.Drawing.Point(340, 701);
+            this.RPL2.Location = new System.Drawing.Point(340, 707);
             this.RPL2.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1617,7 +1617,7 @@
             // 
             // RPL3
             // 
-            this.RPL3.Location = new System.Drawing.Point(340, 722);
+            this.RPL3.Location = new System.Drawing.Point(340, 728);
             this.RPL3.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1629,7 +1629,7 @@
             // 
             // RPL4
             // 
-            this.RPL4.Location = new System.Drawing.Point(340, 745);
+            this.RPL4.Location = new System.Drawing.Point(340, 751);
             this.RPL4.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1646,7 +1646,7 @@
             0,
             0,
             0});
-            this.Spacing2.Location = new System.Drawing.Point(373, 701);
+            this.Spacing2.Location = new System.Drawing.Point(373, 707);
             this.Spacing2.Maximum = new decimal(new int[] {
             999,
             0,
@@ -1663,7 +1663,7 @@
             0,
             0,
             0});
-            this.Spacing3.Location = new System.Drawing.Point(373, 722);
+            this.Spacing3.Location = new System.Drawing.Point(373, 728);
             this.Spacing3.Maximum = new decimal(new int[] {
             999,
             0,
@@ -1680,7 +1680,7 @@
             0,
             0,
             0});
-            this.Spacing4.Location = new System.Drawing.Point(373, 745);
+            this.Spacing4.Location = new System.Drawing.Point(373, 751);
             this.Spacing4.Maximum = new decimal(new int[] {
             999,
             0,
@@ -1692,21 +1692,21 @@
             // 
             // HOF2
             // 
-            this.HOF2.Location = new System.Drawing.Point(412, 701);
+            this.HOF2.Location = new System.Drawing.Point(412, 707);
             this.HOF2.Name = "HOF2";
             this.HOF2.Size = new System.Drawing.Size(48, 20);
             this.HOF2.TabIndex = 80;
             // 
             // HOF3
             // 
-            this.HOF3.Location = new System.Drawing.Point(412, 722);
+            this.HOF3.Location = new System.Drawing.Point(412, 728);
             this.HOF3.Name = "HOF3";
             this.HOF3.Size = new System.Drawing.Size(48, 20);
             this.HOF3.TabIndex = 89;
             // 
             // HOF4
             // 
-            this.HOF4.Location = new System.Drawing.Point(412, 745);
+            this.HOF4.Location = new System.Drawing.Point(412, 751);
             this.HOF4.Name = "HOF4";
             this.HOF4.Size = new System.Drawing.Size(48, 20);
             this.HOF4.TabIndex = 98;
@@ -1724,7 +1724,7 @@
             // lblRPM
             // 
             this.lblRPM.AutoSize = true;
-            this.lblRPM.Location = new System.Drawing.Point(463, 663);
+            this.lblRPM.Location = new System.Drawing.Point(463, 669);
             this.lblRPM.Name = "lblRPM";
             this.lblRPM.Size = new System.Drawing.Size(31, 13);
             this.lblRPM.TabIndex = 280;
@@ -1737,7 +1737,7 @@
             0,
             0,
             0});
-            this.RPM1.Location = new System.Drawing.Point(461, 678);
+            this.RPM1.Location = new System.Drawing.Point(461, 684);
             this.RPM1.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1754,7 +1754,7 @@
             0,
             0,
             0});
-            this.RPM2.Location = new System.Drawing.Point(461, 701);
+            this.RPM2.Location = new System.Drawing.Point(461, 707);
             this.RPM2.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1771,7 +1771,7 @@
             0,
             0,
             0});
-            this.RPM3.Location = new System.Drawing.Point(461, 722);
+            this.RPM3.Location = new System.Drawing.Point(461, 728);
             this.RPM3.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1788,7 +1788,7 @@
             0,
             0,
             0});
-            this.RPM4.Location = new System.Drawing.Point(461, 745);
+            this.RPM4.Location = new System.Drawing.Point(461, 751);
             this.RPM4.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1821,7 +1821,7 @@
             // 
             this.lblAttack2.AutoSize = true;
             this.lblAttack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAttack2.Location = new System.Drawing.Point(111, 376);
+            this.lblAttack2.Location = new System.Drawing.Point(111, 373);
             this.lblAttack2.Name = "lblAttack2";
             this.lblAttack2.Size = new System.Drawing.Size(44, 13);
             this.lblAttack2.TabIndex = 289;
@@ -1831,7 +1831,7 @@
             // 
             this.lblRelease2.AutoSize = true;
             this.lblRelease2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelease2.Location = new System.Drawing.Point(307, 279);
+            this.lblRelease2.Location = new System.Drawing.Point(307, 276);
             this.lblRelease2.Name = "lblRelease2";
             this.lblRelease2.Size = new System.Drawing.Size(53, 13);
             this.lblRelease2.TabIndex = 288;
@@ -1841,7 +1841,7 @@
             // 
             this.lblEgress2.AutoSize = true;
             this.lblEgress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEgress2.Location = new System.Drawing.Point(473, 376);
+            this.lblEgress2.Location = new System.Drawing.Point(473, 373);
             this.lblEgress2.Name = "lblEgress2";
             this.lblEgress2.Size = new System.Drawing.Size(45, 13);
             this.lblEgress2.TabIndex = 287;
@@ -1968,7 +1968,7 @@
             this.panel1.Controls.Add(this.lblAltitude2);
             this.panel1.Controls.Add(this.lblAbort2);
             this.panel1.Controls.Add(this.lblRelease2);
-            this.panel1.Location = new System.Drawing.Point(6, 96);
+            this.panel1.Location = new System.Drawing.Point(6, 93);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 370);
             this.panel1.TabIndex = 300;
@@ -1980,7 +1980,7 @@
             0,
             0,
             0});
-            this.numFAH4.Location = new System.Drawing.Point(244, 335);
+            this.numFAH4.Location = new System.Drawing.Point(244, 332);
             this.numFAH4.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2002,7 +2002,7 @@
             0,
             0,
             0});
-            this.numFAH2.Location = new System.Drawing.Point(244, 159);
+            this.numFAH2.Location = new System.Drawing.Point(244, 156);
             this.numFAH2.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2024,7 +2024,7 @@
             0,
             0,
             0});
-            this.numFAH3.Location = new System.Drawing.Point(244, 312);
+            this.numFAH3.Location = new System.Drawing.Point(244, 309);
             this.numFAH3.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2042,7 +2042,7 @@
             // lblFAH2
             // 
             this.lblFAH2.AutoSize = true;
-            this.lblFAH2.Location = new System.Drawing.Point(241, 298);
+            this.lblFAH2.Location = new System.Drawing.Point(241, 295);
             this.lblFAH2.Name = "lblFAH2";
             this.lblFAH2.Size = new System.Drawing.Size(28, 13);
             this.lblFAH2.TabIndex = 0;
@@ -2055,7 +2055,7 @@
             0,
             0,
             0});
-            this.numFAH1.Location = new System.Drawing.Point(244, 136);
+            this.numFAH1.Location = new System.Drawing.Point(244, 133);
             this.numFAH1.Maximum = new decimal(new int[] {
             360,
             0,
@@ -2073,7 +2073,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 122);
+            this.label2.Location = new System.Drawing.Point(241, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 0;
@@ -2081,7 +2081,7 @@
             // 
             // txtAltitude4
             // 
-            this.txtAltitude4.Location = new System.Drawing.Point(286, 335);
+            this.txtAltitude4.Location = new System.Drawing.Point(286, 332);
             this.txtAltitude4.Name = "txtAltitude4";
             this.txtAltitude4.Size = new System.Drawing.Size(48, 20);
             this.txtAltitude4.TabIndex = 56;
@@ -2089,7 +2089,7 @@
             // lblAltitude2
             // 
             this.lblAltitude2.AutoSize = true;
-            this.lblAltitude2.Location = new System.Drawing.Point(290, 298);
+            this.lblAltitude2.Location = new System.Drawing.Point(290, 295);
             this.lblAltitude2.Name = "lblAltitude2";
             this.lblAltitude2.Size = new System.Drawing.Size(42, 13);
             this.lblAltitude2.TabIndex = 307;
@@ -2098,7 +2098,7 @@
             // lblAbort2
             // 
             this.lblAbort2.AutoSize = true;
-            this.lblAbort2.Location = new System.Drawing.Point(335, 298);
+            this.lblAbort2.Location = new System.Drawing.Point(335, 295);
             this.lblAbort2.Name = "lblAbort2";
             this.lblAbort2.Size = new System.Drawing.Size(46, 13);
             this.lblAbort2.TabIndex = 308;
@@ -2108,7 +2108,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(281, 90);
+            this.label8.Location = new System.Drawing.Point(281, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 301;
@@ -2117,7 +2117,7 @@
             // lblIpAttack2
             // 
             this.lblIpAttack2.AutoSize = true;
-            this.lblIpAttack2.Location = new System.Drawing.Point(127, 395);
+            this.lblIpAttack2.Location = new System.Drawing.Point(127, 392);
             this.lblIpAttack2.Name = "lblIpAttack2";
             this.lblIpAttack2.Size = new System.Drawing.Size(17, 13);
             this.lblIpAttack2.TabIndex = 313;
@@ -2126,7 +2126,7 @@
             // lblIpEgress2
             // 
             this.lblIpEgress2.AutoSize = true;
-            this.lblIpEgress2.Location = new System.Drawing.Point(583, 395);
+            this.lblIpEgress2.Location = new System.Drawing.Point(583, 392);
             this.lblIpEgress2.Name = "lblIpEgress2";
             this.lblIpEgress2.Size = new System.Drawing.Size(17, 13);
             this.lblIpEgress2.TabIndex = 312;
@@ -2135,7 +2135,7 @@
             // lblFormation2
             // 
             this.lblFormation2.AutoSize = true;
-            this.lblFormation2.Location = new System.Drawing.Point(188, 395);
+            this.lblFormation2.Location = new System.Drawing.Point(188, 392);
             this.lblFormation2.Name = "lblFormation2";
             this.lblFormation2.Size = new System.Drawing.Size(53, 13);
             this.lblFormation2.TabIndex = 311;
@@ -2144,7 +2144,7 @@
             // lblScSs2
             // 
             this.lblScSs2.AutoSize = true;
-            this.lblScSs2.Location = new System.Drawing.Point(147, 395);
+            this.lblScSs2.Location = new System.Drawing.Point(147, 392);
             this.lblScSs2.Name = "lblScSs2";
             this.lblScSs2.Size = new System.Drawing.Size(46, 13);
             this.lblScSs2.TabIndex = 310;
@@ -2153,7 +2153,7 @@
             // lblProfile2
             // 
             this.lblProfile2.AutoSize = true;
-            this.lblProfile2.Location = new System.Drawing.Point(24, 395);
+            this.lblProfile2.Location = new System.Drawing.Point(24, 392);
             this.lblProfile2.Name = "lblProfile2";
             this.lblProfile2.Size = new System.Drawing.Size(36, 13);
             this.lblProfile2.TabIndex = 309;
@@ -2162,7 +2162,7 @@
             // lblHeading2
             // 
             this.lblHeading2.AutoSize = true;
-            this.lblHeading2.Location = new System.Drawing.Point(535, 395);
+            this.lblHeading2.Location = new System.Drawing.Point(535, 392);
             this.lblHeading2.Name = "lblHeading2";
             this.lblHeading2.Size = new System.Drawing.Size(47, 13);
             this.lblHeading2.TabIndex = 306;
@@ -2171,7 +2171,7 @@
             // lblCardinal2
             // 
             this.lblCardinal2.AutoSize = true;
-            this.lblCardinal2.Location = new System.Drawing.Point(494, 395);
+            this.lblCardinal2.Location = new System.Drawing.Point(494, 392);
             this.lblCardinal2.Name = "lblCardinal2";
             this.lblCardinal2.Size = new System.Drawing.Size(45, 13);
             this.lblCardinal2.TabIndex = 305;
@@ -2180,7 +2180,7 @@
             // lblLeftRight2
             // 
             this.lblLeftRight2.AutoSize = true;
-            this.lblLeftRight2.Location = new System.Drawing.Point(443, 395);
+            this.lblLeftRight2.Location = new System.Drawing.Point(443, 392);
             this.lblLeftRight2.Name = "lblLeftRight2";
             this.lblLeftRight2.Size = new System.Drawing.Size(55, 13);
             this.lblLeftRight2.TabIndex = 304;
@@ -2189,7 +2189,7 @@
             // lblSem2
             // 
             this.lblSem2.AutoSize = true;
-            this.lblSem2.Location = new System.Drawing.Point(406, 395);
+            this.lblSem2.Location = new System.Drawing.Point(406, 392);
             this.lblSem2.Name = "lblSem2";
             this.lblSem2.Size = new System.Drawing.Size(30, 13);
             this.lblSem2.TabIndex = 303;
@@ -2198,7 +2198,7 @@
             // lblDelivery2
             // 
             this.lblDelivery2.AutoSize = true;
-            this.lblDelivery2.Location = new System.Drawing.Point(71, 395);
+            this.lblDelivery2.Location = new System.Drawing.Point(71, 392);
             this.lblDelivery2.Name = "lblDelivery2";
             this.lblDelivery2.Size = new System.Drawing.Size(45, 13);
             this.lblDelivery2.TabIndex = 302;
@@ -2245,12 +2245,12 @@
             this.colTcn,
             this.colTask,
             this.colNotes});
-            this.dgvPackage.Location = new System.Drawing.Point(14, 500);
+            this.dgvPackage.Location = new System.Drawing.Point(14, 486);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPackage.Size = new System.Drawing.Size(589, 155);
+            this.dgvPackage.Size = new System.Drawing.Size(589, 177);
             this.dgvPackage.TabIndex = 63;
             // 
             // colCallsign
@@ -2299,7 +2299,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(12, 484);
+            this.label42.Location = new System.Drawing.Point(12, 470);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(50, 13);
             this.label42.TabIndex = 381;
