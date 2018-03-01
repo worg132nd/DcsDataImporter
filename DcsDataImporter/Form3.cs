@@ -52,14 +52,23 @@ namespace DcsDataImporter
 
             using (StreamReader reader = new StreamReader(path))
             {
+                string nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking;
+                nrAc = type = callsignAndNr = priConf = secConf = priFreq = secFreq = tasking = null;
+
                 while (reader.Peek() >= 0)
                 {
                     string line = reader.ReadLine();
 
-                    string nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq;
-                    nrAc = type = callsignAndNr = priConf = secConf = priFreq = secFreq = null;
-
-                    if (line.StartsWith("MSNACFT"))
+                    // Parse tasking from AMSNDAT
+                    if (line.StartsWith("AMSNDAT"))
+                    {
+                        int valueNr = 0;
+                        foreach (string word in line.Split('/'))
+                        {
+                            if (valueNr == 2) tasking = word.Trim();
+                            valueNr++;
+                        }
+                    } else if (line.StartsWith("MSNACFT"))
                     {
                         int valueNr = 0;
                         foreach (string word in line.Split('/'))
@@ -75,20 +84,23 @@ namespace DcsDataImporter
 
                             valueNr++;
                         }
-                        /* MessageBox.Show( //debug
+                        if (isFlight(type) && !isCallsignMe(callsignAndNr))
+                        {
+                            MessageBox.Show( //debug
                             "nrAc: " + nrAc + '\n'
                             + "type: " + type + '\n'
                             + "callsignAndNr: " + callsignAndNr + '\n'
                             + "priConf: " + priConf + '\n'
                             + "secConf: " + secConf + '\n'
                             + "priFreq: " + priFreq + '\n'
-                            + "secFreq: " + secFreq); */
-                        if (isFlight(type) && !isCallsignMe(callsignAndNr))
-                        {
-                            ATO ato = new ATO(nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq);
+                            + "secFreq: " + secFreq + '\n'
+                            + "tasking: " + tasking);
+
+                            ATO ato = new ATO(nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking);
                             ATOs.Add(ato);
                             setPkgFlight(ato);
                         }
+                        tasking = null;
                     }
                 }
             }
@@ -115,6 +127,7 @@ namespace DcsDataImporter
                 var row = dgvPackage.Rows[ATOs.Count - 1];
                 row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
                 row.Cells["colAircraftType"].Value = ato.getTypeOfAc();
+                row.Cells["colTask"].Value = ato.getTasking();
             }
         }
 
@@ -1384,27 +1397,6 @@ namespace DcsDataImporter
         }
     }
 
-    /* public class ATO
-    {
-        string id;
-        MSNACFT msnacft;
-
-        public ATO(string id)
-        {
-            this.id = id;
-        }
-
-        public void setMsnacft(MSNACFT msnacft)
-        {
-            this.msnacft = msnacft;
-        }
-
-        public MSNACFT getMsnacft()
-        {
-            return this.msnacft;
-        }
-    }*/
-
     public class ATO
     {
         string nrAc;
@@ -1414,8 +1406,9 @@ namespace DcsDataImporter
         string secConf;
         string priFreq;
         string secFreq;
+        string tasking;
 
-        public ATO(string nrAc, string typeOfAc, string callsignAndNr, string priConf, string secConf, string priFreq, string secFreq)
+        public ATO(string nrAc, string typeOfAc, string callsignAndNr, string priConf, string secConf, string priFreq, string secFreq, string tasking)
         {
             this.nrAc = nrAc;
             this.typeOfAc = typeOfAc;
@@ -1424,6 +1417,7 @@ namespace DcsDataImporter
             this.secConf = secConf;
             this.priFreq = priFreq;
             this.secFreq = secFreq;
+            this.tasking = tasking;
         }
 
         public void setNrAc(string nrAc)
@@ -1494,6 +1488,16 @@ namespace DcsDataImporter
         public string getSecFreq()
         {
             return this.secFreq;
+        }
+
+        public void setTasking(string tasking)
+        {
+            this.tasking = tasking;
+        }
+
+        public string getTasking()
+        {
+            return this.tasking;
         }
     }
 }
