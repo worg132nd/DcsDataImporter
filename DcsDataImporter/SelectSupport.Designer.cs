@@ -262,6 +262,7 @@
             this.Controls.Add(this.chkJstar);
             this.Controls.Add(this.chkFaca);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SelectSupport";
             this.Text = "SelectSupport";
             this.panel1.ResumeLayout(false);

@@ -137,6 +137,7 @@
             this.Controls.Add(this.txtKneeboardPath);
             this.Controls.Add(this.btnBrowseKneeboard);
             this.Controls.Add(this.lblKneeboardPath);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSettings";
             this.Text = "Settings";
             this.ResumeLayout(false);

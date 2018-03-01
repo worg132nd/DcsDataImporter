@@ -258,6 +258,7 @@
             this.Controls.Add(this.txtKillbox);
             this.Controls.Add(this.lblKillbox);
             this.Controls.Add(this.dgvFlightplan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.Text = "Flightplan and Data";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlightplan)).EndInit();

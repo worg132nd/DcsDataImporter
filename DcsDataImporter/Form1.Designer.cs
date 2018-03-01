@@ -1680,6 +1680,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Frequencies and Startup";
             ((System.ComponentModel.ISupportInitialize)(this.txtAwacsPreset)).EndInit();

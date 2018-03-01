@@ -167,6 +167,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmUserInput";
             this.Text = "Import Data";
             ((System.ComponentModel.ISupportInitialize)(this.numMissionId)).EndInit();

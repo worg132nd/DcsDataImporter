@@ -2625,6 +2625,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form3";
             this.Text = "Weapon Profiles and Deliveries";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();

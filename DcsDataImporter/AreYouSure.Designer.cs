@@ -95,7 +95,7 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Requirements:";
             // 
-            // FormPopup
+            // AreYouSure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +107,8 @@
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "FormPopup";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "AreYouSure";
             this.Text = "Confirm";
             this.ResumeLayout(false);
             this.PerformLayout();

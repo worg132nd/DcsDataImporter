@@ -72,6 +72,7 @@
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnBuild);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Welcome";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
