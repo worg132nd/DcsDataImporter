@@ -52,8 +52,8 @@ namespace DcsDataImporter
 
             using (StreamReader reader = new StreamReader(path))
             {
-                string nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking;
-                nrAc = type = callsignAndNr = priConf = secConf = priFreq = secFreq = tasking = null;
+                string nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking, timeFrom, timeTo, pos;
+                nrAc = type = callsignAndNr = priConf = secConf = priFreq = secFreq = tasking = timeFrom = timeTo = pos = null;
 
                 while (reader.Peek() >= 0)
                 {
@@ -73,7 +73,6 @@ namespace DcsDataImporter
                         int valueNr = 0;
                         foreach (string word in line.Split('/'))
                         {
-                            if (valueNr == 0) ;
                             if (valueNr == 1) nrAc = word.Trim();
                             if (valueNr == 2) type = word.Trim();
                             if (valueNr == 3) callsignAndNr = word.Trim();
@@ -100,6 +99,25 @@ namespace DcsDataImporter
                             ATOs.Add(ato);
                         }
                         tasking = null;
+                        timeFrom = null;
+                        timeTo = null;
+                        pos = null;
+                    } else if (line.StartsWith("AMSNLOC"))
+                    {
+                        int valueNr = 0;
+                        foreach (string word in line.Split('/'))
+                        {
+                            if (valueNr == 1) timeFrom = word.Trim();
+                            if (valueNr == 2) timeTo = word.Trim();
+                            if (valueNr == 3) pos = word.Trim();
+
+                            valueNr++;
+                        }
+
+                        ATO ato = ATOs.Last();
+                        ato.setTimeFrom(timeFrom);
+                        ato.setTimeTo(timeTo);
+                        ato.setPos(pos);
                     }
                 }
             }
@@ -155,6 +173,29 @@ namespace DcsDataImporter
                     row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
                     row.Cells["colAircraftType"].Value = ato.getTypeOfAc();
                     row.Cells["colTask"].Value = ato.getTasking();
+
+                    // First, clear out comment
+                    if (row.Cells["colNotes"].Value.ToString() == "-")
+                    {
+                        row.Cells["colNotes"].Value = "";
+                    }
+
+
+                    if (ato.getTimeFrom() != null)
+                    {
+                        row.Cells["colNotes"].Value += ato.getTimeFrom();
+                    }
+
+                    if (ato.getTimeTo() != null)
+                    {
+                        row.Cells["colNotes"].Value += " - " + ato.getTimeTo();
+                    }
+
+                    if (ato.getPos() != null)
+                    {
+                        row.Cells["colNotes"].Value += " " + ato.getPos();
+                    }
+
                     break;
                 }
                 rowNr++;
@@ -1425,6 +1466,9 @@ namespace DcsDataImporter
         string priFreq;
         string secFreq;
         string tasking;
+        string timeFrom;
+        string timeTo;
+        string pos;
 
         public ATO(string nrAc, string typeOfAc, string callsignAndNr, string priConf, string secConf, string priFreq, string secFreq, string tasking)
         {
@@ -1516,6 +1560,36 @@ namespace DcsDataImporter
         public string getTasking()
         {
             return this.tasking;
+        }
+
+        public void setTimeFrom(string timeFrom)
+        {
+            this.timeFrom = timeFrom;
+        }
+
+        public string getTimeFrom()
+        {
+            return this.timeFrom;
+        }
+
+        public void setTimeTo(string timeTo)
+        {
+            this.timeTo = timeTo;
+        }
+
+        public string getTimeTo()
+        {
+            return this.timeTo;
+        }
+
+        public void setPos(string pos)
+        {
+            this.pos = pos;
+        }
+
+        public string getPos()
+        {
+            return this.pos;
         }
     }
 }
