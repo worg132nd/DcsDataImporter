@@ -98,11 +98,33 @@ namespace DcsDataImporter
 
                             ATO ato = new ATO(nrAc, type, callsignAndNr, priConf, secConf, priFreq, secFreq, tasking);
                             ATOs.Add(ato);
-                            setPkgFlight(ato);
                         }
                         tasking = null;
                     }
                 }
+            }
+
+            // after all flights have been added, add all A-10s to the datagrid
+            foreach (ATO ato in ATOs)
+            {
+                if (ato.getTypeOfAc().ToUpper().Trim().Equals("A-10C"))
+                {
+                    setPkgFlight(ato);
+                }
+            }
+
+            // add the rest
+            foreach (ATO ato in ATOs)
+            {
+                if (!ato.getTypeOfAc().ToUpper().Trim().Equals("A-10C"))
+                {
+                    setPkgFlight(ato);
+                }
+            }
+
+            if (ATOs.Count > dgvPackage.Rows.Count)
+            {
+                MessageBox.Show("Too many flights to show all!");
             }
         }
 
@@ -118,16 +140,24 @@ namespace DcsDataImporter
             return false;
         }
 
+        // find first free row
+        // write ato to datagrid
         private void setPkgFlight(ATO ato)
         {
+            int rowNr = 0;
 
-            /* Set name of last waypoint */
-            if (ATOs.Count < 8)
+            while (rowNr < dgvPackage.Rows.Count)
             {
-                var row = dgvPackage.Rows[ATOs.Count - 1];
-                row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
-                row.Cells["colAircraftType"].Value = ato.getTypeOfAc();
-                row.Cells["colTask"].Value = ato.getTasking();
+                var row = dgvPackage.Rows[rowNr];
+
+                if (row.Cells["colCallsign"].Value.ToString() == "-")
+                {
+                    row.Cells["colCallsign"].Value = ato.getCallsignAndNr();
+                    row.Cells["colAircraftType"].Value = ato.getTypeOfAc();
+                    row.Cells["colTask"].Value = ato.getTasking();
+                    break;
+                }
+                rowNr++;
             }
         }
 
@@ -305,19 +335,7 @@ namespace DcsDataImporter
             row.Cells["colTcn"].Value = "-";
             row.Cells["colTask"].Value = "-";
             row.Cells["colNotes"].Value = "-";
-
-            row = dgvPackage.Rows[0];
-            row.Cells["colTask"].Value = "SWEEP";
-            row = dgvPackage.Rows[1];
-            row.Cells["colTask"].Value = "SEAD";
-            row = dgvPackage.Rows[2];
-            row.Cells["colTask"].Value = "SEAD";
-            row = dgvPackage.Rows[3];
-            row.Cells["colTask"].Value = "AI";
-            row = dgvPackage.Rows[4];
-            row.Cells["colTask"].Value = "CAP";
-            row = dgvPackage.Rows[5];
-            row.Cells["colTask"].Value = "CAP";
+            row.Cells["colTask"].Value = "-";
         }
 
         private void initProfiles()
