@@ -248,10 +248,76 @@ namespace DcsDataImporter
             if (Int32.Parse(Properties.Settings.Default.prevTxtNrOfAc) < 3){
                 disableSecElem();
                 moveSecElemUp(132);
+                moveFirstElemUp(7);
+                adjGuiSglElem();
             }
 
             initProfiles();
             initForm(tac);
+        }
+
+        private void adjGuiSglElem()
+        {
+            dgvPackage.Top -= 20;
+            lblPackage.Top -= 20;
+            moveProfilesUp(10);
+        }
+
+        private void moveProfilesUp(int h)
+        {
+            lblProfile.Top -= h;
+            txtProfile1.Top -= h;
+            txtProfile2.Top -= h;
+            txtProfile3.Top -= h;
+            txtProfile4.Top -= h;
+
+            lblMunitions.Top -= h;
+            Munitions1.Top -= h;
+            Munitions2.Top -= h;
+            Munitions3.Top -= h;
+            Munitions4.Top -= h;
+
+            lblMode.Top -= h;
+            Mode1.Top -= h;
+            Mode2.Top -= h;
+            Mode3.Top -= h;
+            Mode4.Top -= h;
+
+            lblFusing.Top -= h;
+            Fusing1.Top -= h;
+            Fusing2.Top -= h;
+            Fusing3.Top -= h;
+            Fusing4.Top -= h;
+
+            lblSGLPAIR.Top -= h;
+            SGLPAIR1.Top -= h;
+            SGLPAIR2.Top -= h;
+            SGLPAIR3.Top -= h;
+            SGLPAIR4.Top -= h;
+
+            lblRPL.Top -= h;
+            RPL1.Top -= h;
+            RPL2.Top -= h;
+            RPL3.Top -= h;
+            RPL4.Top -= h;
+
+            lblSpacing.Top -= h;
+            Spacing1.Top -= h;
+            Spacing2.Top -= h;
+            Spacing3.Top -= h;
+            Spacing4.Top -= h;
+
+            lblHOF.Top -= h;
+            HOF1.Top -= h;
+            HOF2.Top -= h;
+            HOF3.Top -= h;
+            HOF4.Top -= h;
+
+            lblRPM.Top -= h;
+            RPM1.Top -= h;
+            RPM2.Top -= h;
+            RPM3.Top -= h;
+            RPM4.Top -= h;
         }
 
         private void disableSecElem()
@@ -275,6 +341,7 @@ namespace DcsDataImporter
             lblIpEgress2.Hide();
             panel1.Height = 233;
             dgvTgtElem.Hide();
+            lblElement1.Hide();
         }
 
         private void moveSecElemUp(int h)
@@ -296,6 +363,88 @@ namespace DcsDataImporter
             lblCardinal2.Top -= h;
             lblHeading2.Top -= h;
             lblIpEgress2.Top -= h;
+
+            txtProfileAttack3.Top -= h;
+            txtProfileAttack4.Top -= h;
+            cbDelivery3.Top -= h;
+            cbDelivery4.Top -= h;
+            txtAttackIP3.Top -= h;
+            txtAttackIP4.Top -= h;
+            cbSCSS3.Top -= h;
+            cbSCSS4.Top -= h;
+            cbFormation3.Top -= h;
+            cbFormation4.Top -= h;
+            numFAH3.Top -= h;
+            numFAH4.Top -= h;
+            txtAltitude3.Top -= h;
+            txtAltitude4.Top -= h;
+            txtAbort3.Top -= h;
+            txtAbort4.Top -= h;
+            cbSem3.Top -= h;
+            cbSem4.Top -= h;
+            cbEgressDirection3.Top -= h;
+            cbEgressDirection4.Top -= h;
+            cbEgressCardinal3.Top -= h;
+            cbEgressCardinal4.Top -= h;
+            numEgressHeading3.Top -= h;
+            numEgressHeading4.Top -= h;
+            txtEgressIP3.Top -= h;
+            txtEgressIP4.Top -= h;
+        }
+
+        private void moveFirstElemUp(int h)
+        {
+            lblElement1.Top -= h;
+            lblAttack1.Top -= h;
+            lblRelease1.Top -= h;
+            lblEgress1.Top -= h;
+            lblProfile1.Top -= h;
+            lblDelivery1.Top -= h;
+            lblIpAttack1.Top -= h;
+            lblScSs1.Top -= h;
+            lblFormation1.Top -= h;
+            lblFAH1.Top -= h;
+            lblAltitude1.Top -= h;
+            lblAbort1.Top -= h;
+            lblSem1.Top -= h;
+            lblLeftRight1.Top -= h;
+            lblCardinal1.Top -= h;
+            lblHeading1.Top -= h;
+            lblIpEgress1.Top -= h;
+
+            txtProfileAttack1.Top -= h;
+            txtProfileAttack2.Top -= h;
+            cbDelivery1.Top -= h;
+            cbDelivery2.Top -= h;
+            txtAttackIP1.Top -= h;
+            txtAttackIP2.Top -= h;
+            cbSCSS1.Top -= h;
+            cbSCSS2.Top -= h;
+            cbFormation1.Top -= h;
+            cbFormation2.Top -= h;
+            numFAH1.Top -= h;
+            numFAH2.Top -= h;
+            txtAltitude1.Top -= h;
+            txtAltitude2.Top -= h;
+            txtAbort1.Top -= h;
+            txtAbort2.Top -= h;
+            cbSem1.Top -= h;
+            cbSem2.Top -= h;
+            cbEgressDirection1.Top -= h;
+            cbEgressDirection2.Top -= h;
+            cbEgressCardinal1.Top -= h;
+            cbEgressCardinal2.Top -= h;
+            numEgressHeading1.Top -= h;
+            numEgressHeading2.Top -= h;
+            txtEgressIP1.Top -= h;
+            txtEgressIP2.Top -= h;
+
+            // moving top of datagrid view
+            dgvTgtLead.Top -= h;
+
+            // space between sets of rows (pairs of rows)
+            h = h - 7;
+
             txtProfileAttack3.Top -= h;
             txtProfileAttack4.Top -= h;
             cbDelivery3.Top -= h;

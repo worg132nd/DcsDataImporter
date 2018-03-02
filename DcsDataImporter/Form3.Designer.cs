@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblElement1 = new System.Windows.Forms.Label();
             this.lblElement2 = new System.Windows.Forms.Label();
             this.dgvTgtLead = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,23 +47,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lblMunitions = new System.Windows.Forms.Label();
             this.cbDelivery1 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblDelivery1 = new System.Windows.Forms.Label();
             this.cbSem1 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblSem1 = new System.Windows.Forms.Label();
             this.cbEgressDirection1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblLeftRight1 = new System.Windows.Forms.Label();
+            this.lblCardinal1 = new System.Windows.Forms.Label();
             this.cbEgressCardinal1 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblEgress1 = new System.Windows.Forms.Label();
+            this.lblHeading1 = new System.Windows.Forms.Label();
             this.Munitions1 = new System.Windows.Forms.ComboBox();
             this.numEgressHeading1 = new System.Windows.Forms.NumericUpDown();
             this.Mode1 = new System.Windows.Forms.ComboBox();
             this.lblMode = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblAltitude1 = new System.Windows.Forms.Label();
             this.txtAbort1 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblRelease1 = new System.Windows.Forms.Label();
+            this.lblAbort1 = new System.Windows.Forms.Label();
             this.SGLPAIR1 = new System.Windows.Forms.ComboBox();
             this.lblSGLPAIR = new System.Windows.Forms.Label();
             this.txtAltitude1 = new System.Windows.Forms.TextBox();
@@ -77,9 +77,9 @@
             this.lblProfile = new System.Windows.Forms.Label();
             this.txtProfile1 = new System.Windows.Forms.TextBox();
             this.txtProfileAttack1 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.lblProfile1 = new System.Windows.Forms.Label();
             this.lblHOF = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lblAttack1 = new System.Windows.Forms.Label();
             this.txtProfileAttack2 = new System.Windows.Forms.TextBox();
             this.cbDelivery2 = new System.Windows.Forms.ComboBox();
             this.Munitions2 = new System.Windows.Forms.ComboBox();
@@ -110,16 +110,16 @@
             this.cbEgressCardinal4 = new System.Windows.Forms.ComboBox();
             this.numEgressHeading4 = new System.Windows.Forms.NumericUpDown();
             this.cbSCSS1 = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblScSs1 = new System.Windows.Forms.Label();
             this.cbSCSS2 = new System.Windows.Forms.ComboBox();
             this.cbSCSS3 = new System.Windows.Forms.ComboBox();
             this.cbSCSS4 = new System.Windows.Forms.ComboBox();
             this.cbFormation1 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
+            this.lblFormation1 = new System.Windows.Forms.Label();
             this.txtEgressIP1 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblIpEgress1 = new System.Windows.Forms.Label();
             this.txtAttackIP1 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
+            this.lblIpAttack1 = new System.Windows.Forms.Label();
             this.txtAttackIP2 = new System.Windows.Forms.TextBox();
             this.txtAttackIP3 = new System.Windows.Forms.TextBox();
             this.txtAttackIP4 = new System.Windows.Forms.TextBox();
@@ -172,7 +172,7 @@
             this.numFAH3 = new System.Windows.Forms.NumericUpDown();
             this.lblFAH2 = new System.Windows.Forms.Label();
             this.numFAH1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblFAH1 = new System.Windows.Forms.Label();
             this.txtAltitude4 = new System.Windows.Forms.TextBox();
             this.lblAltitude2 = new System.Windows.Forms.Label();
             this.lblAbort2 = new System.Windows.Forms.Label();
@@ -196,7 +196,7 @@
             this.colTcn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label42 = new System.Windows.Forms.Label();
+            this.lblPackage = new System.Windows.Forms.Label();
             this.cmbNrOfAc = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
             this.txtLocation = new System.Windows.Forms.TextBox();
@@ -250,15 +250,15 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // label1
+            // lblElement1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 157;
-            this.label1.Text = "Element # 1";
+            this.lblElement1.AutoSize = true;
+            this.lblElement1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElement1.Location = new System.Drawing.Point(12, 105);
+            this.lblElement1.Name = "lblElement1";
+            this.lblElement1.Size = new System.Drawing.Size(75, 13);
+            this.lblElement1.TabIndex = 157;
+            this.lblElement1.Text = "Element # 1";
             // 
             // lblElement2
             // 
@@ -413,14 +413,14 @@
             this.cbDelivery1.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
             this.cbDelivery1.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
-            // label12
+            // lblDelivery1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(71, 216);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 175;
-            this.label12.Text = "Delivery";
+            this.lblDelivery1.AutoSize = true;
+            this.lblDelivery1.Location = new System.Drawing.Point(71, 216);
+            this.lblDelivery1.Name = "lblDelivery1";
+            this.lblDelivery1.Size = new System.Drawing.Size(45, 13);
+            this.lblDelivery1.TabIndex = 175;
+            this.lblDelivery1.Text = "Delivery";
             // 
             // cbSem1
             // 
@@ -435,14 +435,14 @@
             this.cbSem1.Size = new System.Drawing.Size(53, 21);
             this.cbSem1.TabIndex = 18;
             // 
-            // label15
+            // lblSem1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(406, 216);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(30, 13);
-            this.label15.TabIndex = 177;
-            this.label15.Text = "SEM";
+            this.lblSem1.AutoSize = true;
+            this.lblSem1.Location = new System.Drawing.Point(406, 216);
+            this.lblSem1.Name = "lblSem1";
+            this.lblSem1.Size = new System.Drawing.Size(30, 13);
+            this.lblSem1.TabIndex = 177;
+            this.lblSem1.Text = "SEM";
             // 
             // cbEgressDirection1
             // 
@@ -455,23 +455,23 @@
             this.cbEgressDirection1.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection1.TabIndex = 19;
             // 
-            // label16
+            // lblLeftRight1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(443, 216);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 13);
-            this.label16.TabIndex = 179;
-            this.label16.Text = "Left/Right";
+            this.lblLeftRight1.AutoSize = true;
+            this.lblLeftRight1.Location = new System.Drawing.Point(443, 216);
+            this.lblLeftRight1.Name = "lblLeftRight1";
+            this.lblLeftRight1.Size = new System.Drawing.Size(55, 13);
+            this.lblLeftRight1.TabIndex = 179;
+            this.lblLeftRight1.Text = "Left/Right";
             // 
-            // label17
+            // lblCardinal1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(494, 216);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 13);
-            this.label17.TabIndex = 180;
-            this.label17.Text = "Cardinal";
+            this.lblCardinal1.AutoSize = true;
+            this.lblCardinal1.Location = new System.Drawing.Point(494, 216);
+            this.lblCardinal1.Name = "lblCardinal1";
+            this.lblCardinal1.Size = new System.Drawing.Size(45, 13);
+            this.lblCardinal1.TabIndex = 180;
+            this.lblCardinal1.Text = "Cardinal";
             // 
             // cbEgressCardinal1
             // 
@@ -492,24 +492,24 @@
             this.cbEgressCardinal1.TabIndex = 20;
             this.cbEgressCardinal1.SelectedIndexChanged += new System.EventHandler(this.cbEgressCardinal_SelectedIndexChanged);
             // 
-            // label18
+            // lblEgress1
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(473, 196);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 13);
-            this.label18.TabIndex = 180;
-            this.label18.Text = "Egress";
+            this.lblEgress1.AutoSize = true;
+            this.lblEgress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEgress1.Location = new System.Drawing.Point(473, 196);
+            this.lblEgress1.Name = "lblEgress1";
+            this.lblEgress1.Size = new System.Drawing.Size(45, 13);
+            this.lblEgress1.TabIndex = 180;
+            this.lblEgress1.Text = "Egress";
             // 
-            // label19
+            // lblHeading1
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(535, 216);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 184;
-            this.label19.Text = "Heading";
+            this.lblHeading1.AutoSize = true;
+            this.lblHeading1.Location = new System.Drawing.Point(535, 216);
+            this.lblHeading1.Name = "lblHeading1";
+            this.lblHeading1.Size = new System.Drawing.Size(47, 13);
+            this.lblHeading1.TabIndex = 184;
+            this.lblHeading1.Text = "Heading";
             // 
             // Munitions1
             // 
@@ -598,14 +598,14 @@
             this.lblMode.TabIndex = 188;
             this.lblMode.Text = "Mode";
             // 
-            // label21
+            // lblAltitude1
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(297, 216);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 13);
-            this.label21.TabIndex = 189;
-            this.label21.Text = "Altitude";
+            this.lblAltitude1.AutoSize = true;
+            this.lblAltitude1.Location = new System.Drawing.Point(297, 216);
+            this.lblAltitude1.Name = "lblAltitude1";
+            this.lblAltitude1.Size = new System.Drawing.Size(42, 13);
+            this.lblAltitude1.TabIndex = 189;
+            this.lblAltitude1.Text = "Altitude";
             // 
             // txtAbort1
             // 
@@ -614,24 +614,24 @@
             this.txtAbort1.Size = new System.Drawing.Size(48, 20);
             this.txtAbort1.TabIndex = 17;
             // 
-            // label22
+            // lblRelease1
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(314, 196);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 13);
-            this.label22.TabIndex = 191;
-            this.label22.Text = "Release";
+            this.lblRelease1.AutoSize = true;
+            this.lblRelease1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelease1.Location = new System.Drawing.Point(314, 196);
+            this.lblRelease1.Name = "lblRelease1";
+            this.lblRelease1.Size = new System.Drawing.Size(53, 13);
+            this.lblRelease1.TabIndex = 191;
+            this.lblRelease1.Text = "Release";
             // 
-            // label23
+            // lblAbort1
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(342, 216);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 13);
-            this.label23.TabIndex = 193;
-            this.label23.Text = "Abort alt";
+            this.lblAbort1.AutoSize = true;
+            this.lblAbort1.Location = new System.Drawing.Point(342, 216);
+            this.lblAbort1.Name = "lblAbort1";
+            this.lblAbort1.Size = new System.Drawing.Size(46, 13);
+            this.lblAbort1.TabIndex = 193;
+            this.lblAbort1.Text = "Abort alt";
             // 
             // SGLPAIR1
             // 
@@ -763,14 +763,14 @@
             this.txtProfileAttack1.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack1.TabIndex = 10;
             // 
-            // label31
+            // lblProfile1
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(24, 216);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(36, 13);
-            this.label31.TabIndex = 206;
-            this.label31.Text = "Profile";
+            this.lblProfile1.AutoSize = true;
+            this.lblProfile1.Location = new System.Drawing.Point(24, 216);
+            this.lblProfile1.Name = "lblProfile1";
+            this.lblProfile1.Size = new System.Drawing.Size(36, 13);
+            this.lblProfile1.TabIndex = 206;
+            this.lblProfile1.Text = "Profile";
             // 
             // lblHOF
             // 
@@ -781,15 +781,15 @@
             this.lblHOF.TabIndex = 204;
             this.lblHOF.Text = "HOF";
             // 
-            // label32
+            // lblAttack1
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(111, 196);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(44, 13);
-            this.label32.TabIndex = 209;
-            this.label32.Text = "Attack";
+            this.lblAttack1.AutoSize = true;
+            this.lblAttack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttack1.Location = new System.Drawing.Point(111, 196);
+            this.lblAttack1.Name = "lblAttack1";
+            this.lblAttack1.Size = new System.Drawing.Size(44, 13);
+            this.lblAttack1.TabIndex = 209;
+            this.lblAttack1.Text = "Attack";
             // 
             // txtProfileAttack2
             // 
@@ -1318,14 +1318,14 @@
             this.cbSCSS1.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS1.TabIndex = 13;
             // 
-            // label28
+            // lblScSs1
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(147, 216);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(46, 13);
-            this.label28.TabIndex = 241;
-            this.label28.Text = "S-C/S-S";
+            this.lblScSs1.AutoSize = true;
+            this.lblScSs1.Location = new System.Drawing.Point(147, 216);
+            this.lblScSs1.Name = "lblScSs1";
+            this.lblScSs1.Size = new System.Drawing.Size(46, 13);
+            this.lblScSs1.TabIndex = 241;
+            this.lblScSs1.Text = "S-C/S-S";
             // 
             // cbSCSS2
             // 
@@ -1376,14 +1376,14 @@
             this.cbFormation1.Size = new System.Drawing.Size(57, 21);
             this.cbFormation1.TabIndex = 14;
             // 
-            // label33
+            // lblFormation1
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(188, 216);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 13);
-            this.label33.TabIndex = 246;
-            this.label33.Text = "Formation";
+            this.lblFormation1.AutoSize = true;
+            this.lblFormation1.Location = new System.Drawing.Point(188, 216);
+            this.lblFormation1.Name = "lblFormation1";
+            this.lblFormation1.Size = new System.Drawing.Size(53, 13);
+            this.lblFormation1.TabIndex = 246;
+            this.lblFormation1.Text = "Formation";
             // 
             // txtEgressIP1
             // 
@@ -1392,14 +1392,14 @@
             this.txtEgressIP1.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP1.TabIndex = 22;
             // 
-            // label34
+            // lblIpEgress1
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(583, 216);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(17, 13);
-            this.label34.TabIndex = 248;
-            this.label34.Text = "IP";
+            this.lblIpEgress1.AutoSize = true;
+            this.lblIpEgress1.Location = new System.Drawing.Point(583, 216);
+            this.lblIpEgress1.Name = "lblIpEgress1";
+            this.lblIpEgress1.Size = new System.Drawing.Size(17, 13);
+            this.lblIpEgress1.TabIndex = 248;
+            this.lblIpEgress1.Text = "IP";
             // 
             // txtAttackIP1
             // 
@@ -1408,14 +1408,14 @@
             this.txtAttackIP1.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP1.TabIndex = 12;
             // 
-            // label35
+            // lblIpAttack1
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(127, 216);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(17, 13);
-            this.label35.TabIndex = 250;
-            this.label35.Text = "IP";
+            this.lblIpAttack1.AutoSize = true;
+            this.lblIpAttack1.Location = new System.Drawing.Point(127, 216);
+            this.lblIpAttack1.Name = "lblIpAttack1";
+            this.lblIpAttack1.Size = new System.Drawing.Size(17, 13);
+            this.lblIpAttack1.TabIndex = 250;
+            this.lblIpAttack1.Text = "IP";
             // 
             // txtAttackIP2
             // 
@@ -1961,7 +1961,7 @@
             this.panel1.Controls.Add(this.numFAH3);
             this.panel1.Controls.Add(this.lblFAH2);
             this.panel1.Controls.Add(this.numFAH1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblFAH1);
             this.panel1.Controls.Add(this.txtAbort4);
             this.panel1.Controls.Add(this.txtAltitude4);
             this.panel1.Controls.Add(this.txtAltitude3);
@@ -2070,14 +2070,14 @@
             0,
             0});
             // 
-            // label2
+            // lblFAH1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "FAH";
+            this.lblFAH1.AutoSize = true;
+            this.lblFAH1.Location = new System.Drawing.Point(241, 122);
+            this.lblFAH1.Name = "lblFAH1";
+            this.lblFAH1.Size = new System.Drawing.Size(28, 13);
+            this.lblFAH1.TabIndex = 0;
+            this.lblFAH1.Text = "FAH";
             // 
             // txtAltitude4
             // 
@@ -2229,14 +2229,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2248,8 +2248,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 486);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPackage.Size = new System.Drawing.Size(589, 177);
             this.dgvPackage.TabIndex = 63;
             // 
@@ -2295,15 +2295,15 @@
             this.colNotes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colNotes.Width = 256;
             // 
-            // label42
+            // lblPackage
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(12, 470);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(50, 13);
-            this.label42.TabIndex = 381;
-            this.label42.Text = "Package";
+            this.lblPackage.AutoSize = true;
+            this.lblPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackage.Location = new System.Drawing.Point(12, 470);
+            this.lblPackage.Name = "lblPackage";
+            this.lblPackage.Size = new System.Drawing.Size(50, 13);
+            this.lblPackage.TabIndex = 381;
+            this.lblPackage.Text = "Package";
             // 
             // cmbNrOfAc
             // 
@@ -2484,7 +2484,7 @@
             this.Controls.Add(this.label44);
             this.Controls.Add(this.cmbNrOfAc);
             this.Controls.Add(this.label43);
-            this.Controls.Add(this.label42);
+            this.Controls.Add(this.lblPackage);
             this.Controls.Add(this.dgvPackage);
             this.Controls.Add(this.txtVulEnd);
             this.Controls.Add(this.lblVulEnd);
@@ -2544,16 +2544,16 @@
             this.Controls.Add(this.txtAttackIP4);
             this.Controls.Add(this.txtAttackIP3);
             this.Controls.Add(this.txtAttackIP2);
-            this.Controls.Add(this.label35);
+            this.Controls.Add(this.lblIpAttack1);
             this.Controls.Add(this.txtAttackIP1);
-            this.Controls.Add(this.label34);
+            this.Controls.Add(this.lblIpEgress1);
             this.Controls.Add(this.txtEgressIP1);
-            this.Controls.Add(this.label33);
+            this.Controls.Add(this.lblFormation1);
             this.Controls.Add(this.cbFormation1);
             this.Controls.Add(this.cbSCSS4);
             this.Controls.Add(this.cbSCSS3);
             this.Controls.Add(this.cbSCSS2);
-            this.Controls.Add(this.label28);
+            this.Controls.Add(this.lblScSs1);
             this.Controls.Add(this.cbSCSS1);
             this.Controls.Add(this.numEgressHeading4);
             this.Controls.Add(this.cbEgressCardinal4);
@@ -2582,10 +2582,10 @@
             this.Controls.Add(this.Munitions2);
             this.Controls.Add(this.cbDelivery2);
             this.Controls.Add(this.txtProfileAttack2);
-            this.Controls.Add(this.label32);
+            this.Controls.Add(this.lblAttack1);
             this.Controls.Add(this.txtProfileAttack1);
             this.Controls.Add(this.txtProfile1);
-            this.Controls.Add(this.label31);
+            this.Controls.Add(this.lblProfile1);
             this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.HOF1);
             this.Controls.Add(this.lblHOF);
@@ -2597,24 +2597,24 @@
             this.Controls.Add(this.lblRPL);
             this.Controls.Add(this.txtAltitude1);
             this.Controls.Add(this.lblSGLPAIR);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.lblAbort1);
             this.Controls.Add(this.SGLPAIR1);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.lblRelease1);
             this.Controls.Add(this.txtAbort1);
-            this.Controls.Add(this.label21);
+            this.Controls.Add(this.lblAltitude1);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.Mode1);
             this.Controls.Add(this.numEgressHeading1);
             this.Controls.Add(this.Munitions1);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.lblHeading1);
             this.Controls.Add(this.cbEgressCardinal1);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblEgress1);
+            this.Controls.Add(this.lblCardinal1);
+            this.Controls.Add(this.lblLeftRight1);
             this.Controls.Add(this.cbEgressDirection1);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblSem1);
             this.Controls.Add(this.cbSem1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblDelivery1);
             this.Controls.Add(this.cbDelivery1);
             this.Controls.Add(this.lblMunitions);
             this.Controls.Add(this.label14);
@@ -2622,7 +2622,7 @@
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.dgvTgtLead);
             this.Controls.Add(this.lblElement2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblElement1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -2663,7 +2663,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblElement1;
         private System.Windows.Forms.Label lblElement2;
         private System.Windows.Forms.DataGridView dgvTgtLead;
         private System.Windows.Forms.TextBox txtNotes;
@@ -2679,23 +2679,23 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblMunitions;
         private System.Windows.Forms.ComboBox cbDelivery1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblDelivery1;
         private System.Windows.Forms.ComboBox cbSem1;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblSem1;
         private System.Windows.Forms.ComboBox cbEgressDirection1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblLeftRight1;
+        private System.Windows.Forms.Label lblCardinal1;
         private System.Windows.Forms.ComboBox cbEgressCardinal1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblEgress1;
+        private System.Windows.Forms.Label lblHeading1;
         private System.Windows.Forms.ComboBox Munitions1;
         private System.Windows.Forms.NumericUpDown numEgressHeading1;
         private System.Windows.Forms.ComboBox Mode1;
         private System.Windows.Forms.Label lblMode;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblAltitude1;
         private System.Windows.Forms.TextBox txtAbort1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblRelease1;
+        private System.Windows.Forms.Label lblAbort1;
         private System.Windows.Forms.ComboBox SGLPAIR1;
         private System.Windows.Forms.Label lblSGLPAIR;
         private System.Windows.Forms.TextBox txtAltitude1;
@@ -2709,9 +2709,9 @@
         private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.TextBox txtProfile1;
         private System.Windows.Forms.TextBox txtProfileAttack1;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblProfile1;
         private System.Windows.Forms.Label lblHOF;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblAttack1;
         private System.Windows.Forms.TextBox txtProfileAttack2;
         private System.Windows.Forms.ComboBox cbDelivery2;
         private System.Windows.Forms.ComboBox Munitions2;
@@ -2742,16 +2742,16 @@
         private System.Windows.Forms.ComboBox cbEgressCardinal4;
         private System.Windows.Forms.NumericUpDown numEgressHeading4;
         private System.Windows.Forms.ComboBox cbSCSS1;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblScSs1;
         private System.Windows.Forms.ComboBox cbSCSS2;
         private System.Windows.Forms.ComboBox cbSCSS3;
         private System.Windows.Forms.ComboBox cbSCSS4;
         private System.Windows.Forms.ComboBox cbFormation1;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblFormation1;
         private System.Windows.Forms.TextBox txtEgressIP1;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblIpEgress1;
         private System.Windows.Forms.TextBox txtAttackIP1;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lblIpAttack1;
         private System.Windows.Forms.TextBox txtAttackIP2;
         private System.Windows.Forms.TextBox txtAttackIP3;
         private System.Windows.Forms.TextBox txtAttackIP4;
@@ -2815,7 +2815,7 @@
         private System.Windows.Forms.Label lblVulEnd;
         private System.Windows.Forms.TextBox txtVulEnd;
         private System.Windows.Forms.DataGridView dgvPackage;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lblPackage;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCallsign;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAircraftType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGid;
@@ -2838,7 +2838,7 @@
         private System.Windows.Forms.Label lblLaser;
         private System.Windows.Forms.NumericUpDown numFAH2;
         private System.Windows.Forms.NumericUpDown numFAH1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFAH1;
         private System.Windows.Forms.NumericUpDown numFAH4;
         private System.Windows.Forms.Label lblFAH2;
         private System.Windows.Forms.NumericUpDown numFAH3;
