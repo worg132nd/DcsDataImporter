@@ -166,7 +166,7 @@
             this.txtJoker = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tgtPanel = new System.Windows.Forms.Panel();
             this.numFAH4 = new System.Windows.Forms.NumericUpDown();
             this.numFAH2 = new System.Windows.Forms.NumericUpDown();
             this.numFAH3 = new System.Windows.Forms.NumericUpDown();
@@ -176,7 +176,7 @@
             this.txtAltitude4 = new System.Windows.Forms.TextBox();
             this.lblAltitude2 = new System.Windows.Forms.Label();
             this.lblAbort2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTgt = new System.Windows.Forms.Label();
             this.lblIpAttack2 = new System.Windows.Forms.Label();
             this.lblIpEgress2 = new System.Windows.Forms.Label();
             this.lblFormation2 = new System.Windows.Forms.Label();
@@ -231,7 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RPM4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBingo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.tgtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).BeginInit();
@@ -1953,25 +1953,25 @@
             this.label6.TabIndex = 298;
             this.label6.Text = "JOKER";
             // 
-            // panel1
+            // tgtPanel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.numFAH4);
-            this.panel1.Controls.Add(this.numFAH2);
-            this.panel1.Controls.Add(this.numFAH3);
-            this.panel1.Controls.Add(this.lblFAH2);
-            this.panel1.Controls.Add(this.numFAH1);
-            this.panel1.Controls.Add(this.lblFAH1);
-            this.panel1.Controls.Add(this.txtAbort4);
-            this.panel1.Controls.Add(this.txtAltitude4);
-            this.panel1.Controls.Add(this.txtAltitude3);
-            this.panel1.Controls.Add(this.lblAltitude2);
-            this.panel1.Controls.Add(this.lblAbort2);
-            this.panel1.Controls.Add(this.lblRelease2);
-            this.panel1.Location = new System.Drawing.Point(6, 93);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(607, 370);
-            this.panel1.TabIndex = 300;
+            this.tgtPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tgtPanel.Controls.Add(this.numFAH4);
+            this.tgtPanel.Controls.Add(this.numFAH2);
+            this.tgtPanel.Controls.Add(this.numFAH3);
+            this.tgtPanel.Controls.Add(this.lblFAH2);
+            this.tgtPanel.Controls.Add(this.numFAH1);
+            this.tgtPanel.Controls.Add(this.lblFAH1);
+            this.tgtPanel.Controls.Add(this.txtAbort4);
+            this.tgtPanel.Controls.Add(this.txtAltitude4);
+            this.tgtPanel.Controls.Add(this.txtAltitude3);
+            this.tgtPanel.Controls.Add(this.lblAltitude2);
+            this.tgtPanel.Controls.Add(this.lblAbort2);
+            this.tgtPanel.Controls.Add(this.lblRelease2);
+            this.tgtPanel.Location = new System.Drawing.Point(6, 93);
+            this.tgtPanel.Name = "tgtPanel";
+            this.tgtPanel.Size = new System.Drawing.Size(607, 370);
+            this.tgtPanel.TabIndex = 300;
             // 
             // numFAH4
             // 
@@ -2104,15 +2104,15 @@
             this.lblAbort2.TabIndex = 308;
             this.lblAbort2.Text = "Abort alt";
             // 
-            // label8
+            // lblTgt
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(281, 87);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 13);
-            this.label8.TabIndex = 301;
-            this.label8.Text = "TARGETS";
+            this.lblTgt.AutoSize = true;
+            this.lblTgt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTgt.Location = new System.Drawing.Point(281, 87);
+            this.lblTgt.Name = "lblTgt";
+            this.lblTgt.Size = new System.Drawing.Size(65, 13);
+            this.lblTgt.TabIndex = 301;
+            this.lblTgt.Text = "TARGETS";
             // 
             // lblIpAttack2
             // 
@@ -2498,7 +2498,7 @@
             this.Controls.Add(this.lblLeftRight2);
             this.Controls.Add(this.lblSem2);
             this.Controls.Add(this.lblDelivery2);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblTgt);
             this.Controls.Add(this.txtBingo);
             this.Controls.Add(this.txtJoker);
             this.Controls.Add(this.label5);
@@ -2624,7 +2624,7 @@
             this.Controls.Add(this.lblElement2);
             this.Controls.Add(this.lblElement1);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tgtPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form3";
             this.Text = "Weapon Profiles and Deliveries";
@@ -2648,8 +2648,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RPM4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBingo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tgtPanel.ResumeLayout(false);
+            this.tgtPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH3)).EndInit();
@@ -2798,8 +2798,8 @@
         private System.Windows.Forms.NumericUpDown txtJoker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel tgtPanel;
+        private System.Windows.Forms.Label lblTgt;
         private System.Windows.Forms.Label lblIpAttack2;
         private System.Windows.Forms.Label lblIpEgress2;
         private System.Windows.Forms.Label lblFormation2;

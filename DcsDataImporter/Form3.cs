@@ -339,7 +339,7 @@ namespace DcsDataImporter
             lblCardinal2.Hide();
             lblHeading2.Hide();
             lblIpEgress2.Hide();
-            panel1.Height = 233;
+            tgtPanel.Height = 233;
             dgvTgtElem.Hide();
             lblElement1.Hide();
         }
