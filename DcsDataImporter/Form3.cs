@@ -261,8 +261,17 @@ namespace DcsDataImporter
             dgvPackage.Top -= 20;
             lblPackage.Top -= 20;
             moveProfilesUp(10);
+            incTgtPanelHeight(20);
 
+            moveAttacksDown(10);
             moveTgtPanelDown();
+        }
+
+        private void incTgtPanelHeight(int h)
+        {
+            tgtPanel.Height += h;
+            panel2.Top += h;
+            panel3.Top += h;
         }
 
         private void moveProfilesUp(int h)
@@ -346,6 +355,19 @@ namespace DcsDataImporter
             lblElement1.Hide();
         }
 
+        private void moveAttacksDown(int h)
+        {
+            lblAttack1.Top += h;
+            lblRelease1.Top += h;
+            lblEgress1.Top += h;
+
+            moveFirstLabelsDown(h);
+            moveFirstAttackDown(h);
+            moveSecondAttackDown(h);
+            moveThirdAttackDown(h);
+            moveFourthAttackDown(h);
+        }
+
         private void moveSecElemUp(int h)
         {
             lblElement2.Top -= h;
@@ -410,6 +432,91 @@ namespace DcsDataImporter
             panel3.Top += 50;
             panel6.Top += 50;
             lblTgt.Top += 50;
+        }
+
+        private void moveFirstLabelsDown(int h)
+        {
+            lblProfile1.Top += h;
+            lblDelivery1.Top += h;
+            lblIpAttack1.Top += h;
+            lblScSs1.Top += h;
+            lblFormation1.Top += h;
+            lblFAH1.Top += h;
+            lblAltitude1.Top += h;
+            lblAbort1.Top += h;
+            lblSem1.Top += h;
+            lblLeftRight1.Top += h;
+            lblCardinal1.Top += h;
+            lblHeading1.Top += h;
+            lblIpEgress1.Top += h;
+        }
+
+        private void moveFirstAttackDown(int h)
+        {
+            txtProfileAttack1.Top += h;
+            cbDelivery1.Top += h;
+            txtAttackIP1.Top += h;
+            cbSCSS1.Top += h;
+            cbFormation1.Top += h;
+            numFAH1.Top += h;
+            txtAltitude1.Top += h;
+            txtAbort1.Top += h;
+            cbSem1.Top += h;
+            cbEgressDirection1.Top += h;
+            cbEgressCardinal1.Top += h;
+            numEgressHeading1.Top += h;
+            txtEgressIP1.Top += h;
+        }
+
+        private void moveSecondAttackDown(int h)
+        {
+            txtProfileAttack2.Top += h;
+            cbDelivery2.Top += h;
+            txtAttackIP2.Top += h;
+            cbSCSS2.Top += h;
+            cbFormation2.Top += h;
+            numFAH2.Top += h;
+            txtAltitude2.Top += h;
+            txtAbort2.Top += h;
+            cbSem2.Top += h;
+            cbEgressDirection2.Top += h;
+            cbEgressCardinal2.Top += h;
+            numEgressHeading2.Top += h;
+            txtEgressIP2.Top += h;
+        }
+
+        private void moveThirdAttackDown(int h)
+        {
+            txtProfileAttack3.Top += h;
+            cbDelivery3.Top += h;
+            txtAttackIP3.Top += h;
+            cbSCSS3.Top += h;
+            cbFormation3.Top += h;
+            numFAH3.Top += h;
+            txtAltitude3.Top += h;
+            txtAbort3.Top += h;
+            cbSem3.Top += h;
+            cbEgressDirection3.Top += h;
+            cbEgressCardinal3.Top += h;
+            numEgressHeading3.Top += h;
+            txtEgressIP3.Top += h;
+        }
+
+        private void moveFourthAttackDown(int h)
+        {
+            txtProfileAttack4.Top += h;
+            cbDelivery4.Top += h;
+            txtAttackIP4.Top += h;
+            cbSCSS4.Top += h;
+            cbFormation4.Top += h;
+            numFAH4.Top += h;
+            txtAltitude4.Top += h;
+            txtAbort4.Top += h;
+            cbSem4.Top += h;
+            cbEgressDirection4.Top += h;
+            cbEgressCardinal4.Top += h;
+            numEgressHeading4.Top += h;
+            txtEgressIP4.Top += h;
         }
 
         private void moveFirstElemUp(int h)
