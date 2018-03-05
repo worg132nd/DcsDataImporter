@@ -247,8 +247,6 @@ namespace DcsDataImporter
             // Disable second element if less than 3 in the flight
             if (Int32.Parse(Properties.Settings.Default.prevTxtNrOfAc) < 3){
                 disableSecElem();
-                moveSecElemUp(132);
-                moveFirstElemUp(7);
                 adjGuiSglElem();
             }
 
@@ -258,9 +256,13 @@ namespace DcsDataImporter
 
         private void adjGuiSglElem()
         {
+            moveSecElemUp(132);
+            moveFirstElemUp(7);
             dgvPackage.Top -= 20;
             lblPackage.Top -= 20;
             moveProfilesUp(10);
+
+            moveTgtPanelDown();
         }
 
         private void moveProfilesUp(int h)
@@ -398,6 +400,16 @@ namespace DcsDataImporter
         {
             panel2.Top = tgtPanel.Height + tgtPanel.Location.Y;
             panel3.Top = tgtPanel.Height + tgtPanel.Location.Y + 1;
+        }
+
+        private void moveTgtPanelDown()
+        {
+            tgtPanel.Top += 50;
+            panel1.Top += 50;
+            panel2.Top += 50;
+            panel3.Top += 50;
+            panel6.Top += 50;
+            lblTgt.Top += 50;
         }
 
         private void moveFirstElemUp(int h)
