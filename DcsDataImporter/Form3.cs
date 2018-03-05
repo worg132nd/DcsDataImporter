@@ -390,6 +390,14 @@ namespace DcsDataImporter
             numEgressHeading4.Top -= h;
             txtEgressIP3.Top -= h;
             txtEgressIP4.Top -= h;
+
+            moveBottomTgtDelimiter();
+        }
+
+        private void moveBottomTgtDelimiter()
+        {
+            panel2.Top = tgtPanel.Height + tgtPanel.Location.Y;
+            panel3.Top = tgtPanel.Height + tgtPanel.Location.Y + 1;
         }
 
         private void moveFirstElemUp(int h)
@@ -481,7 +489,6 @@ namespace DcsDataImporter
             txtBingo.Text = Properties.Settings.Default.prevTxtBingo;
             cmbNrOfAc.Text = Properties.Settings.Default.prevTxtNrOfAc;
             txtTac.Text = tac;
-            txtLocation.Text = Properties.Settings.Default.prevTxtLocation;
             txtNotes.Text = Properties.Settings.Default.prevAmpn;
             txtVulStart.Text = Properties.Settings.Default.prevTxtVulStart;
             txtVulEnd.Text = Properties.Settings.Default.prevTxtVulEnd;
@@ -495,7 +502,9 @@ namespace DcsDataImporter
 
             var row = dgv.Rows[0];
             row.Cells[0].Value = "Primary";
+            row.Cells[0].Style.Font = new Font(dgvTgtLead.DefaultCellStyle.Font, FontStyle.Bold);
             row.Cells[2].Value = "Secondary";
+            row.Cells[2].Style.Font = new Font(dgvTgtLead.DefaultCellStyle.Font, FontStyle.Bold);
             row = dgv.Rows[1];
             row.Cells[0].Value = row.Cells[2].Value = "DMPI";
             row = dgv.Rows[2];
@@ -724,7 +733,6 @@ namespace DcsDataImporter
             Properties.Settings.Default.prevForm3TxtCallsign = txtCallsign.Text;
             Properties.Settings.Default.prevForm3TxtMsnNr = txtMsnNr.Text;
             Properties.Settings.Default.prevForm3CmbNrOfAc = cmbNrOfAc.Text;
-            Properties.Settings.Default.prevForm3TxtLocation = txtLocation.Text;
             Properties.Settings.Default.prevForm3NumPlaytime = numPlaytime.Text;
             Properties.Settings.Default.prevForm3TxtLoadout = txtLoadout.Text;
             Properties.Settings.Default.prevForm3CbAbort = cbAbort.Text;
@@ -838,7 +846,6 @@ namespace DcsDataImporter
             txtCallsign.Text = Properties.Settings.Default.prevForm3TxtCallsign;
             txtMsnNr.Text = Properties.Settings.Default.prevForm3TxtMsnNr;
             cmbNrOfAc.Text = Properties.Settings.Default.prevForm3CmbNrOfAc;
-            txtLocation.Text = Properties.Settings.Default.prevForm3TxtLocation;
             numPlaytime.Text = Properties.Settings.Default.prevForm3NumPlaytime;
             txtLoadout.Text = Properties.Settings.Default.prevForm3TxtLoadout;
             cbAbort.Text = Properties.Settings.Default.prevForm3CbAbort;
