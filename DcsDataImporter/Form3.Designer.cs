@@ -34,10 +34,6 @@
             this.lblElement2 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.dgvTgtElem = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.lblMunitions = new System.Windows.Forms.Label();
             this.Munitions1 = new System.Windows.Forms.ComboBox();
@@ -190,6 +186,12 @@
             this.lblVulEnd = new System.Windows.Forms.Label();
             this.txtVulEnd = new System.Windows.Forms.TextBox();
             this.dgvPackage = new System.Windows.Forms.DataGridView();
+            this.colCallsign = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAircraftType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTcn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPackage = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -212,12 +214,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCapabilities = new System.Windows.Forms.TextBox();
             this.cmbNrOfAc = new System.Windows.Forms.TextBox();
-            this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTcn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAircraftType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCallsign = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RPL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spacing1)).BeginInit();
@@ -294,30 +294,6 @@
             this.dgvTgtElem.RowHeadersVisible = false;
             this.dgvTgtElem.Size = new System.Drawing.Size(589, 69);
             this.dgvTgtElem.TabIndex = 36;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ElemCol1";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 64;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ElemCol2";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 229;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "ElemCol3";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 64;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "ElemCol4";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 229;
             // 
             // label14
             // 
@@ -2355,6 +2331,48 @@
             this.dgvPackage.Size = new System.Drawing.Size(589, 177);
             this.dgvPackage.TabIndex = 63;
             // 
+            // colCallsign
+            // 
+            this.colCallsign.HeaderText = "Callsign";
+            this.colCallsign.Name = "colCallsign";
+            this.colCallsign.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCallsign.Width = 110;
+            // 
+            // colAircraftType
+            // 
+            this.colAircraftType.HeaderText = "Aircraft Type";
+            this.colAircraftType.Name = "colAircraftType";
+            this.colAircraftType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAircraftType.Width = 73;
+            // 
+            // colGid
+            // 
+            this.colGid.HeaderText = "GID";
+            this.colGid.Name = "colGid";
+            this.colGid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colGid.Width = 47;
+            // 
+            // colTcn
+            // 
+            this.colTcn.HeaderText = "TCN";
+            this.colTcn.Name = "colTcn";
+            this.colTcn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTcn.Width = 30;
+            // 
+            // colTask
+            // 
+            this.colTask.HeaderText = "Task";
+            this.colTask.Name = "colTask";
+            this.colTask.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTask.Width = 70;
+            // 
+            // colNotes
+            // 
+            this.colNotes.HeaderText = "Notes";
+            this.colNotes.Name = "colNotes";
+            this.colNotes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNotes.Width = 256;
+            // 
             // lblPackage
             // 
             this.lblPackage.AutoSize = true;
@@ -2581,47 +2599,29 @@
             this.cmbNrOfAc.Size = new System.Drawing.Size(32, 20);
             this.cmbNrOfAc.TabIndex = 404;
             // 
-            // colNotes
+            // dataGridViewTextBoxColumn1
             // 
-            this.colNotes.HeaderText = "Notes";
-            this.colNotes.Name = "colNotes";
-            this.colNotes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colNotes.Width = 256;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ElemCol1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 64;
             // 
-            // colTask
+            // dataGridViewTextBoxColumn2
             // 
-            this.colTask.HeaderText = "Task";
-            this.colTask.Name = "colTask";
-            this.colTask.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTask.Width = 70;
+            this.dataGridViewTextBoxColumn2.HeaderText = "ElemCol2";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 229;
             // 
-            // colTcn
+            // dataGridViewTextBoxColumn3
             // 
-            this.colTcn.HeaderText = "TCN";
-            this.colTcn.Name = "colTcn";
-            this.colTcn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTcn.Width = 30;
+            this.dataGridViewTextBoxColumn3.HeaderText = "ElemCol3";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 70;
             // 
-            // colGid
+            // dataGridViewTextBoxColumn4
             // 
-            this.colGid.HeaderText = "GID";
-            this.colGid.Name = "colGid";
-            this.colGid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colGid.Width = 47;
-            // 
-            // colAircraftType
-            // 
-            this.colAircraftType.HeaderText = "Aircraft Type";
-            this.colAircraftType.Name = "colAircraftType";
-            this.colAircraftType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAircraftType.Width = 73;
-            // 
-            // colCallsign
-            // 
-            this.colCallsign.HeaderText = "Callsign";
-            this.colCallsign.Name = "colCallsign";
-            this.colCallsign.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colCallsign.Width = 110;
+            this.dataGridViewTextBoxColumn4.HeaderText = "ElemCol4";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 223;
             // 
             // Form3
             // 
@@ -2756,10 +2756,6 @@
         private System.Windows.Forms.Label lblElement2;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.DataGridView dgvTgtElem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblMunitions;
         private System.Windows.Forms.ComboBox Munitions1;
@@ -2940,5 +2936,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTcn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTask;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
