@@ -34,6 +34,10 @@
             this.lblElement2 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.dgvTgtElem = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.lblMunitions = new System.Windows.Forms.Label();
             this.Munitions1 = new System.Windows.Forms.ComboBox();
@@ -92,34 +96,60 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tgtPanel = new System.Windows.Forms.Panel();
+            this.txtAttackIP5 = new System.Windows.Forms.TextBox();
             this.txtEgressIP3 = new System.Windows.Forms.TextBox();
+            this.txtEgressIP5 = new System.Windows.Forms.TextBox();
             this.cbFormation3 = new System.Windows.Forms.ComboBox();
+            this.cbFormation5 = new System.Windows.Forms.ComboBox();
             this.txtAttackIP3 = new System.Windows.Forms.TextBox();
+            this.cbSCSS5 = new System.Windows.Forms.ComboBox();
             this.cbSCSS3 = new System.Windows.Forms.ComboBox();
+            this.txtProfileAttack5 = new System.Windows.Forms.TextBox();
             this.numEgressHeading3 = new System.Windows.Forms.NumericUpDown();
+            this.txtAltitude5 = new System.Windows.Forms.TextBox();
+            this.txtAbort5 = new System.Windows.Forms.TextBox();
             this.cbEgressCardinal3 = new System.Windows.Forms.ComboBox();
+            this.numEgressHeading5 = new System.Windows.Forms.NumericUpDown();
             this.cbEgressDirection3 = new System.Windows.Forms.ComboBox();
+            this.cbEgressCardinal5 = new System.Windows.Forms.ComboBox();
             this.cbSem3 = new System.Windows.Forms.ComboBox();
+            this.cbEgressDirection5 = new System.Windows.Forms.ComboBox();
             this.txtAbort3 = new System.Windows.Forms.TextBox();
+            this.cbSem5 = new System.Windows.Forms.ComboBox();
             this.cbDelivery3 = new System.Windows.Forms.ComboBox();
+            this.cbDelivery5 = new System.Windows.Forms.ComboBox();
             this.txtProfileAttack3 = new System.Windows.Forms.TextBox();
+            this.txtEgressIP6 = new System.Windows.Forms.TextBox();
             this.lblElement1 = new System.Windows.Forms.Label();
+            this.cbFormation6 = new System.Windows.Forms.ComboBox();
             this.dgvTgtLead = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAttackIP6 = new System.Windows.Forms.TextBox();
             this.lblIpAttack2 = new System.Windows.Forms.Label();
+            this.cbSCSS6 = new System.Windows.Forms.ComboBox();
             this.lblIpEgress2 = new System.Windows.Forms.Label();
+            this.numEgressHeading6 = new System.Windows.Forms.NumericUpDown();
             this.lblFormation2 = new System.Windows.Forms.Label();
+            this.cbEgressCardinal6 = new System.Windows.Forms.ComboBox();
             this.lblScSs2 = new System.Windows.Forms.Label();
+            this.cbEgressDirection6 = new System.Windows.Forms.ComboBox();
             this.lblProfile2 = new System.Windows.Forms.Label();
+            this.cbSem6 = new System.Windows.Forms.ComboBox();
             this.lblHeading2 = new System.Windows.Forms.Label();
+            this.txtAbort6 = new System.Windows.Forms.TextBox();
             this.lblCardinal2 = new System.Windows.Forms.Label();
+            this.txtAltitude6 = new System.Windows.Forms.TextBox();
             this.lblLeftRight2 = new System.Windows.Forms.Label();
+            this.cbDelivery6 = new System.Windows.Forms.ComboBox();
             this.lblSem2 = new System.Windows.Forms.Label();
+            this.txtProfileAttack6 = new System.Windows.Forms.TextBox();
             this.lblDelivery2 = new System.Windows.Forms.Label();
+            this.numFAH6 = new System.Windows.Forms.NumericUpDown();
             this.lblAttack2 = new System.Windows.Forms.Label();
+            this.numFAH5 = new System.Windows.Forms.NumericUpDown();
             this.lblEgress2 = new System.Windows.Forms.Label();
             this.txtEgressIP4 = new System.Windows.Forms.TextBox();
             this.cbFormation4 = new System.Windows.Forms.ComboBox();
@@ -214,10 +244,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCapabilities = new System.Windows.Forms.TextBox();
             this.cmbNrOfAc = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtElem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RPL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spacing1)).BeginInit();
@@ -235,7 +261,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).BeginInit();
             this.tgtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading2)).BeginInit();
@@ -289,11 +319,35 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvTgtElem.Location = new System.Drawing.Point(15, 297);
+            this.dgvTgtElem.Location = new System.Drawing.Point(25, 204);
             this.dgvTgtElem.Name = "dgvTgtElem";
             this.dgvTgtElem.RowHeadersVisible = false;
             this.dgvTgtElem.Size = new System.Drawing.Size(589, 69);
             this.dgvTgtElem.TabIndex = 36;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ElemCol1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 64;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "ElemCol2";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 229;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "ElemCol3";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "ElemCol4";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 223;
             // 
             // label14
             // 
@@ -1104,30 +1158,57 @@
             // tgtPanel
             // 
             this.tgtPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.tgtPanel.Controls.Add(this.txtEgressIP3);
-            this.tgtPanel.Controls.Add(this.cbFormation3);
-            this.tgtPanel.Controls.Add(this.txtAttackIP3);
-            this.tgtPanel.Controls.Add(this.cbSCSS3);
-            this.tgtPanel.Controls.Add(this.numEgressHeading3);
-            this.tgtPanel.Controls.Add(this.cbEgressCardinal3);
-            this.tgtPanel.Controls.Add(this.cbEgressDirection3);
-            this.tgtPanel.Controls.Add(this.cbSem3);
-            this.tgtPanel.Controls.Add(this.txtAbort3);
-            this.tgtPanel.Controls.Add(this.cbDelivery3);
-            this.tgtPanel.Controls.Add(this.txtProfileAttack3);
-            this.tgtPanel.Controls.Add(this.lblElement1);
             this.tgtPanel.Controls.Add(this.dgvTgtLead);
+            this.tgtPanel.Controls.Add(this.dgvTgtElem);
+            this.tgtPanel.Controls.Add(this.txtAttackIP5);
+            this.tgtPanel.Controls.Add(this.txtEgressIP3);
+            this.tgtPanel.Controls.Add(this.txtEgressIP5);
+            this.tgtPanel.Controls.Add(this.cbFormation3);
+            this.tgtPanel.Controls.Add(this.cbFormation5);
+            this.tgtPanel.Controls.Add(this.txtAttackIP3);
+            this.tgtPanel.Controls.Add(this.cbSCSS5);
+            this.tgtPanel.Controls.Add(this.cbSCSS3);
+            this.tgtPanel.Controls.Add(this.txtProfileAttack5);
+            this.tgtPanel.Controls.Add(this.numEgressHeading3);
+            this.tgtPanel.Controls.Add(this.txtAltitude5);
+            this.tgtPanel.Controls.Add(this.txtAbort5);
+            this.tgtPanel.Controls.Add(this.cbEgressCardinal3);
+            this.tgtPanel.Controls.Add(this.numEgressHeading5);
+            this.tgtPanel.Controls.Add(this.cbEgressDirection3);
+            this.tgtPanel.Controls.Add(this.cbEgressCardinal5);
+            this.tgtPanel.Controls.Add(this.cbSem3);
+            this.tgtPanel.Controls.Add(this.cbEgressDirection5);
+            this.tgtPanel.Controls.Add(this.txtAbort3);
+            this.tgtPanel.Controls.Add(this.cbSem5);
+            this.tgtPanel.Controls.Add(this.cbDelivery3);
+            this.tgtPanel.Controls.Add(this.cbDelivery5);
+            this.tgtPanel.Controls.Add(this.txtProfileAttack3);
+            this.tgtPanel.Controls.Add(this.txtEgressIP6);
+            this.tgtPanel.Controls.Add(this.lblElement1);
+            this.tgtPanel.Controls.Add(this.cbFormation6);
+            this.tgtPanel.Controls.Add(this.txtAttackIP6);
             this.tgtPanel.Controls.Add(this.lblIpAttack2);
+            this.tgtPanel.Controls.Add(this.cbSCSS6);
             this.tgtPanel.Controls.Add(this.lblIpEgress2);
+            this.tgtPanel.Controls.Add(this.numEgressHeading6);
             this.tgtPanel.Controls.Add(this.lblFormation2);
+            this.tgtPanel.Controls.Add(this.cbEgressCardinal6);
             this.tgtPanel.Controls.Add(this.lblScSs2);
+            this.tgtPanel.Controls.Add(this.cbEgressDirection6);
             this.tgtPanel.Controls.Add(this.lblProfile2);
+            this.tgtPanel.Controls.Add(this.cbSem6);
             this.tgtPanel.Controls.Add(this.lblHeading2);
+            this.tgtPanel.Controls.Add(this.txtAbort6);
             this.tgtPanel.Controls.Add(this.lblCardinal2);
+            this.tgtPanel.Controls.Add(this.txtAltitude6);
             this.tgtPanel.Controls.Add(this.lblLeftRight2);
+            this.tgtPanel.Controls.Add(this.cbDelivery6);
             this.tgtPanel.Controls.Add(this.lblSem2);
+            this.tgtPanel.Controls.Add(this.txtProfileAttack6);
             this.tgtPanel.Controls.Add(this.lblDelivery2);
+            this.tgtPanel.Controls.Add(this.numFAH6);
             this.tgtPanel.Controls.Add(this.lblAttack2);
+            this.tgtPanel.Controls.Add(this.numFAH5);
             this.tgtPanel.Controls.Add(this.lblEgress2);
             this.tgtPanel.Controls.Add(this.txtEgressIP4);
             this.tgtPanel.Controls.Add(this.cbFormation4);
@@ -1196,12 +1277,26 @@
             this.tgtPanel.Size = new System.Drawing.Size(642, 370);
             this.tgtPanel.TabIndex = 300;
             // 
+            // txtAttackIP5
+            // 
+            this.txtAttackIP5.Location = new System.Drawing.Point(132, 221);
+            this.txtAttackIP5.Name = "txtAttackIP5";
+            this.txtAttackIP5.Size = new System.Drawing.Size(26, 20);
+            this.txtAttackIP5.TabIndex = 425;
+            // 
             // txtEgressIP3
             // 
             this.txtEgressIP3.Location = new System.Drawing.Point(588, 313);
             this.txtEgressIP3.Name = "txtEgressIP3";
             this.txtEgressIP3.Size = new System.Drawing.Size(26, 20);
             this.txtEgressIP3.TabIndex = 382;
+            // 
+            // txtEgressIP5
+            // 
+            this.txtEgressIP5.Location = new System.Drawing.Point(588, 221);
+            this.txtEgressIP5.Name = "txtEgressIP5";
+            this.txtEgressIP5.Size = new System.Drawing.Size(26, 20);
+            this.txtEgressIP5.TabIndex = 434;
             // 
             // cbFormation3
             // 
@@ -1216,12 +1311,37 @@
             this.cbFormation3.Size = new System.Drawing.Size(57, 21);
             this.cbFormation3.TabIndex = 376;
             // 
+            // cbFormation5
+            // 
+            this.cbFormation5.FormattingEnabled = true;
+            this.cbFormation5.Items.AddRange(new object[] {
+            "FW",
+            "Line",
+            "Trail",
+            "Wedge"});
+            this.cbFormation5.Location = new System.Drawing.Point(203, 221);
+            this.cbFormation5.Name = "cbFormation5";
+            this.cbFormation5.Size = new System.Drawing.Size(57, 21);
+            this.cbFormation5.TabIndex = 427;
+            // 
             // txtAttackIP3
             // 
             this.txtAttackIP3.Location = new System.Drawing.Point(132, 313);
             this.txtAttackIP3.Name = "txtAttackIP3";
             this.txtAttackIP3.Size = new System.Drawing.Size(26, 20);
             this.txtAttackIP3.TabIndex = 374;
+            // 
+            // cbSCSS5
+            // 
+            this.cbSCSS5.FormattingEnabled = true;
+            this.cbSCSS5.Items.AddRange(new object[] {
+            "S-C",
+            "S-S",
+            "N/A"});
+            this.cbSCSS5.Location = new System.Drawing.Point(159, 221);
+            this.cbSCSS5.Name = "cbSCSS5";
+            this.cbSCSS5.Size = new System.Drawing.Size(43, 21);
+            this.cbSCSS5.TabIndex = 426;
             // 
             // cbSCSS3
             // 
@@ -1234,6 +1354,13 @@
             this.cbSCSS3.Name = "cbSCSS3";
             this.cbSCSS3.Size = new System.Drawing.Size(43, 21);
             this.cbSCSS3.TabIndex = 375;
+            // 
+            // txtProfileAttack5
+            // 
+            this.txtProfileAttack5.Location = new System.Drawing.Point(25, 221);
+            this.txtProfileAttack5.Name = "txtProfileAttack5";
+            this.txtProfileAttack5.Size = new System.Drawing.Size(52, 20);
+            this.txtProfileAttack5.TabIndex = 423;
             // 
             // numEgressHeading3
             // 
@@ -1257,6 +1384,20 @@
             0,
             0});
             // 
+            // txtAltitude5
+            // 
+            this.txtAltitude5.Location = new System.Drawing.Point(303, 221);
+            this.txtAltitude5.Name = "txtAltitude5";
+            this.txtAltitude5.Size = new System.Drawing.Size(48, 20);
+            this.txtAltitude5.TabIndex = 428;
+            // 
+            // txtAbort5
+            // 
+            this.txtAbort5.Location = new System.Drawing.Point(352, 221);
+            this.txtAbort5.Name = "txtAbort5";
+            this.txtAbort5.Size = new System.Drawing.Size(48, 20);
+            this.txtAbort5.TabIndex = 429;
+            // 
             // cbEgressCardinal3
             // 
             this.cbEgressCardinal3.FormattingEnabled = true;
@@ -1275,6 +1416,28 @@
             this.cbEgressCardinal3.Size = new System.Drawing.Size(43, 21);
             this.cbEgressCardinal3.TabIndex = 380;
             // 
+            // numEgressHeading5
+            // 
+            this.numEgressHeading5.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numEgressHeading5.Location = new System.Drawing.Point(549, 221);
+            this.numEgressHeading5.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numEgressHeading5.Name = "numEgressHeading5";
+            this.numEgressHeading5.Size = new System.Drawing.Size(38, 20);
+            this.numEgressHeading5.TabIndex = 433;
+            this.numEgressHeading5.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            // 
             // cbEgressDirection3
             // 
             this.cbEgressDirection3.FormattingEnabled = true;
@@ -1285,6 +1448,24 @@
             this.cbEgressDirection3.Name = "cbEgressDirection3";
             this.cbEgressDirection3.Size = new System.Drawing.Size(47, 21);
             this.cbEgressDirection3.TabIndex = 379;
+            // 
+            // cbEgressCardinal5
+            // 
+            this.cbEgressCardinal5.FormattingEnabled = true;
+            this.cbEgressCardinal5.Items.AddRange(new object[] {
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N/A"});
+            this.cbEgressCardinal5.Location = new System.Drawing.Point(505, 221);
+            this.cbEgressCardinal5.Name = "cbEgressCardinal5";
+            this.cbEgressCardinal5.Size = new System.Drawing.Size(43, 21);
+            this.cbEgressCardinal5.TabIndex = 432;
             // 
             // cbSem3
             // 
@@ -1299,12 +1480,36 @@
             this.cbSem3.Size = new System.Drawing.Size(53, 21);
             this.cbSem3.TabIndex = 378;
             // 
+            // cbEgressDirection5
+            // 
+            this.cbEgressDirection5.FormattingEnabled = true;
+            this.cbEgressDirection5.Items.AddRange(new object[] {
+            "Left",
+            "Right"});
+            this.cbEgressDirection5.Location = new System.Drawing.Point(457, 221);
+            this.cbEgressDirection5.Name = "cbEgressDirection5";
+            this.cbEgressDirection5.Size = new System.Drawing.Size(47, 21);
+            this.cbEgressDirection5.TabIndex = 431;
+            // 
             // txtAbort3
             // 
             this.txtAbort3.Location = new System.Drawing.Point(352, 313);
             this.txtAbort3.Name = "txtAbort3";
             this.txtAbort3.Size = new System.Drawing.Size(48, 20);
             this.txtAbort3.TabIndex = 377;
+            // 
+            // cbSem5
+            // 
+            this.cbSem5.FormattingEnabled = true;
+            this.cbSem5.Items.AddRange(new object[] {
+            "TLT",
+            "TRN",
+            "CLM",
+            "NONE"});
+            this.cbSem5.Location = new System.Drawing.Point(403, 221);
+            this.cbSem5.Name = "cbSem5";
+            this.cbSem5.Size = new System.Drawing.Size(53, 21);
+            this.cbSem5.TabIndex = 430;
             // 
             // cbDelivery3
             // 
@@ -1335,12 +1540,48 @@
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery3.TabIndex = 373;
             // 
+            // cbDelivery5
+            // 
+            this.cbDelivery5.DropDownWidth = 185;
+            this.cbDelivery5.FormattingEnabled = true;
+            this.cbDelivery5.Items.AddRange(new object[] {
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
+            "Popup"});
+            this.cbDelivery5.Location = new System.Drawing.Point(78, 221);
+            this.cbDelivery5.Name = "cbDelivery5";
+            this.cbDelivery5.Size = new System.Drawing.Size(53, 21);
+            this.cbDelivery5.TabIndex = 424;
+            // 
             // txtProfileAttack3
             // 
             this.txtProfileAttack3.Location = new System.Drawing.Point(25, 313);
             this.txtProfileAttack3.Name = "txtProfileAttack3";
             this.txtProfileAttack3.Size = new System.Drawing.Size(52, 20);
             this.txtProfileAttack3.TabIndex = 372;
+            // 
+            // txtEgressIP6
+            // 
+            this.txtEgressIP6.Location = new System.Drawing.Point(588, 244);
+            this.txtEgressIP6.Name = "txtEgressIP6";
+            this.txtEgressIP6.Size = new System.Drawing.Size(26, 20);
+            this.txtEgressIP6.TabIndex = 422;
             // 
             // lblElement1
             // 
@@ -1352,6 +1593,19 @@
             this.lblElement1.Size = new System.Drawing.Size(75, 13);
             this.lblElement1.TabIndex = 371;
             this.lblElement1.Text = "Element # 1";
+            // 
+            // cbFormation6
+            // 
+            this.cbFormation6.FormattingEnabled = true;
+            this.cbFormation6.Items.AddRange(new object[] {
+            "FW",
+            "Line",
+            "Trail",
+            "Wedge"});
+            this.cbFormation6.Location = new System.Drawing.Point(203, 243);
+            this.cbFormation6.Name = "cbFormation6";
+            this.cbFormation6.Size = new System.Drawing.Size(57, 21);
+            this.cbFormation6.TabIndex = 415;
             // 
             // dgvTgtLead
             // 
@@ -1396,6 +1650,13 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 223;
             // 
+            // txtAttackIP6
+            // 
+            this.txtAttackIP6.Location = new System.Drawing.Point(132, 244);
+            this.txtAttackIP6.Name = "txtAttackIP6";
+            this.txtAttackIP6.Size = new System.Drawing.Size(26, 20);
+            this.txtAttackIP6.TabIndex = 413;
+            // 
             // lblIpAttack2
             // 
             this.lblIpAttack2.AutoSize = true;
@@ -1405,6 +1666,18 @@
             this.lblIpAttack2.Size = new System.Drawing.Size(17, 13);
             this.lblIpAttack2.TabIndex = 369;
             this.lblIpAttack2.Text = "IP";
+            // 
+            // cbSCSS6
+            // 
+            this.cbSCSS6.FormattingEnabled = true;
+            this.cbSCSS6.Items.AddRange(new object[] {
+            "S-C",
+            "S-S",
+            "N/A"});
+            this.cbSCSS6.Location = new System.Drawing.Point(159, 243);
+            this.cbSCSS6.Name = "cbSCSS6";
+            this.cbSCSS6.Size = new System.Drawing.Size(43, 21);
+            this.cbSCSS6.TabIndex = 414;
             // 
             // lblIpEgress2
             // 
@@ -1416,6 +1689,28 @@
             this.lblIpEgress2.TabIndex = 368;
             this.lblIpEgress2.Text = "IP";
             // 
+            // numEgressHeading6
+            // 
+            this.numEgressHeading6.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numEgressHeading6.Location = new System.Drawing.Point(549, 244);
+            this.numEgressHeading6.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numEgressHeading6.Name = "numEgressHeading6";
+            this.numEgressHeading6.Size = new System.Drawing.Size(38, 20);
+            this.numEgressHeading6.TabIndex = 421;
+            this.numEgressHeading6.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            // 
             // lblFormation2
             // 
             this.lblFormation2.AutoSize = true;
@@ -1425,6 +1720,24 @@
             this.lblFormation2.Size = new System.Drawing.Size(53, 13);
             this.lblFormation2.TabIndex = 367;
             this.lblFormation2.Text = "Formation";
+            // 
+            // cbEgressCardinal6
+            // 
+            this.cbEgressCardinal6.FormattingEnabled = true;
+            this.cbEgressCardinal6.Items.AddRange(new object[] {
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N/A"});
+            this.cbEgressCardinal6.Location = new System.Drawing.Point(505, 243);
+            this.cbEgressCardinal6.Name = "cbEgressCardinal6";
+            this.cbEgressCardinal6.Size = new System.Drawing.Size(43, 21);
+            this.cbEgressCardinal6.TabIndex = 420;
             // 
             // lblScSs2
             // 
@@ -1436,6 +1749,17 @@
             this.lblScSs2.TabIndex = 366;
             this.lblScSs2.Text = "S-C/S-S";
             // 
+            // cbEgressDirection6
+            // 
+            this.cbEgressDirection6.FormattingEnabled = true;
+            this.cbEgressDirection6.Items.AddRange(new object[] {
+            "Left",
+            "Right"});
+            this.cbEgressDirection6.Location = new System.Drawing.Point(457, 243);
+            this.cbEgressDirection6.Name = "cbEgressDirection6";
+            this.cbEgressDirection6.Size = new System.Drawing.Size(47, 21);
+            this.cbEgressDirection6.TabIndex = 419;
+            // 
             // lblProfile2
             // 
             this.lblProfile2.AutoSize = true;
@@ -1445,6 +1769,19 @@
             this.lblProfile2.Size = new System.Drawing.Size(36, 13);
             this.lblProfile2.TabIndex = 365;
             this.lblProfile2.Text = "Profile";
+            // 
+            // cbSem6
+            // 
+            this.cbSem6.FormattingEnabled = true;
+            this.cbSem6.Items.AddRange(new object[] {
+            "TLT",
+            "TRN",
+            "CLM",
+            "NONE"});
+            this.cbSem6.Location = new System.Drawing.Point(403, 243);
+            this.cbSem6.Name = "cbSem6";
+            this.cbSem6.Size = new System.Drawing.Size(53, 21);
+            this.cbSem6.TabIndex = 418;
             // 
             // lblHeading2
             // 
@@ -1456,6 +1793,13 @@
             this.lblHeading2.TabIndex = 364;
             this.lblHeading2.Text = "Heading";
             // 
+            // txtAbort6
+            // 
+            this.txtAbort6.Location = new System.Drawing.Point(352, 244);
+            this.txtAbort6.Name = "txtAbort6";
+            this.txtAbort6.Size = new System.Drawing.Size(48, 20);
+            this.txtAbort6.TabIndex = 417;
+            // 
             // lblCardinal2
             // 
             this.lblCardinal2.AutoSize = true;
@@ -1465,6 +1809,13 @@
             this.lblCardinal2.Size = new System.Drawing.Size(45, 13);
             this.lblCardinal2.TabIndex = 363;
             this.lblCardinal2.Text = "Cardinal";
+            // 
+            // txtAltitude6
+            // 
+            this.txtAltitude6.Location = new System.Drawing.Point(303, 244);
+            this.txtAltitude6.Name = "txtAltitude6";
+            this.txtAltitude6.Size = new System.Drawing.Size(48, 20);
+            this.txtAltitude6.TabIndex = 416;
             // 
             // lblLeftRight2
             // 
@@ -1476,6 +1827,35 @@
             this.lblLeftRight2.TabIndex = 362;
             this.lblLeftRight2.Text = "Left/Right";
             // 
+            // cbDelivery6
+            // 
+            this.cbDelivery6.DropDownWidth = 185;
+            this.cbDelivery6.FormattingEnabled = true;
+            this.cbDelivery6.Items.AddRange(new object[] {
+            "Low Angle Strafe (LAS)",
+            "High Angle Strafe (HAS)",
+            "Long Range Strafe (LRS)",
+            "Two-Target Strafe (TTS)",
+            "Low Angle Rocket (LAR)",
+            "High Angle Rocket (HAR)",
+            "Low Altitude Tactical Rocket (LATR)",
+            "High Altitude Tactical Rocket (HATR)",
+            "High Altitude Release Rocket (HARR)",
+            "Loft Rocket (LR)",
+            "Visual Level Delivery (VLD)",
+            "Low Angle High Drag (LAHD)",
+            "Low Angle Low Drag (LALD)",
+            "Dive Bomb (DB)",
+            "High Altitude Dive Bomb (HADB)",
+            "High Altitude Release Bomb (HARB)",
+            "Low Altitude Toss (LAT)",
+            "Medium Altitude Toss (MAT)",
+            "Popup"});
+            this.cbDelivery6.Location = new System.Drawing.Point(78, 243);
+            this.cbDelivery6.Name = "cbDelivery6";
+            this.cbDelivery6.Size = new System.Drawing.Size(53, 21);
+            this.cbDelivery6.TabIndex = 412;
+            // 
             // lblSem2
             // 
             this.lblSem2.AutoSize = true;
@@ -1485,6 +1865,13 @@
             this.lblSem2.Size = new System.Drawing.Size(30, 13);
             this.lblSem2.TabIndex = 361;
             this.lblSem2.Text = "SEM";
+            // 
+            // txtProfileAttack6
+            // 
+            this.txtProfileAttack6.Location = new System.Drawing.Point(25, 244);
+            this.txtProfileAttack6.Name = "txtProfileAttack6";
+            this.txtProfileAttack6.Size = new System.Drawing.Size(52, 20);
+            this.txtProfileAttack6.TabIndex = 411;
             // 
             // lblDelivery2
             // 
@@ -1496,6 +1883,28 @@
             this.lblDelivery2.TabIndex = 360;
             this.lblDelivery2.Text = "Delivery";
             // 
+            // numFAH6
+            // 
+            this.numFAH6.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numFAH6.Location = new System.Drawing.Point(264, 244);
+            this.numFAH6.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numFAH6.Name = "numFAH6";
+            this.numFAH6.Size = new System.Drawing.Size(38, 20);
+            this.numFAH6.TabIndex = 410;
+            this.numFAH6.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            // 
             // lblAttack2
             // 
             this.lblAttack2.AutoSize = true;
@@ -1506,6 +1915,28 @@
             this.lblAttack2.Size = new System.Drawing.Size(44, 13);
             this.lblAttack2.TabIndex = 359;
             this.lblAttack2.Text = "Attack";
+            // 
+            // numFAH5
+            // 
+            this.numFAH5.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numFAH5.Location = new System.Drawing.Point(264, 221);
+            this.numFAH5.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numFAH5.Name = "numFAH5";
+            this.numFAH5.Size = new System.Drawing.Size(38, 20);
+            this.numFAH5.TabIndex = 409;
+            this.numFAH5.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
             // 
             // lblEgress2
             // 
@@ -2599,30 +3030,6 @@
             this.cmbNrOfAc.Size = new System.Drawing.Size(32, 20);
             this.cmbNrOfAc.TabIndex = 404;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ElemCol1";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 64;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ElemCol2";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 229;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "ElemCol3";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "ElemCol4";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 223;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2711,7 +3118,6 @@
             this.Controls.Add(this.Munitions1);
             this.Controls.Add(this.lblMunitions);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dgvTgtElem);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tgtPanel);
@@ -2736,7 +3142,11 @@
             this.tgtPanel.ResumeLayout(false);
             this.tgtPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFAH5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading2)).EndInit();
@@ -2940,5 +3350,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.TextBox txtAttackIP5;
+        private System.Windows.Forms.TextBox txtEgressIP5;
+        private System.Windows.Forms.ComboBox cbFormation5;
+        private System.Windows.Forms.ComboBox cbSCSS5;
+        private System.Windows.Forms.TextBox txtProfileAttack5;
+        private System.Windows.Forms.TextBox txtAltitude5;
+        private System.Windows.Forms.TextBox txtAbort5;
+        private System.Windows.Forms.NumericUpDown numEgressHeading5;
+        private System.Windows.Forms.ComboBox cbEgressCardinal5;
+        private System.Windows.Forms.ComboBox cbEgressDirection5;
+        private System.Windows.Forms.ComboBox cbSem5;
+        private System.Windows.Forms.ComboBox cbDelivery5;
+        private System.Windows.Forms.TextBox txtEgressIP6;
+        private System.Windows.Forms.ComboBox cbFormation6;
+        private System.Windows.Forms.TextBox txtAttackIP6;
+        private System.Windows.Forms.ComboBox cbSCSS6;
+        private System.Windows.Forms.NumericUpDown numEgressHeading6;
+        private System.Windows.Forms.ComboBox cbEgressCardinal6;
+        private System.Windows.Forms.ComboBox cbEgressDirection6;
+        private System.Windows.Forms.ComboBox cbSem6;
+        private System.Windows.Forms.TextBox txtAbort6;
+        private System.Windows.Forms.TextBox txtAltitude6;
+        private System.Windows.Forms.ComboBox cbDelivery6;
+        private System.Windows.Forms.TextBox txtProfileAttack6;
+        private System.Windows.Forms.NumericUpDown numFAH6;
+        private System.Windows.Forms.NumericUpDown numFAH5;
     }
 }

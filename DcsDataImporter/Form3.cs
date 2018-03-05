@@ -261,10 +261,60 @@ namespace DcsDataImporter
             dgvPackage.Top -= 20;
             lblPackage.Top -= 20;
             moveProfilesUp(10);
-            incTgtPanelHeight(20);
+            incTgtPanelHeight(70);
 
             moveAttacksDown(10);
-            moveTgtPanelDown();
+            moveTgtPanelDown(25);
+            //showFifthAndSixthAttacks();
+            moveFifthAndSixthAttacks(21);
+        }
+
+        private void moveFifthAndSixthAttacks(int h)
+        {
+            txtProfileAttack5.Top += h;
+            cbDelivery5.Top += h;
+            txtAttackIP5.Top += h;
+            cbSCSS5.Top += h;
+            cbFormation5.Top += h;
+            numFAH5.Top += h;
+            txtAltitude5.Top += h;
+            txtAbort5.Top += h;
+            cbSem5.Top += h;
+            cbEgressDirection5.Top += h;
+            cbEgressCardinal5.Top += h;
+            numEgressHeading5.Top += h;
+            txtEgressIP5.Top += h;
+
+            txtProfileAttack6.Top += h;
+            cbDelivery6.Top += h;
+            txtAttackIP6.Top += h;
+            cbSCSS6.Top += h;
+            cbFormation6.Top += h;
+            numFAH6.Top += h;
+            txtAltitude6.Top += h;
+            txtAbort6.Top += h;
+            cbSem6.Top += h;
+            cbEgressDirection6.Top += h;
+            cbEgressCardinal6.Top += h;
+            numEgressHeading6.Top += h;
+            txtEgressIP6.Top += h;
+        }
+
+        private void showFifthAndSixthAttacks()
+        {
+            txtProfileAttack1.Visible = true;
+            cbDelivery1.Visible = true;
+            txtAttackIP1.Visible = true;
+            cbSCSS1.Visible = true;
+            cbFormation1.Visible = true;
+            numFAH1.Visible = true;
+            txtAltitude1.Visible = true;
+            txtAbort1.Visible = true;
+            cbSem1.Visible = true;
+            cbEgressDirection1.Visible = true;
+            cbEgressCardinal1.Visible = true;
+            numEgressHeading1.Visible = true;
+            txtEgressIP1.Visible = true;
         }
 
         private void incTgtPanelHeight(int h)
@@ -424,14 +474,14 @@ namespace DcsDataImporter
             panel3.Top = tgtPanel.Height + tgtPanel.Location.Y + 1;
         }
 
-        private void moveTgtPanelDown()
+        private void moveTgtPanelDown(int h)
         {
-            tgtPanel.Top += 50;
-            panel1.Top += 50;
-            panel2.Top += 50;
-            panel3.Top += 50;
-            panel6.Top += 50;
-            lblTgt.Top += 50;
+            tgtPanel.Top += h;
+            panel1.Top += h;
+            panel2.Top += h;
+            panel3.Top += h;
+            panel6.Top += h;
+            lblTgt.Top += h;
         }
 
         private void moveFirstLabelsDown(int h)
