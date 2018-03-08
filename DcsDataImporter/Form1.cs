@@ -263,7 +263,7 @@ namespace DcsDataImporter
         // Convert from format 0730 to 07:30 and set the correct text box
         private void formatAndSetTime(string time, Control textBox) 
         {
-            if (!time.Equals("-") && !time.Equals(""))
+            if (time != null && !time.Equals("-") && !time.Equals(""))
             {
                 textBox.Text = time[0].ToString() + time[1].ToString() + ":" + time[2].ToString() + time[3].ToString();
             }

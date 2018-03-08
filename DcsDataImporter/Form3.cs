@@ -264,7 +264,7 @@ namespace DcsDataImporter
             incTgtPanelHeight(70);
 
             moveAttacksDown(10);
-            moveTgtPanelDown(25);
+            moveTgtPanelDown(15);
             //showFifthAndSixthAttacks();
             moveFifthAndSixthAttacks(21);
         }
@@ -682,7 +682,11 @@ namespace DcsDataImporter
 
         private void initPackageDgv()
         {
-            dgvPackage.RowCount = 7;
+            if (Int32.Parse(Properties.Settings.Default.prevTxtNrOfAc) < 3)
+            {
+                adjustdgvPackageForSingleElement();
+            }
+            
             dgvPackage.DefaultCellStyle.SelectionBackColor = dgvPackage.DefaultCellStyle.BackColor;
             dgvPackage.DefaultCellStyle.SelectionForeColor = dgvPackage.DefaultCellStyle.ForeColor;
 
@@ -692,6 +696,14 @@ namespace DcsDataImporter
                 initSupportRow(i);
                 i++;
             }
+        }
+
+        private void adjustdgvPackageForSingleElement()
+        {
+            dgvPackage.RowCount = 8;
+            dgvPackage.Top -= 22;
+            dgvPackage.Height += 22;
+            lblPackage.Top -= 22;
         }
 
         private void initSupportRow(int i)
