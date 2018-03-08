@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblElement2 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
@@ -2750,14 +2750,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2769,8 +2769,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 486);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPackage.Size = new System.Drawing.Size(589, 177);
             this.dgvPackage.TabIndex = 63;
             // 
@@ -2840,9 +2840,9 @@
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(536, 25);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(45, 13);
+            this.label44.Size = new System.Drawing.Size(72, 13);
             this.label44.TabIndex = 385;
-            this.label44.Text = "Pos/FL:";
+            this.label44.Text = "Pos/FL (ETA)";
             // 
             // label45
             // 
