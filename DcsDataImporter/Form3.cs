@@ -265,7 +265,6 @@ namespace DcsDataImporter
 
             moveAttacksDown(10);
             moveTgtPanelDown(15);
-            //showFifthAndSixthAttacks();
             moveFifthAndSixthAttacks(21);
         }
 
@@ -298,23 +297,6 @@ namespace DcsDataImporter
             cbEgressCardinal6.Top += h;
             numEgressHeading6.Top += h;
             txtEgressIP6.Top += h;
-        }
-
-        private void showFifthAndSixthAttacks()
-        {
-            txtProfileAttack1.Visible = true;
-            cbDelivery1.Visible = true;
-            txtAttackIP1.Visible = true;
-            cbSCSS1.Visible = true;
-            cbFormation1.Visible = true;
-            numFAH1.Visible = true;
-            txtAltitude1.Visible = true;
-            txtAbort1.Visible = true;
-            cbSem1.Visible = true;
-            cbEgressDirection1.Visible = true;
-            cbEgressCardinal1.Visible = true;
-            numEgressHeading1.Visible = true;
-            txtEgressIP1.Visible = true;
         }
 
         private void incTgtPanelHeight(int h)

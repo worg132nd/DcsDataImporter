@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblElement2 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
@@ -96,6 +96,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tgtPanel = new System.Windows.Forms.Panel();
+            this.dgvTgtLead = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAttackIP5 = new System.Windows.Forms.TextBox();
             this.txtEgressIP3 = new System.Windows.Forms.TextBox();
             this.txtEgressIP5 = new System.Windows.Forms.TextBox();
@@ -122,11 +127,6 @@
             this.txtEgressIP6 = new System.Windows.Forms.TextBox();
             this.lblElement1 = new System.Windows.Forms.Label();
             this.cbFormation6 = new System.Windows.Forms.ComboBox();
-            this.dgvTgtLead = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAttackIP6 = new System.Windows.Forms.TextBox();
             this.lblIpAttack2 = new System.Windows.Forms.Label();
             this.cbSCSS6 = new System.Windows.Forms.ComboBox();
@@ -260,9 +260,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBingo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).BeginInit();
             this.tgtPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH5)).BeginInit();
@@ -1277,6 +1277,49 @@
             this.tgtPanel.Size = new System.Drawing.Size(642, 370);
             this.tgtPanel.TabIndex = 300;
             // 
+            // dgvTgtLead
+            // 
+            this.dgvTgtLead.AllowUserToAddRows = false;
+            this.dgvTgtLead.AllowUserToDeleteRows = false;
+            this.dgvTgtLead.AllowUserToResizeColumns = false;
+            this.dgvTgtLead.AllowUserToResizeRows = false;
+            this.dgvTgtLead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTgtLead.ColumnHeadersVisible = false;
+            this.dgvTgtLead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvTgtLead.Location = new System.Drawing.Point(25, 30);
+            this.dgvTgtLead.Name = "dgvTgtLead";
+            this.dgvTgtLead.RowHeadersVisible = false;
+            this.dgvTgtLead.Size = new System.Drawing.Size(589, 69);
+            this.dgvTgtLead.TabIndex = 370;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "LeadCol1";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 64;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "LeadCol2";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 229;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "LeadCol3";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 70;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "LeadCol4";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 223;
+            // 
             // txtAttackIP5
             // 
             this.txtAttackIP5.Location = new System.Drawing.Point(132, 221);
@@ -1539,6 +1582,8 @@
             this.cbDelivery3.Name = "cbDelivery3";
             this.cbDelivery3.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery3.TabIndex = 373;
+            this.cbDelivery3.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery3.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // cbDelivery5
             // 
@@ -1568,6 +1613,8 @@
             this.cbDelivery5.Name = "cbDelivery5";
             this.cbDelivery5.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery5.TabIndex = 424;
+            this.cbDelivery5.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery5.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // txtProfileAttack3
             // 
@@ -1606,49 +1653,6 @@
             this.cbFormation6.Name = "cbFormation6";
             this.cbFormation6.Size = new System.Drawing.Size(57, 21);
             this.cbFormation6.TabIndex = 415;
-            // 
-            // dgvTgtLead
-            // 
-            this.dgvTgtLead.AllowUserToAddRows = false;
-            this.dgvTgtLead.AllowUserToDeleteRows = false;
-            this.dgvTgtLead.AllowUserToResizeColumns = false;
-            this.dgvTgtLead.AllowUserToResizeRows = false;
-            this.dgvTgtLead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTgtLead.ColumnHeadersVisible = false;
-            this.dgvTgtLead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dgvTgtLead.Location = new System.Drawing.Point(25, 30);
-            this.dgvTgtLead.Name = "dgvTgtLead";
-            this.dgvTgtLead.RowHeadersVisible = false;
-            this.dgvTgtLead.Size = new System.Drawing.Size(589, 69);
-            this.dgvTgtLead.TabIndex = 370;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "LeadCol1";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 64;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "LeadCol2";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 229;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "LeadCol3";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 70;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "LeadCol4";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 223;
             // 
             // txtAttackIP6
             // 
@@ -1855,6 +1859,8 @@
             this.cbDelivery6.Name = "cbDelivery6";
             this.cbDelivery6.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery6.TabIndex = 412;
+            this.cbDelivery6.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery6.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // lblSem2
             // 
@@ -2080,6 +2086,8 @@
             this.cbDelivery4.Name = "cbDelivery4";
             this.cbDelivery4.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery4.TabIndex = 349;
+            this.cbDelivery4.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery4.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // txtProfileAttack4
             // 
@@ -2393,6 +2401,8 @@
             this.cbDelivery1.Name = "cbDelivery1";
             this.cbDelivery1.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery1.TabIndex = 322;
+            this.cbDelivery1.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery1.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // txtEgressIP2
             // 
@@ -2539,6 +2549,8 @@
             this.cbDelivery2.Name = "cbDelivery2";
             this.cbDelivery2.Size = new System.Drawing.Size(53, 21);
             this.cbDelivery2.TabIndex = 310;
+            this.cbDelivery2.DropDown += new System.EventHandler(this.cbDelivery_DropDown);
+            this.cbDelivery2.SelectedIndexChanged += new System.EventHandler(this.cbDelivery_SelectedIndexChanged);
             // 
             // txtProfileAttack2
             // 
@@ -2738,14 +2750,14 @@
             this.dgvPackage.AllowUserToDeleteRows = false;
             this.dgvPackage.AllowUserToResizeColumns = false;
             this.dgvPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCallsign,
@@ -2757,8 +2769,8 @@
             this.dgvPackage.Location = new System.Drawing.Point(14, 486);
             this.dgvPackage.Name = "dgvPackage";
             this.dgvPackage.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPackage.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPackage.Size = new System.Drawing.Size(589, 177);
             this.dgvPackage.TabIndex = 63;
             // 
@@ -3141,9 +3153,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtJoker)).EndInit();
             this.tgtPanel.ResumeLayout(false);
             this.tgtPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTgtLead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEgressHeading6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFAH5)).EndInit();
