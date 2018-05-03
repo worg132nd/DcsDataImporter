@@ -1050,33 +1050,45 @@ namespace DcsDataImporter
                     // 23.000, 237.000, 237.000, 237.000, 237.000 og 237.000
                     // append forskjellige antall 000
 
+                    // xxx
                     if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsDigit(s[2]))
                     {
                         s += ".000";
+                    // xxx.
                     } else if (s.Length == 4 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsDigit(s[2]) && s[3] == '.')
                     {
                         s += "000";
+                    // xxx.x
                     } else if (s.Length == 5 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsDigit(s[2]) && s[3] == '.' && Char.IsDigit(s[4]))
                     {
                         s += "00";
+                    // xxx.xx
                     } else if (s.Length == 6 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && Char.IsDigit(s[2]) && s[3] == '.' && Char.IsDigit(s[4]) && Char.IsDigit(s[5]))
                     {
                         s += "0";
+                    // xx
                     } else if (s.Length == 2 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]))
                     {
                         s += ".00";
+                    // xx.
                     } else if (s.Length == 3 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.')
                     {
                         s += "000";
+                    // xx.x
                     } else if (s.Length == 4 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.' && Char.IsDigit(s[3]))
                     {
-                        s += "00";
+                        s += "0";
+                    // xx.xx
                     } else if (s.Length == 5 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.' && Char.IsDigit(s[3]) && Char.IsDigit(s[4]))
                     {
                         /* Can be both length 5 and 6 in the list, so has to find out which it is
                          * If it is 6, meaning search will yield no match, add a zero */
                         tuple = (Tuple)list.Find(x => x.getFreq().ToLower().Equals(s.ToLower()));
                         if (tuple == null) s += "0";
+                    // xx.xxx
+                    } else if (s.Length == 6 && Char.IsDigit(s[0]) && Char.IsDigit(s[1]) && s[2] == '.' && Char.IsDigit(s[3]) && Char.IsDigit(s[4]))
+                    {
+                        s = s.Substring(0, 5);
                     }
                     tuple = (Tuple)list.Find(x => x.getFreq().ToLower().Equals(s.ToLower()));
                 }
