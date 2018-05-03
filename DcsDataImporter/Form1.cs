@@ -276,35 +276,40 @@ namespace DcsDataImporter
 
         private void initStandardTraining()
         {
-            setSupportCell("AWACS A-A #1", "channel", "MAROON 3");
-            setSupportCell("AWACS A-A #1", "freq", "239.500");
-            setSupportCell("AWACS A-A #1", "preset", "10");
+            setSupportCell("AWACS A-A #1", "channel", "ORANGE 10");
+            setSupportCell("AWACS A-A #1", "freq", "228.000");
+            //setSupportCell("AWACS A-A #1", "preset", "-");
 
-            setSupportCell("AWACS A-A #2", "channel", "BLUE 8");
-            setSupportCell("AWACS A-A #2", "freq", "226.250");
-            setSupportCell("AWACS A-A #2", "preset", "3");
+            setSupportCell("AWACS A-A #2", "channel", "YELLOW 1");
+            setSupportCell("AWACS A-A #2", "freq", "227.500");
+            //setSupportCell("AWACS A-A #2", "preset", "3");
 
-            setSupportCell("AWACS A-G", "channel", "GREEN 5");
-            setSupportCell("AWACS A-G", "freq", "230.250");
-            setSupportCell("AWACS A-G", "preset", "4");
+            setSupportCell("AWACS A-G", "channel", "GREEN 4");
+            setSupportCell("AWACS A-G", "freq", "229.000");
+            //setSupportCell("AWACS A-G", "preset", "4");
 
-            setSupportCell("AWACS A-A #1", "backup", "127.750");
-            setSupportCell("AWACS A-A #2", "backup", "127.750");
-            setSupportCell("AWACS A-G", "backup", "127.750");
+            setSupportCell("AWACS A-A #1", "backup", "136.250");
+            setSupportCell("AWACS A-A #2", "backup", "136.250");
+            setSupportCell("AWACS A-G", "backup", "136.250");
 
-            setSupportCell("SCRAMBLE", "channel", "MAROON 7");
-            setSupportCell("SCRAMBLE", "freq", "240.750");
-            setSupportCell("SCRAMBLE", "preset", "5");
+            setSupportCell("SCRAMBLE", "channel", "VIOLET 10");
+            setSupportCell("SCRAMBLE", "freq", "228.250");
+            //setSupportCell("SCRAMBLE", "preset", "5");
 
-            txtAwacsBackupChannel.Text = "PURPLE 11";
-            txtAwacsBackupFreq.Text = "127.750";
-            txtAwacsBackupPreset.Text = "15";
+            txtAwacsBackupChannel.Text = "INDIGO 6";
+            txtAwacsBackupFreq.Text = "136.250";
+            //txtAwacsBackupPreset.Text = "15";
 
-            setSupportCell("Tanker", "callsign", "TEXACO");
-            setSupportCell("Tanker", "freq", "150.000");
-            setSupportCell("Tanker", "channel", "OLIVE 6");
-            setSupportCell("Tanker", "preset", "8");
-            setSupportCell("Tanker", "notes", "TCN5Y FL115 220KT Gori S33");
+            setSupportCell("Tanker 1", "callsign", "TEXACO");
+            setSupportCell("Tanker 1", "freq", "151.000");
+            setSupportCell("Tanker 1", "channel", "OLIVE 10");
+            //setSupportCell("Tanker", "preset", "8");
+
+            setSupportCell("Tanker 2", "callsign", "SHELL");
+            setSupportCell("Tanker 2", "freq", "149.000");
+
+            setSupportCell("Tanker 1", "notes", "TCN5Y FL115 270KTS");
+            setSupportCell("Tanker 2", "notes", "TCN6Y FL12 270KTS");
 
             txtTacpCp.Text = "MUKHRANI"; //default
             setSupportCell("JTAC", "notes", "MUKHRANI");

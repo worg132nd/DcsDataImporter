@@ -211,7 +211,7 @@
             this.numTankers.Size = new System.Drawing.Size(26, 20);
             this.numTankers.TabIndex = 309;
             this.numTankers.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
