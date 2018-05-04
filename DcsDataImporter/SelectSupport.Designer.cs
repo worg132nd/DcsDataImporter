@@ -119,6 +119,8 @@
             // chkExtraAwacsAG
             // 
             this.chkExtraAwacsAG.AutoSize = true;
+            this.chkExtraAwacsAG.Checked = true;
+            this.chkExtraAwacsAG.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkExtraAwacsAG.Location = new System.Drawing.Point(13, 57);
             this.chkExtraAwacsAG.Name = "chkExtraAwacsAG";
             this.chkExtraAwacsAG.Size = new System.Drawing.Size(135, 17);

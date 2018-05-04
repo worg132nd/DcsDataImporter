@@ -284,17 +284,27 @@ namespace DcsDataImporter
             setSupportCell("AWACS A-A #2", "freq", "227.500");
             //setSupportCell("AWACS A-A #2", "preset", "3");
 
-            setSupportCell("AWACS A-G", "channel", "GREEN 4");
-            setSupportCell("AWACS A-G", "freq", "229.000");
+            setSupportCell("AWACS A-G #1", "channel", "GREEN 4");
+            setSupportCell("AWACS A-G #1", "freq", "229.000");
             //setSupportCell("AWACS A-G", "preset", "4");
+
+            setSupportCell("AWACS A-G #2", "channel", "YELLOW 1");
+            setSupportCell("AWACS A-G #2", "freq", "227.500");
 
             setSupportCell("AWACS A-A #1", "backup", "136.250");
             setSupportCell("AWACS A-A #2", "backup", "136.250");
-            setSupportCell("AWACS A-G", "backup", "136.250");
+            setSupportCell("AWACS A-G #1", "backup", "136.250");
+            setSupportCell("AWACS A-G #2", "backup", "136.250");
 
             setSupportCell("SCRAMBLE", "channel", "VIOLET 10");
             setSupportCell("SCRAMBLE", "freq", "228.250");
             //setSupportCell("SCRAMBLE", "preset", "5");
+
+            setSupportCell("CSAR", "channel", "BROWN 10");
+            setSupportCell("CSAR", "freq", "228.500");
+
+            setSupportCell("In-flight Report", "channel", "OCHRE 9");
+            setSupportCell("In-flight Report", "freq", "234.000");
 
             txtAwacsBackupChannel.Text = "INDIGO 6";
             txtAwacsBackupFreq.Text = "136.250";

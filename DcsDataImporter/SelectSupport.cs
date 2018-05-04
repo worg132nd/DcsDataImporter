@@ -73,7 +73,7 @@ namespace DcsDataImporter
 
             if (standardTraining)
             {
-                chkCsar.Checked = false;
+                chkCsar.Checked = true;
             }
         }
 
