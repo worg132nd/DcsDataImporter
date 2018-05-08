@@ -278,18 +278,19 @@ namespace DcsDataImporter
         {
             setSupportCell("AWACS A-A #1", "channel", "ORANGE 10");
             setSupportCell("AWACS A-A #1", "freq", "228.000");
-            //setSupportCell("AWACS A-A #1", "preset", "-");
+            setSupportCell("AWACS A-A #1", "preset", "3");
 
             setSupportCell("AWACS A-A #2", "channel", "YELLOW 1");
             setSupportCell("AWACS A-A #2", "freq", "227.500");
-            //setSupportCell("AWACS A-A #2", "preset", "3");
+            setSupportCell("AWACS A-A #2", "preset", "19");
 
             setSupportCell("AWACS A-G #1", "channel", "GREEN 4");
             setSupportCell("AWACS A-G #1", "freq", "229.000");
-            //setSupportCell("AWACS A-G", "preset", "4");
+            setSupportCell("AWACS A-G #1", "preset", "2");
 
             setSupportCell("AWACS A-G #2", "channel", "YELLOW 1");
             setSupportCell("AWACS A-G #2", "freq", "227.500");
+            setSupportCell("AWACS A-G #2", "preset", "19");
 
             setSupportCell("AWACS A-A #1", "backup", "136.250");
             setSupportCell("AWACS A-A #2", "backup", "136.250");
@@ -298,39 +299,42 @@ namespace DcsDataImporter
 
             setSupportCell("SCRAMBLE", "channel", "VIOLET 10");
             setSupportCell("SCRAMBLE", "freq", "228.250");
-            //setSupportCell("SCRAMBLE", "preset", "5");
+            setSupportCell("SCRAMBLE", "preset", "18");
 
             setSupportCell("CSAR", "channel", "BROWN 10");
             setSupportCell("CSAR", "freq", "228.500");
+            setSupportCell("CSAR", "preset", "5");
 
             setSupportCell("In-flight Report", "channel", "OCHRE 9");
             setSupportCell("In-flight Report", "freq", "234.000");
+            setSupportCell("In-flight Report", "preset", "4");
 
             txtAwacsBackupChannel.Text = "INDIGO 6";
             txtAwacsBackupFreq.Text = "136.250";
-            //txtAwacsBackupPreset.Text = "15";
 
             setSupportCell("Tanker 1", "callsign", "TEXACO");
             setSupportCell("Tanker 1", "freq", "151.000");
             setSupportCell("Tanker 1", "channel", "OLIVE 10");
-            //setSupportCell("Tanker", "preset", "8");
+            setSupportCell("Tanker 1", "preset", "5");
 
             setSupportCell("Tanker 2", "callsign", "SHELL");
             setSupportCell("Tanker 2", "freq", "149.000");
+            setSupportCell("Tanker 2", "channel", "OLIVE 8");
+            setSupportCell("Tanker 2", "preset", "6");
 
             setSupportCell("Tanker 1", "notes", "TCN5Y FL115 270KTS");
             setSupportCell("Tanker 2", "notes", "TCN6Y FL12 270KTS");
 
-            txtTacpCp.Text = "MUKHRANI"; //default
-            setSupportCell("JTAC", "notes", "MUKHRANI");
-            txtParking.Text = "Apron 1, parking space 13";
+            //txtTacpCp.Text = "MUKHRANI"; //default
+            //setSupportCell("JTAC", "notes", "MUKHRANI");
+            //txtParking.Text = "Apron 1, parking space 13";
 
-            cmbAirbaseAlt.Text = "UG27";
+            //cmbAirbaseAlt.Text = "UGKO";
 
             enableAwacs();
             txtAwacsFreq.Text = "237.000";
             txtAwacsChannel.Text = "BLUE 3";
-            txtAwacsPreset.Text = "2";
+            txtAwacsPreset.Text = "1";
 
         }
 
@@ -613,6 +617,7 @@ namespace DcsDataImporter
 
             foreach (string word in presetsTextCleaned.Split(' '))
             {
+                //MessageBox.Show(word);
 
                 if (lastWordWasChannel && isNumber(word))
                 {
